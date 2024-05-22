@@ -14,6 +14,7 @@ import axios from 'axios'
 // Register Models to Database.
 
 
+import { DBCrudCacheSet } from 'quicklists-vue-orm-ui';
 
 
 import Address from '@/models/Address'
@@ -71,6 +72,7 @@ import WebsiteProducerRegistration from '@/models/WebsiteProducerRegistration'
 
 
 
+
 VuexORM.use(VuexORMAxios, {
   axios,
   baseURL: 'https://your-api-url.com'  // Set your API base URL here
@@ -78,6 +80,7 @@ VuexORM.use(VuexORMAxios, {
 
 const database = new VuexORM.Database();
 
+database.register(DBCrudCacheSet)
 database.register(Address)
 database.register(Attachment)
 database.register(Audit)
