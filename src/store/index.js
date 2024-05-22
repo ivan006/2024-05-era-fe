@@ -13,32 +13,63 @@ import axios from 'axios'
 
 // Register Models to Database.
 
-import User from '@/models/User'
 
-import LoginSession from '@/models/LoginSession'
-import Post from '@/models/Post'
-import Food from '@/models/Food'
-import Upload from '@/models/Upload'
-import UploadRelation from '@/models/UploadRelation'
-import place from '@/models/place'
-import DBEvent from '@/models/DBEvent'
-import DBEventType from '@/models/DBEventType'
-import DBMembership from '@/models/DBMembership'
-import order from '@/models/order'
-import DBProviderGroup from '@/models/DBProviderGroup'
-import SnackbarNotification from '@/models/SnackbarNotification'
-import Image from '@/models/Image'
-import Table from '@/models/Table'
-import DBVenueCountry from '@/models/DBVenueCountry'
-import DBVenueState from '@/models/DBVenueState'
-import DBVenueSubstate from '@/models/DBVenueSubstate'
-import DBVenueTown from '@/models/DBVenueTown'
-import DBVenueSuburb from '@/models/DBVenueSuburb'
-import DBPerson from '@/models/DBPerson'
-import { DBCrudCacheSet } from 'quicklists-vue-orm-ui'
-import DBCustomerGroup from '@/models/DBCustomerGroup'
-import DBCustomerManager from '@/models/DBCustomerManager'
-import DBRSVP from '@/models/DBRSVP'
+
+
+import Address from '@/models/Address'
+import Attachment from '@/models/Attachment'
+import Audit from '@/models/Audit'
+import Bank from '@/models/Bank'
+import Communication from '@/models/Communication'
+import Contactnumber from '@/models/Contactnumber'
+import Crm from '@/models/Crm'
+import Document from '@/models/Document'
+import Documentdetail from '@/models/Documentdetail'
+import Domainuser from '@/models/Domainuser'
+import Dummy from '@/models/Dummy'
+import Email from '@/models/Email'
+import Entity from '@/models/Entity'
+import Entityaudit from '@/models/Entityaudit'
+import Entityevent from '@/models/Entityevent'
+import Entitygood from '@/models/Entitygood'
+import Entitygoodapproval from '@/models/Entitygoodapproval'
+import Entityrelationship from '@/models/Entityrelationship'
+import Externalproducer from '@/models/Externalproducer'
+import Good from '@/models/Good'
+import Instanceno from '@/models/Instanceno'
+import Object from '@/models/Object'
+import Objecttrait from '@/models/Objecttrait'
+import Objectvalue from '@/models/Objectvalue'
+import Passwordhash from '@/models/Passwordhash'
+import Productprovider from '@/models/Productprovider'
+import Query from '@/models/Query'
+import Queryheader from '@/models/Queryheader'
+import Relative from '@/models/Relative'
+import Requirement from '@/models/Requirement'
+import Requirementdetail from '@/models/Requirementdetail'
+import Rule from '@/models/Rule'
+import Ruleaction from '@/models/Ruleaction'
+import Ruleactiondatum from '@/models/Ruleactiondatum'
+import Ruleconfig from '@/models/Ruleconfig'
+import Ruleentityrole from '@/models/Ruleentityrole'
+import Servicerequest from '@/models/Servicerequest'
+import Servicerequestfrequency from '@/models/Servicerequestfrequency'
+import Servicerequestreport from '@/models/Servicerequestreport'
+import Systemaction from '@/models/Systemaction'
+import Systemcode from '@/models/Systemcode'
+import Systemconfiguration from '@/models/Systemconfiguration'
+import Systemlog from '@/models/Systemlog'
+import Systemuser from '@/models/Systemuser'
+import Transaction from '@/models/Transaction'
+import Treatmentdetail from '@/models/Treatmentdetail'
+import Useraccess from '@/models/Useraccess'
+import Userconfiguration from '@/models/Userconfiguration'
+import Userdevice from '@/models/Userdevice'
+import Userrole from '@/models/Userrole'
+import Userroleaccess from '@/models/Userroleaccess'
+import WebsiteProducerRegistration from '@/models/WebsiteProducerRegistration'
+
+
 
 VuexORM.use(VuexORMAxios, {
   axios,
@@ -47,31 +78,58 @@ VuexORM.use(VuexORMAxios, {
 
 const database = new VuexORM.Database();
 
-database.register(DBCrudCacheSet)
-database.register(User)
-database.register(LoginSession)
-database.register(Post)
-database.register(Food)
-database.register(Upload)
-database.register(UploadRelation)
-database.register(place)
-database.register(DBEvent)
-database.register(DBEventType)
-database.register(DBMembership)
-database.register(order)
-database.register(DBProviderGroup)
-database.register(SnackbarNotification)
-database.register(Table)
-database.register(Image)
-database.register(DBVenueCountry)
-database.register(DBVenueState)
-database.register(DBVenueSubstate)
-database.register(DBVenueTown)
-database.register(DBVenueSuburb)
-database.register(DBPerson)
-database.register(DBCustomerGroup)
-database.register(DBCustomerManager)
-database.register(DBRSVP)
+database.register(Address)
+database.register(Attachment)
+database.register(Audit)
+database.register(Bank)
+database.register(Communication)
+database.register(Contactnumber)
+database.register(Crm)
+database.register(Document)
+database.register(Documentdetail)
+database.register(Domainuser)
+database.register(Dummy)
+database.register(Email)
+database.register(Entity)
+database.register(Entityaudit)
+database.register(Entityevent)
+database.register(Entitygood)
+database.register(Entitygoodapproval)
+database.register(Entityrelationship)
+database.register(Externalproducer)
+database.register(Good)
+database.register(Instanceno)
+database.register(Object)
+database.register(Objecttrait)
+database.register(Objectvalue)
+database.register(Passwordhash)
+database.register(Productprovider)
+database.register(Query)
+database.register(Queryheader)
+database.register(Relative)
+database.register(Requirement)
+database.register(Requirementdetail)
+database.register(Rule)
+database.register(Ruleaction)
+database.register(Ruleactiondatum)
+database.register(Ruleconfig)
+database.register(Ruleentityrole)
+database.register(Servicerequest)
+database.register(Servicerequestfrequency)
+database.register(Servicerequestreport)
+database.register(Systemaction)
+database.register(Systemcode)
+database.register(Systemconfiguration)
+database.register(Systemlog)
+database.register(Systemuser)
+database.register(Transaction)
+database.register(Treatmentdetail)
+database.register(Useraccess)
+database.register(Userconfiguration)
+database.register(Userdevice)
+database.register(Userrole)
+database.register(Userroleaccess)
+database.register(WebsiteProducerRegistration)
 
 
 const store = createStore({
