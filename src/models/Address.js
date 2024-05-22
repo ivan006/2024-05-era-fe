@@ -24,8 +24,8 @@ export default class Address extends Model {
             'Dispatch': this.attr(''),
             'Latitude': this.attr(''),
             'Longitude': this.attr(''),
-            'countrySystemcode': this.belongsTo(Systemcode, 'country_systemcode_id'),
-            'typeSystemcode': this.belongsTo(Systemcode, 'type_systemcode_id')
+            'country': this.belongsTo(Systemcode, 'Country'),
+            'type': this.belongsTo(Systemcode, 'Type')
         };
     }
 }

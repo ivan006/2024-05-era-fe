@@ -1,8 +1,6 @@
 import { Model } from '@vuex-orm/core';
 import Entity from './Entity';
 import Systemuser from './Systemuser';
-import Servicerequestfrequency from './Servicerequestfrequency';
-import Servicerequestreport from './Servicerequestreport';
 
 export default class Servicerequest extends Model {
     static entity = 'servicerequest';
@@ -21,10 +19,8 @@ export default class Servicerequest extends Model {
             'Locations': this.attr(''),
             'Deliverables': this.attr(''),
             'DeliveryDate': this.attr(''),
-            'entity': this.belongsTo(Entity, 'entity_id'),
-            'systemuser': this.belongsTo(Systemuser, 'systemuser_id'),
-            'servicerequestfrequencies': this.hasMany(Servicerequestfrequency, 'servicerequest_id'),
-            'servicerequestreports': this.hasMany(Servicerequestreport, 'servicerequest_id')
+            'serviceProvider': this.belongsTo(Entity, 'ServiceProvider'),
+            'createdBy': this.belongsTo(Systemuser, 'CreatedBy')
         };
     }
 }

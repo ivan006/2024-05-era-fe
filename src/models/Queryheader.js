@@ -1,5 +1,4 @@
 import { Model } from '@vuex-orm/core';
-import Entitygoodapproval from './Entitygoodapproval';
 
 export default class Queryheader extends Model {
     static entity = 'queryheader';
@@ -17,7 +16,7 @@ export default class Queryheader extends Model {
             'CreatedOn': this.attr(''),
             'ClosedBy': this.attr(''),
             'ClosedOn': this.attr(''),
-            'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'queryheader_id')
+            
         };
     }
 }

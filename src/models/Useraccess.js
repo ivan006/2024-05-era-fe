@@ -19,9 +19,9 @@ export default class Useraccess extends Model {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'FbId': this.attr(''),
-            'systemaction': this.belongsTo(Systemaction, 'systemaction_id'),
-            'systemuser': this.belongsTo(Systemuser, 'systemuser_id'),
-            'userrole': this.belongsTo(Userrole, 'userrole_id')
+            'systemAction': this.belongsTo(Systemaction, 'SystemAction'),
+            'systemUser': this.belongsTo(Systemuser, 'SystemUser'),
+            'userRole': this.belongsTo(Userrole, 'UserRole')
         };
     }
 }

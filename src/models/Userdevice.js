@@ -12,7 +12,7 @@ export default class Userdevice extends Model {
             'Name': this.attr(''),
             'LastUsed': this.attr(''),
             'FbId': this.attr(''),
-            'systemuser': this.belongsTo(Systemuser, 'systemuser_id')
+            'systemUser': this.belongsTo(Systemuser, 'SystemUser')
         };
     }
 }

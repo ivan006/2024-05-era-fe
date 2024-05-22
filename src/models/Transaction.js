@@ -21,7 +21,7 @@ export default class Transaction extends Model {
             'Period': this.attr(''),
             'Reference': this.attr(''),
             'Type': this.attr(''),
-            'systemcode': this.belongsTo(Systemcode, 'systemcode_id')
+            'type': this.belongsTo(Systemcode, 'Type')
         };
     }
 }

@@ -1,12 +1,4 @@
 import { Model } from '@vuex-orm/core';
-import Communication from './Communication';
-import Domainuser from './Domainuser';
-import Entityaudit from './Entityaudit';
-import Servicerequest from './Servicerequest';
-import Servicerequestreport from './Servicerequestreport';
-import Useraccess from './Useraccess';
-import Userconfiguration from './Userconfiguration';
-import Userdevice from './Userdevice';
 
 export default class Systemuser extends Model {
     static entity = 'systemuser';
@@ -30,14 +22,7 @@ export default class Systemuser extends Model {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'FbId': this.attr(''),
-            'communications': this.hasMany(Communication, 'systemuser_id'),
-            'domainuser': this.hasOne(Domainuser, 'systemuser_id'),
-            'entityaudits': this.hasMany(Entityaudit, 'systemuser_id'),
-            'servicerequests': this.hasMany(Servicerequest, 'systemuser_id'),
-            'servicerequestreports': this.hasMany(Servicerequestreport, 'systemuser_id'),
-            'useraccesses': this.hasMany(Useraccess, 'systemuser_id'),
-            'userconfiguration': this.hasOne(Userconfiguration, 'systemuser_id'),
-            'userdevices': this.hasMany(Userdevice, 'systemuser_id')
+            
         };
     }
 }

@@ -1,5 +1,4 @@
 import { Model } from '@vuex-orm/core';
-import Useraccess from './Useraccess';
 
 export default class Systemaction extends Model {
     static entity = 'systemaction';
@@ -17,7 +16,7 @@ export default class Systemaction extends Model {
             'CreatedBy': this.attr(''),
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
-            'useraccesses': this.hasMany(Useraccess, 'systemaction_id')
+            
         };
     }
 }

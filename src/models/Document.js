@@ -1,5 +1,4 @@
 import { Model } from '@vuex-orm/core';
-import Documentdetail from './Documentdetail';
 
 export default class Document extends Model {
     static entity = 'document';
@@ -15,7 +14,7 @@ export default class Document extends Model {
             'CreatedBy': this.attr(''),
             'CreatedOn': this.attr(''),
             'Access': this.attr(''),
-            'documentdetails': this.hasMany(Documentdetail, 'document_id')
+            
         };
     }
 }
