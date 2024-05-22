@@ -1,7 +1,7 @@
 import { Model,  } from '@vuex-orm/core';
 
-export default class Post extends Model {
-    static entity = 'post';
+export default class PostTag extends Model {
+    static entity = 'postTag';
 
     static fields() {
         return {
@@ -9,7 +9,8 @@ export default class Post extends Model {
             'id': this.attr(''),
             'created_at': this.attr(''),
             'updated_at': this.attr(''),
-            'name': this.attr(''),
+            'post_id': this.attr(''),
+            'tag_id': this.attr(''),
             
         };
     }

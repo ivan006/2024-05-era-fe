@@ -1,7 +1,7 @@
 import { Model,  } from '@vuex-orm/core';
 
-export default class Post extends Model {
-    static entity = 'post';
+export default class Tag extends Model {
+    static entity = 'tag';
 
     static fields() {
         return {

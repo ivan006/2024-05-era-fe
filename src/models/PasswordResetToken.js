@@ -1,15 +1,14 @@
 import { Model,  } from '@vuex-orm/core';
 
-export default class Post extends Model {
-    static entity = 'post';
+export default class PasswordResetToken extends Model {
+    static entity = 'passwordResetToken';
 
     static fields() {
         return {
             id: this.attr(null),
-            'id': this.attr(''),
+            'email': this.attr(''),
+            'token': this.attr(''),
             'created_at': this.attr(''),
-            'updated_at': this.attr(''),
-            'name': this.attr(''),
             
         };
     }
