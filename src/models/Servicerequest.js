@@ -23,8 +23,8 @@ export default class Servicerequest extends Model {
             'DeliveryDate': this.attr(''),
             'entity': this.belongsTo(Entity, 'entity_id'),
             'systemuser': this.belongsTo(Systemuser, 'systemuser_id'),
-            'servicerequestfrequencies': this.hasMany(Servicerequestfrequency),
-            'servicerequestreports': this.hasMany(Servicerequestreport)
+            'servicerequestfrequencies': this.hasMany(Servicerequestfrequency, 'servicerequest_id'),
+            'servicerequestreports': this.hasMany(Servicerequestreport, 'servicerequest_id')
         };
     }
 }

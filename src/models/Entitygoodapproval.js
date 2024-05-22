@@ -22,7 +22,7 @@ export default class Entitygoodapproval extends Model {
             'UseVAT': this.attr(''),
             'Query': this.attr(''),
             'Status': this.attr(''),
-            'entitygoods': this.hasMany(Entitygood),
+            'entitygoods': this.hasMany(Entitygood, 'entitygoodapproval_id'),
             'entity': this.belongsTo(Entity, 'entity_id'),
             'entity': this.belongsTo(Entity, 'entity_id'),
             'queryheader': this.belongsTo(Queryheader, 'queryheader_id'),

@@ -15,7 +15,7 @@ export default class Document extends Model {
             'CreatedBy': this.attr(''),
             'CreatedOn': this.attr(''),
             'Access': this.attr(''),
-            'documentdetails': this.hasMany(Documentdetail)
+            'documentdetails': this.hasMany(Documentdetail, 'document_id')
         };
     }
 }

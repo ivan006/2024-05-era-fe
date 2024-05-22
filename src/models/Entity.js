@@ -28,14 +28,14 @@ export default class Entity extends Model {
             'Passport': this.attr(''),
             'HasPhoto': this.attr(''),
             'IsPaid': this.attr(''),
-            'entitygoods': this.hasMany(Entitygood),
-            'entitygoodapprovals': this.hasMany(Entitygoodapproval),
-            'entitygoodapprovals': this.hasMany(Entitygoodapproval),
-            'entitygoodapprovals': this.hasMany(Entitygoodapproval),
-            'goods': this.hasMany(Good),
-            'servicerequests': this.hasMany(Servicerequest),
-            'servicerequestreports': this.hasMany(Servicerequestreport),
-            'systemcodes': this.hasMany(Systemcode)
+            'entitygoods': this.hasMany(Entitygood, 'entity_id'),
+            'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'entity_id'),
+            'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'entity_id'),
+            'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'entity_id'),
+            'goods': this.hasMany(Good, 'entity_id'),
+            'servicerequests': this.hasMany(Servicerequest, 'entity_id'),
+            'servicerequestreports': this.hasMany(Servicerequestreport, 'entity_id'),
+            'systemcodes': this.hasMany(Systemcode, 'entity_id')
         };
     }
 }

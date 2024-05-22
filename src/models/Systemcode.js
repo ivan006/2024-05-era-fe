@@ -27,14 +27,14 @@ export default class Systemcode extends Model {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'Entity': this.attr(''),
-            'countryAddresses': this.hasMany(Address),
-            'typeAddresses': this.hasMany(Address),
-            'contactnumbers': this.hasMany(Contactnumber),
-            'emails': this.hasMany(Email),
-            'servicerequestfrequencies': this.hasMany(Servicerequestfrequency),
+            'countryAddresses': this.hasMany(Address, 'systemcode_id'),
+            'typeAddresses': this.hasMany(Address, 'systemcode_id'),
+            'contactnumbers': this.hasMany(Contactnumber, 'systemcode_id'),
+            'emails': this.hasMany(Email, 'systemcode_id'),
+            'servicerequestfrequencies': this.hasMany(Servicerequestfrequency, 'systemcode_id'),
             'entity': this.belongsTo(Entity, 'entity_id'),
-            'transactions': this.hasMany(Transaction),
-            'userconfigurations': this.hasMany(Userconfiguration)
+            'transactions': this.hasMany(Transaction, 'systemcode_id'),
+            'userconfigurations': this.hasMany(Userconfiguration, 'systemcode_id')
         };
     }
 }

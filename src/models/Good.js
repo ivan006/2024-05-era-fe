@@ -19,7 +19,7 @@ export default class Good extends Model {
             'HazardSubstance': this.attr(''),
             'Dimension': this.attr(''),
             'Sector': this.attr(''),
-            'entitygoods': this.hasMany(Entitygood),
+            'entitygoods': this.hasMany(Entitygood, 'good_id'),
             'entity': this.belongsTo(Entity, 'entity_id')
         };
     }

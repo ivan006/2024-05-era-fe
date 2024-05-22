@@ -30,14 +30,14 @@ export default class Systemuser extends Model {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'FbId': this.attr(''),
-            'communications': this.hasMany(Communication),
-            'domainuser': this.hasOne(Domainuser),
-            'entityaudits': this.hasMany(Entityaudit),
-            'servicerequests': this.hasMany(Servicerequest),
-            'servicerequestreports': this.hasMany(Servicerequestreport),
-            'useraccesses': this.hasMany(Useraccess),
-            'userconfiguration': this.hasOne(Userconfiguration),
-            'userdevices': this.hasMany(Userdevice)
+            'communications': this.hasMany(Communication, 'systemuser_id'),
+            'domainuser': this.hasOne(Domainuser, 'systemuser_id'),
+            'entityaudits': this.hasMany(Entityaudit, 'systemuser_id'),
+            'servicerequests': this.hasMany(Servicerequest, 'systemuser_id'),
+            'servicerequestreports': this.hasMany(Servicerequestreport, 'systemuser_id'),
+            'useraccesses': this.hasMany(Useraccess, 'systemuser_id'),
+            'userconfiguration': this.hasOne(Userconfiguration, 'systemuser_id'),
+            'userdevices': this.hasMany(Userdevice, 'systemuser_id')
         };
     }
 }
