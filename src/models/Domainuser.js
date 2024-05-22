@@ -1,4 +1,4 @@
-import { Model, belongsTo } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Systemuser from './Systemuser';
 
 export default class Domainuser extends Model {

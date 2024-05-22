@@ -1,4 +1,4 @@
-import { Model, belongsTo } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Entity from './Entity';
 import Entitygoodapproval from './Entitygoodapproval';
 import Good from './Good';

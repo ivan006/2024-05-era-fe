@@ -1,4 +1,4 @@
-import { Model, hasMany } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Entitygood from './Entitygood';
 import Entitygoodapproval from './Entitygoodapproval';
 import Good from './Good';

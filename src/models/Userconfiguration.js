@@ -1,4 +1,4 @@
-import { Model, belongsTo } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Systemcode from './Systemcode';
 import Systemuser from './Systemuser';
 

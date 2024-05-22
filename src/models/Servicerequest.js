@@ -1,4 +1,4 @@
-import { Model, belongsTo, hasMany } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Entity from './Entity';
 import Systemuser from './Systemuser';
 import Servicerequestfrequency from './Servicerequestfrequency';

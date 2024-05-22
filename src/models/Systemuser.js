@@ -1,4 +1,4 @@
-import { Model, hasMany, hasOne } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Communication from './Communication';
 import Domainuser from './Domainuser';
 import Entityaudit from './Entityaudit';

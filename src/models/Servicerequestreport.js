@@ -1,4 +1,4 @@
-import { Model, hasMany, belongsTo } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Externalproducer from './Externalproducer';
 import Servicerequest from './Servicerequest';
 import Entity from './Entity';

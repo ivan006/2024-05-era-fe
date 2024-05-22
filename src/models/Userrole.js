@@ -1,4 +1,4 @@
-import { Model, hasMany } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Useraccess from './Useraccess';
 
 export default class Userrole extends Model {

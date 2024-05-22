@@ -1,4 +1,4 @@
-import { Model, hasMany, belongsTo } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Address from './Address';
 import Contactnumber from './Contactnumber';
 import Email from './Email';

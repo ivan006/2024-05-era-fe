@@ -1,4 +1,4 @@
-import { Model,  } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 
 export default class PasswordResetToken extends Model {
     static entity = 'passwordResetToken';

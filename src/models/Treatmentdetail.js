@@ -1,4 +1,4 @@
-import { Model, hasMany, belongsTo } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Servicerequestreport from './Servicerequestreport';
 
 export default class Treatmentdetail extends Model {

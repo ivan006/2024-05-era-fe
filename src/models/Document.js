@@ -1,4 +1,4 @@
-import { Model, hasMany } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Documentdetail from './Documentdetail';
 
 export default class Document extends Model {

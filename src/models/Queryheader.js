@@ -1,4 +1,4 @@
-import { Model, hasMany } from '@vuex-orm/core';
+import { Model } from '@vuex-orm/core';
 import Entitygoodapproval from './Entitygoodapproval';
 
 export default class Queryheader extends Model {
