@@ -27,12 +27,12 @@ export default class Systemcode extends Model {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'Entity': this.attr(''),
-            'addresses': this.hasMany(Address),
-            'addresses': this.hasMany(Address),
+            'countryAddresses': this.hasMany(Address),
+            'typeAddresses': this.hasMany(Address),
             'contactnumbers': this.hasMany(Contactnumber),
             'emails': this.hasMany(Email),
             'servicerequestfrequencies': this.hasMany(Servicerequestfrequency),
-            'entity': this.belongsTo(Entity),
+            'entity': this.belongsTo(Entity, 'entity_id'),
             'transactions': this.hasMany(Transaction),
             'userconfigurations': this.hasMany(Userconfiguration)
         };

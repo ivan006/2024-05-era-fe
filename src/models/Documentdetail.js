@@ -17,7 +17,7 @@ export default class Documentdetail extends Model {
             'Style': this.attr(''),
             'CreatedBy': this.attr(''),
             'CreatedOn': this.attr(''),
-            'document': this.belongsTo(Document)
+            'document': this.belongsTo(Document, 'document_id')
         };
     }
 }

@@ -16,7 +16,7 @@ export default class Communication extends Model {
             'Content': this.attr(''),
             'RelativeName': this.attr(''),
             'RelativeID': this.attr(''),
-            'systemuser': this.belongsTo(Systemuser)
+            'systemuser': this.belongsTo(Systemuser, 'systemuser_id')
         };
     }
 }

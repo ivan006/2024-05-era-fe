@@ -17,7 +17,7 @@ export default class Treatmentdetail extends Model {
             'Landfill': this.attr(''),
             'LocalSecondaryProducts': this.attr(''),
             'servicerequestreports': this.hasMany(Servicerequestreport),
-            'servicerequestreport': this.belongsTo(Servicerequestreport)
+            'servicerequestreport': this.belongsTo(Servicerequestreport, 'servicerequestreport_id')
         };
     }
 }

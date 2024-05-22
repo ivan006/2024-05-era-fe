@@ -10,7 +10,7 @@ export default class Externalproducer extends Model {
             'Id': this.attr(''),
             'Name': this.attr(''),
             'ServiceRequestReport': this.attr(''),
-            'servicerequestreport': this.belongsTo(Servicerequestreport)
+            'servicerequestreport': this.belongsTo(Servicerequestreport, 'servicerequestreport_id')
         };
     }
 }

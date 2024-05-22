@@ -23,10 +23,10 @@ export default class Entitygoodapproval extends Model {
             'Query': this.attr(''),
             'Status': this.attr(''),
             'entitygoods': this.hasMany(Entitygood),
-            'entity': this.belongsTo(Entity),
-            'entity': this.belongsTo(Entity),
-            'queryheader': this.belongsTo(Queryheader),
-            'entity': this.belongsTo(Entity)
+            'entity': this.belongsTo(Entity, 'entity_id'),
+            'entity': this.belongsTo(Entity, 'entity_id'),
+            'queryheader': this.belongsTo(Queryheader, 'queryheader_id'),
+            'entity': this.belongsTo(Entity, 'entity_id')
         };
     }
 }

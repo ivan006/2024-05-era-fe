@@ -12,8 +12,8 @@ export default class Servicerequestfrequency extends Model {
             'ServiceRequest': this.attr(''),
             'ReportFrequency': this.attr(''),
             'Active': this.attr(''),
-            'servicerequest': this.belongsTo(Servicerequest),
-            'systemcode': this.belongsTo(Systemcode)
+            'servicerequest': this.belongsTo(Servicerequest, 'servicerequest_id'),
+            'systemcode': this.belongsTo(Systemcode, 'systemcode_id')
         };
     }
 }

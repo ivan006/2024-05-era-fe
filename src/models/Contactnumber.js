@@ -12,7 +12,7 @@ export default class Contactnumber extends Model {
             'Type': this.attr(''),
             'Person': this.attr(''),
             'Preferred': this.attr(''),
-            'systemcode': this.belongsTo(Systemcode)
+            'systemcode': this.belongsTo(Systemcode, 'systemcode_id')
         };
     }
 }

@@ -20,7 +20,7 @@ export default class Good extends Model {
             'Dimension': this.attr(''),
             'Sector': this.attr(''),
             'entitygoods': this.hasMany(Entitygood),
-            'entity': this.belongsTo(Entity)
+            'entity': this.belongsTo(Entity, 'entity_id')
         };
     }
 }

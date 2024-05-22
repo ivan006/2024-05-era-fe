@@ -21,10 +21,10 @@ export default class Servicerequestreport extends Model {
             'Approved': this.attr(''),
             'Rejected': this.attr(''),
             'externalproducers': this.hasMany(Externalproducer),
-            'servicerequest': this.belongsTo(Servicerequest),
-            'entity': this.belongsTo(Entity),
-            'systemuser': this.belongsTo(Systemuser),
-            'treatmentdetail': this.belongsTo(Treatmentdetail),
+            'servicerequest': this.belongsTo(Servicerequest, 'servicerequest_id'),
+            'entity': this.belongsTo(Entity, 'entity_id'),
+            'systemuser': this.belongsTo(Systemuser, 'systemuser_id'),
+            'treatmentdetail': this.belongsTo(Treatmentdetail, 'treatmentdetail_id'),
             'treatmentdetails': this.hasMany(Treatmentdetail)
         };
     }
