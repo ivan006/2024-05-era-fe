@@ -5,50 +5,27 @@
                 :user="user"
                 :showMap="true"
                 :model="superTableModel"
-                :canEdit="
-                    !!this.$store.getters['entities/login-sessions/all']()[0]
-                "
                 @update:modelValue="openRecord"
                 :displayMapField="false"
-                :canCreate="canCreate"
-                canCreateDescription="Please first set your creator settings"
             />
         </v-card>
-        <!--    <home-plans></home-plans>-->
-        <!--    <home-hero></home-hero>-->
-        <!--    <home-details></home-details>-->
     </div>
 </template>
 
 <script>
-// import HomeHero from "@/components/HomeHero";
-// import HomeDetails from "@/components/HomeDetails";
-// import HomePlans from "@/components/HomePlans";
-// import MapComponent from '@/views/ListsMode/ListsMapComponent.vue'
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import DBEvent from '@/models/DBEvent'
+import ---model name here--- from '@/models/ ---model name here---'
 import router from '@/router'
-import LoginSession from '@/models/LoginSession'
 
 export default {
-    name: 'ListsEvents',
+    name: '---Compoentn name to go here---',
     components: {
         SuperTable,
-        // HomeHero,
-        // HomeDetails,
-        // HomePlans,
-        // MapComponent,
     },
 
     computed: {
         superTableModel() {
             return DBEvent
-        },
-        loginSession() {
-            return LoginSession.query().withAllRecursive().first()
-        },
-        canCreate() {
-            return !!this.loginSession?.enabled_provider_group_id
         },
         user() {
           let result = {}
@@ -62,7 +39,7 @@ export default {
     methods: {
         openRecord(e) {
             router.push({
-                name: '/lists/events/:cId',
+                name: '/lists/---kebaba case here---/:cId',
                 params: {
                     cId: e.id,
                 },
