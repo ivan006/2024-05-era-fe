@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Entityevent extends MyBaseModel {
     static entity = 'entityevent';
-    static entityUrl = '/rest/v1/entityevent';
+    static entityUrl = '/api/entityevent';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -32,7 +32,7 @@ export default class Entityevent extends MyBaseModel {
             'Event': this.attr('', {}),
             'Date': this.attr('', {}),
             'Instance': this.attr('', {}),
-            
+
         };
     }
 

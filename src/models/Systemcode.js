@@ -9,7 +9,7 @@ import Userconfiguration from './Userconfiguration';
 
 export default class Systemcode extends MyBaseModel {
     static entity = 'systemcode';
-    static entityUrl = '/rest/v1/systemcode';
+    static entityUrl = '/api/systemcode';
 
     static parentWithables = [
         'entity'

@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class PersonalAccessToken extends MyBaseModel {
     static entity = 'personalAccessToken';
-    static entityUrl = '/rest/v1/personal_access_tokens';
+    static entityUrl = '/api/personal_access_tokens';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -40,7 +40,7 @@ export default class PersonalAccessToken extends MyBaseModel {
             'expires_at': this.attr('', {}),
             'created_at': this.attr('', {}),
             'updated_at': this.attr('', {}),
-            
+
         };
     }
 

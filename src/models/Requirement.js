@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Requirement extends MyBaseModel {
     static entity = 'requirement';
-    static entityUrl = '/rest/v1/requirement';
+    static entityUrl = '/api/requirement';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -42,7 +42,7 @@ export default class Requirement extends MyBaseModel {
             'SystemCodeContext': this.attr('', {}),
             'SystemCodeField': this.attr('', {}),
             'ValueType': this.attr('', {}),
-            
+
         };
     }
 

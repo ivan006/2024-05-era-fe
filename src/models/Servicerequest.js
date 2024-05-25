@@ -6,7 +6,7 @@ import Servicerequestreport from './Servicerequestreport';
 
 export default class Servicerequest extends MyBaseModel {
     static entity = 'servicerequest';
-    static entityUrl = '/rest/v1/servicerequest';
+    static entityUrl = '/api/servicerequest';
 
     static parentWithables = [
         'serviceProvider',

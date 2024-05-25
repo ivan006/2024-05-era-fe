@@ -3,7 +3,7 @@ import Systemcode from './Systemcode';
 
 export default class Email extends MyBaseModel {
     static entity = 'email';
-    static entityUrl = '/rest/v1/email';
+    static entityUrl = '/api/email';
 
     static parentWithables = [
         'type'

@@ -3,10 +3,10 @@ import Entitygoodapproval from './Entitygoodapproval';
 
 export default class Queryheader extends MyBaseModel {
     static entity = 'queryheader';
-    static entityUrl = '/rest/v1/queryheader';
+    static entityUrl = '/api/queryheader';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {

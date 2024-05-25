@@ -8,10 +8,10 @@ import Systemcode from './Systemcode';
 
 export default class Entity extends MyBaseModel {
     static entity = 'entity';
-    static entityUrl = '/rest/v1/entity';
+    static entityUrl = '/api/entity';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {

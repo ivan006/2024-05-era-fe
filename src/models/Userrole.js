@@ -3,10 +3,10 @@ import Useraccess from './Useraccess';
 
 export default class Userrole extends MyBaseModel {
     static entity = 'userrole';
-    static entityUrl = '/rest/v1/userrole';
+    static entityUrl = '/api/userrole';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {

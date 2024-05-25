@@ -3,7 +3,7 @@ import Systemcode from './Systemcode';
 
 export default class Transaction extends MyBaseModel {
     static entity = 'transaction';
-    static entityUrl = '/rest/v1/transactions';
+    static entityUrl = '/api/transactions';
 
     static parentWithables = [
         'type'

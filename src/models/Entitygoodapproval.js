@@ -5,7 +5,7 @@ import Entitygood from './Entitygood';
 
 export default class Entitygoodapproval extends MyBaseModel {
     static entity = 'entitygoodapproval';
-    static entityUrl = '/rest/v1/entitygoodapproval';
+    static entityUrl = '/api/entitygoodapproval';
 
     static parentWithables = [
         'approvedBy',

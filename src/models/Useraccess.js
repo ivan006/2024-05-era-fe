@@ -5,7 +5,7 @@ import Userrole from './Userrole';
 
 export default class Useraccess extends MyBaseModel {
     static entity = 'useraccess';
-    static entityUrl = '/rest/v1/useraccess';
+    static entityUrl = '/api/useraccess';
 
     static parentWithables = [
         'systemUser',

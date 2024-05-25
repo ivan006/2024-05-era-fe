@@ -3,7 +3,7 @@ import Servicerequestreport from './Servicerequestreport';
 
 export default class Externalproducer extends MyBaseModel {
     static entity = 'externalproducer';
-    static entityUrl = '/rest/v1/externalproducers';
+    static entityUrl = '/api/externalproducers';
 
     static parentWithables = [
         'serviceRequestReport'

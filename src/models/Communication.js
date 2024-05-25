@@ -3,7 +3,7 @@ import Systemuser from './Systemuser';
 
 export default class Communication extends MyBaseModel {
     static entity = 'communication';
-    static entityUrl = '/rest/v1/communication';
+    static entityUrl = '/api/communication';
 
     static parentWithables = [
         'sentBy'

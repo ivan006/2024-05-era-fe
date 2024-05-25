@@ -4,7 +4,7 @@ import Systemcode from './Systemcode';
 
 export default class Servicerequestfrequency extends MyBaseModel {
     static entity = 'servicerequestfrequency';
-    static entityUrl = '/rest/v1/servicerequestfrequency';
+    static entityUrl = '/api/servicerequestfrequency';
 
     static parentWithables = [
         'serviceRequest',

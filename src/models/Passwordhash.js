@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Passwordhash extends MyBaseModel {
     static entity = 'passwordhash';
-    static entityUrl = '/rest/v1/passwordhash';
+    static entityUrl = '/api/passwordhash';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -36,7 +36,7 @@ export default class Passwordhash extends MyBaseModel {
             'ChangedOn': this.attr('', {}),
             'ChangedBy': this.attr('', {}),
             'FbId': this.attr('', {}),
-            
+
         };
     }
 

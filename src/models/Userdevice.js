@@ -3,7 +3,7 @@ import Systemuser from './Systemuser';
 
 export default class Userdevice extends MyBaseModel {
     static entity = 'userdevice';
-    static entityUrl = '/rest/v1/userdevice';
+    static entityUrl = '/api/userdevice';
 
     static parentWithables = [
         'systemUser'

@@ -3,7 +3,7 @@ import Servicerequestreport from './Servicerequestreport';
 
 export default class Treatmentdetail extends MyBaseModel {
     static entity = 'treatmentdetail';
-    static entityUrl = '/rest/v1/treatmentdetails';
+    static entityUrl = '/api/treatmentdetails';
 
     static parentWithables = [
         'serviceRequestReport'

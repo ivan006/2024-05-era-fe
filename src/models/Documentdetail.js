@@ -3,7 +3,7 @@ import Document from './Document';
 
 export default class Documentdetail extends MyBaseModel {
     static entity = 'documentdetail';
-    static entityUrl = '/rest/v1/documentdetail';
+    static entityUrl = '/api/documentdetail';
 
     static parentWithables = [
         'document'

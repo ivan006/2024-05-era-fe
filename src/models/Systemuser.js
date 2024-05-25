@@ -10,10 +10,10 @@ import Userdevice from './Userdevice';
 
 export default class Systemuser extends MyBaseModel {
     static entity = 'systemuser';
-    static entityUrl = '/rest/v1/systemuser';
+    static entityUrl = '/api/systemuser';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {

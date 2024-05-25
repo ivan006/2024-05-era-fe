@@ -5,7 +5,7 @@ import Good from './Good';
 
 export default class Entitygood extends MyBaseModel {
     static entity = 'entitygood';
-    static entityUrl = '/rest/v1/entitygood';
+    static entityUrl = '/api/entitygood';
 
     static parentWithables = [
         'entity',

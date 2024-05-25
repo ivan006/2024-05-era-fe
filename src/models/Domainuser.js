@@ -3,7 +3,7 @@ import Systemuser from './Systemuser';
 
 export default class Domainuser extends MyBaseModel {
     static entity = 'domainuser';
-    static entityUrl = '/rest/v1/domainuser';
+    static entityUrl = '/api/domainuser';
 
     static parentWithables = [
         'systemUser'

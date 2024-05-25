@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Relative extends MyBaseModel {
     static entity = 'relative';
-    static entityUrl = '/rest/v1/relative';
+    static entityUrl = '/api/relative';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -36,7 +36,7 @@ export default class Relative extends MyBaseModel {
             'Student': this.attr('', {}),
             'Disabled': this.attr('', {}),
             'TraditionalMarriage': this.attr('', {}),
-            
+
         };
     }
 

@@ -3,10 +3,10 @@ import Useraccess from './Useraccess';
 
 export default class Systemaction extends MyBaseModel {
     static entity = 'systemaction';
-    static entityUrl = '/rest/v1/systemaction';
+    static entityUrl = '/api/systemaction';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
