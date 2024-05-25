@@ -41,7 +41,7 @@ export default class Documentdetail extends MyBaseModel {
             'Style': this.attr('', {}),
             'CreatedBy': this.attr('', {}),
             'CreatedOn': this.attr('', {}),
-            'DocumentObject': this.belongsTo(Document, 'Document')
+            'document': this.belongsTo(Document, 'Document')
         };
     }
 

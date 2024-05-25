@@ -49,7 +49,7 @@ export default class Systemcode extends MyBaseModel {
             'ChangedOn': this.attr('', {}),
             'ChangedBy': this.attr('', {}),
             'Entity': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'EntityObject': this.belongsTo(Entity, 'Entity')
+            'entity': this.belongsTo(Entity, 'Entity')
         };
     }
 

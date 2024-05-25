@@ -54,7 +54,7 @@ export default class Entitygoodapproval extends MyBaseModel {
             'approvedBy': this.belongsTo(Entity, 'ApprovedBy'),
             'invoiceApprovedBy': this.belongsTo(Entity, 'InvoiceApprovedBy'),
             'query': this.belongsTo(Queryheader, 'Query'),
-            'EntityObject': this.belongsTo(Entity, 'Entity')
+            'entity': this.belongsTo(Entity, 'Entity')
         };
     }
 
