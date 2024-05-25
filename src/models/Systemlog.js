@@ -15,15 +15,15 @@ export default class Systemlog extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            LogDate: { },
-            LogLevel: { },
-            Logger: { },
-            SystemUser: { },
-            CallSite: { },
-            Message: { },
-            Exception: { },
-            StackTrace: { }
+        'Id': { },
+            'LogDate': { },
+            'LogLevel': { },
+            'Logger': { },
+            'SystemUser': { },
+            'CallSite': { },
+            'Message': { },
+            'Exception': { },
+            'StackTrace': { }
     };
 
     static fields() {

@@ -6,7 +6,7 @@ export default class Contactnumber extends MyBaseModel {
     static entityUrl = '/rest/v1/contactnumber';
 
     static parentWithables = [
-        'type': 'Type'
+        'type'
     ];
 
     static rules = {
@@ -16,11 +16,11 @@ export default class Contactnumber extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Number: { },
-            Type: { },
-            Person: { },
-            Preferred: { }
+        'Id': { },
+            'Number': { },
+            'Type': { },
+            'Person': { },
+            'Preferred': { }
     };
 
     static fields() {

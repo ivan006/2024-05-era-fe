@@ -15,14 +15,14 @@ export default class Userroleaccess extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        UserRole: { },
-            SystemAction: { },
-            CreatedOn: { },
-            CreatedBy: { },
-            ChangedOn: { },
-            ChangedBy: { },
-            FbId: { },
-            Rule: { }
+        'UserRole': { },
+            'SystemAction': { },
+            'CreatedOn': { },
+            'CreatedBy': { },
+            'ChangedOn': { },
+            'ChangedBy': { },
+            'FbId': { },
+            'Rule': { }
     };
 
     static fields() {

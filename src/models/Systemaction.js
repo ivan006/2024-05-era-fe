@@ -16,16 +16,16 @@ export default class Systemaction extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Module: { },
-            Context: { },
-            Action: { },
-            Description: { },
-            Available: { },
-            CreatedOn: { },
-            CreatedBy: { },
-            ChangedOn: { },
-            ChangedBy: { }
+        'Id': { },
+            'Module': { },
+            'Context': { },
+            'Action': { },
+            'Description': { },
+            'Available': { },
+            'CreatedOn': { },
+            'CreatedBy': { },
+            'ChangedOn': { },
+            'ChangedBy': { }
     };
 
     static fields() {

@@ -15,12 +15,12 @@ export default class Crm extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Entity: { },
-            EntityProduct: { },
-            Contact: { },
-            Description: { },
-            Status: { }
+        'Id': { },
+            'Entity': { },
+            'EntityProduct': { },
+            'Contact': { },
+            'Description': { },
+            'Status': { }
     };
 
     static fields() {

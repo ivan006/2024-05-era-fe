@@ -6,7 +6,7 @@ export default class Externalproducer extends MyBaseModel {
     static entityUrl = '/rest/v1/externalproducers';
 
     static parentWithables = [
-        'serviceRequestReport': 'ServiceRequestReport'
+        'serviceRequestReport'
     ];
 
     static rules = {
@@ -16,9 +16,9 @@ export default class Externalproducer extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Name: { },
-            ServiceRequestReport: { }
+        'Id': { },
+            'Name': { },
+            'ServiceRequestReport': { }
     };
 
     static fields() {

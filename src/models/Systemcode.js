@@ -12,7 +12,7 @@ export default class Systemcode extends MyBaseModel {
     static entityUrl = '/rest/v1/systemcode';
 
     static parentWithables = [
-        'entity': 'Entity'
+        'entity'
     ];
 
     static rules = {
@@ -22,20 +22,20 @@ export default class Systemcode extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Context: { },
-            Field: { },
-            Description: { },
-            Value: { },
-            Code: { },
-            Active: { },
-            UserGenerated: { },
-            ContextualId: { },
-            CreatedOn: { },
-            CreatedBy: { },
-            ChangedOn: { },
-            ChangedBy: { },
-            Entity: { }
+        'Id': { },
+            'Context': { },
+            'Field': { },
+            'Description': { },
+            'Value': { },
+            'Code': { },
+            'Active': { },
+            'UserGenerated': { },
+            'ContextualId': { },
+            'CreatedOn': { },
+            'CreatedBy': { },
+            'ChangedOn': { },
+            'ChangedBy': { },
+            'Entity': { }
     };
 
     static fields() {

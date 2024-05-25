@@ -15,14 +15,14 @@ export default class User extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        id: { },
-            name: { },
-            email: { },
-            email_verified_at: { },
-            password: { },
-            remember_token: { },
-            created_at: { },
-            updated_at: { }
+        'id': { },
+            'name': { },
+            'email': { },
+            'email_verified_at': { },
+            'password': { },
+            'remember_token': { },
+            'created_at': { },
+            'updated_at': { }
     };
 
     static fields() {

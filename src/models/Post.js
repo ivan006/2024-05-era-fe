@@ -15,10 +15,10 @@ export default class Post extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        id: { },
-            created_at: { },
-            updated_at: { },
-            name: { }
+        'id': { },
+            'created_at': { },
+            'updated_at': { },
+            'name': { }
     };
 
     static fields() {

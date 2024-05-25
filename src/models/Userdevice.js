@@ -6,7 +6,7 @@ export default class Userdevice extends MyBaseModel {
     static entityUrl = '/rest/v1/userdevice';
 
     static parentWithables = [
-        'systemUser': 'SystemUser'
+        'systemUser'
     ];
 
     static rules = {
@@ -16,11 +16,11 @@ export default class Userdevice extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        SystemUser: { },
-            DeviceKey: { },
-            Name: { },
-            LastUsed: { },
-            FbId: { }
+        'SystemUser': { },
+            'DeviceKey': { },
+            'Name': { },
+            'LastUsed': { },
+            'FbId': { }
     };
 
     static fields() {

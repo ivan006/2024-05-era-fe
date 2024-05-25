@@ -7,7 +7,7 @@ export default class Good extends MyBaseModel {
     static entityUrl = '/rest/v1/good';
 
     static parentWithables = [
-        'sector': 'Sector'
+        'sector'
     ];
 
     static rules = {
@@ -17,17 +17,17 @@ export default class Good extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            HSCode: { },
-            Description: { },
-            EU6: { },
-            EU10: { },
-            UNU: { },
-            AvgKg: { },
-            Category: { },
-            HazardSubstance: { },
-            Dimension: { },
-            Sector: { }
+        'Id': { },
+            'HSCode': { },
+            'Description': { },
+            'EU6': { },
+            'EU10': { },
+            'UNU': { },
+            'AvgKg': { },
+            'Category': { },
+            'HazardSubstance': { },
+            'Dimension': { },
+            'Sector': { }
     };
 
     static fields() {

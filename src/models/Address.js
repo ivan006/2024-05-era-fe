@@ -6,8 +6,8 @@ export default class Address extends MyBaseModel {
     static entityUrl = '/rest/v1/address';
 
     static parentWithables = [
-        'country': 'Country',
-        'type': 'Type'
+        'country',
+        'type'
     ];
 
     static rules = {
@@ -17,23 +17,23 @@ export default class Address extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            StreetNo: { },
-            StreetName: { },
-            Building: { },
-            Postal: { },
-            Suburb: { },
-            City: { },
-            Province: { },
-            Country: { },
-            PostCode: { },
-            Type: { },
-            Person: { },
-            MoveDate: { },
-            Preferred: { },
-            Dispatch: { },
-            Latitude: { },
-            Longitude: { }
+        'Id': { },
+            'StreetNo': { },
+            'StreetName': { },
+            'Building': { },
+            'Postal': { },
+            'Suburb': { },
+            'City': { },
+            'Province': { },
+            'Country': { },
+            'PostCode': { },
+            'Type': { },
+            'Person': { },
+            'MoveDate': { },
+            'Preferred': { },
+            'Dispatch': { },
+            'Latitude': { },
+            'Longitude': { }
     };
 
     static fields() {

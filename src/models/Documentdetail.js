@@ -6,7 +6,7 @@ export default class Documentdetail extends MyBaseModel {
     static entityUrl = '/rest/v1/documentdetail';
 
     static parentWithables = [
-        'document': 'Document'
+        'document'
     ];
 
     static rules = {
@@ -16,16 +16,16 @@ export default class Documentdetail extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Document: { },
-            Section: { },
-            Position: { },
-            Title: { },
-            Description: { },
-            Comments: { },
-            Style: { },
-            CreatedBy: { },
-            CreatedOn: { }
+        'Id': { },
+            'Document': { },
+            'Section': { },
+            'Position': { },
+            'Title': { },
+            'Description': { },
+            'Comments': { },
+            'Style': { },
+            'CreatedBy': { },
+            'CreatedOn': { }
     };
 
     static fields() {

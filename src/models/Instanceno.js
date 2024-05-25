@@ -15,8 +15,8 @@ export default class Instanceno extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            ObjectName: { }
+        'Id': { },
+            'ObjectName': { }
     };
 
     static fields() {

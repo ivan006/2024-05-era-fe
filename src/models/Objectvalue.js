@@ -15,13 +15,13 @@ export default class Objectvalue extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Trait: { },
-            Value: { },
-            Instance: { },
-            ValueJson: { },
-            Object: { },
-            Entity: { }
+        'Id': { },
+            'Trait': { },
+            'Value': { },
+            'Instance': { },
+            'ValueJson': { },
+            'Object': { },
+            'Entity': { }
     };
 
     static fields() {

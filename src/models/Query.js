@@ -15,14 +15,14 @@ export default class Query extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            ParentQuery: { },
-            AssignedTo: { },
-            Description: { },
-            CreatedBy: { },
-            CreatedOn: { },
-            ClosedOn: { },
-            ClosedBy: { }
+        'Id': { },
+            'ParentQuery': { },
+            'AssignedTo': { },
+            'Description': { },
+            'CreatedBy': { },
+            'CreatedOn': { },
+            'ClosedOn': { },
+            'ClosedBy': { }
     };
 
     static fields() {

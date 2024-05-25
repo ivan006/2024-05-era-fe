@@ -9,8 +9,8 @@ export default class Servicerequest extends MyBaseModel {
     static entityUrl = '/rest/v1/servicerequest';
 
     static parentWithables = [
-        'serviceProvider': 'ServiceProvider',
-        'createdBy': 'CreatedBy'
+        'serviceProvider',
+        'createdBy'
     ];
 
     static rules = {
@@ -20,17 +20,17 @@ export default class Servicerequest extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            ServiceRequestNo: { },
-            ServiceProvider: { },
-            CreatedBy: { },
-            CreatedOn: { },
-            FromDate: { },
-            ToDate: { },
-            Services: { },
-            Locations: { },
-            Deliverables: { },
-            DeliveryDate: { }
+        'Id': { },
+            'ServiceRequestNo': { },
+            'ServiceProvider': { },
+            'CreatedBy': { },
+            'CreatedOn': { },
+            'FromDate': { },
+            'ToDate': { },
+            'Services': { },
+            'Locations': { },
+            'Deliverables': { },
+            'DeliveryDate': { }
     };
 
     static fields() {

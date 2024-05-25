@@ -15,9 +15,9 @@ export default class Productprovider extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Name: { },
-            Entity: { }
+        'Id': { },
+            'Name': { },
+            'Entity': { }
     };
 
     static fields() {

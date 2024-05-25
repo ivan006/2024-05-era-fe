@@ -15,11 +15,11 @@ export default class Ruleactiondatum extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Rule: { },
-            TableName: { },
-            ColumnName: { },
-            ColumnType: { }
+        'Id': { },
+            'Rule': { },
+            'TableName': { },
+            'ColumnName': { },
+            'ColumnType': { }
     };
 
     static fields() {

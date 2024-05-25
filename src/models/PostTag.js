@@ -15,11 +15,11 @@ export default class PostTag extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        id: { },
-            created_at: { },
-            updated_at: { },
-            post_id: { },
-            tag_id: { }
+        'id': { },
+            'created_at': { },
+            'updated_at': { },
+            'post_id': { },
+            'tag_id': { }
     };
 
     static fields() {

@@ -7,8 +7,8 @@ export default class Servicerequestfrequency extends MyBaseModel {
     static entityUrl = '/rest/v1/servicerequestfrequency';
 
     static parentWithables = [
-        'serviceRequest': 'ServiceRequest',
-        'reportFrequency': 'ReportFrequency'
+        'serviceRequest',
+        'reportFrequency'
     ];
 
     static rules = {
@@ -18,10 +18,10 @@ export default class Servicerequestfrequency extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            ServiceRequest: { },
-            ReportFrequency: { },
-            Active: { }
+        'Id': { },
+            'ServiceRequest': { },
+            'ReportFrequency': { },
+            'Active': { }
     };
 
     static fields() {

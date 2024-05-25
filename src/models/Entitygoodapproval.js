@@ -8,10 +8,10 @@ export default class Entitygoodapproval extends MyBaseModel {
     static entityUrl = '/rest/v1/entitygoodapproval';
 
     static parentWithables = [
-        'approvedBy': 'ApprovedBy',
-        'invoiceApprovedBy': 'InvoiceApprovedBy',
-        'entity': 'Entity',
-        'query': 'Query'
+        'approvedBy',
+        'invoiceApprovedBy',
+        'entity',
+        'query'
     ];
 
     static rules = {
@@ -21,19 +21,19 @@ export default class Entitygoodapproval extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            ApprovedBy: { },
-            ApprovedOn: { },
-            InvoiceApprovedBy: { },
-            InvoiceApprovedOn: { },
-            Entity: { },
-            Period: { },
-            PurchaseOrder: { },
-            InvoiceNo: { },
-            UseAR: { },
-            UseVAT: { },
-            Query: { },
-            Status: { }
+        'Id': { },
+            'ApprovedBy': { },
+            'ApprovedOn': { },
+            'InvoiceApprovedBy': { },
+            'InvoiceApprovedOn': { },
+            'Entity': { },
+            'Period': { },
+            'PurchaseOrder': { },
+            'InvoiceNo': { },
+            'UseAR': { },
+            'UseVAT': { },
+            'Query': { },
+            'Status': { }
     };
 
     static fields() {

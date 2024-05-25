@@ -15,12 +15,12 @@ export default class Entityevent extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            TableID: { },
-            TableName: { },
-            Event: { },
-            Date: { },
-            Instance: { }
+        'Id': { },
+            'TableID': { },
+            'TableName': { },
+            'Event': { },
+            'Date': { },
+            'Instance': { }
     };
 
     static fields() {

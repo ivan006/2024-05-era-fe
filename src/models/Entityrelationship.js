@@ -15,17 +15,17 @@ export default class Entityrelationship extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            EntityA: { },
-            EntityB: { },
-            EntityARelationship: { },
-            EntityBRelationship: { },
-            EntityAStatus: { },
-            EntityBStatus: { },
-            EntityAQualifier: { },
-            EntityBQualifier: { },
-            EntityALevel: { },
-            EntityBLevel: { }
+        'Id': { },
+            'EntityA': { },
+            'EntityB': { },
+            'EntityARelationship': { },
+            'EntityBRelationship': { },
+            'EntityAStatus': { },
+            'EntityBStatus': { },
+            'EntityAQualifier': { },
+            'EntityBQualifier': { },
+            'EntityALevel': { },
+            'EntityBLevel': { }
     };
 
     static fields() {

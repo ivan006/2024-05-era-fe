@@ -6,7 +6,7 @@ export default class Communication extends MyBaseModel {
     static entityUrl = '/rest/v1/communication';
 
     static parentWithables = [
-        'sentBy': 'SentBy'
+        'sentBy'
     ];
 
     static rules = {
@@ -16,15 +16,15 @@ export default class Communication extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Type: { },
-            Status: { },
-            SentBy: { },
-            SentTo: { },
-            SentOn: { },
-            Content: { },
-            RelativeName: { },
-            RelativeID: { }
+        'Id': { },
+            'Type': { },
+            'Status': { },
+            'SentBy': { },
+            'SentTo': { },
+            'SentOn': { },
+            'Content': { },
+            'RelativeName': { },
+            'RelativeID': { }
     };
 
     static fields() {

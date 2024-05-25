@@ -6,7 +6,7 @@ export default class Treatmentdetail extends MyBaseModel {
     static entityUrl = '/rest/v1/treatmentdetails';
 
     static parentWithables = [
-        'serviceRequestReport': 'ServiceRequestReport'
+        'serviceRequestReport'
     ];
 
     static rules = {
@@ -16,15 +16,15 @@ export default class Treatmentdetail extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            ServiceRequestReport: { },
-            OpeningBalance: { },
-            Refurbished: { },
-            Recovered: { },
-            Export: { },
-            Energy: { },
-            Landfill: { },
-            LocalSecondaryProducts: { }
+        'Id': { },
+            'ServiceRequestReport': { },
+            'OpeningBalance': { },
+            'Refurbished': { },
+            'Recovered': { },
+            'Export': { },
+            'Energy': { },
+            'Landfill': { },
+            'LocalSecondaryProducts': { }
     };
 
     static fields() {

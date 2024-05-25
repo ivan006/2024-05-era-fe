@@ -15,15 +15,15 @@ export default class Audit extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            TableName: { },
-            CRUD: { },
-            Data: { },
-            ChangeDate: { },
-            Entity: { },
-            PageNo: { },
-            NoOfLines: { },
-            CrudMessage: { }
+        'Id': { },
+            'TableName': { },
+            'CRUD': { },
+            'Data': { },
+            'ChangeDate': { },
+            'Entity': { },
+            'PageNo': { },
+            'NoOfLines': { },
+            'CrudMessage': { }
     };
 
     static fields() {

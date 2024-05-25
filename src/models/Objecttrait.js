@@ -15,18 +15,18 @@ export default class Objecttrait extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Name: { },
-            Description: { },
-            Object: { },
-            Type: { },
-            Level: { },
-            IsRule: { },
-            SpecialType: { },
-            IsDisabled: { },
-            IsHidden: { },
-            SystemCodeContext: { },
-            SystemCodeField: { }
+        'Id': { },
+            'Name': { },
+            'Description': { },
+            'Object': { },
+            'Type': { },
+            'Level': { },
+            'IsRule': { },
+            'SpecialType': { },
+            'IsDisabled': { },
+            'IsHidden': { },
+            'SystemCodeContext': { },
+            'SystemCodeField': { }
     };
 
     static fields() {

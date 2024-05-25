@@ -23,22 +23,22 @@ export default class Systemuser extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Entity: { },
-            Username: { },
-            Active: { },
-            LastSeen: { },
-            LoginCount: { },
-            FailedLoginAttempts: { },
-            LockedSince: { },
-            Secret: { },
-            Email: { },
-            Phone: { },
-            CreatedOn: { },
-            CreatedBy: { },
-            ChangedOn: { },
-            ChangedBy: { },
-            FbId: { }
+        'Id': { },
+            'Entity': { },
+            'Username': { },
+            'Active': { },
+            'LastSeen': { },
+            'LoginCount': { },
+            'FailedLoginAttempts': { },
+            'LockedSince': { },
+            'Secret': { },
+            'Email': { },
+            'Phone': { },
+            'CreatedOn': { },
+            'CreatedBy': { },
+            'ChangedOn': { },
+            'ChangedBy': { },
+            'FbId': { }
     };
 
     static fields() {

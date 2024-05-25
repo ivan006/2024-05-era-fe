@@ -15,20 +15,20 @@ export default class Requirementdetail extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Requirement: { },
-            RelativeID: { },
-            Service: { },
-            Category: { },
-            Value: { },
-            Comment: { },
-            Received: { },
-            Name: { },
-            NameOriginal: { },
-            ContentType: { },
-            Path: { },
-            ChangedBy: { },
-            ChangedOn: { }
+        'Id': { },
+            'Requirement': { },
+            'RelativeID': { },
+            'Service': { },
+            'Category': { },
+            'Value': { },
+            'Comment': { },
+            'Received': { },
+            'Name': { },
+            'NameOriginal': { },
+            'ContentType': { },
+            'Path': { },
+            'ChangedBy': { },
+            'ChangedOn': { }
     };
 
     static fields() {

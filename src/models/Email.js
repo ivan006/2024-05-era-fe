@@ -6,7 +6,7 @@ export default class Email extends MyBaseModel {
     static entityUrl = '/rest/v1/email';
 
     static parentWithables = [
-        'type': 'Type'
+        'type'
     ];
 
     static rules = {
@@ -16,11 +16,11 @@ export default class Email extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Address: { },
-            Type: { },
-            Person: { },
-            Preferred: { }
+        'Id': { },
+            'Address': { },
+            'Type': { },
+            'Person': { },
+            'Preferred': { }
     };
 
     static fields() {

@@ -15,15 +15,15 @@ export default class Ruleconfig extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Rule: { },
-            TableName: { },
-            ColumnName: { },
-            ColumnType: { },
-            Operand: { },
-            Value: { },
-            Description: { },
-            SystemCodeValue: { }
+        'Id': { },
+            'Rule': { },
+            'TableName': { },
+            'ColumnName': { },
+            'ColumnType': { },
+            'Operand': { },
+            'Value': { },
+            'Description': { },
+            'SystemCodeValue': { }
     };
 
     static fields() {

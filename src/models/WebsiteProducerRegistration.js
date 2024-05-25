@@ -15,9 +15,9 @@ export default class WebsiteProducerRegistration extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Data: { },
-            ProducerId: { }
+        'Id': { },
+            'Data': { },
+            'ProducerId': { }
     };
 
     static fields() {

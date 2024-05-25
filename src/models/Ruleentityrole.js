@@ -15,16 +15,16 @@ export default class Ruleentityrole extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            EntityRole: { },
-            Entity: { },
-            UserRole: { },
-            Rule: { },
-            Priority: { },
-            CRUD_Create: { },
-            CRUD_Read: { },
-            CRUD_Update: { },
-            CRUD_Delete: { }
+        'Id': { },
+            'EntityRole': { },
+            'Entity': { },
+            'UserRole': { },
+            'Rule': { },
+            'Priority': { },
+            'CRUD_Create': { },
+            'CRUD_Read': { },
+            'CRUD_Update': { },
+            'CRUD_Delete': { }
     };
 
     static fields() {

@@ -15,14 +15,14 @@ export default class Relative extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Entity: { },
-            Relative: { },
-            Relationship: { },
-            Adopted: { },
-            Student: { },
-            Disabled: { },
-            TraditionalMarriage: { }
+        'Id': { },
+            'Entity': { },
+            'Relative': { },
+            'Relationship': { },
+            'Adopted': { },
+            'Student': { },
+            'Disabled': { },
+            'TraditionalMarriage': { }
     };
 
     static fields() {

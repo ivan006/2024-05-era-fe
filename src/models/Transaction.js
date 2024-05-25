@@ -6,7 +6,7 @@ export default class Transaction extends MyBaseModel {
     static entityUrl = '/rest/v1/transactions';
 
     static parentWithables = [
-        'type': 'Type'
+        'type'
     ];
 
     static rules = {
@@ -16,20 +16,20 @@ export default class Transaction extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            TransNo: { },
-            Description: { },
-            TransactionDate: { },
-            CaptureDate: { },
-            AccountCode: { },
-            Entity: { },
-            EntityProduct: { },
-            Debit: { },
-            Credit: { },
-            Source: { },
-            Period: { },
-            Reference: { },
-            Type: { }
+        'Id': { },
+            'TransNo': { },
+            'Description': { },
+            'TransactionDate': { },
+            'CaptureDate': { },
+            'AccountCode': { },
+            'Entity': { },
+            'EntityProduct': { },
+            'Debit': { },
+            'Credit': { },
+            'Source': { },
+            'Period': { },
+            'Reference': { },
+            'Type': { }
     };
 
     static fields() {

@@ -8,9 +8,9 @@ export default class Entitygood extends MyBaseModel {
     static entityUrl = '/rest/v1/entitygood';
 
     static parentWithables = [
-        'entity': 'Entity',
-        'good': 'Good',
-        'invoice': 'Invoice'
+        'entity',
+        'good',
+        'invoice'
     ];
 
     static rules = {
@@ -20,20 +20,20 @@ export default class Entitygood extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Entity: { },
-            Good: { },
-            Units: { },
-            AvgKg: { },
-            AvgKgOld: { },
-            AvgLifeSpan: { },
-            TotalKg: { },
-            Tariff: { },
-            Selected: { },
-            Dimension: { },
-            WasteClass: { },
-            Period: { },
-            Invoice: { }
+        'Id': { },
+            'Entity': { },
+            'Good': { },
+            'Units': { },
+            'AvgKg': { },
+            'AvgKgOld': { },
+            'AvgLifeSpan': { },
+            'TotalKg': { },
+            'Tariff': { },
+            'Selected': { },
+            'Dimension': { },
+            'WasteClass': { },
+            'Period': { },
+            'Invoice': { }
     };
 
     static fields() {

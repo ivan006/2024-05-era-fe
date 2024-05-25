@@ -15,11 +15,11 @@ export default class Object extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Name: { },
-            Description: { },
-            Parent: { },
-            ChildType: { }
+        'Id': { },
+            'Name': { },
+            'Description': { },
+            'Parent': { },
+            'ChildType': { }
     };
 
     static fields() {

@@ -21,22 +21,22 @@ export default class Entity extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            ExternalNo: { },
-            Level: { },
-            Type: { },
-            Title: { },
-            Name: { },
-            Surname: { },
-            Identity: { },
-            BirthDate: { },
-            Gender: { },
-            Language: { },
-            Status: { },
-            Note: { },
-            Passport: { },
-            HasPhoto: { },
-            IsPaid: { }
+        'Id': { },
+            'ExternalNo': { },
+            'Level': { },
+            'Type': { },
+            'Title': { },
+            'Name': { },
+            'Surname': { },
+            'Identity': { },
+            'BirthDate': { },
+            'Gender': { },
+            'Language': { },
+            'Status': { },
+            'Note': { },
+            'Passport': { },
+            'HasPhoto': { },
+            'IsPaid': { }
     };
 
     static fields() {

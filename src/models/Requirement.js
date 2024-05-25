@@ -15,17 +15,17 @@ export default class Requirement extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Service: { },
-            Category: { },
-            Code: { },
-            Name: { },
-            Required: { },
-            Path: { },
-            Display: { },
-            SystemCodeContext: { },
-            SystemCodeField: { },
-            ValueType: { }
+        'Id': { },
+            'Service': { },
+            'Category': { },
+            'Code': { },
+            'Name': { },
+            'Required': { },
+            'Path': { },
+            'Display': { },
+            'SystemCodeContext': { },
+            'SystemCodeField': { },
+            'ValueType': { }
     };
 
     static fields() {

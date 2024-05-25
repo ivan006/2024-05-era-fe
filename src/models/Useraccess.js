@@ -8,9 +8,9 @@ export default class Useraccess extends MyBaseModel {
     static entityUrl = '/rest/v1/useraccess';
 
     static parentWithables = [
-        'systemUser': 'SystemUser',
-        'userRole': 'UserRole',
-        'systemAction': 'SystemAction'
+        'systemUser',
+        'userRole',
+        'systemAction'
     ];
 
     static rules = {
@@ -20,16 +20,16 @@ export default class Useraccess extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            SystemUser: { },
-            UserRole: { },
-            SystemAction: { },
-            Entity: { },
-            CreatedOn: { },
-            CreatedBy: { },
-            ChangedOn: { },
-            ChangedBy: { },
-            FbId: { }
+        'Id': { },
+            'SystemUser': { },
+            'UserRole': { },
+            'SystemAction': { },
+            'Entity': { },
+            'CreatedOn': { },
+            'CreatedBy': { },
+            'ChangedOn': { },
+            'ChangedBy': { },
+            'FbId': { }
     };
 
     static fields() {

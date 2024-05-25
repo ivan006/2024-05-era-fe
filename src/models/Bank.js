@@ -15,15 +15,15 @@ export default class Bank extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Name: { },
-            Branch: { },
-            BranchName: { },
-            Type: { },
-            BankType: { },
-            Account: { },
-            Verified: { },
-            Entity: { }
+        'Id': { },
+            'Name': { },
+            'Branch': { },
+            'BranchName': { },
+            'Type': { },
+            'BankType': { },
+            'Account': { },
+            'Verified': { },
+            'Entity': { }
     };
 
     static fields() {

@@ -16,14 +16,14 @@ export default class Document extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            RelativeName: { },
-            RelativeID: { },
-            Comment: { },
-            Title: { },
-            CreatedBy: { },
-            CreatedOn: { },
-            Access: { }
+        'Id': { },
+            'RelativeName': { },
+            'RelativeID': { },
+            'Comment': { },
+            'Title': { },
+            'CreatedBy': { },
+            'CreatedOn': { },
+            'Access': { }
     };
 
     static fields() {

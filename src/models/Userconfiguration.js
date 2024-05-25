@@ -7,8 +7,8 @@ export default class Userconfiguration extends MyBaseModel {
     static entityUrl = '/rest/v1/userconfiguration';
 
     static parentWithables = [
-        'systemUser': 'SystemUser',
-        'language': 'Language'
+        'systemUser',
+        'language'
     ];
 
     static rules = {
@@ -18,9 +18,9 @@ export default class Userconfiguration extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        SystemUser: { },
-            Language: { },
-            FbId: { }
+        'SystemUser': { },
+            'Language': { },
+            'FbId': { }
     };
 
     static fields() {

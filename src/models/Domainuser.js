@@ -6,7 +6,7 @@ export default class Domainuser extends MyBaseModel {
     static entityUrl = '/rest/v1/domainuser';
 
     static parentWithables = [
-        'systemUser': 'SystemUser'
+        'systemUser'
     ];
 
     static rules = {
@@ -16,13 +16,13 @@ export default class Domainuser extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        SystemUser: { },
-            DomainName: { },
-            DomainAccount: { },
-            CreatedOn: { },
-            CreatedBy: { },
-            ChangedOn: { },
-            ChangedBy: { }
+        'SystemUser': { },
+            'DomainName': { },
+            'DomainAccount': { },
+            'CreatedOn': { },
+            'CreatedBy': { },
+            'ChangedOn': { },
+            'ChangedBy': { }
     };
 
     static fields() {

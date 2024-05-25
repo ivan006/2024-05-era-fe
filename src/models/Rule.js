@@ -15,11 +15,11 @@ export default class Rule extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Name: { },
-            Description: { },
-            RuleType: { },
-            NextRule: { }
+        'Id': { },
+            'Name': { },
+            'Description': { },
+            'RuleType': { },
+            'NextRule': { }
     };
 
     static fields() {

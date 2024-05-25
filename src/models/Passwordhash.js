@@ -15,14 +15,14 @@ export default class Passwordhash extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        SystemUser: { },
-            Hash: { },
-            Salt: { },
-            CreatedOn: { },
-            CreatedBy: { },
-            ChangedOn: { },
-            ChangedBy: { },
-            FbId: { }
+        'SystemUser': { },
+            'Hash': { },
+            'Salt': { },
+            'CreatedOn': { },
+            'CreatedBy': { },
+            'ChangedOn': { },
+            'ChangedBy': { },
+            'FbId': { }
     };
 
     static fields() {

@@ -15,15 +15,15 @@ export default class Ruleaction extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Rule: { },
-            Process: { },
-            Result: { },
-            ResultNegative: { },
-            ResultType: { },
-            Description: { },
-            ResultSystemCode: { },
-            NegativeSystemCode: { }
+        'Id': { },
+            'Rule': { },
+            'Process': { },
+            'Result': { },
+            'ResultNegative': { },
+            'ResultType': { },
+            'Description': { },
+            'ResultSystemCode': { },
+            'NegativeSystemCode': { }
     };
 
     static fields() {

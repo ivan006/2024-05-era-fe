@@ -16,16 +16,16 @@ export default class Queryheader extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Subject: { },
-            Status: { },
-            Type: { },
-            RelativeName: { },
-            RelativeID: { },
-            CreatedBy: { },
-            CreatedOn: { },
-            ClosedBy: { },
-            ClosedOn: { }
+        'Id': { },
+            'Subject': { },
+            'Status': { },
+            'Type': { },
+            'RelativeName': { },
+            'RelativeID': { },
+            'CreatedBy': { },
+            'CreatedOn': { },
+            'ClosedBy': { },
+            'ClosedOn': { }
     };
 
     static fields() {

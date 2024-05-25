@@ -15,7 +15,7 @@ export default class Dummy extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        textData: { }
+        'textData': { }
     };
 
     static fields() {

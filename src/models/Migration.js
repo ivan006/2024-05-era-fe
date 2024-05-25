@@ -15,9 +15,9 @@ export default class Migration extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        id: { },
-            migration: { },
-            batch: { }
+        'id': { },
+            'migration': { },
+            'batch': { }
     };
 
     static fields() {

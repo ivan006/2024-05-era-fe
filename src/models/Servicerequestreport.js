@@ -10,10 +10,10 @@ export default class Servicerequestreport extends MyBaseModel {
     static entityUrl = '/rest/v1/servicerequestreport';
 
     static parentWithables = [
-        'serviceRequest': 'ServiceRequest',
-        'serviceProvider': 'ServiceProvider',
-        'createdBy': 'CreatedBy',
-        'treatmentDetail': 'TreatmentDetails'
+        'serviceRequest',
+        'serviceProvider',
+        'createdBy',
+        'treatmentDetail'
     ];
 
     static rules = {
@@ -23,15 +23,15 @@ export default class Servicerequestreport extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            ServiceRequest: { },
-            ServiceProvider: { },
-            CreatedBy: { },
-            TreatmentDetails: { },
-            CreatedOn: { },
-            ReportDate: { },
-            Approved: { },
-            Rejected: { }
+        'Id': { },
+            'ServiceRequest': { },
+            'ServiceProvider': { },
+            'CreatedBy': { },
+            'TreatmentDetails': { },
+            'CreatedOn': { },
+            'ReportDate': { },
+            'Approved': { },
+            'Rejected': { }
     };
 
     static fields() {

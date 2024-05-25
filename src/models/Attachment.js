@@ -15,15 +15,15 @@ export default class Attachment extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Name: { },
-            Description: { },
-            ContentType: { },
-            Path: { },
-            RelativeName: { },
-            RelativeID: { },
-            CreatedOn: { },
-            CreatedBy: { }
+        'Id': { },
+            'Name': { },
+            'Description': { },
+            'ContentType': { },
+            'Path': { },
+            'RelativeName': { },
+            'RelativeID': { },
+            'CreatedOn': { },
+            'CreatedBy': { }
     };
 
     static fields() {

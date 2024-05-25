@@ -6,7 +6,7 @@ export default class Entityaudit extends MyBaseModel {
     static entityUrl = '/rest/v1/entityaudit';
 
     static parentWithables = [
-        'systemUser': 'SystemUser'
+        'systemUser'
     ];
 
     static rules = {
@@ -16,13 +16,13 @@ export default class Entityaudit extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Entity Name: { },
-            Entity Id: { },
-            Operation: { },
-            SystemUser: { },
-            Changes: { },
-            Audit_TS: { }
+        'Id': { },
+            'Entity Name': { },
+            'Entity Id': { },
+            'Operation': { },
+            'SystemUser': { },
+            'Changes': { },
+            'Audit_TS': { }
     };
 
     static fields() {

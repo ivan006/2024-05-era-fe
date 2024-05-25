@@ -15,9 +15,9 @@ export default class Systemconfiguration extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        Id: { },
-            Name: { },
-            Value: { }
+        'Id': { },
+            'Name': { },
+            'Value': { }
     };
 
     static fields() {

@@ -15,13 +15,13 @@ export default class FailedJob extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        id: { },
-            uuid: { },
-            connection: { },
-            queue: { },
-            payload: { },
-            exception: { },
-            failed_at: { }
+        'id': { },
+            'uuid': { },
+            'connection': { },
+            'queue': { },
+            'payload': { },
+            'exception': { },
+            'failed_at': { }
     };
 
     static fields() {
