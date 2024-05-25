@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class WebsiteProducerRegistration extends MyBaseModel {
     static entity = 'websiteProducerRegistration';
-    static entityUrl = '/api/website_producer_registrations';
+    static entityUrl = '/rest/v1/website_producer_registrations';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -26,7 +26,7 @@ export default class WebsiteProducerRegistration extends MyBaseModel {
             'Id': this.attr('', {}),
             'Data': this.attr('', {}),
             'ProducerId': this.attr('', {}),
-
+            
         };
     }
 

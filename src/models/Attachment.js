@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Attachment extends MyBaseModel {
     static entity = 'attachment';
-    static entityUrl = '/api/attachment';
+    static entityUrl = '/rest/v1/attachments';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Attachment extends MyBaseModel {
             'RelativeID': this.attr('', {}),
             'CreatedOn': this.attr('', {}),
             'CreatedBy': this.attr('', {}),
-
+            
         };
     }
 

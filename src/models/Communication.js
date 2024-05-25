@@ -1,12 +1,11 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Systemuser from './Systemuser';
 
 export default class Communication extends MyBaseModel {
     static entity = 'communication';
-    static entityUrl = '/api/communication';
+    static entityUrl = '/rest/v1/communications';
 
     static parentWithables = [
-        'sentBy'
+        
     ];
 
     static rules = {
@@ -33,13 +32,13 @@ export default class Communication extends MyBaseModel {
             'Id': this.attr('', {}),
             'Type': this.attr('', {}),
             'Status': this.attr('', {}),
-            'SentBy': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'SentBy': this.attr('', {}),
             'SentTo': this.attr('', {}),
             'SentOn': this.attr('', {}),
             'Content': this.attr('', {}),
             'RelativeName': this.attr('', {}),
             'RelativeID': this.attr('', {}),
-            'sentBy': this.belongsTo(Systemuser, 'SentBy')
+            
         };
     }
 

@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Ruleentityrole extends MyBaseModel {
     static entity = 'ruleentityrole';
-    static entityUrl = '/api/ruleentityrole';
+    static entityUrl = '/rest/v1/ruleentityroles';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -40,7 +40,7 @@ export default class Ruleentityrole extends MyBaseModel {
             'CRUD_Read': this.attr('', {}),
             'CRUD_Update': this.attr('', {}),
             'CRUD_Delete': this.attr('', {}),
-
+            
         };
     }
 

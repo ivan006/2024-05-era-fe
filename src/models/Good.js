@@ -1,13 +1,11 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Entity from './Entity';
-import Entitygood from './Entitygood';
 
 export default class Good extends MyBaseModel {
     static entity = 'good';
-    static entityUrl = '/api/good';
+    static entityUrl = '/rest/v1/goods';
 
     static parentWithables = [
-        'sector'
+        
     ];
 
     static rules = {
@@ -43,9 +41,8 @@ export default class Good extends MyBaseModel {
             'Category': this.attr('', {}),
             'HazardSubstance': this.attr('', {}),
             'Dimension': this.attr('', {}),
-            'Sector': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'sector': this.belongsTo(Entity, 'Sector'),
-            'entitygoods': this.hasMany(Entitygood, 'Good')
+            'Sector': this.attr('', {}),
+            
         };
     }
 

@@ -1,12 +1,11 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Document from './Document';
 
 export default class Documentdetail extends MyBaseModel {
     static entity = 'documentdetail';
-    static entityUrl = '/api/documentdetail';
+    static entityUrl = '/rest/v1/documentdetails';
 
     static parentWithables = [
-        'document'
+        
     ];
 
     static rules = {
@@ -32,7 +31,7 @@ export default class Documentdetail extends MyBaseModel {
         return {
             id: this.attr(null),
             'Id': this.attr('', {}),
-            'Document': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Document': this.attr('', {}),
             'Section': this.attr('', {}),
             'Position': this.attr('', {}),
             'Title': this.attr('', {}),
@@ -41,7 +40,7 @@ export default class Documentdetail extends MyBaseModel {
             'Style': this.attr('', {}),
             'CreatedBy': this.attr('', {}),
             'CreatedOn': this.attr('', {}),
-            'document': this.belongsTo(Document, 'Document')
+            
         };
     }
 

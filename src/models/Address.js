@@ -1,13 +1,11 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Systemcode from './Systemcode';
 
 export default class Address extends MyBaseModel {
     static entity = 'address';
-    static entityUrl = '/api/address';
+    static entityUrl = '/rest/v1/addresses';
 
     static parentWithables = [
-        'country',
-        'type'
+        
     ];
 
     static rules = {
@@ -47,17 +45,16 @@ export default class Address extends MyBaseModel {
             'Suburb': this.attr('', {}),
             'City': this.attr('', {}),
             'Province': this.attr('', {}),
-            'Country': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Country': this.attr('', {}),
             'PostCode': this.attr('', {}),
-            'Type': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Type': this.attr('', {}),
             'Person': this.attr('', {}),
             'MoveDate': this.attr('', {}),
             'Preferred': this.attr('', {}),
             'Dispatch': this.attr('', {}),
             'Latitude': this.attr('', {}),
             'Longitude': this.attr('', {}),
-            'country': this.belongsTo(Systemcode, 'Country'),
-            'type': this.belongsTo(Systemcode, 'Type')
+            
         };
     }
 

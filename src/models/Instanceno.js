@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Instanceno extends MyBaseModel {
     static entity = 'instanceno';
-    static entityUrl = '/api/instanceno';
+    static entityUrl = '/rest/v1/instancenos';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -24,7 +24,7 @@ export default class Instanceno extends MyBaseModel {
             id: this.attr(null),
             'Id': this.attr('', {}),
             'ObjectName': this.attr('', {}),
-
+            
         };
     }
 

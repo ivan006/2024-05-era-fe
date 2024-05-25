@@ -1,12 +1,11 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Servicerequestreport from './Servicerequestreport';
 
 export default class Externalproducer extends MyBaseModel {
     static entity = 'externalproducer';
-    static entityUrl = '/api/externalproducers';
+    static entityUrl = '/rest/v1/externalproducers';
 
     static parentWithables = [
-        'serviceRequestReport'
+        
     ];
 
     static rules = {
@@ -26,8 +25,8 @@ export default class Externalproducer extends MyBaseModel {
             id: this.attr(null),
             'Id': this.attr('', {}),
             'Name': this.attr('', {}),
-            'ServiceRequestReport': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'serviceRequestReport': this.belongsTo(Servicerequestreport, 'ServiceRequestReport')
+            'ServiceRequestReport': this.attr('', {}),
+            
         };
     }
 

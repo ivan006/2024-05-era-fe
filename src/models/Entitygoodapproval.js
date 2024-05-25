@@ -1,17 +1,11 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Entity from './Entity';
-import Queryheader from './Queryheader';
-import Entitygood from './Entitygood';
 
 export default class Entitygoodapproval extends MyBaseModel {
     static entity = 'entitygoodapproval';
-    static entityUrl = '/api/entitygoodapproval';
+    static entityUrl = '/rest/v1/entitygoodapprovals';
 
     static parentWithables = [
-        'approvedBy',
-        'invoiceApprovedBy',
-        'entity',
-        'query'
+        
     ];
 
     static rules = {
@@ -40,23 +34,19 @@ export default class Entitygoodapproval extends MyBaseModel {
         return {
             id: this.attr(null),
             'Id': this.attr('', {}),
-            'ApprovedBy': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'ApprovedBy': this.attr('', {}),
             'ApprovedOn': this.attr('', {}),
-            'InvoiceApprovedBy': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'InvoiceApprovedBy': this.attr('', {}),
             'InvoiceApprovedOn': this.attr('', {}),
-            'Entity': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Entity': this.attr('', {}),
             'Period': this.attr('', {}),
             'PurchaseOrder': this.attr('', {}),
             'InvoiceNo': this.attr('', {}),
             'UseAR': this.attr('', {}),
             'UseVAT': this.attr('', {}),
-            'Query': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Query': this.attr('', {}),
             'Status': this.attr('', {}),
-            'approvedBy': this.belongsTo(Entity, 'ApprovedBy'),
-            'invoiceApprovedBy': this.belongsTo(Entity, 'InvoiceApprovedBy'),
-            'query': this.belongsTo(Queryheader, 'Query'),
-            'entity': this.belongsTo(Entity, 'Entity'),
-            'entitygoods': this.hasMany(Entitygood, 'Invoice')
+            
         };
     }
 

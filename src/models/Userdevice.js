@@ -1,12 +1,11 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Systemuser from './Systemuser';
 
 export default class Userdevice extends MyBaseModel {
     static entity = 'userdevice';
-    static entityUrl = '/api/userdevice';
+    static entityUrl = '/rest/v1/userdevices';
 
     static parentWithables = [
-        'systemUser'
+        
     ];
 
     static rules = {
@@ -26,12 +25,12 @@ export default class Userdevice extends MyBaseModel {
     static fields() {
         return {
             id: this.attr(null),
-            'SystemUser': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'SystemUser': this.attr('', {}),
             'DeviceKey': this.attr('', {}),
             'Name': this.attr('', {}),
             'LastUsed': this.attr('', {}),
             'FbId': this.attr('', {}),
-            'systemUser': this.belongsTo(Systemuser, 'SystemUser')
+            
         };
     }
 

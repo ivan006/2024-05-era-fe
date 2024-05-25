@@ -1,19 +1,11 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Servicerequest from './Servicerequest';
-import Entity from './Entity';
-import Systemuser from './Systemuser';
-import Treatmentdetail from './Treatmentdetail';
-import Externalproducer from './Externalproducer';
 
 export default class Servicerequestreport extends MyBaseModel {
     static entity = 'servicerequestreport';
-    static entityUrl = '/api/servicerequestreport';
+    static entityUrl = '/rest/v1/servicerequestreports';
 
     static parentWithables = [
-        'serviceRequest',
-        'serviceProvider',
-        'createdBy',
-        'treatmentDetail'
+        
     ];
 
     static rules = {
@@ -38,20 +30,15 @@ export default class Servicerequestreport extends MyBaseModel {
         return {
             id: this.attr(null),
             'Id': this.attr('', {}),
-            'ServiceRequest': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'ServiceProvider': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'CreatedBy': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'TreatmentDetails': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'ServiceRequest': this.attr('', {}),
+            'ServiceProvider': this.attr('', {}),
+            'CreatedBy': this.attr('', {}),
+            'TreatmentDetails': this.attr('', {}),
             'CreatedOn': this.attr('', {}),
             'ReportDate': this.attr('', {}),
             'Approved': this.attr('', {}),
             'Rejected': this.attr('', {}),
-            'serviceRequest': this.belongsTo(Servicerequest, 'ServiceRequest'),
-            'serviceProvider': this.belongsTo(Entity, 'ServiceProvider'),
-            'createdBy': this.belongsTo(Systemuser, 'CreatedBy'),
-            'treatmentDetail': this.belongsTo(Treatmentdetail, 'TreatmentDetails'),
-            'externalproducers': this.hasMany(Externalproducer, 'ServiceRequestReport'),
-            'treatmentdetails': this.hasMany(Treatmentdetail, 'ServiceRequestReport')
+            
         };
     }
 

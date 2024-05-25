@@ -1,18 +1,11 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Entity from './Entity';
-import Address from './Address';
-import Contactnumber from './Contactnumber';
-import Email from './Email';
-import Servicerequestfrequency from './Servicerequestfrequency';
-import Transaction from './Transaction';
-import Userconfiguration from './Userconfiguration';
 
 export default class Systemcode extends MyBaseModel {
     static entity = 'systemcode';
-    static entityUrl = '/api/systemcode';
+    static entityUrl = '/rest/v1/systemcodes';
 
     static parentWithables = [
-        'entity'
+        
     ];
 
     static rules = {
@@ -54,15 +47,8 @@ export default class Systemcode extends MyBaseModel {
             'CreatedBy': this.attr('', {}),
             'ChangedOn': this.attr('', {}),
             'ChangedBy': this.attr('', {}),
-            'Entity': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'entity': this.belongsTo(Entity, 'Entity'),
-            'addresses': this.hasMany(Address, 'Country'),
-            'addresses': this.hasMany(Address, 'Type'),
-            'contactnumbers': this.hasMany(Contactnumber, 'Type'),
-            'emails': this.hasMany(Email, 'Type'),
-            'servicerequestfrequencies': this.hasMany(Servicerequestfrequency, 'ReportFrequency'),
-            'transactions': this.hasMany(Transaction, 'Type'),
-            'userconfigurations': this.hasMany(Userconfiguration, 'Language')
+            'Entity': this.attr('', {}),
+            
         };
     }
 

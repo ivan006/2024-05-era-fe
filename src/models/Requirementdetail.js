@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Requirementdetail extends MyBaseModel {
     static entity = 'requirementdetail';
-    static entityUrl = '/api/requirementdetail';
+    static entityUrl = '/rest/v1/requirementdetails';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -48,7 +48,7 @@ export default class Requirementdetail extends MyBaseModel {
             'Path': this.attr('', {}),
             'ChangedBy': this.attr('', {}),
             'ChangedOn': this.attr('', {}),
-
+            
         };
     }
 

@@ -1,12 +1,11 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Systemcode from './Systemcode';
 
 export default class Transaction extends MyBaseModel {
     static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+    static entityUrl = '/rest/v1/transactions';
 
     static parentWithables = [
-        'type'
+        
     ];
 
     static rules = {
@@ -48,8 +47,8 @@ export default class Transaction extends MyBaseModel {
             'Source': this.attr('', {}),
             'Period': this.attr('', {}),
             'Reference': this.attr('', {}),
-            'Type': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'type': this.belongsTo(Systemcode, 'Type')
+            'Type': this.attr('', {}),
+            
         };
     }
 

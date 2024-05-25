@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Objectvalue extends MyBaseModel {
     static entity = 'objectvalue';
-    static entityUrl = '/api/objectvalue';
+    static entityUrl = '/rest/v1/objectvalues';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -34,7 +34,7 @@ export default class Objectvalue extends MyBaseModel {
             'ValueJson': this.attr('', {}),
             'Object': this.attr('', {}),
             'Entity': this.attr('', {}),
-
+            
         };
     }
 

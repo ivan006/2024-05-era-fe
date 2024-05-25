@@ -1,14 +1,11 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Servicerequest from './Servicerequest';
-import Systemcode from './Systemcode';
 
 export default class Servicerequestfrequency extends MyBaseModel {
     static entity = 'servicerequestfrequency';
-    static entityUrl = '/api/servicerequestfrequency';
+    static entityUrl = '/rest/v1/servicerequestfrequencies';
 
     static parentWithables = [
-        'serviceRequest',
-        'reportFrequency'
+        
     ];
 
     static rules = {
@@ -28,11 +25,10 @@ export default class Servicerequestfrequency extends MyBaseModel {
         return {
             id: this.attr(null),
             'Id': this.attr('', {}),
-            'ServiceRequest': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'ReportFrequency': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'ServiceRequest': this.attr('', {}),
+            'ReportFrequency': this.attr('', {}),
             'Active': this.attr('', {}),
-            'serviceRequest': this.belongsTo(Servicerequest, 'ServiceRequest'),
-            'reportFrequency': this.belongsTo(Systemcode, 'ReportFrequency')
+            
         };
     }
 

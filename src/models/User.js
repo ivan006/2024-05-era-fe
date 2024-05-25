@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class User extends MyBaseModel {
     static entity = 'user';
-    static entityUrl = '/api/users';
+    static entityUrl = '/rest/v1/users';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -36,7 +36,7 @@ export default class User extends MyBaseModel {
             'remember_token': this.attr('', {}),
             'created_at': this.attr('', {}),
             'updated_at': this.attr('', {}),
-
+            
         };
     }
 
