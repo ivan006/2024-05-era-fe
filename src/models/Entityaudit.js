@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Entityaudit extends MyBaseModel {
     static entity = 'entityaudit';
-    static entityUrl = '/rest/v1/entityaudits';
+    static entityUrl = '/api/entityaudits';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -34,7 +34,7 @@ export default class Entityaudit extends MyBaseModel {
             'SystemUser': this.attr('', {}),
             'Changes': this.attr('', {}),
             'Audit_TS': this.attr('', {}),
-            
+
         };
     }
 

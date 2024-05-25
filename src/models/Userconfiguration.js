@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Userconfiguration extends MyBaseModel {
     static entity = 'userconfiguration';
-    static entityUrl = '/rest/v1/userconfigurations';
+    static entityUrl = '/api/userconfigurations';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -26,7 +26,7 @@ export default class Userconfiguration extends MyBaseModel {
             'SystemUser': this.attr('', {}),
             'Language': this.attr('', {}),
             'FbId': this.attr('', {}),
-            
+
         };
     }
 

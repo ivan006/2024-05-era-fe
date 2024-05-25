@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Migration extends MyBaseModel {
     static entity = 'migration';
-    static entityUrl = '/rest/v1/migrations';
+    static entityUrl = '/api/migrations';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -26,7 +26,7 @@ export default class Migration extends MyBaseModel {
             'id': this.attr('', {}),
             'migration': this.attr('', {}),
             'batch': this.attr('', {}),
-            
+
         };
     }
 

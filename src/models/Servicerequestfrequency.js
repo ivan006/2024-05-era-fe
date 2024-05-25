@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Servicerequestfrequency extends MyBaseModel {
     static entity = 'servicerequestfrequency';
-    static entityUrl = '/rest/v1/servicerequestfrequencies';
+    static entityUrl = '/api/servicerequestfrequencies';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -28,7 +28,7 @@ export default class Servicerequestfrequency extends MyBaseModel {
             'ServiceRequest': this.attr('', {}),
             'ReportFrequency': this.attr('', {}),
             'Active': this.attr('', {}),
-            
+
         };
     }
 

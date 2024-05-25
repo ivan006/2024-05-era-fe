@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Communication extends MyBaseModel {
     static entity = 'communication';
-    static entityUrl = '/rest/v1/communications';
+    static entityUrl = '/api/communications';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Communication extends MyBaseModel {
             'Content': this.attr('', {}),
             'RelativeName': this.attr('', {}),
             'RelativeID': this.attr('', {}),
-            
+
         };
     }
 

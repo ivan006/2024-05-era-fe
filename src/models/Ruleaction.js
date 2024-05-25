@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Ruleaction extends MyBaseModel {
     static entity = 'ruleaction';
-    static entityUrl = '/rest/v1/ruleactions';
+    static entityUrl = '/api/ruleactions';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Ruleaction extends MyBaseModel {
             'Description': this.attr('', {}),
             'ResultSystemCode': this.attr('', {}),
             'NegativeSystemCode': this.attr('', {}),
-            
+
         };
     }
 

@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Entitygoodapproval extends MyBaseModel {
     static entity = 'entitygoodapproval';
-    static entityUrl = '/rest/v1/entitygoodapprovals';
+    static entityUrl = '/api/entitygoodapprovals';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -46,7 +46,7 @@ export default class Entitygoodapproval extends MyBaseModel {
             'UseVAT': this.attr('', {}),
             'Query': this.attr('', {}),
             'Status': this.attr('', {}),
-            
+
         };
     }
 

@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Queryheader extends MyBaseModel {
     static entity = 'queryheader';
-    static entityUrl = '/rest/v1/queryheaders';
+    static entityUrl = '/api/queryheaders';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -40,7 +40,7 @@ export default class Queryheader extends MyBaseModel {
             'CreatedOn': this.attr('', {}),
             'ClosedBy': this.attr('', {}),
             'ClosedOn': this.attr('', {}),
-            
+
         };
     }
 

@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Userdevice extends MyBaseModel {
     static entity = 'userdevice';
-    static entityUrl = '/rest/v1/userdevices';
+    static entityUrl = '/api/userdevices';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -30,7 +30,7 @@ export default class Userdevice extends MyBaseModel {
             'Name': this.attr('', {}),
             'LastUsed': this.attr('', {}),
             'FbId': this.attr('', {}),
-            
+
         };
     }
 

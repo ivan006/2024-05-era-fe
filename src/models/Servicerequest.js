@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Servicerequest extends MyBaseModel {
     static entity = 'servicerequest';
-    static entityUrl = '/rest/v1/servicerequests';
+    static entityUrl = '/api/servicerequests';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -42,7 +42,7 @@ export default class Servicerequest extends MyBaseModel {
             'Locations': this.attr('', {}),
             'Deliverables': this.attr('', {}),
             'DeliveryDate': this.attr('', {}),
-            
+
         };
     }
 

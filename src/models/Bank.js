@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Bank extends MyBaseModel {
     static entity = 'bank';
-    static entityUrl = '/rest/v1/banks';
+    static entityUrl = '/api/banks';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Bank extends MyBaseModel {
             'Account': this.attr('', {}),
             'Verified': this.attr('', {}),
             'Entity': this.attr('', {}),
-            
+
         };
     }
 

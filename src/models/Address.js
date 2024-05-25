@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Address extends MyBaseModel {
     static entity = 'address';
-    static entityUrl = '/rest/v1/addresses';
+    static entityUrl = '/api/addresses';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -54,7 +54,7 @@ export default class Address extends MyBaseModel {
             'Dispatch': this.attr('', {}),
             'Latitude': this.attr('', {}),
             'Longitude': this.attr('', {}),
-            
+
         };
     }
 

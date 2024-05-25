@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Externalproducer extends MyBaseModel {
     static entity = 'externalproducer';
-    static entityUrl = '/rest/v1/externalproducers';
+    static entityUrl = '/api/externalproducers';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -26,7 +26,7 @@ export default class Externalproducer extends MyBaseModel {
             'Id': this.attr('', {}),
             'Name': this.attr('', {}),
             'ServiceRequestReport': this.attr('', {}),
-            
+
         };
     }
 

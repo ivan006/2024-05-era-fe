@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Documentdetail extends MyBaseModel {
     static entity = 'documentdetail';
-    static entityUrl = '/rest/v1/documentdetails';
+    static entityUrl = '/api/documentdetails';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -40,7 +40,7 @@ export default class Documentdetail extends MyBaseModel {
             'Style': this.attr('', {}),
             'CreatedBy': this.attr('', {}),
             'CreatedOn': this.attr('', {}),
-            
+
         };
     }
 

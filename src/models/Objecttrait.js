@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Objecttrait extends MyBaseModel {
     static entity = 'objecttrait';
-    static entityUrl = '/rest/v1/objecttraits';
+    static entityUrl = '/api/objecttraits';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -44,7 +44,7 @@ export default class Objecttrait extends MyBaseModel {
             'IsHidden': this.attr('', {}),
             'SystemCodeContext': this.attr('', {}),
             'SystemCodeField': this.attr('', {}),
-            
+
         };
     }
 

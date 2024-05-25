@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Systemlog extends MyBaseModel {
     static entity = 'systemlog';
-    static entityUrl = '/rest/v1/systemlogs';
+    static entityUrl = '/api/systemlogs';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Systemlog extends MyBaseModel {
             'Message': this.attr('', {}),
             'Exception': this.attr('', {}),
             'StackTrace': this.attr('', {}),
-            
+
         };
     }
 

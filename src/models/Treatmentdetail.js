@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Treatmentdetail extends MyBaseModel {
     static entity = 'treatmentdetail';
-    static entityUrl = '/rest/v1/treatmentdetails';
+    static entityUrl = '/api/treatmentdetails';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Treatmentdetail extends MyBaseModel {
             'Energy': this.attr('', {}),
             'Landfill': this.attr('', {}),
             'LocalSecondaryProducts': this.attr('', {}),
-            
+
         };
     }
 

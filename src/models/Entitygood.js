@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Entitygood extends MyBaseModel {
     static entity = 'entitygood';
-    static entityUrl = '/rest/v1/entitygoods';
+    static entityUrl = '/api/entitygoods';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -48,7 +48,7 @@ export default class Entitygood extends MyBaseModel {
             'WasteClass': this.attr('', {}),
             'Period': this.attr('', {}),
             'Invoice': this.attr('', {}),
-            
+
         };
     }
 

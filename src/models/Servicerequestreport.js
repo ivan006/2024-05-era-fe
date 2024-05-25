@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Servicerequestreport extends MyBaseModel {
     static entity = 'servicerequestreport';
-    static entityUrl = '/rest/v1/servicerequestreports';
+    static entityUrl = '/api/servicerequestreports';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Servicerequestreport extends MyBaseModel {
             'ReportDate': this.attr('', {}),
             'Approved': this.attr('', {}),
             'Rejected': this.attr('', {}),
-            
+
         };
     }
 

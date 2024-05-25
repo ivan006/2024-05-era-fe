@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Good extends MyBaseModel {
     static entity = 'good';
-    static entityUrl = '/rest/v1/goods';
+    static entityUrl = '/api/goods';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -42,7 +42,7 @@ export default class Good extends MyBaseModel {
             'HazardSubstance': this.attr('', {}),
             'Dimension': this.attr('', {}),
             'Sector': this.attr('', {}),
-            
+
         };
     }
 

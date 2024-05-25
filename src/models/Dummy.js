@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Dummy extends MyBaseModel {
     static entity = 'dummy';
-    static entityUrl = '/rest/v1/dummies';
+    static entityUrl = '/api/dummies';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -22,7 +22,7 @@ export default class Dummy extends MyBaseModel {
         return {
             id: this.attr(null),
             'textData': this.attr('', {}),
-            
+
         };
     }
 

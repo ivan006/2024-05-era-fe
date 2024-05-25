@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class FailedJob extends MyBaseModel {
     static entity = 'failedJob';
-    static entityUrl = '/rest/v1/failed_jobs';
+    static entityUrl = '/api/failed_jobs';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -34,7 +34,7 @@ export default class FailedJob extends MyBaseModel {
             'payload': this.attr('', {}),
             'exception': this.attr('', {}),
             'failed_at': this.attr('', {}),
-            
+
         };
     }
 

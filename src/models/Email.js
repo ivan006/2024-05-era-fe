@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Email extends MyBaseModel {
     static entity = 'email';
-    static entityUrl = '/rest/v1/emails';
+    static entityUrl = '/api/emails';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -30,7 +30,7 @@ export default class Email extends MyBaseModel {
             'Type': this.attr('', {}),
             'Person': this.attr('', {}),
             'Preferred': this.attr('', {}),
-            
+
         };
     }
 

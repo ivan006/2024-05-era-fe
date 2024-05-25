@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Query extends MyBaseModel {
     static entity = 'query';
-    static entityUrl = '/rest/v1/queries';
+    static entityUrl = '/api/queries';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -36,7 +36,7 @@ export default class Query extends MyBaseModel {
             'CreatedOn': this.attr('', {}),
             'ClosedOn': this.attr('', {}),
             'ClosedBy': this.attr('', {}),
-            
+
         };
     }
 

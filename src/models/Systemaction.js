@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Systemaction extends MyBaseModel {
     static entity = 'systemaction';
-    static entityUrl = '/rest/v1/systemactions';
+    static entityUrl = '/api/systemactions';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -40,7 +40,7 @@ export default class Systemaction extends MyBaseModel {
             'CreatedBy': this.attr('', {}),
             'ChangedOn': this.attr('', {}),
             'ChangedBy': this.attr('', {}),
-            
+
         };
     }
 

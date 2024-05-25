@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Domainuser extends MyBaseModel {
     static entity = 'domainuser';
-    static entityUrl = '/rest/v1/domainusers';
+    static entityUrl = '/api/domainusers';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -34,7 +34,7 @@ export default class Domainuser extends MyBaseModel {
             'CreatedBy': this.attr('', {}),
             'ChangedOn': this.attr('', {}),
             'ChangedBy': this.attr('', {}),
-            
+
         };
     }
 

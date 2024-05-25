@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Systemuser extends MyBaseModel {
     static entity = 'systemuser';
-    static entityUrl = '/rest/v1/systemusers';
+    static entityUrl = '/api/systemusers';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -52,7 +52,7 @@ export default class Systemuser extends MyBaseModel {
             'ChangedOn': this.attr('', {}),
             'ChangedBy': this.attr('', {}),
             'FbId': this.attr('', {}),
-            
+
         };
     }
 

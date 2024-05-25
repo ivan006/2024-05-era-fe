@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Entity extends MyBaseModel {
     static entity = 'entity';
-    static entityUrl = '/rest/v1/entities';
+    static entityUrl = '/api/entities';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -52,7 +52,7 @@ export default class Entity extends MyBaseModel {
             'Passport': this.attr('', {}),
             'HasPhoto': this.attr('', {}),
             'IsPaid': this.attr('', {}),
-            
+
         };
     }
 

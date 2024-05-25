@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Userroleaccess extends MyBaseModel {
     static entity = 'userroleaccess';
-    static entityUrl = '/rest/v1/userroleaccesses';
+    static entityUrl = '/api/userroleaccesses';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -36,7 +36,7 @@ export default class Userroleaccess extends MyBaseModel {
             'ChangedBy': this.attr('', {}),
             'FbId': this.attr('', {}),
             'Rule': this.attr('', {}),
-            
+
         };
     }
 

@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Crm extends MyBaseModel {
     static entity = 'crm';
-    static entityUrl = '/rest/v1/crms';
+    static entityUrl = '/api/crms';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -32,7 +32,7 @@ export default class Crm extends MyBaseModel {
             'Contact': this.attr('', {}),
             'Description': this.attr('', {}),
             'Status': this.attr('', {}),
-            
+
         };
     }
 
