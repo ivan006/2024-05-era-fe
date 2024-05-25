@@ -1,6 +1,7 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import Entity from './Entity';
 import Queryheader from './Queryheader';
+import Entitygood from './Entitygood';
 
 export default class Entitygoodapproval extends MyBaseModel {
     static entity = 'entitygoodapproval';
@@ -54,7 +55,8 @@ export default class Entitygoodapproval extends MyBaseModel {
             'approvedBy': this.belongsTo(Entity, 'ApprovedBy'),
             'invoiceApprovedBy': this.belongsTo(Entity, 'InvoiceApprovedBy'),
             'query': this.belongsTo(Queryheader, 'Query'),
-            'entity': this.belongsTo(Entity, 'Entity')
+            'entity': this.belongsTo(Entity, 'Entity'),
+            'entitygoods': this.hasMany(Entitygood, 'Invoice')
         };
     }
 

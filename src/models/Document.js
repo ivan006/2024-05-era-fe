@@ -1,4 +1,5 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Documentdetail from './Documentdetail';
 
 export default class Document extends MyBaseModel {
     static entity = 'document';
@@ -36,7 +37,7 @@ export default class Document extends MyBaseModel {
             'CreatedBy': this.attr('', {}),
             'CreatedOn': this.attr('', {}),
             'Access': this.attr('', {}),
-            
+            'documentdetails': this.hasMany(Documentdetail, 'Document')
         };
     }
 

@@ -1,6 +1,8 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import Entity from './Entity';
 import Systemuser from './Systemuser';
+import Servicerequestfrequency from './Servicerequestfrequency';
+import Servicerequestreport from './Servicerequestreport';
 
 export default class Servicerequest extends MyBaseModel {
     static entity = 'servicerequest';
@@ -46,7 +48,9 @@ export default class Servicerequest extends MyBaseModel {
             'Deliverables': this.attr('', {}),
             'DeliveryDate': this.attr('', {}),
             'serviceProvider': this.belongsTo(Entity, 'ServiceProvider'),
-            'createdBy': this.belongsTo(Systemuser, 'CreatedBy')
+            'createdBy': this.belongsTo(Systemuser, 'CreatedBy'),
+            'servicerequestfrequencies': this.hasMany(Servicerequestfrequency, 'ServiceRequest'),
+            'servicerequestreports': this.hasMany(Servicerequestreport, 'ServiceRequest')
         };
     }
 

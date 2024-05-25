@@ -39,7 +39,8 @@ export default class Treatmentdetail extends MyBaseModel {
             'Energy': this.attr('', {}),
             'Landfill': this.attr('', {}),
             'LocalSecondaryProducts': this.attr('', {}),
-            'serviceRequestReport': this.belongsTo(Servicerequestreport, 'ServiceRequestReport')
+            'serviceRequestReport': this.belongsTo(Servicerequestreport, 'ServiceRequestReport'),
+            'servicerequestreports': this.hasMany(Servicerequestreport, 'TreatmentDetails')
         };
     }
 

@@ -3,6 +3,7 @@ import Servicerequest from './Servicerequest';
 import Entity from './Entity';
 import Systemuser from './Systemuser';
 import Treatmentdetail from './Treatmentdetail';
+import Externalproducer from './Externalproducer';
 
 export default class Servicerequestreport extends MyBaseModel {
     static entity = 'servicerequestreport';
@@ -48,7 +49,9 @@ export default class Servicerequestreport extends MyBaseModel {
             'serviceRequest': this.belongsTo(Servicerequest, 'ServiceRequest'),
             'serviceProvider': this.belongsTo(Entity, 'ServiceProvider'),
             'createdBy': this.belongsTo(Systemuser, 'CreatedBy'),
-            'treatmentDetail': this.belongsTo(Treatmentdetail, 'TreatmentDetails')
+            'treatmentDetail': this.belongsTo(Treatmentdetail, 'TreatmentDetails'),
+            'externalproducers': this.hasMany(Externalproducer, 'ServiceRequestReport'),
+            'treatmentdetails': this.hasMany(Treatmentdetail, 'ServiceRequestReport')
         };
     }
 
