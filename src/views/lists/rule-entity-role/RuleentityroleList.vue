@@ -39,9 +39,9 @@ export default {
     methods: {
         openRecord(e) {
             router.push({
-                name: '/lists/rule-entity-role/:cId',
+                name: '/lists/rule-entity-role/:rId',
                 params: {
-                    cId: e.id,
+                    rId: e.Id,
                 },
             })
         },

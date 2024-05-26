@@ -39,9 +39,9 @@ export default {
     methods: {
         openRecord(e) {
             router.push({
-                name: '/lists/service-request-frequency/:cId',
+                name: '/lists/service-request-frequency/:rId',
                 params: {
-                    cId: e.id,
+                    rId: e.Id,
                 },
             })
         },

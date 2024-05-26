@@ -39,9 +39,9 @@ export default {
     methods: {
         openRecord(e) {
             router.push({
-                name: '/lists/rule-action/:cId',
+                name: '/lists/rule-action/:rId',
                 params: {
-                    cId: e.id,
+                    rId: e.Id,
                 },
             })
         },

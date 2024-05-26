@@ -39,9 +39,9 @@ export default {
     methods: {
         openRecord(e) {
             router.push({
-                name: '/lists/crm/:cId',
+                name: '/lists/crm/:rId',
                 params: {
-                    cId: e.id,
+                    rId: e.Id,
                 },
             })
         },
