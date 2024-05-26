@@ -58,14 +58,14 @@ export default class Entity extends MyBaseModel {
             'Passport': this.attr(''),
             'HasPhoto': this.attr(''),
             'IsPaid': this.attr(''),
-            'entitygoods': this.hasMany(Entitygood, 'Entity'),
-            'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'ApprovedBy'),
-            'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'InvoiceApprovedBy'),
-            'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'Entity'),
-            'goods': this.hasMany(Good, 'Sector'),
-            'servicerequests': this.hasMany(Servicerequest, 'ServiceProvider'),
-            'servicerequestreports': this.hasMany(Servicerequestreport, 'ServiceProvider'),
-            'systemcodes': this.hasMany(Systemcode, 'Entity')
+            'entitygood': this.hasMany(Entitygood, 'Entity'),
+            'entitygoodapprovalApprovedBy': this.hasMany(Entitygoodapproval, 'ApprovedBy'),
+            'entitygoodapprovalInvoiceApprovedBy': this.hasMany(Entitygoodapproval, 'InvoiceApprovedBy'),
+            'entitygoodapprovalEntity': this.hasMany(Entitygoodapproval, 'Entity'),
+            'good': this.hasMany(Good, 'Sector'),
+            'servicerequest': this.hasMany(Servicerequest, 'ServiceProvider'),
+            'servicerequestreport': this.hasMany(Servicerequestreport, 'ServiceProvider'),
+            'systemcode': this.hasMany(Systemcode, 'Entity')
         };
     }
 

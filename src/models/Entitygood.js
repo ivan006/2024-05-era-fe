@@ -54,7 +54,7 @@ export default class Entitygood extends MyBaseModel {
             'Period': this.attr(''),
             'Invoice': this.attr(''),
             'entity': this.belongsTo(Entity, 'Entity'),
-            'invoice': this.belongsTo(Entitygoodapproval, 'Invoice'),
+            'entitygoodapproval': this.belongsTo(Entitygoodapproval, 'Invoice'),
             'good': this.belongsTo(Good, 'Good')
         };
     }

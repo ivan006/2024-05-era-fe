@@ -35,7 +35,7 @@ export default class Domainuser extends MyBaseModel {
             'CreatedBy': this.attr(''),
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
-            'systemUser': this.belongsTo(Systemuser, 'SystemUser')
+            'systemuser': this.belongsTo(Systemuser, 'SystemUser')
         };
     }
 

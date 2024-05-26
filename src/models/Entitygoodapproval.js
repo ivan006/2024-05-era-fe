@@ -52,11 +52,11 @@ export default class Entitygoodapproval extends MyBaseModel {
             'UseVAT': this.attr(''),
             'Query': this.attr(''),
             'Status': this.attr(''),
-            'approvedBy': this.belongsTo(Entity, 'ApprovedBy'),
-            'invoiceApprovedBy': this.belongsTo(Entity, 'InvoiceApprovedBy'),
-            'query': this.belongsTo(Queryheader, 'Query'),
-            'entity': this.belongsTo(Entity, 'Entity'),
-            'entitygoods': this.hasMany(Entitygood, 'Invoice')
+            'entityApprovedBy': this.belongsTo(Entity, 'ApprovedBy'),
+            'entityInvoiceApprovedBy': this.belongsTo(Entity, 'InvoiceApprovedBy'),
+            'queryheader': this.belongsTo(Queryheader, 'Query'),
+            'entityEntity': this.belongsTo(Entity, 'Entity'),
+            'entitygood': this.hasMany(Entitygood, 'Invoice')
         };
     }
 

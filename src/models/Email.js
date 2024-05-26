@@ -31,7 +31,7 @@ export default class Email extends MyBaseModel {
             'Type': this.attr(''),
             'Person': this.attr(''),
             'Preferred': this.attr(''),
-            'type': this.belongsTo(Systemcode, 'Type')
+            'systemcode': this.belongsTo(Systemcode, 'Type')
         };
     }
 

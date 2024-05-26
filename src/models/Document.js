@@ -37,7 +37,7 @@ export default class Document extends MyBaseModel {
             'CreatedBy': this.attr(''),
             'CreatedOn': this.attr(''),
             'Access': this.attr(''),
-            'documentdetails': this.hasMany(Documentdetail, 'Document')
+            'documentdetail': this.hasMany(Documentdetail, 'Document')
         };
     }
 

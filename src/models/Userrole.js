@@ -37,7 +37,7 @@ export default class Userrole extends MyBaseModel {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'FbId': this.attr(''),
-            'useraccesses': this.hasMany(Useraccess, 'UserRole')
+            'useraccess': this.hasMany(Useraccess, 'UserRole')
         };
     }
 
