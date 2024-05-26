@@ -4,6 +4,7 @@ import Systemuser from './Systemuser';
 export default class Userdevice extends MyBaseModel {
     static entity = 'userdevice';
     static entityUrl = '/api/userdevices';
+    static primaryKey = 'SystemUser';
 
     static parentWithables = [
         'systemUser'
@@ -25,7 +26,6 @@ export default class Userdevice extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'SystemUser': this.attr(''),
             'DeviceKey': this.attr(''),
             'Name': this.attr(''),

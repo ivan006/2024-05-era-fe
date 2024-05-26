@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Instanceno extends MyBaseModel {
     static entity = 'instanceno';
     static entityUrl = '/api/instancenos';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -21,7 +22,6 @@ export default class Instanceno extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'ObjectName': this.attr(''),
             

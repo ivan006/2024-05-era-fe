@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Objecttrait extends MyBaseModel {
     static entity = 'objecttrait';
     static entityUrl = '/api/objecttraits';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -31,7 +32,6 @@ export default class Objecttrait extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Name': this.attr(''),
             'Description': this.attr(''),

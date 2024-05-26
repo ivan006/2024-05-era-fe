@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class PersonalAccessToken extends MyBaseModel {
     static entity = 'personalAccessToken';
     static entityUrl = '/api/personal_access_tokens';
+    static primaryKey = 'id';
 
     static parentWithables = [
         
@@ -29,7 +30,6 @@ export default class PersonalAccessToken extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'id': this.attr(''),
             'tokenable_type': this.attr(''),
             'tokenable_id': this.attr(''),

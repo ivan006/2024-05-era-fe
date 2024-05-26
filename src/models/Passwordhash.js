@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Passwordhash extends MyBaseModel {
     static entity = 'passwordhash';
     static entityUrl = '/api/passwordhashes';
+    static primaryKey = 'SystemUser';
 
     static parentWithables = [
         
@@ -27,7 +28,6 @@ export default class Passwordhash extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'SystemUser': this.attr(''),
             'Hash': this.attr(''),
             'Salt': this.attr(''),

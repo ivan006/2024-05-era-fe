@@ -4,6 +4,7 @@ import Document from './Document';
 export default class Documentdetail extends MyBaseModel {
     static entity = 'documentdetail';
     static entityUrl = '/api/documentdetails';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'document'
@@ -30,7 +31,6 @@ export default class Documentdetail extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Document': this.attr(''),
             'Section': this.attr(''),

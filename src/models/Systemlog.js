@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Systemlog extends MyBaseModel {
     static entity = 'systemlog';
     static entityUrl = '/api/systemlogs';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -28,7 +29,6 @@ export default class Systemlog extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'LogDate': this.attr(''),
             'LogLevel': this.attr(''),

@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Requirement extends MyBaseModel {
     static entity = 'requirement';
     static entityUrl = '/api/requirements';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -30,7 +31,6 @@ export default class Requirement extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Service': this.attr(''),
             'Category': this.attr(''),

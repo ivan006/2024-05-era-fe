@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Entityrelationship extends MyBaseModel {
     static entity = 'entityrelationship';
     static entityUrl = '/api/entityrelationships';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -30,7 +31,6 @@ export default class Entityrelationship extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'EntityA': this.attr(''),
             'EntityB': this.attr(''),

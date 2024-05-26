@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Entityevent extends MyBaseModel {
     static entity = 'entityevent';
     static entityUrl = '/api/entityevents';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -25,7 +26,6 @@ export default class Entityevent extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'TableID': this.attr(''),
             'TableName': this.attr(''),

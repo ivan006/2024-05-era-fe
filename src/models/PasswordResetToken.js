@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class PasswordResetToken extends MyBaseModel {
     static entity = 'passwordResetToken';
     static entityUrl = '/api/password_reset_tokens';
+    static primaryKey = 'email';
 
     static parentWithables = [
         
@@ -22,7 +23,6 @@ export default class PasswordResetToken extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'email': this.attr(''),
             'token': this.attr(''),
             'created_at': this.attr(''),

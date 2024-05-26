@@ -6,6 +6,7 @@ import Entitygood from './Entitygood';
 export default class Entitygoodapproval extends MyBaseModel {
     static entity = 'entitygoodapproval';
     static entityUrl = '/api/entitygoodapprovals';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'approvedBy',
@@ -38,7 +39,6 @@ export default class Entitygoodapproval extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'ApprovedBy': this.attr(''),
             'ApprovedOn': this.attr(''),

@@ -4,6 +4,7 @@ import Systemcode from './Systemcode';
 export default class Transaction extends MyBaseModel {
     static entity = 'transaction';
     static entityUrl = '/api/transactions';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'type'
@@ -34,7 +35,6 @@ export default class Transaction extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'TransNo': this.attr(''),
             'Description': this.attr(''),

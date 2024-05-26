@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Audit extends MyBaseModel {
     static entity = 'audit';
     static entityUrl = '/api/audits';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -28,7 +29,6 @@ export default class Audit extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'TableName': this.attr(''),
             'CRUD': this.attr(''),

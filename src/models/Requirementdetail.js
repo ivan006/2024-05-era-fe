@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Requirementdetail extends MyBaseModel {
     static entity = 'requirementdetail';
     static entityUrl = '/api/requirementdetails';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -33,7 +34,6 @@ export default class Requirementdetail extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Requirement': this.attr(''),
             'RelativeID': this.attr(''),

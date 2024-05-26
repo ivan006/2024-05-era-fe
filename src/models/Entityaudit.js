@@ -4,6 +4,7 @@ import Systemuser from './Systemuser';
 export default class Entityaudit extends MyBaseModel {
     static entity = 'entityaudit';
     static entityUrl = '/api/entityaudits';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'systemUser'
@@ -27,7 +28,6 @@ export default class Entityaudit extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Entity Name': this.attr(''),
             'Entity Id': this.attr(''),

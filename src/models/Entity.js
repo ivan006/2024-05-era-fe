@@ -9,6 +9,7 @@ import Systemcode from './Systemcode';
 export default class Entity extends MyBaseModel {
     static entity = 'entity';
     static entityUrl = '/api/entities';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -41,7 +42,6 @@ export default class Entity extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'ExternalNo': this.attr(''),
             'Level': this.attr(''),

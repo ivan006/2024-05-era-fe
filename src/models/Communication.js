@@ -4,6 +4,7 @@ import Systemuser from './Systemuser';
 export default class Communication extends MyBaseModel {
     static entity = 'communication';
     static entityUrl = '/api/communications';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'sentBy'
@@ -29,7 +30,6 @@ export default class Communication extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Type': this.attr(''),
             'Status': this.attr(''),

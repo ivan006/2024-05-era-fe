@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Ruleaction extends MyBaseModel {
     static entity = 'ruleaction';
     static entityUrl = '/api/ruleactions';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -28,7 +29,6 @@ export default class Ruleaction extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Rule': this.attr(''),
             'Process': this.attr(''),

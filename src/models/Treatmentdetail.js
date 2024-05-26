@@ -4,6 +4,7 @@ import Servicerequestreport from './Servicerequestreport';
 export default class Treatmentdetail extends MyBaseModel {
     static entity = 'treatmentdetail';
     static entityUrl = '/api/treatmentdetails';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'serviceRequestReport'
@@ -29,7 +30,6 @@ export default class Treatmentdetail extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'ServiceRequestReport': this.attr(''),
             'OpeningBalance': this.attr(''),

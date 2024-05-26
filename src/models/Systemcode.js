@@ -10,6 +10,7 @@ import Userconfiguration from './Userconfiguration';
 export default class Systemcode extends MyBaseModel {
     static entity = 'systemcode';
     static entityUrl = '/api/systemcodes';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'entity'
@@ -40,7 +41,6 @@ export default class Systemcode extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Context': this.attr(''),
             'Field': this.attr(''),

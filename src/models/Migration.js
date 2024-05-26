@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Migration extends MyBaseModel {
     static entity = 'migration';
     static entityUrl = '/api/migrations';
+    static primaryKey = 'id';
 
     static parentWithables = [
         
@@ -22,7 +23,6 @@ export default class Migration extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'id': this.attr(''),
             'migration': this.attr(''),
             'batch': this.attr(''),

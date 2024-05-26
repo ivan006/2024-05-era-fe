@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Productprovider extends MyBaseModel {
     static entity = 'productprovider';
     static entityUrl = '/api/productproviders';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -22,7 +23,6 @@ export default class Productprovider extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Name': this.attr(''),
             'Entity': this.attr(''),

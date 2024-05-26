@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class FailedJob extends MyBaseModel {
     static entity = 'failedJob';
     static entityUrl = '/api/failed_jobs';
+    static primaryKey = 'id';
 
     static parentWithables = [
         
@@ -26,7 +27,6 @@ export default class FailedJob extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'id': this.attr(''),
             'uuid': this.attr(''),
             'connection': this.attr(''),

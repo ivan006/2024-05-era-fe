@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Relative extends MyBaseModel {
     static entity = 'relative';
     static entityUrl = '/api/relatives';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -27,7 +28,6 @@ export default class Relative extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Entity': this.attr(''),
             'Relative': this.attr(''),

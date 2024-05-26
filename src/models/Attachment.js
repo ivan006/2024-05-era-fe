@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Attachment extends MyBaseModel {
     static entity = 'attachment';
     static entityUrl = '/api/attachments';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -28,7 +29,6 @@ export default class Attachment extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Name': this.attr(''),
             'Description': this.attr(''),

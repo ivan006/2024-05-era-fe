@@ -5,6 +5,7 @@ import Entitygood from './Entitygood';
 export default class Good extends MyBaseModel {
     static entity = 'good';
     static entityUrl = '/api/goods';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'sector'
@@ -32,7 +33,6 @@ export default class Good extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'HSCode': this.attr(''),
             'Description': this.attr(''),

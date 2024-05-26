@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Query extends MyBaseModel {
     static entity = 'query';
     static entityUrl = '/api/queries';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -27,7 +28,6 @@ export default class Query extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'ParentQuery': this.attr(''),
             'AssignedTo': this.attr(''),

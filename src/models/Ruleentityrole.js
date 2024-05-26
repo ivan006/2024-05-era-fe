@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Ruleentityrole extends MyBaseModel {
     static entity = 'ruleentityrole';
     static entityUrl = '/api/ruleentityroles';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -29,7 +30,6 @@ export default class Ruleentityrole extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'EntityRole': this.attr(''),
             'Entity': this.attr(''),

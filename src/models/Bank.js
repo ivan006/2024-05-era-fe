@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Bank extends MyBaseModel {
     static entity = 'bank';
     static entityUrl = '/api/banks';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -28,7 +29,6 @@ export default class Bank extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Name': this.attr(''),
             'Branch': this.attr(''),

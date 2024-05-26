@@ -4,6 +4,7 @@ import Entitygoodapproval from './Entitygoodapproval';
 export default class Queryheader extends MyBaseModel {
     static entity = 'queryheader';
     static entityUrl = '/api/queryheaders';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -30,7 +31,6 @@ export default class Queryheader extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Subject': this.attr(''),
             'Status': this.attr(''),

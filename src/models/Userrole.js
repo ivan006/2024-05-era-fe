@@ -4,6 +4,7 @@ import Useraccess from './Useraccess';
 export default class Userrole extends MyBaseModel {
     static entity = 'userrole';
     static entityUrl = '/api/userroles';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -28,7 +29,6 @@ export default class Userrole extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Name': this.attr(''),
             'Active': this.attr(''),

@@ -4,6 +4,7 @@ import Systemuser from './Systemuser';
 export default class Domainuser extends MyBaseModel {
     static entity = 'domainuser';
     static entityUrl = '/api/domainusers';
+    static primaryKey = 'SystemUser';
 
     static parentWithables = [
         'systemUser'
@@ -27,7 +28,6 @@ export default class Domainuser extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'SystemUser': this.attr(''),
             'DomainName': this.attr(''),
             'DomainAccount': this.attr(''),

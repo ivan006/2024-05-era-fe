@@ -5,6 +5,7 @@ import Systemcode from './Systemcode';
 export default class Servicerequestfrequency extends MyBaseModel {
     static entity = 'servicerequestfrequency';
     static entityUrl = '/api/servicerequestfrequencies';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'serviceRequest',
@@ -26,7 +27,6 @@ export default class Servicerequestfrequency extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'ServiceRequest': this.attr(''),
             'ReportFrequency': this.attr(''),

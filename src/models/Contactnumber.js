@@ -4,6 +4,7 @@ import Systemcode from './Systemcode';
 export default class Contactnumber extends MyBaseModel {
     static entity = 'contactnumber';
     static entityUrl = '/api/contactnumbers';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'type'
@@ -25,7 +26,6 @@ export default class Contactnumber extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Number': this.attr(''),
             'Type': this.attr(''),

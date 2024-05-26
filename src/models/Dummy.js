@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Dummy extends MyBaseModel {
     static entity = 'dummy';
     static entityUrl = '/api/dummies';
+    static primaryKey = 'id';
 
     static parentWithables = [
         
@@ -20,7 +21,6 @@ export default class Dummy extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'textData': this.attr(''),
             
         };

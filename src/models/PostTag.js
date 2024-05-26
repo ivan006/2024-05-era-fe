@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class PostTag extends MyBaseModel {
     static entity = 'postTag';
     static entityUrl = '/api/post_tags';
+    static primaryKey = 'id';
 
     static parentWithables = [
         
@@ -24,7 +25,6 @@ export default class PostTag extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'id': this.attr(''),
             'created_at': this.attr(''),
             'updated_at': this.attr(''),

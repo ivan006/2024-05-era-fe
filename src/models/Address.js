@@ -4,6 +4,7 @@ import Systemcode from './Systemcode';
 export default class Address extends MyBaseModel {
     static entity = 'address';
     static entityUrl = '/api/addresses';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'country',
@@ -38,7 +39,6 @@ export default class Address extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'StreetNo': this.attr(''),
             'StreetName': this.attr(''),

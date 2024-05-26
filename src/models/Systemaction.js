@@ -4,6 +4,7 @@ import Useraccess from './Useraccess';
 export default class Systemaction extends MyBaseModel {
     static entity = 'systemaction';
     static entityUrl = '/api/systemactions';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -30,7 +31,6 @@ export default class Systemaction extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Module': this.attr(''),
             'Context': this.attr(''),

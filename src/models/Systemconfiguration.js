@@ -3,6 +3,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 export default class Systemconfiguration extends MyBaseModel {
     static entity = 'systemconfiguration';
     static entityUrl = '/api/systemconfigurations';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         
@@ -22,7 +23,6 @@ export default class Systemconfiguration extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'Name': this.attr(''),
             'Value': this.attr(''),

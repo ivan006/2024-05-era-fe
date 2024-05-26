@@ -8,6 +8,7 @@ import Externalproducer from './Externalproducer';
 export default class Servicerequestreport extends MyBaseModel {
     static entity = 'servicerequestreport';
     static entityUrl = '/api/servicerequestreports';
+    static primaryKey = 'Id';
 
     static parentWithables = [
         'serviceRequest',
@@ -36,7 +37,6 @@ export default class Servicerequestreport extends MyBaseModel {
 
     static fields() {
         return {
-            id: this.attr(null),
             'Id': this.attr(''),
             'ServiceRequest': this.attr(''),
             'ServiceProvider': this.attr(''),
