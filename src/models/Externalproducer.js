@@ -7,7 +7,7 @@ export default class Externalproducer extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'serviceRequestReport'
+        'serviceRequestReportRel'
     ];
 
     static rules = {

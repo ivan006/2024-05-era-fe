@@ -7,7 +7,7 @@ export default class Userdevice extends MyBaseModel {
     static primaryKey = 'SystemUser';
 
     static parentWithables = [
-        'systemUser'
+        'systemUserRel'
     ];
 
     static rules = {

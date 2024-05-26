@@ -7,7 +7,7 @@ export default class Domainuser extends MyBaseModel {
     static primaryKey = 'SystemUser';
 
     static parentWithables = [
-        'systemUser'
+        'systemUserRel'
     ];
 
     static rules = {

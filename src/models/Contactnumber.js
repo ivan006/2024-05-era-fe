@@ -7,7 +7,7 @@ export default class Contactnumber extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'type'
+        'typeRel'
     ];
 
     static rules = {

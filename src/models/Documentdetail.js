@@ -7,7 +7,7 @@ export default class Documentdetail extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'document'
+        'documentRel'
     ];
 
     static rules = {

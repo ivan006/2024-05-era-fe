@@ -7,8 +7,8 @@ export default class Address extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'countryId',
-        'type'
+        'country',
+        'typeRel'
     ];
 
     static rules = {

@@ -9,9 +9,9 @@ export default class Useraccess extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'systemUser',
-        'userRole',
-        'systemAction'
+        'systemUserRel',
+        'userRoleRel',
+        'systemActionRel'
     ];
 
     static rules = {

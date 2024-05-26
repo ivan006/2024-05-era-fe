@@ -8,7 +8,7 @@ export default class Good extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'sector'
+        'sectorRel'
     ];
 
     static rules = {

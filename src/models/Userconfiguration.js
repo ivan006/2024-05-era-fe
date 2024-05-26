@@ -8,8 +8,8 @@ export default class Userconfiguration extends MyBaseModel {
     static primaryKey = 'SystemUser';
 
     static parentWithables = [
-        'systemUser',
-        'language'
+        'systemUserRel',
+        'languageRel'
     ];
 
     static rules = {

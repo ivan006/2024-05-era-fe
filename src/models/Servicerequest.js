@@ -10,8 +10,8 @@ export default class Servicerequest extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'serviceProvider',
-        'createdBy'
+        'serviceProviderRel',
+        'createdByRel'
     ];
 
     static rules = {

@@ -9,10 +9,10 @@ export default class Entitygoodapproval extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'approvedBy',
-        'invoiceApprovedBy',
-        'entity',
-        'query'
+        'approvedByRel',
+        'invoiceApprovedByRel',
+        'entityRel',
+        'queryRel'
     ];
 
     static rules = {

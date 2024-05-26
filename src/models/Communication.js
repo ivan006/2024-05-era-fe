@@ -7,7 +7,7 @@ export default class Communication extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'sentBy'
+        'sentByRel'
     ];
 
     static rules = {

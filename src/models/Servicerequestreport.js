@@ -11,9 +11,9 @@ export default class Servicerequestreport extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'serviceRequest',
-        'serviceProvider',
-        'createdBy',
+        'serviceRequestRel',
+        'serviceProviderRel',
+        'createdByRel',
         'treatmentDetail'
     ];
 

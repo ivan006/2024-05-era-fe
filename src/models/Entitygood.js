@@ -9,9 +9,9 @@ export default class Entitygood extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'entity',
-        'good',
-        'invoice'
+        'entityRel',
+        'goodRel',
+        'invoiceRel'
     ];
 
     static rules = {

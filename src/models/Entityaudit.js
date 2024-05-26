@@ -7,7 +7,7 @@ export default class Entityaudit extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'systemUser'
+        'systemUserRel'
     ];
 
     static rules = {

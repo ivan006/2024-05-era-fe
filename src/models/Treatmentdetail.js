@@ -7,7 +7,7 @@ export default class Treatmentdetail extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'serviceRequestReport'
+        'serviceRequestReportRel'
     ];
 
     static rules = {

@@ -8,8 +8,8 @@ export default class Servicerequestfrequency extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'serviceRequest',
-        'reportFrequency'
+        'serviceRequestRel',
+        'reportFrequencyRel'
     ];
 
     static rules = {

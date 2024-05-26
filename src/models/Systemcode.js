@@ -13,7 +13,7 @@ export default class Systemcode extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'entity'
+        'entityRel'
     ];
 
     static rules = {
