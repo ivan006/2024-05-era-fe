@@ -3,7 +3,7 @@ import Systemuser from './Systemuser';
 
 export default class Communication extends MyBaseModel {
     static entity = 'communication';
-    static entityUrl = '/rest/v1/communications';
+    static entityUrl = '/api/communications';
 
     static parentWithables = [
         'sentBy'
@@ -16,29 +16,29 @@ export default class Communication extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Type': { },
-            'Status': { },
-            'SentBy': { },
-            'SentTo': { },
-            'SentOn': { },
-            'Content': { },
-            'RelativeName': { },
-            'RelativeID': { }
+        'Id': {},
+            'Type': {},
+            'Status': {},
+            'SentBy': { relationRules: { linkables: (user) => { return {} } } },
+            'SentTo': {},
+            'SentOn': {},
+            'Content': {},
+            'RelativeName': {},
+            'RelativeID': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Type': this.attr('', {}),
-            'Status': this.attr('', {}),
-            'SentBy': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'SentTo': this.attr('', {}),
-            'SentOn': this.attr('', {}),
-            'Content': this.attr('', {}),
-            'RelativeName': this.attr('', {}),
-            'RelativeID': this.attr('', {}),
+            'Id': this.attr(''),
+            'Type': this.attr(''),
+            'Status': this.attr(''),
+            'SentBy': this.attr(''),
+            'SentTo': this.attr(''),
+            'SentOn': this.attr(''),
+            'Content': this.attr(''),
+            'RelativeName': this.attr(''),
+            'RelativeID': this.attr(''),
             'sentBy': this.belongsTo(Systemuser, 'SentBy')
         };
     }

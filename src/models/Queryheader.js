@@ -3,7 +3,7 @@ import Entitygoodapproval from './Entitygoodapproval';
 
 export default class Queryheader extends MyBaseModel {
     static entity = 'queryheader';
-    static entityUrl = '/rest/v1/queryheaders';
+    static entityUrl = '/api/queryheaders';
 
     static parentWithables = [
         
@@ -16,31 +16,31 @@ export default class Queryheader extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Subject': { },
-            'Status': { },
-            'Type': { },
-            'RelativeName': { },
-            'RelativeID': { },
-            'CreatedBy': { },
-            'CreatedOn': { },
-            'ClosedBy': { },
-            'ClosedOn': { }
+        'Id': {},
+            'Subject': {},
+            'Status': {},
+            'Type': {},
+            'RelativeName': {},
+            'RelativeID': {},
+            'CreatedBy': {},
+            'CreatedOn': {},
+            'ClosedBy': {},
+            'ClosedOn': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Subject': this.attr('', {}),
-            'Status': this.attr('', {}),
-            'Type': this.attr('', {}),
-            'RelativeName': this.attr('', {}),
-            'RelativeID': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
-            'ClosedBy': this.attr('', {}),
-            'ClosedOn': this.attr('', {}),
+            'Id': this.attr(''),
+            'Subject': this.attr(''),
+            'Status': this.attr(''),
+            'Type': this.attr(''),
+            'RelativeName': this.attr(''),
+            'RelativeID': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'ClosedBy': this.attr(''),
+            'ClosedOn': this.attr(''),
             'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'Query')
         };
     }

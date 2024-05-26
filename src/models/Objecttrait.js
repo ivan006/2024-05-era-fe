@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Objecttrait extends MyBaseModel {
     static entity = 'objecttrait';
-    static entityUrl = '/rest/v1/objecttraits';
+    static entityUrl = '/api/objecttraits';
 
     static parentWithables = [
         
@@ -15,35 +15,35 @@ export default class Objecttrait extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Name': { },
-            'Description': { },
-            'Object': { },
-            'Type': { },
-            'Level': { },
-            'IsRule': { },
-            'SpecialType': { },
-            'IsDisabled': { },
-            'IsHidden': { },
-            'SystemCodeContext': { },
-            'SystemCodeField': { }
+        'Id': {},
+            'Name': {},
+            'Description': {},
+            'Object': {},
+            'Type': {},
+            'Level': {},
+            'IsRule': {},
+            'SpecialType': {},
+            'IsDisabled': {},
+            'IsHidden': {},
+            'SystemCodeContext': {},
+            'SystemCodeField': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Name': this.attr('', {}),
-            'Description': this.attr('', {}),
-            'Object': this.attr('', {}),
-            'Type': this.attr('', {}),
-            'Level': this.attr('', {}),
-            'IsRule': this.attr('', {}),
-            'SpecialType': this.attr('', {}),
-            'IsDisabled': this.attr('', {}),
-            'IsHidden': this.attr('', {}),
-            'SystemCodeContext': this.attr('', {}),
-            'SystemCodeField': this.attr('', {}),
+            'Id': this.attr(''),
+            'Name': this.attr(''),
+            'Description': this.attr(''),
+            'Object': this.attr(''),
+            'Type': this.attr(''),
+            'Level': this.attr(''),
+            'IsRule': this.attr(''),
+            'SpecialType': this.attr(''),
+            'IsDisabled': this.attr(''),
+            'IsHidden': this.attr(''),
+            'SystemCodeContext': this.attr(''),
+            'SystemCodeField': this.attr(''),
             
         };
     }

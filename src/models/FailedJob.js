@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class FailedJob extends MyBaseModel {
     static entity = 'failedJob';
-    static entityUrl = '/rest/v1/failed_jobs';
+    static entityUrl = '/api/failed_jobs';
 
     static parentWithables = [
         
@@ -15,25 +15,25 @@ export default class FailedJob extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'id': { },
-            'uuid': { },
-            'connection': { },
-            'queue': { },
-            'payload': { },
-            'exception': { },
-            'failed_at': { }
+        'id': {},
+            'uuid': {},
+            'connection': {},
+            'queue': {},
+            'payload': {},
+            'exception': {},
+            'failed_at': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'id': this.attr('', {}),
-            'uuid': this.attr('', {}),
-            'connection': this.attr('', {}),
-            'queue': this.attr('', {}),
-            'payload': this.attr('', {}),
-            'exception': this.attr('', {}),
-            'failed_at': this.attr('', {}),
+            'id': this.attr(''),
+            'uuid': this.attr(''),
+            'connection': this.attr(''),
+            'queue': this.attr(''),
+            'payload': this.attr(''),
+            'exception': this.attr(''),
+            'failed_at': this.attr(''),
             
         };
     }

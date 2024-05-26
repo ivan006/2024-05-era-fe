@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Dummy extends MyBaseModel {
     static entity = 'dummy';
-    static entityUrl = '/rest/v1/dummies';
+    static entityUrl = '/api/dummies';
 
     static parentWithables = [
         
@@ -15,13 +15,13 @@ export default class Dummy extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'textData': { }
+        'textData': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'textData': this.attr('', {}),
+            'textData': this.attr(''),
             
         };
     }

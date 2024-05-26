@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Ruleconfig extends MyBaseModel {
     static entity = 'ruleconfig';
-    static entityUrl = '/rest/v1/ruleconfigs';
+    static entityUrl = '/api/ruleconfigs';
 
     static parentWithables = [
         
@@ -15,29 +15,29 @@ export default class Ruleconfig extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Rule': { },
-            'TableName': { },
-            'ColumnName': { },
-            'ColumnType': { },
-            'Operand': { },
-            'Value': { },
-            'Description': { },
-            'SystemCodeValue': { }
+        'Id': {},
+            'Rule': {},
+            'TableName': {},
+            'ColumnName': {},
+            'ColumnType': {},
+            'Operand': {},
+            'Value': {},
+            'Description': {},
+            'SystemCodeValue': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Rule': this.attr('', {}),
-            'TableName': this.attr('', {}),
-            'ColumnName': this.attr('', {}),
-            'ColumnType': this.attr('', {}),
-            'Operand': this.attr('', {}),
-            'Value': this.attr('', {}),
-            'Description': this.attr('', {}),
-            'SystemCodeValue': this.attr('', {}),
+            'Id': this.attr(''),
+            'Rule': this.attr(''),
+            'TableName': this.attr(''),
+            'ColumnName': this.attr(''),
+            'ColumnType': this.attr(''),
+            'Operand': this.attr(''),
+            'Value': this.attr(''),
+            'Description': this.attr(''),
+            'SystemCodeValue': this.attr(''),
             
         };
     }

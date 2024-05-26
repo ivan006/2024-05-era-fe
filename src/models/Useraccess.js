@@ -5,7 +5,7 @@ import Userrole from './Userrole';
 
 export default class Useraccess extends MyBaseModel {
     static entity = 'useraccess';
-    static entityUrl = '/rest/v1/useraccesses';
+    static entityUrl = '/api/useraccesses';
 
     static parentWithables = [
         'systemUser',
@@ -20,31 +20,31 @@ export default class Useraccess extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'SystemUser': { },
-            'UserRole': { },
-            'SystemAction': { },
-            'Entity': { },
-            'CreatedOn': { },
-            'CreatedBy': { },
-            'ChangedOn': { },
-            'ChangedBy': { },
-            'FbId': { }
+        'Id': {},
+            'SystemUser': { relationRules: { linkables: (user) => { return {} } } },
+            'UserRole': { relationRules: { linkables: (user) => { return {} } } },
+            'SystemAction': { relationRules: { linkables: (user) => { return {} } } },
+            'Entity': {},
+            'CreatedOn': {},
+            'CreatedBy': {},
+            'ChangedOn': {},
+            'ChangedBy': {},
+            'FbId': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'SystemUser': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'UserRole': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'SystemAction': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'Entity': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
-            'ChangedOn': this.attr('', {}),
-            'ChangedBy': this.attr('', {}),
-            'FbId': this.attr('', {}),
+            'Id': this.attr(''),
+            'SystemUser': this.attr(''),
+            'UserRole': this.attr(''),
+            'SystemAction': this.attr(''),
+            'Entity': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'ChangedOn': this.attr(''),
+            'ChangedBy': this.attr(''),
+            'FbId': this.attr(''),
             'systemAction': this.belongsTo(Systemaction, 'SystemAction'),
             'systemUser': this.belongsTo(Systemuser, 'SystemUser'),
             'userRole': this.belongsTo(Userrole, 'UserRole')

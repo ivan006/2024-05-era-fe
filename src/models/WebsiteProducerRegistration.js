@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class WebsiteProducerRegistration extends MyBaseModel {
     static entity = 'websiteProducerRegistration';
-    static entityUrl = '/rest/v1/website_producer_registrations';
+    static entityUrl = '/api/website_producer_registrations';
 
     static parentWithables = [
         
@@ -15,17 +15,17 @@ export default class WebsiteProducerRegistration extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Data': { },
-            'ProducerId': { }
+        'Id': {},
+            'Data': {},
+            'ProducerId': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Data': this.attr('', {}),
-            'ProducerId': this.attr('', {}),
+            'Id': this.attr(''),
+            'Data': this.attr(''),
+            'ProducerId': this.attr(''),
             
         };
     }

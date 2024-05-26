@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Tag extends MyBaseModel {
     static entity = 'tag';
-    static entityUrl = '/rest/v1/tags';
+    static entityUrl = '/api/tags';
 
     static parentWithables = [
         
@@ -15,19 +15,19 @@ export default class Tag extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'id': { },
-            'created_at': { },
-            'updated_at': { },
-            'name': { }
+        'id': {},
+            'created_at': {},
+            'updated_at': {},
+            'name': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'id': this.attr('', {}),
-            'created_at': this.attr('', {}),
-            'updated_at': this.attr('', {}),
-            'name': this.attr('', {}),
+            'id': this.attr(''),
+            'created_at': this.attr(''),
+            'updated_at': this.attr(''),
+            'name': this.attr(''),
             
         };
     }

@@ -6,7 +6,7 @@ import Servicerequestreport from './Servicerequestreport';
 
 export default class Servicerequest extends MyBaseModel {
     static entity = 'servicerequest';
-    static entityUrl = '/rest/v1/servicerequests';
+    static entityUrl = '/api/servicerequests';
 
     static parentWithables = [
         'serviceProvider',
@@ -20,33 +20,33 @@ export default class Servicerequest extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'ServiceRequestNo': { },
-            'ServiceProvider': { },
-            'CreatedBy': { },
-            'CreatedOn': { },
-            'FromDate': { },
-            'ToDate': { },
-            'Services': { },
-            'Locations': { },
-            'Deliverables': { },
-            'DeliveryDate': { }
+        'Id': {},
+            'ServiceRequestNo': {},
+            'ServiceProvider': { relationRules: { linkables: (user) => { return {} } } },
+            'CreatedBy': { relationRules: { linkables: (user) => { return {} } } },
+            'CreatedOn': {},
+            'FromDate': {},
+            'ToDate': {},
+            'Services': {},
+            'Locations': {},
+            'Deliverables': {},
+            'DeliveryDate': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'ServiceRequestNo': this.attr('', {}),
-            'ServiceProvider': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'CreatedBy': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'CreatedOn': this.attr('', {}),
-            'FromDate': this.attr('', {}),
-            'ToDate': this.attr('', {}),
-            'Services': this.attr('', {}),
-            'Locations': this.attr('', {}),
-            'Deliverables': this.attr('', {}),
-            'DeliveryDate': this.attr('', {}),
+            'Id': this.attr(''),
+            'ServiceRequestNo': this.attr(''),
+            'ServiceProvider': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'FromDate': this.attr(''),
+            'ToDate': this.attr(''),
+            'Services': this.attr(''),
+            'Locations': this.attr(''),
+            'Deliverables': this.attr(''),
+            'DeliveryDate': this.attr(''),
             'serviceProvider': this.belongsTo(Entity, 'ServiceProvider'),
             'createdBy': this.belongsTo(Systemuser, 'CreatedBy'),
             'servicerequestfrequencies': this.hasMany(Servicerequestfrequency, 'ServiceRequest'),

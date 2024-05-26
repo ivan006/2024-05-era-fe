@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Ruleactiondatum extends MyBaseModel {
     static entity = 'ruleactiondatum';
-    static entityUrl = '/rest/v1/ruleactiondatas';
+    static entityUrl = '/api/ruleactiondatas';
 
     static parentWithables = [
         
@@ -15,21 +15,21 @@ export default class Ruleactiondatum extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Rule': { },
-            'TableName': { },
-            'ColumnName': { },
-            'ColumnType': { }
+        'Id': {},
+            'Rule': {},
+            'TableName': {},
+            'ColumnName': {},
+            'ColumnType': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Rule': this.attr('', {}),
-            'TableName': this.attr('', {}),
-            'ColumnName': this.attr('', {}),
-            'ColumnType': this.attr('', {}),
+            'Id': this.attr(''),
+            'Rule': this.attr(''),
+            'TableName': this.attr(''),
+            'ColumnName': this.attr(''),
+            'ColumnType': this.attr(''),
             
         };
     }

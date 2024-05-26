@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Relative extends MyBaseModel {
     static entity = 'relative';
-    static entityUrl = '/rest/v1/relatives';
+    static entityUrl = '/api/relatives';
 
     static parentWithables = [
         
@@ -15,27 +15,27 @@ export default class Relative extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Entity': { },
-            'Relative': { },
-            'Relationship': { },
-            'Adopted': { },
-            'Student': { },
-            'Disabled': { },
-            'TraditionalMarriage': { }
+        'Id': {},
+            'Entity': {},
+            'Relative': {},
+            'Relationship': {},
+            'Adopted': {},
+            'Student': {},
+            'Disabled': {},
+            'TraditionalMarriage': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Entity': this.attr('', {}),
-            'Relative': this.attr('', {}),
-            'Relationship': this.attr('', {}),
-            'Adopted': this.attr('', {}),
-            'Student': this.attr('', {}),
-            'Disabled': this.attr('', {}),
-            'TraditionalMarriage': this.attr('', {}),
+            'Id': this.attr(''),
+            'Entity': this.attr(''),
+            'Relative': this.attr(''),
+            'Relationship': this.attr(''),
+            'Adopted': this.attr(''),
+            'Student': this.attr(''),
+            'Disabled': this.attr(''),
+            'TraditionalMarriage': this.attr(''),
             
         };
     }

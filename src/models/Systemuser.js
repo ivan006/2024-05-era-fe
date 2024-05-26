@@ -10,7 +10,7 @@ import Userdevice from './Userdevice';
 
 export default class Systemuser extends MyBaseModel {
     static entity = 'systemuser';
-    static entityUrl = '/rest/v1/systemusers';
+    static entityUrl = '/api/systemusers';
 
     static parentWithables = [
         
@@ -23,43 +23,43 @@ export default class Systemuser extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Entity': { },
-            'Username': { },
-            'Active': { },
-            'LastSeen': { },
-            'LoginCount': { },
-            'FailedLoginAttempts': { },
-            'LockedSince': { },
-            'Secret': { },
-            'Email': { },
-            'Phone': { },
-            'CreatedOn': { },
-            'CreatedBy': { },
-            'ChangedOn': { },
-            'ChangedBy': { },
-            'FbId': { }
+        'Id': {},
+            'Entity': {},
+            'Username': {},
+            'Active': {},
+            'LastSeen': {},
+            'LoginCount': {},
+            'FailedLoginAttempts': {},
+            'LockedSince': {},
+            'Secret': {},
+            'Email': {},
+            'Phone': {},
+            'CreatedOn': {},
+            'CreatedBy': {},
+            'ChangedOn': {},
+            'ChangedBy': {},
+            'FbId': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Entity': this.attr('', {}),
-            'Username': this.attr('', {}),
-            'Active': this.attr('', {}),
-            'LastSeen': this.attr('', {}),
-            'LoginCount': this.attr('', {}),
-            'FailedLoginAttempts': this.attr('', {}),
-            'LockedSince': this.attr('', {}),
-            'Secret': this.attr('', {}),
-            'Email': this.attr('', {}),
-            'Phone': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
-            'ChangedOn': this.attr('', {}),
-            'ChangedBy': this.attr('', {}),
-            'FbId': this.attr('', {}),
+            'Id': this.attr(''),
+            'Entity': this.attr(''),
+            'Username': this.attr(''),
+            'Active': this.attr(''),
+            'LastSeen': this.attr(''),
+            'LoginCount': this.attr(''),
+            'FailedLoginAttempts': this.attr(''),
+            'LockedSince': this.attr(''),
+            'Secret': this.attr(''),
+            'Email': this.attr(''),
+            'Phone': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'ChangedOn': this.attr(''),
+            'ChangedBy': this.attr(''),
+            'FbId': this.attr(''),
             'communications': this.hasMany(Communication, 'SentBy'),
             'domainusers': this.hasMany(Domainuser, 'SystemUser'),
             'entityaudits': this.hasMany(Entityaudit, 'SystemUser'),

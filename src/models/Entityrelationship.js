@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Entityrelationship extends MyBaseModel {
     static entity = 'entityrelationship';
-    static entityUrl = '/rest/v1/entityrelationships';
+    static entityUrl = '/api/entityrelationships';
 
     static parentWithables = [
         
@@ -15,33 +15,33 @@ export default class Entityrelationship extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'EntityA': { },
-            'EntityB': { },
-            'EntityARelationship': { },
-            'EntityBRelationship': { },
-            'EntityAStatus': { },
-            'EntityBStatus': { },
-            'EntityAQualifier': { },
-            'EntityBQualifier': { },
-            'EntityALevel': { },
-            'EntityBLevel': { }
+        'Id': {},
+            'EntityA': {},
+            'EntityB': {},
+            'EntityARelationship': {},
+            'EntityBRelationship': {},
+            'EntityAStatus': {},
+            'EntityBStatus': {},
+            'EntityAQualifier': {},
+            'EntityBQualifier': {},
+            'EntityALevel': {},
+            'EntityBLevel': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'EntityA': this.attr('', {}),
-            'EntityB': this.attr('', {}),
-            'EntityARelationship': this.attr('', {}),
-            'EntityBRelationship': this.attr('', {}),
-            'EntityAStatus': this.attr('', {}),
-            'EntityBStatus': this.attr('', {}),
-            'EntityAQualifier': this.attr('', {}),
-            'EntityBQualifier': this.attr('', {}),
-            'EntityALevel': this.attr('', {}),
-            'EntityBLevel': this.attr('', {}),
+            'Id': this.attr(''),
+            'EntityA': this.attr(''),
+            'EntityB': this.attr(''),
+            'EntityARelationship': this.attr(''),
+            'EntityBRelationship': this.attr(''),
+            'EntityAStatus': this.attr(''),
+            'EntityBStatus': this.attr(''),
+            'EntityAQualifier': this.attr(''),
+            'EntityBQualifier': this.attr(''),
+            'EntityALevel': this.attr(''),
+            'EntityBLevel': this.attr(''),
             
         };
     }

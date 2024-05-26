@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Objectvalue extends MyBaseModel {
     static entity = 'objectvalue';
-    static entityUrl = '/rest/v1/objectvalues';
+    static entityUrl = '/api/objectvalues';
 
     static parentWithables = [
         
@@ -15,25 +15,25 @@ export default class Objectvalue extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Trait': { },
-            'Value': { },
-            'Instance': { },
-            'ValueJson': { },
-            'Object': { },
-            'Entity': { }
+        'Id': {},
+            'Trait': {},
+            'Value': {},
+            'Instance': {},
+            'ValueJson': {},
+            'Object': {},
+            'Entity': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Trait': this.attr('', {}),
-            'Value': this.attr('', {}),
-            'Instance': this.attr('', {}),
-            'ValueJson': this.attr('', {}),
-            'Object': this.attr('', {}),
-            'Entity': this.attr('', {}),
+            'Id': this.attr(''),
+            'Trait': this.attr(''),
+            'Value': this.attr(''),
+            'Instance': this.attr(''),
+            'ValueJson': this.attr(''),
+            'Object': this.attr(''),
+            'Entity': this.attr(''),
             
         };
     }

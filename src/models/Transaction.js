@@ -3,7 +3,7 @@ import Systemcode from './Systemcode';
 
 export default class Transaction extends MyBaseModel {
     static entity = 'transaction';
-    static entityUrl = '/rest/v1/transactions';
+    static entityUrl = '/api/transactions';
 
     static parentWithables = [
         'type'
@@ -16,39 +16,39 @@ export default class Transaction extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'TransNo': { },
-            'Description': { },
-            'TransactionDate': { },
-            'CaptureDate': { },
-            'AccountCode': { },
-            'Entity': { },
-            'EntityProduct': { },
-            'Debit': { },
-            'Credit': { },
-            'Source': { },
-            'Period': { },
-            'Reference': { },
-            'Type': { }
+        'Id': {},
+            'TransNo': {},
+            'Description': {},
+            'TransactionDate': {},
+            'CaptureDate': {},
+            'AccountCode': {},
+            'Entity': {},
+            'EntityProduct': {},
+            'Debit': {},
+            'Credit': {},
+            'Source': {},
+            'Period': {},
+            'Reference': {},
+            'Type': { relationRules: { linkables: (user) => { return {} } } }
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'TransNo': this.attr('', {}),
-            'Description': this.attr('', {}),
-            'TransactionDate': this.attr('', {}),
-            'CaptureDate': this.attr('', {}),
-            'AccountCode': this.attr('', {}),
-            'Entity': this.attr('', {}),
-            'EntityProduct': this.attr('', {}),
-            'Debit': this.attr('', {}),
-            'Credit': this.attr('', {}),
-            'Source': this.attr('', {}),
-            'Period': this.attr('', {}),
-            'Reference': this.attr('', {}),
-            'Type': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Id': this.attr(''),
+            'TransNo': this.attr(''),
+            'Description': this.attr(''),
+            'TransactionDate': this.attr(''),
+            'CaptureDate': this.attr(''),
+            'AccountCode': this.attr(''),
+            'Entity': this.attr(''),
+            'EntityProduct': this.attr(''),
+            'Debit': this.attr(''),
+            'Credit': this.attr(''),
+            'Source': this.attr(''),
+            'Period': this.attr(''),
+            'Reference': this.attr(''),
+            'Type': this.attr(''),
             'type': this.belongsTo(Systemcode, 'Type')
         };
     }

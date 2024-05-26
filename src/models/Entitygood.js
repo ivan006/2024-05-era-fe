@@ -5,7 +5,7 @@ import Good from './Good';
 
 export default class Entitygood extends MyBaseModel {
     static entity = 'entitygood';
-    static entityUrl = '/rest/v1/entitygoods';
+    static entityUrl = '/api/entitygoods';
 
     static parentWithables = [
         'entity',
@@ -20,39 +20,39 @@ export default class Entitygood extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Entity': { },
-            'Good': { },
-            'Units': { },
-            'AvgKg': { },
-            'AvgKgOld': { },
-            'AvgLifeSpan': { },
-            'TotalKg': { },
-            'Tariff': { },
-            'Selected': { },
-            'Dimension': { },
-            'WasteClass': { },
-            'Period': { },
-            'Invoice': { }
+        'Id': {},
+            'Entity': { relationRules: { linkables: (user) => { return {} } } },
+            'Good': { relationRules: { linkables: (user) => { return {} } } },
+            'Units': {},
+            'AvgKg': {},
+            'AvgKgOld': {},
+            'AvgLifeSpan': {},
+            'TotalKg': {},
+            'Tariff': {},
+            'Selected': {},
+            'Dimension': {},
+            'WasteClass': {},
+            'Period': {},
+            'Invoice': { relationRules: { linkables: (user) => { return {} } } }
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Entity': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'Good': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'Units': this.attr('', {}),
-            'AvgKg': this.attr('', {}),
-            'AvgKgOld': this.attr('', {}),
-            'AvgLifeSpan': this.attr('', {}),
-            'TotalKg': this.attr('', {}),
-            'Tariff': this.attr('', {}),
-            'Selected': this.attr('', {}),
-            'Dimension': this.attr('', {}),
-            'WasteClass': this.attr('', {}),
-            'Period': this.attr('', {}),
-            'Invoice': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Id': this.attr(''),
+            'Entity': this.attr(''),
+            'Good': this.attr(''),
+            'Units': this.attr(''),
+            'AvgKg': this.attr(''),
+            'AvgKgOld': this.attr(''),
+            'AvgLifeSpan': this.attr(''),
+            'TotalKg': this.attr(''),
+            'Tariff': this.attr(''),
+            'Selected': this.attr(''),
+            'Dimension': this.attr(''),
+            'WasteClass': this.attr(''),
+            'Period': this.attr(''),
+            'Invoice': this.attr(''),
             'entity': this.belongsTo(Entity, 'Entity'),
             'invoice': this.belongsTo(Entitygoodapproval, 'Invoice'),
             'good': this.belongsTo(Good, 'Good')

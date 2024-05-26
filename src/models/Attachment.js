@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Attachment extends MyBaseModel {
     static entity = 'attachment';
-    static entityUrl = '/rest/v1/attachments';
+    static entityUrl = '/api/attachments';
 
     static parentWithables = [
         
@@ -15,29 +15,29 @@ export default class Attachment extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Name': { },
-            'Description': { },
-            'ContentType': { },
-            'Path': { },
-            'RelativeName': { },
-            'RelativeID': { },
-            'CreatedOn': { },
-            'CreatedBy': { }
+        'Id': {},
+            'Name': {},
+            'Description': {},
+            'ContentType': {},
+            'Path': {},
+            'RelativeName': {},
+            'RelativeID': {},
+            'CreatedOn': {},
+            'CreatedBy': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Name': this.attr('', {}),
-            'Description': this.attr('', {}),
-            'ContentType': this.attr('', {}),
-            'Path': this.attr('', {}),
-            'RelativeName': this.attr('', {}),
-            'RelativeID': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
+            'Id': this.attr(''),
+            'Name': this.attr(''),
+            'Description': this.attr(''),
+            'ContentType': this.attr(''),
+            'Path': this.attr(''),
+            'RelativeName': this.attr(''),
+            'RelativeID': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'CreatedBy': this.attr(''),
             
         };
     }

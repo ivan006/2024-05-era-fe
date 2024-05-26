@@ -4,7 +4,7 @@ import Systemcode from './Systemcode';
 
 export default class Servicerequestfrequency extends MyBaseModel {
     static entity = 'servicerequestfrequency';
-    static entityUrl = '/rest/v1/servicerequestfrequencies';
+    static entityUrl = '/api/servicerequestfrequencies';
 
     static parentWithables = [
         'serviceRequest',
@@ -18,19 +18,19 @@ export default class Servicerequestfrequency extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'ServiceRequest': { },
-            'ReportFrequency': { },
-            'Active': { }
+        'Id': {},
+            'ServiceRequest': { relationRules: { linkables: (user) => { return {} } } },
+            'ReportFrequency': { relationRules: { linkables: (user) => { return {} } } },
+            'Active': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'ServiceRequest': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'ReportFrequency': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'Active': this.attr('', {}),
+            'Id': this.attr(''),
+            'ServiceRequest': this.attr(''),
+            'ReportFrequency': this.attr(''),
+            'Active': this.attr(''),
             'serviceRequest': this.belongsTo(Servicerequest, 'ServiceRequest'),
             'reportFrequency': this.belongsTo(Systemcode, 'ReportFrequency')
         };

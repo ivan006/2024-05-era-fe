@@ -8,7 +8,7 @@ import Systemcode from './Systemcode';
 
 export default class Entity extends MyBaseModel {
     static entity = 'entity';
-    static entityUrl = '/rest/v1/entities';
+    static entityUrl = '/api/entities';
 
     static parentWithables = [
         
@@ -21,43 +21,43 @@ export default class Entity extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'ExternalNo': { },
-            'Level': { },
-            'Type': { },
-            'Title': { },
-            'Name': { },
-            'Surname': { },
-            'Identity': { },
-            'BirthDate': { },
-            'Gender': { },
-            'Language': { },
-            'Status': { },
-            'Note': { },
-            'Passport': { },
-            'HasPhoto': { },
-            'IsPaid': { }
+        'Id': {},
+            'ExternalNo': {},
+            'Level': {},
+            'Type': {},
+            'Title': {},
+            'Name': {},
+            'Surname': {},
+            'Identity': {},
+            'BirthDate': {},
+            'Gender': {},
+            'Language': {},
+            'Status': {},
+            'Note': {},
+            'Passport': {},
+            'HasPhoto': {},
+            'IsPaid': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'ExternalNo': this.attr('', {}),
-            'Level': this.attr('', {}),
-            'Type': this.attr('', {}),
-            'Title': this.attr('', {}),
-            'Name': this.attr('', {}),
-            'Surname': this.attr('', {}),
-            'Identity': this.attr('', {}),
-            'BirthDate': this.attr('', {}),
-            'Gender': this.attr('', {}),
-            'Language': this.attr('', {}),
-            'Status': this.attr('', {}),
-            'Note': this.attr('', {}),
-            'Passport': this.attr('', {}),
-            'HasPhoto': this.attr('', {}),
-            'IsPaid': this.attr('', {}),
+            'Id': this.attr(''),
+            'ExternalNo': this.attr(''),
+            'Level': this.attr(''),
+            'Type': this.attr(''),
+            'Title': this.attr(''),
+            'Name': this.attr(''),
+            'Surname': this.attr(''),
+            'Identity': this.attr(''),
+            'BirthDate': this.attr(''),
+            'Gender': this.attr(''),
+            'Language': this.attr(''),
+            'Status': this.attr(''),
+            'Note': this.attr(''),
+            'Passport': this.attr(''),
+            'HasPhoto': this.attr(''),
+            'IsPaid': this.attr(''),
             'entitygoods': this.hasMany(Entitygood, 'Entity'),
             'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'ApprovedBy'),
             'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'InvoiceApprovedBy'),

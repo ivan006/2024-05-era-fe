@@ -3,7 +3,7 @@ import Systemcode from './Systemcode';
 
 export default class Email extends MyBaseModel {
     static entity = 'email';
-    static entityUrl = '/rest/v1/emails';
+    static entityUrl = '/api/emails';
 
     static parentWithables = [
         'type'
@@ -16,21 +16,21 @@ export default class Email extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Address': { },
-            'Type': { },
-            'Person': { },
-            'Preferred': { }
+        'Id': {},
+            'Address': {},
+            'Type': { relationRules: { linkables: (user) => { return {} } } },
+            'Person': {},
+            'Preferred': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Address': this.attr('', {}),
-            'Type': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'Person': this.attr('', {}),
-            'Preferred': this.attr('', {}),
+            'Id': this.attr(''),
+            'Address': this.attr(''),
+            'Type': this.attr(''),
+            'Person': this.attr(''),
+            'Preferred': this.attr(''),
             'type': this.belongsTo(Systemcode, 'Type')
         };
     }

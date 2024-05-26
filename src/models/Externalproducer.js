@@ -3,7 +3,7 @@ import Servicerequestreport from './Servicerequestreport';
 
 export default class Externalproducer extends MyBaseModel {
     static entity = 'externalproducer';
-    static entityUrl = '/rest/v1/externalproducers';
+    static entityUrl = '/api/externalproducers';
 
     static parentWithables = [
         'serviceRequestReport'
@@ -16,17 +16,17 @@ export default class Externalproducer extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Name': { },
-            'ServiceRequestReport': { }
+        'Id': {},
+            'Name': {},
+            'ServiceRequestReport': { relationRules: { linkables: (user) => { return {} } } }
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Name': this.attr('', {}),
-            'ServiceRequestReport': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Id': this.attr(''),
+            'Name': this.attr(''),
+            'ServiceRequestReport': this.attr(''),
             'serviceRequestReport': this.belongsTo(Servicerequestreport, 'ServiceRequestReport')
         };
     }

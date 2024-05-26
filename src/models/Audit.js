@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Audit extends MyBaseModel {
     static entity = 'audit';
-    static entityUrl = '/rest/v1/audits';
+    static entityUrl = '/api/audits';
 
     static parentWithables = [
         
@@ -15,29 +15,29 @@ export default class Audit extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'TableName': { },
-            'CRUD': { },
-            'Data': { },
-            'ChangeDate': { },
-            'Entity': { },
-            'PageNo': { },
-            'NoOfLines': { },
-            'CrudMessage': { }
+        'Id': {},
+            'TableName': {},
+            'CRUD': {},
+            'Data': {},
+            'ChangeDate': {},
+            'Entity': {},
+            'PageNo': {},
+            'NoOfLines': {},
+            'CrudMessage': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'TableName': this.attr('', {}),
-            'CRUD': this.attr('', {}),
-            'Data': this.attr('', {}),
-            'ChangeDate': this.attr('', {}),
-            'Entity': this.attr('', {}),
-            'PageNo': this.attr('', {}),
-            'NoOfLines': this.attr('', {}),
-            'CrudMessage': this.attr('', {}),
+            'Id': this.attr(''),
+            'TableName': this.attr(''),
+            'CRUD': this.attr(''),
+            'Data': this.attr(''),
+            'ChangeDate': this.attr(''),
+            'Entity': this.attr(''),
+            'PageNo': this.attr(''),
+            'NoOfLines': this.attr(''),
+            'CrudMessage': this.attr(''),
             
         };
     }

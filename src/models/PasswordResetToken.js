@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class PasswordResetToken extends MyBaseModel {
     static entity = 'passwordResetToken';
-    static entityUrl = '/rest/v1/password_reset_tokens';
+    static entityUrl = '/api/password_reset_tokens';
 
     static parentWithables = [
         
@@ -15,17 +15,17 @@ export default class PasswordResetToken extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'email': { },
-            'token': { },
-            'created_at': { }
+        'email': {},
+            'token': {},
+            'created_at': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'email': this.attr('', {}),
-            'token': this.attr('', {}),
-            'created_at': this.attr('', {}),
+            'email': this.attr(''),
+            'token': this.attr(''),
+            'created_at': this.attr(''),
             
         };
     }

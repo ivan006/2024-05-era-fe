@@ -3,7 +3,7 @@ import Useraccess from './Useraccess';
 
 export default class Systemaction extends MyBaseModel {
     static entity = 'systemaction';
-    static entityUrl = '/rest/v1/systemactions';
+    static entityUrl = '/api/systemactions';
 
     static parentWithables = [
         
@@ -16,31 +16,31 @@ export default class Systemaction extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Module': { },
-            'Context': { },
-            'Action': { },
-            'Description': { },
-            'Available': { },
-            'CreatedOn': { },
-            'CreatedBy': { },
-            'ChangedOn': { },
-            'ChangedBy': { }
+        'Id': {},
+            'Module': {},
+            'Context': {},
+            'Action': {},
+            'Description': {},
+            'Available': {},
+            'CreatedOn': {},
+            'CreatedBy': {},
+            'ChangedOn': {},
+            'ChangedBy': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Module': this.attr('', {}),
-            'Context': this.attr('', {}),
-            'Action': this.attr('', {}),
-            'Description': this.attr('', {}),
-            'Available': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
-            'ChangedOn': this.attr('', {}),
-            'ChangedBy': this.attr('', {}),
+            'Id': this.attr(''),
+            'Module': this.attr(''),
+            'Context': this.attr(''),
+            'Action': this.attr(''),
+            'Description': this.attr(''),
+            'Available': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'ChangedOn': this.attr(''),
+            'ChangedBy': this.attr(''),
             'useraccesses': this.hasMany(Useraccess, 'SystemAction')
         };
     }

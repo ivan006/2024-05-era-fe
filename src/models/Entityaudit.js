@@ -3,7 +3,7 @@ import Systemuser from './Systemuser';
 
 export default class Entityaudit extends MyBaseModel {
     static entity = 'entityaudit';
-    static entityUrl = '/rest/v1/entityaudits';
+    static entityUrl = '/api/entityaudits';
 
     static parentWithables = [
         'systemUser'
@@ -16,25 +16,25 @@ export default class Entityaudit extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Entity Name': { },
-            'Entity Id': { },
-            'Operation': { },
-            'SystemUser': { },
-            'Changes': { },
-            'Audit_TS': { }
+        'Id': {},
+            'Entity Name': {},
+            'Entity Id': {},
+            'Operation': {},
+            'SystemUser': { relationRules: { linkables: (user) => { return {} } } },
+            'Changes': {},
+            'Audit_TS': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Entity Name': this.attr('', {}),
-            'Entity Id': this.attr('', {}),
-            'Operation': this.attr('', {}),
-            'SystemUser': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'Changes': this.attr('', {}),
-            'Audit_TS': this.attr('', {}),
+            'Id': this.attr(''),
+            'Entity Name': this.attr(''),
+            'Entity Id': this.attr(''),
+            'Operation': this.attr(''),
+            'SystemUser': this.attr(''),
+            'Changes': this.attr(''),
+            'Audit_TS': this.attr(''),
             'systemUser': this.belongsTo(Systemuser, 'SystemUser')
         };
     }

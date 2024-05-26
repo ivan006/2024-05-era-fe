@@ -5,7 +5,7 @@ import Entitygood from './Entitygood';
 
 export default class Entitygoodapproval extends MyBaseModel {
     static entity = 'entitygoodapproval';
-    static entityUrl = '/rest/v1/entitygoodapprovals';
+    static entityUrl = '/api/entitygoodapprovals';
 
     static parentWithables = [
         'approvedBy',
@@ -21,37 +21,37 @@ export default class Entitygoodapproval extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'ApprovedBy': { },
-            'ApprovedOn': { },
-            'InvoiceApprovedBy': { },
-            'InvoiceApprovedOn': { },
-            'Entity': { },
-            'Period': { },
-            'PurchaseOrder': { },
-            'InvoiceNo': { },
-            'UseAR': { },
-            'UseVAT': { },
-            'Query': { },
-            'Status': { }
+        'Id': {},
+            'ApprovedBy': { relationRules: { linkables: (user) => { return {} } } },
+            'ApprovedOn': {},
+            'InvoiceApprovedBy': { relationRules: { linkables: (user) => { return {} } } },
+            'InvoiceApprovedOn': {},
+            'Entity': { relationRules: { linkables: (user) => { return {} } } },
+            'Period': {},
+            'PurchaseOrder': {},
+            'InvoiceNo': {},
+            'UseAR': {},
+            'UseVAT': {},
+            'Query': { relationRules: { linkables: (user) => { return {} } } },
+            'Status': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'ApprovedBy': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'ApprovedOn': this.attr('', {}),
-            'InvoiceApprovedBy': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'InvoiceApprovedOn': this.attr('', {}),
-            'Entity': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'Period': this.attr('', {}),
-            'PurchaseOrder': this.attr('', {}),
-            'InvoiceNo': this.attr('', {}),
-            'UseAR': this.attr('', {}),
-            'UseVAT': this.attr('', {}),
-            'Query': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'Status': this.attr('', {}),
+            'Id': this.attr(''),
+            'ApprovedBy': this.attr(''),
+            'ApprovedOn': this.attr(''),
+            'InvoiceApprovedBy': this.attr(''),
+            'InvoiceApprovedOn': this.attr(''),
+            'Entity': this.attr(''),
+            'Period': this.attr(''),
+            'PurchaseOrder': this.attr(''),
+            'InvoiceNo': this.attr(''),
+            'UseAR': this.attr(''),
+            'UseVAT': this.attr(''),
+            'Query': this.attr(''),
+            'Status': this.attr(''),
             'approvedBy': this.belongsTo(Entity, 'ApprovedBy'),
             'invoiceApprovedBy': this.belongsTo(Entity, 'InvoiceApprovedBy'),
             'query': this.belongsTo(Queryheader, 'Query'),

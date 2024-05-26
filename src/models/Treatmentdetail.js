@@ -3,7 +3,7 @@ import Servicerequestreport from './Servicerequestreport';
 
 export default class Treatmentdetail extends MyBaseModel {
     static entity = 'treatmentdetail';
-    static entityUrl = '/rest/v1/treatmentdetails';
+    static entityUrl = '/api/treatmentdetails';
 
     static parentWithables = [
         'serviceRequestReport'
@@ -16,29 +16,29 @@ export default class Treatmentdetail extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'ServiceRequestReport': { },
-            'OpeningBalance': { },
-            'Refurbished': { },
-            'Recovered': { },
-            'Export': { },
-            'Energy': { },
-            'Landfill': { },
-            'LocalSecondaryProducts': { }
+        'Id': {},
+            'ServiceRequestReport': { relationRules: { linkables: (user) => { return {} } } },
+            'OpeningBalance': {},
+            'Refurbished': {},
+            'Recovered': {},
+            'Export': {},
+            'Energy': {},
+            'Landfill': {},
+            'LocalSecondaryProducts': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'ServiceRequestReport': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'OpeningBalance': this.attr('', {}),
-            'Refurbished': this.attr('', {}),
-            'Recovered': this.attr('', {}),
-            'Export': this.attr('', {}),
-            'Energy': this.attr('', {}),
-            'Landfill': this.attr('', {}),
-            'LocalSecondaryProducts': this.attr('', {}),
+            'Id': this.attr(''),
+            'ServiceRequestReport': this.attr(''),
+            'OpeningBalance': this.attr(''),
+            'Refurbished': this.attr(''),
+            'Recovered': this.attr(''),
+            'Export': this.attr(''),
+            'Energy': this.attr(''),
+            'Landfill': this.attr(''),
+            'LocalSecondaryProducts': this.attr(''),
             'serviceRequestReport': this.belongsTo(Servicerequestreport, 'ServiceRequestReport'),
             'servicerequestreports': this.hasMany(Servicerequestreport, 'TreatmentDetails')
         };

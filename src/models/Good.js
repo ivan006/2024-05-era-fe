@@ -4,7 +4,7 @@ import Entitygood from './Entitygood';
 
 export default class Good extends MyBaseModel {
     static entity = 'good';
-    static entityUrl = '/rest/v1/goods';
+    static entityUrl = '/api/goods';
 
     static parentWithables = [
         'sector'
@@ -17,33 +17,33 @@ export default class Good extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'HSCode': { },
-            'Description': { },
-            'EU6': { },
-            'EU10': { },
-            'UNU': { },
-            'AvgKg': { },
-            'Category': { },
-            'HazardSubstance': { },
-            'Dimension': { },
-            'Sector': { }
+        'Id': {},
+            'HSCode': {},
+            'Description': {},
+            'EU6': {},
+            'EU10': {},
+            'UNU': {},
+            'AvgKg': {},
+            'Category': {},
+            'HazardSubstance': {},
+            'Dimension': {},
+            'Sector': { relationRules: { linkables: (user) => { return {} } } }
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'HSCode': this.attr('', {}),
-            'Description': this.attr('', {}),
-            'EU6': this.attr('', {}),
-            'EU10': this.attr('', {}),
-            'UNU': this.attr('', {}),
-            'AvgKg': this.attr('', {}),
-            'Category': this.attr('', {}),
-            'HazardSubstance': this.attr('', {}),
-            'Dimension': this.attr('', {}),
-            'Sector': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Id': this.attr(''),
+            'HSCode': this.attr(''),
+            'Description': this.attr(''),
+            'EU6': this.attr(''),
+            'EU10': this.attr(''),
+            'UNU': this.attr(''),
+            'AvgKg': this.attr(''),
+            'Category': this.attr(''),
+            'HazardSubstance': this.attr(''),
+            'Dimension': this.attr(''),
+            'Sector': this.attr(''),
             'sector': this.belongsTo(Entity, 'Sector'),
             'entitygoods': this.hasMany(Entitygood, 'Good')
         };

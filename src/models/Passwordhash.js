@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Passwordhash extends MyBaseModel {
     static entity = 'passwordhash';
-    static entityUrl = '/rest/v1/passwordhashes';
+    static entityUrl = '/api/passwordhashes';
 
     static parentWithables = [
         
@@ -15,27 +15,27 @@ export default class Passwordhash extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'SystemUser': { },
-            'Hash': { },
-            'Salt': { },
-            'CreatedOn': { },
-            'CreatedBy': { },
-            'ChangedOn': { },
-            'ChangedBy': { },
-            'FbId': { }
+        'SystemUser': {},
+            'Hash': {},
+            'Salt': {},
+            'CreatedOn': {},
+            'CreatedBy': {},
+            'ChangedOn': {},
+            'ChangedBy': {},
+            'FbId': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'SystemUser': this.attr('', {}),
-            'Hash': this.attr('', {}),
-            'Salt': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
-            'ChangedOn': this.attr('', {}),
-            'ChangedBy': this.attr('', {}),
-            'FbId': this.attr('', {}),
+            'SystemUser': this.attr(''),
+            'Hash': this.attr(''),
+            'Salt': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'ChangedOn': this.attr(''),
+            'ChangedBy': this.attr(''),
+            'FbId': this.attr(''),
             
         };
     }

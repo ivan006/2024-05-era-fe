@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Migration extends MyBaseModel {
     static entity = 'migration';
-    static entityUrl = '/rest/v1/migrations';
+    static entityUrl = '/api/migrations';
 
     static parentWithables = [
         
@@ -15,17 +15,17 @@ export default class Migration extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'id': { },
-            'migration': { },
-            'batch': { }
+        'id': {},
+            'migration': {},
+            'batch': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'id': this.attr('', {}),
-            'migration': this.attr('', {}),
-            'batch': this.attr('', {}),
+            'id': this.attr(''),
+            'migration': this.attr(''),
+            'batch': this.attr(''),
             
         };
     }

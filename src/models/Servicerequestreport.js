@@ -7,7 +7,7 @@ import Externalproducer from './Externalproducer';
 
 export default class Servicerequestreport extends MyBaseModel {
     static entity = 'servicerequestreport';
-    static entityUrl = '/rest/v1/servicerequestreports';
+    static entityUrl = '/api/servicerequestreports';
 
     static parentWithables = [
         'serviceRequest',
@@ -23,29 +23,29 @@ export default class Servicerequestreport extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'ServiceRequest': { },
-            'ServiceProvider': { },
-            'CreatedBy': { },
-            'TreatmentDetails': { },
-            'CreatedOn': { },
-            'ReportDate': { },
-            'Approved': { },
-            'Rejected': { }
+        'Id': {},
+            'ServiceRequest': { relationRules: { linkables: (user) => { return {} } } },
+            'ServiceProvider': { relationRules: { linkables: (user) => { return {} } } },
+            'CreatedBy': { relationRules: { linkables: (user) => { return {} } } },
+            'TreatmentDetails': { relationRules: { linkables: (user) => { return {} } } },
+            'CreatedOn': {},
+            'ReportDate': {},
+            'Approved': {},
+            'Rejected': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'ServiceRequest': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'ServiceProvider': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'CreatedBy': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'TreatmentDetails': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'CreatedOn': this.attr('', {}),
-            'ReportDate': this.attr('', {}),
-            'Approved': this.attr('', {}),
-            'Rejected': this.attr('', {}),
+            'Id': this.attr(''),
+            'ServiceRequest': this.attr(''),
+            'ServiceProvider': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'TreatmentDetails': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'ReportDate': this.attr(''),
+            'Approved': this.attr(''),
+            'Rejected': this.attr(''),
             'serviceRequest': this.belongsTo(Servicerequest, 'ServiceRequest'),
             'serviceProvider': this.belongsTo(Entity, 'ServiceProvider'),
             'createdBy': this.belongsTo(Systemuser, 'CreatedBy'),

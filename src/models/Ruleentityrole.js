@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Ruleentityrole extends MyBaseModel {
     static entity = 'ruleentityrole';
-    static entityUrl = '/rest/v1/ruleentityroles';
+    static entityUrl = '/api/ruleentityroles';
 
     static parentWithables = [
         
@@ -15,31 +15,31 @@ export default class Ruleentityrole extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'EntityRole': { },
-            'Entity': { },
-            'UserRole': { },
-            'Rule': { },
-            'Priority': { },
-            'CRUD_Create': { },
-            'CRUD_Read': { },
-            'CRUD_Update': { },
-            'CRUD_Delete': { }
+        'Id': {},
+            'EntityRole': {},
+            'Entity': {},
+            'UserRole': {},
+            'Rule': {},
+            'Priority': {},
+            'CRUD_Create': {},
+            'CRUD_Read': {},
+            'CRUD_Update': {},
+            'CRUD_Delete': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'EntityRole': this.attr('', {}),
-            'Entity': this.attr('', {}),
-            'UserRole': this.attr('', {}),
-            'Rule': this.attr('', {}),
-            'Priority': this.attr('', {}),
-            'CRUD_Create': this.attr('', {}),
-            'CRUD_Read': this.attr('', {}),
-            'CRUD_Update': this.attr('', {}),
-            'CRUD_Delete': this.attr('', {}),
+            'Id': this.attr(''),
+            'EntityRole': this.attr(''),
+            'Entity': this.attr(''),
+            'UserRole': this.attr(''),
+            'Rule': this.attr(''),
+            'Priority': this.attr(''),
+            'CRUD_Create': this.attr(''),
+            'CRUD_Read': this.attr(''),
+            'CRUD_Update': this.attr(''),
+            'CRUD_Delete': this.attr(''),
             
         };
     }

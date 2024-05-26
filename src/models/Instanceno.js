@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Instanceno extends MyBaseModel {
     static entity = 'instanceno';
-    static entityUrl = '/rest/v1/instancenos';
+    static entityUrl = '/api/instancenos';
 
     static parentWithables = [
         
@@ -15,15 +15,15 @@ export default class Instanceno extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'ObjectName': { }
+        'Id': {},
+            'ObjectName': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'ObjectName': this.attr('', {}),
+            'Id': this.attr(''),
+            'ObjectName': this.attr(''),
             
         };
     }

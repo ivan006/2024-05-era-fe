@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Ruleaction extends MyBaseModel {
     static entity = 'ruleaction';
-    static entityUrl = '/rest/v1/ruleactions';
+    static entityUrl = '/api/ruleactions';
 
     static parentWithables = [
         
@@ -15,29 +15,29 @@ export default class Ruleaction extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Rule': { },
-            'Process': { },
-            'Result': { },
-            'ResultNegative': { },
-            'ResultType': { },
-            'Description': { },
-            'ResultSystemCode': { },
-            'NegativeSystemCode': { }
+        'Id': {},
+            'Rule': {},
+            'Process': {},
+            'Result': {},
+            'ResultNegative': {},
+            'ResultType': {},
+            'Description': {},
+            'ResultSystemCode': {},
+            'NegativeSystemCode': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Rule': this.attr('', {}),
-            'Process': this.attr('', {}),
-            'Result': this.attr('', {}),
-            'ResultNegative': this.attr('', {}),
-            'ResultType': this.attr('', {}),
-            'Description': this.attr('', {}),
-            'ResultSystemCode': this.attr('', {}),
-            'NegativeSystemCode': this.attr('', {}),
+            'Id': this.attr(''),
+            'Rule': this.attr(''),
+            'Process': this.attr(''),
+            'Result': this.attr(''),
+            'ResultNegative': this.attr(''),
+            'ResultType': this.attr(''),
+            'Description': this.attr(''),
+            'ResultSystemCode': this.attr(''),
+            'NegativeSystemCode': this.attr(''),
             
         };
     }

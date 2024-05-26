@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Crm extends MyBaseModel {
     static entity = 'crm';
-    static entityUrl = '/rest/v1/crms';
+    static entityUrl = '/api/crms';
 
     static parentWithables = [
         
@@ -15,23 +15,23 @@ export default class Crm extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Entity': { },
-            'EntityProduct': { },
-            'Contact': { },
-            'Description': { },
-            'Status': { }
+        'Id': {},
+            'Entity': {},
+            'EntityProduct': {},
+            'Contact': {},
+            'Description': {},
+            'Status': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Entity': this.attr('', {}),
-            'EntityProduct': this.attr('', {}),
-            'Contact': this.attr('', {}),
-            'Description': this.attr('', {}),
-            'Status': this.attr('', {}),
+            'Id': this.attr(''),
+            'Entity': this.attr(''),
+            'EntityProduct': this.attr(''),
+            'Contact': this.attr(''),
+            'Description': this.attr(''),
+            'Status': this.attr(''),
             
         };
     }

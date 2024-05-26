@@ -9,7 +9,7 @@ import Userconfiguration from './Userconfiguration';
 
 export default class Systemcode extends MyBaseModel {
     static entity = 'systemcode';
-    static entityUrl = '/rest/v1/systemcodes';
+    static entityUrl = '/api/systemcodes';
 
     static parentWithables = [
         'entity'
@@ -22,39 +22,39 @@ export default class Systemcode extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Context': { },
-            'Field': { },
-            'Description': { },
-            'Value': { },
-            'Code': { },
-            'Active': { },
-            'UserGenerated': { },
-            'ContextualId': { },
-            'CreatedOn': { },
-            'CreatedBy': { },
-            'ChangedOn': { },
-            'ChangedBy': { },
-            'Entity': { }
+        'Id': {},
+            'Context': {},
+            'Field': {},
+            'Description': {},
+            'Value': {},
+            'Code': {},
+            'Active': {},
+            'UserGenerated': {},
+            'ContextualId': {},
+            'CreatedOn': {},
+            'CreatedBy': {},
+            'ChangedOn': {},
+            'ChangedBy': {},
+            'Entity': { relationRules: { linkables: (user) => { return {} } } }
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Context': this.attr('', {}),
-            'Field': this.attr('', {}),
-            'Description': this.attr('', {}),
-            'Value': this.attr('', {}),
-            'Code': this.attr('', {}),
-            'Active': this.attr('', {}),
-            'UserGenerated': this.attr('', {}),
-            'ContextualId': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
-            'ChangedOn': this.attr('', {}),
-            'ChangedBy': this.attr('', {}),
-            'Entity': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Id': this.attr(''),
+            'Context': this.attr(''),
+            'Field': this.attr(''),
+            'Description': this.attr(''),
+            'Value': this.attr(''),
+            'Code': this.attr(''),
+            'Active': this.attr(''),
+            'UserGenerated': this.attr(''),
+            'ContextualId': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'ChangedOn': this.attr(''),
+            'ChangedBy': this.attr(''),
+            'Entity': this.attr(''),
             'entity': this.belongsTo(Entity, 'Entity'),
             'addresses': this.hasMany(Address, 'Country'),
             'addresses': this.hasMany(Address, 'Type'),

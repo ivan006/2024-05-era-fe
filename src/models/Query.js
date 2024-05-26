@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Query extends MyBaseModel {
     static entity = 'query';
-    static entityUrl = '/rest/v1/queries';
+    static entityUrl = '/api/queries';
 
     static parentWithables = [
         
@@ -15,27 +15,27 @@ export default class Query extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'ParentQuery': { },
-            'AssignedTo': { },
-            'Description': { },
-            'CreatedBy': { },
-            'CreatedOn': { },
-            'ClosedOn': { },
-            'ClosedBy': { }
+        'Id': {},
+            'ParentQuery': {},
+            'AssignedTo': {},
+            'Description': {},
+            'CreatedBy': {},
+            'CreatedOn': {},
+            'ClosedOn': {},
+            'ClosedBy': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'ParentQuery': this.attr('', {}),
-            'AssignedTo': this.attr('', {}),
-            'Description': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
-            'ClosedOn': this.attr('', {}),
-            'ClosedBy': this.attr('', {}),
+            'Id': this.attr(''),
+            'ParentQuery': this.attr(''),
+            'AssignedTo': this.attr(''),
+            'Description': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'ClosedOn': this.attr(''),
+            'ClosedBy': this.attr(''),
             
         };
     }

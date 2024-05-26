@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Systemconfiguration extends MyBaseModel {
     static entity = 'systemconfiguration';
-    static entityUrl = '/rest/v1/systemconfigurations';
+    static entityUrl = '/api/systemconfigurations';
 
     static parentWithables = [
         
@@ -15,17 +15,17 @@ export default class Systemconfiguration extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Name': { },
-            'Value': { }
+        'Id': {},
+            'Name': {},
+            'Value': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Name': this.attr('', {}),
-            'Value': this.attr('', {}),
+            'Id': this.attr(''),
+            'Name': this.attr(''),
+            'Value': this.attr(''),
             
         };
     }

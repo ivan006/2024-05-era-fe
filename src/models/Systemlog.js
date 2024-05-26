@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Systemlog extends MyBaseModel {
     static entity = 'systemlog';
-    static entityUrl = '/rest/v1/systemlogs';
+    static entityUrl = '/api/systemlogs';
 
     static parentWithables = [
         
@@ -15,29 +15,29 @@ export default class Systemlog extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'LogDate': { },
-            'LogLevel': { },
-            'Logger': { },
-            'SystemUser': { },
-            'CallSite': { },
-            'Message': { },
-            'Exception': { },
-            'StackTrace': { }
+        'Id': {},
+            'LogDate': {},
+            'LogLevel': {},
+            'Logger': {},
+            'SystemUser': {},
+            'CallSite': {},
+            'Message': {},
+            'Exception': {},
+            'StackTrace': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'LogDate': this.attr('', {}),
-            'LogLevel': this.attr('', {}),
-            'Logger': this.attr('', {}),
-            'SystemUser': this.attr('', {}),
-            'CallSite': this.attr('', {}),
-            'Message': this.attr('', {}),
-            'Exception': this.attr('', {}),
-            'StackTrace': this.attr('', {}),
+            'Id': this.attr(''),
+            'LogDate': this.attr(''),
+            'LogLevel': this.attr(''),
+            'Logger': this.attr(''),
+            'SystemUser': this.attr(''),
+            'CallSite': this.attr(''),
+            'Message': this.attr(''),
+            'Exception': this.attr(''),
+            'StackTrace': this.attr(''),
             
         };
     }

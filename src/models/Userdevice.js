@@ -3,7 +3,7 @@ import Systemuser from './Systemuser';
 
 export default class Userdevice extends MyBaseModel {
     static entity = 'userdevice';
-    static entityUrl = '/rest/v1/userdevices';
+    static entityUrl = '/api/userdevices';
 
     static parentWithables = [
         'systemUser'
@@ -16,21 +16,21 @@ export default class Userdevice extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'SystemUser': { },
-            'DeviceKey': { },
-            'Name': { },
-            'LastUsed': { },
-            'FbId': { }
+        'SystemUser': { relationRules: { linkables: (user) => { return {} } } },
+            'DeviceKey': {},
+            'Name': {},
+            'LastUsed': {},
+            'FbId': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'SystemUser': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'DeviceKey': this.attr('', {}),
-            'Name': this.attr('', {}),
-            'LastUsed': this.attr('', {}),
-            'FbId': this.attr('', {}),
+            'SystemUser': this.attr(''),
+            'DeviceKey': this.attr(''),
+            'Name': this.attr(''),
+            'LastUsed': this.attr(''),
+            'FbId': this.attr(''),
             'systemUser': this.belongsTo(Systemuser, 'SystemUser')
         };
     }

@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class User extends MyBaseModel {
     static entity = 'user';
-    static entityUrl = '/rest/v1/users';
+    static entityUrl = '/api/users';
 
     static parentWithables = [
         
@@ -15,27 +15,27 @@ export default class User extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'id': { },
-            'name': { },
-            'email': { },
-            'email_verified_at': { },
-            'password': { },
-            'remember_token': { },
-            'created_at': { },
-            'updated_at': { }
+        'id': {},
+            'name': {},
+            'email': {},
+            'email_verified_at': {},
+            'password': {},
+            'remember_token': {},
+            'created_at': {},
+            'updated_at': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'id': this.attr('', {}),
-            'name': this.attr('', {}),
-            'email': this.attr('', {}),
-            'email_verified_at': this.attr('', {}),
-            'password': this.attr('', {}),
-            'remember_token': this.attr('', {}),
-            'created_at': this.attr('', {}),
-            'updated_at': this.attr('', {}),
+            'id': this.attr(''),
+            'name': this.attr(''),
+            'email': this.attr(''),
+            'email_verified_at': this.attr(''),
+            'password': this.attr(''),
+            'remember_token': this.attr(''),
+            'created_at': this.attr(''),
+            'updated_at': this.attr(''),
             
         };
     }

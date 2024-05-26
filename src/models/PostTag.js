@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class PostTag extends MyBaseModel {
     static entity = 'postTag';
-    static entityUrl = '/rest/v1/post_tags';
+    static entityUrl = '/api/post_tags';
 
     static parentWithables = [
         
@@ -15,21 +15,21 @@ export default class PostTag extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'id': { },
-            'created_at': { },
-            'updated_at': { },
-            'post_id': { },
-            'tag_id': { }
+        'id': {},
+            'created_at': {},
+            'updated_at': {},
+            'post_id': {},
+            'tag_id': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'id': this.attr('', {}),
-            'created_at': this.attr('', {}),
-            'updated_at': this.attr('', {}),
-            'post_id': this.attr('', {}),
-            'tag_id': this.attr('', {}),
+            'id': this.attr(''),
+            'created_at': this.attr(''),
+            'updated_at': this.attr(''),
+            'post_id': this.attr(''),
+            'tag_id': this.attr(''),
             
         };
     }

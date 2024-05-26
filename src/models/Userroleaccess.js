@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Userroleaccess extends MyBaseModel {
     static entity = 'userroleaccess';
-    static entityUrl = '/rest/v1/userroleaccesses';
+    static entityUrl = '/api/userroleaccesses';
 
     static parentWithables = [
         
@@ -15,27 +15,27 @@ export default class Userroleaccess extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'UserRole': { },
-            'SystemAction': { },
-            'CreatedOn': { },
-            'CreatedBy': { },
-            'ChangedOn': { },
-            'ChangedBy': { },
-            'FbId': { },
-            'Rule': { }
+        'UserRole': {},
+            'SystemAction': {},
+            'CreatedOn': {},
+            'CreatedBy': {},
+            'ChangedOn': {},
+            'ChangedBy': {},
+            'FbId': {},
+            'Rule': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'UserRole': this.attr('', {}),
-            'SystemAction': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
-            'ChangedOn': this.attr('', {}),
-            'ChangedBy': this.attr('', {}),
-            'FbId': this.attr('', {}),
-            'Rule': this.attr('', {}),
+            'UserRole': this.attr(''),
+            'SystemAction': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'ChangedOn': this.attr(''),
+            'ChangedBy': this.attr(''),
+            'FbId': this.attr(''),
+            'Rule': this.attr(''),
             
         };
     }

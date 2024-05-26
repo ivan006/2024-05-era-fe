@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class PersonalAccessToken extends MyBaseModel {
     static entity = 'personalAccessToken';
-    static entityUrl = '/rest/v1/personal_access_tokens';
+    static entityUrl = '/api/personal_access_tokens';
 
     static parentWithables = [
         
@@ -15,31 +15,31 @@ export default class PersonalAccessToken extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'id': { },
-            'tokenable_type': { },
-            'tokenable_id': { },
-            'name': { },
-            'token': { },
-            'abilities': { },
-            'last_used_at': { },
-            'expires_at': { },
-            'created_at': { },
-            'updated_at': { }
+        'id': {},
+            'tokenable_type': {},
+            'tokenable_id': {},
+            'name': {},
+            'token': {},
+            'abilities': {},
+            'last_used_at': {},
+            'expires_at': {},
+            'created_at': {},
+            'updated_at': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'id': this.attr('', {}),
-            'tokenable_type': this.attr('', {}),
-            'tokenable_id': this.attr('', {}),
-            'name': this.attr('', {}),
-            'token': this.attr('', {}),
-            'abilities': this.attr('', {}),
-            'last_used_at': this.attr('', {}),
-            'expires_at': this.attr('', {}),
-            'created_at': this.attr('', {}),
-            'updated_at': this.attr('', {}),
+            'id': this.attr(''),
+            'tokenable_type': this.attr(''),
+            'tokenable_id': this.attr(''),
+            'name': this.attr(''),
+            'token': this.attr(''),
+            'abilities': this.attr(''),
+            'last_used_at': this.attr(''),
+            'expires_at': this.attr(''),
+            'created_at': this.attr(''),
+            'updated_at': this.attr(''),
             
         };
     }

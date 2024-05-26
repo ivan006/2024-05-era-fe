@@ -3,7 +3,7 @@ import Documentdetail from './Documentdetail';
 
 export default class Document extends MyBaseModel {
     static entity = 'document';
-    static entityUrl = '/rest/v1/documents';
+    static entityUrl = '/api/documents';
 
     static parentWithables = [
         
@@ -16,27 +16,27 @@ export default class Document extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'RelativeName': { },
-            'RelativeID': { },
-            'Comment': { },
-            'Title': { },
-            'CreatedBy': { },
-            'CreatedOn': { },
-            'Access': { }
+        'Id': {},
+            'RelativeName': {},
+            'RelativeID': {},
+            'Comment': {},
+            'Title': {},
+            'CreatedBy': {},
+            'CreatedOn': {},
+            'Access': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'RelativeName': this.attr('', {}),
-            'RelativeID': this.attr('', {}),
-            'Comment': this.attr('', {}),
-            'Title': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
-            'Access': this.attr('', {}),
+            'Id': this.attr(''),
+            'RelativeName': this.attr(''),
+            'RelativeID': this.attr(''),
+            'Comment': this.attr(''),
+            'Title': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'Access': this.attr(''),
             'documentdetails': this.hasMany(Documentdetail, 'Document')
         };
     }

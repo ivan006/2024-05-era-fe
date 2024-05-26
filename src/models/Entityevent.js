@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Entityevent extends MyBaseModel {
     static entity = 'entityevent';
-    static entityUrl = '/rest/v1/entityevents';
+    static entityUrl = '/api/entityevents';
 
     static parentWithables = [
         
@@ -15,23 +15,23 @@ export default class Entityevent extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'TableID': { },
-            'TableName': { },
-            'Event': { },
-            'Date': { },
-            'Instance': { }
+        'Id': {},
+            'TableID': {},
+            'TableName': {},
+            'Event': {},
+            'Date': {},
+            'Instance': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'TableID': this.attr('', {}),
-            'TableName': this.attr('', {}),
-            'Event': this.attr('', {}),
-            'Date': this.attr('', {}),
-            'Instance': this.attr('', {}),
+            'Id': this.attr(''),
+            'TableID': this.attr(''),
+            'TableName': this.attr(''),
+            'Event': this.attr(''),
+            'Date': this.attr(''),
+            'Instance': this.attr(''),
             
         };
     }

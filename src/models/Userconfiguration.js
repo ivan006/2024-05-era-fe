@@ -4,7 +4,7 @@ import Systemuser from './Systemuser';
 
 export default class Userconfiguration extends MyBaseModel {
     static entity = 'userconfiguration';
-    static entityUrl = '/rest/v1/userconfigurations';
+    static entityUrl = '/api/userconfigurations';
 
     static parentWithables = [
         'systemUser',
@@ -18,17 +18,17 @@ export default class Userconfiguration extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'SystemUser': { },
-            'Language': { },
-            'FbId': { }
+        'SystemUser': { relationRules: { linkables: (user) => { return {} } } },
+            'Language': { relationRules: { linkables: (user) => { return {} } } },
+            'FbId': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'SystemUser': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'Language': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'FbId': this.attr('', {}),
+            'SystemUser': this.attr(''),
+            'Language': this.attr(''),
+            'FbId': this.attr(''),
             'language': this.belongsTo(Systemcode, 'Language'),
             'systemUser': this.belongsTo(Systemuser, 'SystemUser')
         };

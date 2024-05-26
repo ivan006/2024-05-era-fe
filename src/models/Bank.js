@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Bank extends MyBaseModel {
     static entity = 'bank';
-    static entityUrl = '/rest/v1/banks';
+    static entityUrl = '/api/banks';
 
     static parentWithables = [
         
@@ -15,29 +15,29 @@ export default class Bank extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Name': { },
-            'Branch': { },
-            'BranchName': { },
-            'Type': { },
-            'BankType': { },
-            'Account': { },
-            'Verified': { },
-            'Entity': { }
+        'Id': {},
+            'Name': {},
+            'Branch': {},
+            'BranchName': {},
+            'Type': {},
+            'BankType': {},
+            'Account': {},
+            'Verified': {},
+            'Entity': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Name': this.attr('', {}),
-            'Branch': this.attr('', {}),
-            'BranchName': this.attr('', {}),
-            'Type': this.attr('', {}),
-            'BankType': this.attr('', {}),
-            'Account': this.attr('', {}),
-            'Verified': this.attr('', {}),
-            'Entity': this.attr('', {}),
+            'Id': this.attr(''),
+            'Name': this.attr(''),
+            'Branch': this.attr(''),
+            'BranchName': this.attr(''),
+            'Type': this.attr(''),
+            'BankType': this.attr(''),
+            'Account': this.attr(''),
+            'Verified': this.attr(''),
+            'Entity': this.attr(''),
             
         };
     }

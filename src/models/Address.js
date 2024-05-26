@@ -3,7 +3,7 @@ import Systemcode from './Systemcode';
 
 export default class Address extends MyBaseModel {
     static entity = 'address';
-    static entityUrl = '/rest/v1/addresses';
+    static entityUrl = '/api/addresses';
 
     static parentWithables = [
         'country',
@@ -17,45 +17,45 @@ export default class Address extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'StreetNo': { },
-            'StreetName': { },
-            'Building': { },
-            'Postal': { },
-            'Suburb': { },
-            'City': { },
-            'Province': { },
-            'Country': { },
-            'PostCode': { },
-            'Type': { },
-            'Person': { },
-            'MoveDate': { },
-            'Preferred': { },
-            'Dispatch': { },
-            'Latitude': { },
-            'Longitude': { }
+        'Id': {},
+            'StreetNo': {},
+            'StreetName': {},
+            'Building': {},
+            'Postal': {},
+            'Suburb': {},
+            'City': {},
+            'Province': {},
+            'Country': { relationRules: { linkables: (user) => { return {} } } },
+            'PostCode': {},
+            'Type': { relationRules: { linkables: (user) => { return {} } } },
+            'Person': {},
+            'MoveDate': {},
+            'Preferred': {},
+            'Dispatch': {},
+            'Latitude': {},
+            'Longitude': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'StreetNo': this.attr('', {}),
-            'StreetName': this.attr('', {}),
-            'Building': this.attr('', {}),
-            'Postal': this.attr('', {}),
-            'Suburb': this.attr('', {}),
-            'City': this.attr('', {}),
-            'Province': this.attr('', {}),
-            'Country': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'PostCode': this.attr('', {}),
-            'Type': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'Person': this.attr('', {}),
-            'MoveDate': this.attr('', {}),
-            'Preferred': this.attr('', {}),
-            'Dispatch': this.attr('', {}),
-            'Latitude': this.attr('', {}),
-            'Longitude': this.attr('', {}),
+            'Id': this.attr(''),
+            'StreetNo': this.attr(''),
+            'StreetName': this.attr(''),
+            'Building': this.attr(''),
+            'Postal': this.attr(''),
+            'Suburb': this.attr(''),
+            'City': this.attr(''),
+            'Province': this.attr(''),
+            'Country': this.attr(''),
+            'PostCode': this.attr(''),
+            'Type': this.attr(''),
+            'Person': this.attr(''),
+            'MoveDate': this.attr(''),
+            'Preferred': this.attr(''),
+            'Dispatch': this.attr(''),
+            'Latitude': this.attr(''),
+            'Longitude': this.attr(''),
             'country': this.belongsTo(Systemcode, 'Country'),
             'type': this.belongsTo(Systemcode, 'Type')
         };

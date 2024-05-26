@@ -2,7 +2,7 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Requirement extends MyBaseModel {
     static entity = 'requirement';
-    static entityUrl = '/rest/v1/requirements';
+    static entityUrl = '/api/requirements';
 
     static parentWithables = [
         
@@ -15,33 +15,33 @@ export default class Requirement extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Service': { },
-            'Category': { },
-            'Code': { },
-            'Name': { },
-            'Required': { },
-            'Path': { },
-            'Display': { },
-            'SystemCodeContext': { },
-            'SystemCodeField': { },
-            'ValueType': { }
+        'Id': {},
+            'Service': {},
+            'Category': {},
+            'Code': {},
+            'Name': {},
+            'Required': {},
+            'Path': {},
+            'Display': {},
+            'SystemCodeContext': {},
+            'SystemCodeField': {},
+            'ValueType': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Service': this.attr('', {}),
-            'Category': this.attr('', {}),
-            'Code': this.attr('', {}),
-            'Name': this.attr('', {}),
-            'Required': this.attr('', {}),
-            'Path': this.attr('', {}),
-            'Display': this.attr('', {}),
-            'SystemCodeContext': this.attr('', {}),
-            'SystemCodeField': this.attr('', {}),
-            'ValueType': this.attr('', {}),
+            'Id': this.attr(''),
+            'Service': this.attr(''),
+            'Category': this.attr(''),
+            'Code': this.attr(''),
+            'Name': this.attr(''),
+            'Required': this.attr(''),
+            'Path': this.attr(''),
+            'Display': this.attr(''),
+            'SystemCodeContext': this.attr(''),
+            'SystemCodeField': this.attr(''),
+            'ValueType': this.attr(''),
             
         };
     }

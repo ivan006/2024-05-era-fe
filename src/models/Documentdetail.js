@@ -3,7 +3,7 @@ import Document from './Document';
 
 export default class Documentdetail extends MyBaseModel {
     static entity = 'documentdetail';
-    static entityUrl = '/rest/v1/documentdetails';
+    static entityUrl = '/api/documentdetails';
 
     static parentWithables = [
         'document'
@@ -16,31 +16,31 @@ export default class Documentdetail extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': { },
-            'Document': { },
-            'Section': { },
-            'Position': { },
-            'Title': { },
-            'Description': { },
-            'Comments': { },
-            'Style': { },
-            'CreatedBy': { },
-            'CreatedOn': { }
+        'Id': {},
+            'Document': { relationRules: { linkables: (user) => { return {} } } },
+            'Section': {},
+            'Position': {},
+            'Title': {},
+            'Description': {},
+            'Comments': {},
+            'Style': {},
+            'CreatedBy': {},
+            'CreatedOn': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'Id': this.attr('', {}),
-            'Document': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'Section': this.attr('', {}),
-            'Position': this.attr('', {}),
-            'Title': this.attr('', {}),
-            'Description': this.attr('', {}),
-            'Comments': this.attr('', {}),
-            'Style': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
+            'Id': this.attr(''),
+            'Document': this.attr(''),
+            'Section': this.attr(''),
+            'Position': this.attr(''),
+            'Title': this.attr(''),
+            'Description': this.attr(''),
+            'Comments': this.attr(''),
+            'Style': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'CreatedOn': this.attr(''),
             'document': this.belongsTo(Document, 'Document')
         };
     }

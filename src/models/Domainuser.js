@@ -3,7 +3,7 @@ import Systemuser from './Systemuser';
 
 export default class Domainuser extends MyBaseModel {
     static entity = 'domainuser';
-    static entityUrl = '/rest/v1/domainusers';
+    static entityUrl = '/api/domainusers';
 
     static parentWithables = [
         'systemUser'
@@ -16,25 +16,25 @@ export default class Domainuser extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'SystemUser': { },
-            'DomainName': { },
-            'DomainAccount': { },
-            'CreatedOn': { },
-            'CreatedBy': { },
-            'ChangedOn': { },
-            'ChangedBy': { }
+        'SystemUser': { relationRules: { linkables: (user) => { return {} } } },
+            'DomainName': {},
+            'DomainAccount': {},
+            'CreatedOn': {},
+            'CreatedBy': {},
+            'ChangedOn': {},
+            'ChangedBy': {}
     };
 
     static fields() {
         return {
             id: this.attr(null),
-            'SystemUser': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
-            'DomainName': this.attr('', {}),
-            'DomainAccount': this.attr('', {}),
-            'CreatedOn': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
-            'ChangedOn': this.attr('', {}),
-            'ChangedBy': this.attr('', {}),
+            'SystemUser': this.attr(''),
+            'DomainName': this.attr(''),
+            'DomainAccount': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'ChangedOn': this.attr(''),
+            'ChangedBy': this.attr(''),
             'systemUser': this.belongsTo(Systemuser, 'SystemUser')
         };
     }
