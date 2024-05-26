@@ -29,8 +29,8 @@ export default class Userconfiguration extends MyBaseModel {
             'SystemUser': this.attr(''),
             'Language': this.attr(''),
             'FbId': this.attr(''),
-            'language': this.belongsTo(Systemcode, 'Language'),
-            'systemUser': this.belongsTo(Systemuser, 'SystemUser')
+            'languageRel': this.belongsTo(Systemcode, 'Language'),
+            'systemUserRel': this.belongsTo(Systemuser, 'SystemUser')
         };
     }
 

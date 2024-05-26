@@ -47,8 +47,8 @@ export default class Servicerequest extends MyBaseModel {
             'Locations': this.attr(''),
             'Deliverables': this.attr(''),
             'DeliveryDate': this.attr(''),
-            'serviceProvider': this.belongsTo(Entity, 'ServiceProvider'),
-            'createdBy': this.belongsTo(Systemuser, 'CreatedBy'),
+            'serviceProviderRel': this.belongsTo(Entity, 'ServiceProvider'),
+            'createdByRel': this.belongsTo(Systemuser, 'CreatedBy'),
             'servicerequestfrequencies': this.hasMany(Servicerequestfrequency, 'ServiceRequest'),
             'servicerequestreports': this.hasMany(Servicerequestreport, 'ServiceRequest')
         };

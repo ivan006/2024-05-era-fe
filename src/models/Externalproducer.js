@@ -27,7 +27,7 @@ export default class Externalproducer extends MyBaseModel {
             'Id': this.attr(''),
             'Name': this.attr(''),
             'ServiceRequestReport': this.attr(''),
-            'serviceRequestReport': this.belongsTo(Servicerequestreport, 'ServiceRequestReport')
+            'serviceRequestReportRel': this.belongsTo(Servicerequestreport, 'ServiceRequestReport')
         };
     }
 

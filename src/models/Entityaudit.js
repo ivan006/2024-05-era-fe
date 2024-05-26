@@ -35,7 +35,7 @@ export default class Entityaudit extends MyBaseModel {
             'SystemUser': this.attr(''),
             'Changes': this.attr(''),
             'Audit_TS': this.attr(''),
-            'systemUser': this.belongsTo(Systemuser, 'SystemUser')
+            'systemUserRel': this.belongsTo(Systemuser, 'SystemUser')
         };
     }
 

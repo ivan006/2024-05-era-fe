@@ -53,9 +53,9 @@ export default class Entitygood extends MyBaseModel {
             'WasteClass': this.attr(''),
             'Period': this.attr(''),
             'Invoice': this.attr(''),
-            'entity': this.belongsTo(Entity, 'Entity'),
-            'invoice': this.belongsTo(Entitygoodapproval, 'Invoice'),
-            'good': this.belongsTo(Good, 'Good')
+            'entityRel': this.belongsTo(Entity, 'Entity'),
+            'invoiceRel': this.belongsTo(Entitygoodapproval, 'Invoice'),
+            'goodRel': this.belongsTo(Good, 'Good')
         };
     }
 

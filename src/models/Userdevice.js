@@ -31,7 +31,7 @@ export default class Userdevice extends MyBaseModel {
             'Name': this.attr(''),
             'LastUsed': this.attr(''),
             'FbId': this.attr(''),
-            'systemUser': this.belongsTo(Systemuser, 'SystemUser')
+            'systemUserRel': this.belongsTo(Systemuser, 'SystemUser')
         };
     }
 

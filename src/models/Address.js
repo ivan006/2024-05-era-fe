@@ -7,7 +7,7 @@ export default class Address extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-        'country',
+        'countryId',
         'type'
     ];
 
@@ -26,7 +26,7 @@ export default class Address extends MyBaseModel {
             'Suburb': {},
             'City': {},
             'Province': {},
-            'Country': { relationRules: { linkables: (user) => { return {} } } },
+            'Country_id': { relationRules: { linkables: (user) => { return {} } } },
             'PostCode': {},
             'Type': { relationRules: { linkables: (user) => { return {} } } },
             'Person': {},
@@ -47,7 +47,7 @@ export default class Address extends MyBaseModel {
             'Suburb': this.attr(''),
             'City': this.attr(''),
             'Province': this.attr(''),
-            'Country': this.attr(''),
+            'Country_id': this.attr(''),
             'PostCode': this.attr(''),
             'Type': this.attr(''),
             'Person': this.attr(''),
@@ -56,8 +56,8 @@ export default class Address extends MyBaseModel {
             'Dispatch': this.attr(''),
             'Latitude': this.attr(''),
             'Longitude': this.attr(''),
-            'country': this.belongsTo(Systemcode, 'Country'),
-            'type': this.belongsTo(Systemcode, 'Type')
+            'country': this.belongsTo(Systemcode, 'Country_id'),
+            'typeRel': this.belongsTo(Systemcode, 'Type')
         };
     }
 

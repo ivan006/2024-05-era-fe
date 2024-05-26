@@ -44,7 +44,7 @@ export default class Good extends MyBaseModel {
             'HazardSubstance': this.attr(''),
             'Dimension': this.attr(''),
             'Sector': this.attr(''),
-            'sector': this.belongsTo(Entity, 'Sector'),
+            'sectorRel': this.belongsTo(Entity, 'Sector'),
             'entitygoods': this.hasMany(Entitygood, 'Good')
         };
     }

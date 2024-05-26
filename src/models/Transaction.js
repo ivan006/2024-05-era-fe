@@ -49,7 +49,7 @@ export default class Transaction extends MyBaseModel {
             'Period': this.attr(''),
             'Reference': this.attr(''),
             'Type': this.attr(''),
-            'type': this.belongsTo(Systemcode, 'Type')
+            'typeRel': this.belongsTo(Systemcode, 'Type')
         };
     }
 
