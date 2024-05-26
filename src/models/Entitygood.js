@@ -1,11 +1,16 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Entity from './Entity';
+import Entitygoodapproval from './Entitygoodapproval';
+import Good from './Good';
 
 export default class Entitygood extends MyBaseModel {
     static entity = 'entitygood';
-    static entityUrl = '/api/entitygoods';
+    static entityUrl = '/rest/v1/entitygoods';
 
     static parentWithables = [
-
+        'entity',
+        'good',
+        'invoice'
     ];
 
     static rules = {
@@ -35,8 +40,8 @@ export default class Entitygood extends MyBaseModel {
         return {
             id: this.attr(null),
             'Id': this.attr('', {}),
-            'Entity': this.attr('', {}),
-            'Good': this.attr('', {}),
+            'Entity': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Good': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
             'Units': this.attr('', {}),
             'AvgKg': this.attr('', {}),
             'AvgKgOld': this.attr('', {}),
@@ -47,8 +52,10 @@ export default class Entitygood extends MyBaseModel {
             'Dimension': this.attr('', {}),
             'WasteClass': this.attr('', {}),
             'Period': this.attr('', {}),
-            'Invoice': this.attr('', {}),
-
+            'Invoice': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'entity': this.belongsTo(Entity, 'Entity'),
+            'invoice': this.belongsTo(Entitygoodapproval, 'Invoice'),
+            'good': this.belongsTo(Good, 'Good')
         };
     }
 

@@ -1,11 +1,12 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Useraccess from './Useraccess';
 
 export default class Systemaction extends MyBaseModel {
     static entity = 'systemaction';
-    static entityUrl = '/api/systemactions';
+    static entityUrl = '/rest/v1/systemactions';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -40,7 +41,7 @@ export default class Systemaction extends MyBaseModel {
             'CreatedBy': this.attr('', {}),
             'ChangedOn': this.attr('', {}),
             'ChangedBy': this.attr('', {}),
-
+            'useraccesses': this.hasMany(Useraccess, 'SystemAction')
         };
     }
 

@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Entityrelationship extends MyBaseModel {
     static entity = 'entityrelationship';
-    static entityUrl = '/api/entityrelationships';
+    static entityUrl = '/rest/v1/entityrelationships';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -42,7 +42,7 @@ export default class Entityrelationship extends MyBaseModel {
             'EntityBQualifier': this.attr('', {}),
             'EntityALevel': this.attr('', {}),
             'EntityBLevel': this.attr('', {}),
-
+            
         };
     }
 

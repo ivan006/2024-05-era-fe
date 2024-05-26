@@ -1,11 +1,12 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Systemuser from './Systemuser';
 
 export default class Domainuser extends MyBaseModel {
     static entity = 'domainuser';
-    static entityUrl = '/api/domainusers';
+    static entityUrl = '/rest/v1/domainusers';
 
     static parentWithables = [
-
+        'systemUser'
     ];
 
     static rules = {
@@ -27,14 +28,14 @@ export default class Domainuser extends MyBaseModel {
     static fields() {
         return {
             id: this.attr(null),
-            'SystemUser': this.attr('', {}),
+            'SystemUser': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
             'DomainName': this.attr('', {}),
             'DomainAccount': this.attr('', {}),
             'CreatedOn': this.attr('', {}),
             'CreatedBy': this.attr('', {}),
             'ChangedOn': this.attr('', {}),
             'ChangedBy': this.attr('', {}),
-
+            'systemUser': this.belongsTo(Systemuser, 'SystemUser')
         };
     }
 

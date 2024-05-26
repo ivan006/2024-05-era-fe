@@ -1,11 +1,12 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Systemcode from './Systemcode';
 
 export default class Contactnumber extends MyBaseModel {
     static entity = 'contactnumber';
-    static entityUrl = '/api/contactnumbers';
+    static entityUrl = '/rest/v1/contactnumbers';
 
     static parentWithables = [
-
+        'type'
     ];
 
     static rules = {
@@ -27,10 +28,10 @@ export default class Contactnumber extends MyBaseModel {
             id: this.attr(null),
             'Id': this.attr('', {}),
             'Number': this.attr('', {}),
-            'Type': this.attr('', {}),
+            'Type': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
             'Person': this.attr('', {}),
             'Preferred': this.attr('', {}),
-
+            'type': this.belongsTo(Systemcode, 'Type')
         };
     }
 

@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Audit extends MyBaseModel {
     static entity = 'audit';
-    static entityUrl = '/api/audits';
+    static entityUrl = '/rest/v1/audits';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Audit extends MyBaseModel {
             'PageNo': this.attr('', {}),
             'NoOfLines': this.attr('', {}),
             'CrudMessage': this.attr('', {}),
-
+            
         };
     }
 

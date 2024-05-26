@@ -1,11 +1,12 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Servicerequestreport from './Servicerequestreport';
 
 export default class Treatmentdetail extends MyBaseModel {
     static entity = 'treatmentdetail';
-    static entityUrl = '/api/treatmentdetails';
+    static entityUrl = '/rest/v1/treatmentdetails';
 
     static parentWithables = [
-
+        'serviceRequestReport'
     ];
 
     static rules = {
@@ -30,7 +31,7 @@ export default class Treatmentdetail extends MyBaseModel {
         return {
             id: this.attr(null),
             'Id': this.attr('', {}),
-            'ServiceRequestReport': this.attr('', {}),
+            'ServiceRequestReport': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
             'OpeningBalance': this.attr('', {}),
             'Refurbished': this.attr('', {}),
             'Recovered': this.attr('', {}),
@@ -38,7 +39,8 @@ export default class Treatmentdetail extends MyBaseModel {
             'Energy': this.attr('', {}),
             'Landfill': this.attr('', {}),
             'LocalSecondaryProducts': this.attr('', {}),
-
+            'serviceRequestReport': this.belongsTo(Servicerequestreport, 'ServiceRequestReport'),
+            'servicerequestreports': this.hasMany(Servicerequestreport, 'TreatmentDetails')
         };
     }
 

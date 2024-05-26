@@ -1,11 +1,12 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Entitygoodapproval from './Entitygoodapproval';
 
 export default class Queryheader extends MyBaseModel {
     static entity = 'queryheader';
-    static entityUrl = '/api/queryheaders';
+    static entityUrl = '/rest/v1/queryheaders';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -40,7 +41,7 @@ export default class Queryheader extends MyBaseModel {
             'CreatedOn': this.attr('', {}),
             'ClosedBy': this.attr('', {}),
             'ClosedOn': this.attr('', {}),
-
+            'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'Query')
         };
     }
 

@@ -1,11 +1,19 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Communication from './Communication';
+import Domainuser from './Domainuser';
+import Entityaudit from './Entityaudit';
+import Servicerequest from './Servicerequest';
+import Servicerequestreport from './Servicerequestreport';
+import Useraccess from './Useraccess';
+import Userconfiguration from './Userconfiguration';
+import Userdevice from './Userdevice';
 
 export default class Systemuser extends MyBaseModel {
     static entity = 'systemuser';
-    static entityUrl = '/api/systemusers';
+    static entityUrl = '/rest/v1/systemusers';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -52,7 +60,14 @@ export default class Systemuser extends MyBaseModel {
             'ChangedOn': this.attr('', {}),
             'ChangedBy': this.attr('', {}),
             'FbId': this.attr('', {}),
-
+            'communications': this.hasMany(Communication, 'SentBy'),
+            'domainusers': this.hasMany(Domainuser, 'SystemUser'),
+            'entityaudits': this.hasMany(Entityaudit, 'SystemUser'),
+            'servicerequests': this.hasMany(Servicerequest, 'CreatedBy'),
+            'servicerequestreports': this.hasMany(Servicerequestreport, 'CreatedBy'),
+            'useraccesses': this.hasMany(Useraccess, 'SystemUser'),
+            'userconfigurations': this.hasMany(Userconfiguration, 'SystemUser'),
+            'userdevices': this.hasMany(Userdevice, 'SystemUser')
         };
     }
 

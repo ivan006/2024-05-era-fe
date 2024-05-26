@@ -1,11 +1,16 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Entity from './Entity';
+import Systemuser from './Systemuser';
+import Servicerequestfrequency from './Servicerequestfrequency';
+import Servicerequestreport from './Servicerequestreport';
 
 export default class Servicerequest extends MyBaseModel {
     static entity = 'servicerequest';
-    static entityUrl = '/api/servicerequests';
+    static entityUrl = '/rest/v1/servicerequests';
 
     static parentWithables = [
-
+        'serviceProvider',
+        'createdBy'
     ];
 
     static rules = {
@@ -33,8 +38,8 @@ export default class Servicerequest extends MyBaseModel {
             id: this.attr(null),
             'Id': this.attr('', {}),
             'ServiceRequestNo': this.attr('', {}),
-            'ServiceProvider': this.attr('', {}),
-            'CreatedBy': this.attr('', {}),
+            'ServiceProvider': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'CreatedBy': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
             'CreatedOn': this.attr('', {}),
             'FromDate': this.attr('', {}),
             'ToDate': this.attr('', {}),
@@ -42,7 +47,10 @@ export default class Servicerequest extends MyBaseModel {
             'Locations': this.attr('', {}),
             'Deliverables': this.attr('', {}),
             'DeliveryDate': this.attr('', {}),
-
+            'serviceProvider': this.belongsTo(Entity, 'ServiceProvider'),
+            'createdBy': this.belongsTo(Systemuser, 'CreatedBy'),
+            'servicerequestfrequencies': this.hasMany(Servicerequestfrequency, 'ServiceRequest'),
+            'servicerequestreports': this.hasMany(Servicerequestreport, 'ServiceRequest')
         };
     }
 

@@ -1,11 +1,14 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Systemcode from './Systemcode';
+import Systemuser from './Systemuser';
 
 export default class Userconfiguration extends MyBaseModel {
     static entity = 'userconfiguration';
-    static entityUrl = '/api/userconfigurations';
+    static entityUrl = '/rest/v1/userconfigurations';
 
     static parentWithables = [
-
+        'systemUser',
+        'language'
     ];
 
     static rules = {
@@ -23,10 +26,11 @@ export default class Userconfiguration extends MyBaseModel {
     static fields() {
         return {
             id: this.attr(null),
-            'SystemUser': this.attr('', {}),
-            'Language': this.attr('', {}),
+            'SystemUser': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'Language': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
             'FbId': this.attr('', {}),
-
+            'language': this.belongsTo(Systemcode, 'Language'),
+            'systemUser': this.belongsTo(Systemuser, 'SystemUser')
         };
     }
 

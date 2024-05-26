@@ -1,11 +1,12 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Systemuser from './Systemuser';
 
 export default class Entityaudit extends MyBaseModel {
     static entity = 'entityaudit';
-    static entityUrl = '/api/entityaudits';
+    static entityUrl = '/rest/v1/entityaudits';
 
     static parentWithables = [
-
+        'systemUser'
     ];
 
     static rules = {
@@ -31,10 +32,10 @@ export default class Entityaudit extends MyBaseModel {
             'Entity Name': this.attr('', {}),
             'Entity Id': this.attr('', {}),
             'Operation': this.attr('', {}),
-            'SystemUser': this.attr('', {}),
+            'SystemUser': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
             'Changes': this.attr('', {}),
             'Audit_TS': this.attr('', {}),
-
+            'systemUser': this.belongsTo(Systemuser, 'SystemUser')
         };
     }
 

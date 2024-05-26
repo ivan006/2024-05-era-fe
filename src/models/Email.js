@@ -1,11 +1,12 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Systemcode from './Systemcode';
 
 export default class Email extends MyBaseModel {
     static entity = 'email';
-    static entityUrl = '/api/emails';
+    static entityUrl = '/rest/v1/emails';
 
     static parentWithables = [
-
+        'type'
     ];
 
     static rules = {
@@ -27,10 +28,10 @@ export default class Email extends MyBaseModel {
             id: this.attr(null),
             'Id': this.attr('', {}),
             'Address': this.attr('', {}),
-            'Type': this.attr('', {}),
+            'Type': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
             'Person': this.attr('', {}),
             'Preferred': this.attr('', {}),
-
+            'type': this.belongsTo(Systemcode, 'Type')
         };
     }
 

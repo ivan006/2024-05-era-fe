@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class PostTag extends MyBaseModel {
     static entity = 'postTag';
-    static entityUrl = '/api/post_tags';
+    static entityUrl = '/rest/v1/post_tags';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -30,7 +30,7 @@ export default class PostTag extends MyBaseModel {
             'updated_at': this.attr('', {}),
             'post_id': this.attr('', {}),
             'tag_id': this.attr('', {}),
-
+            
         };
     }
 

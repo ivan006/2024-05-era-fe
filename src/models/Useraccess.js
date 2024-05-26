@@ -1,11 +1,16 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import Systemaction from './Systemaction';
+import Systemuser from './Systemuser';
+import Userrole from './Userrole';
 
 export default class Useraccess extends MyBaseModel {
     static entity = 'useraccess';
-    static entityUrl = '/api/useraccesses';
+    static entityUrl = '/rest/v1/useraccesses';
 
     static parentWithables = [
-
+        'systemUser',
+        'userRole',
+        'systemAction'
     ];
 
     static rules = {
@@ -31,16 +36,18 @@ export default class Useraccess extends MyBaseModel {
         return {
             id: this.attr(null),
             'Id': this.attr('', {}),
-            'SystemUser': this.attr('', {}),
-            'UserRole': this.attr('', {}),
-            'SystemAction': this.attr('', {}),
+            'SystemUser': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'UserRole': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
+            'SystemAction': this.attr('', { relationRules: { linkables: (user) => { return {} } } }),
             'Entity': this.attr('', {}),
             'CreatedOn': this.attr('', {}),
             'CreatedBy': this.attr('', {}),
             'ChangedOn': this.attr('', {}),
             'ChangedBy': this.attr('', {}),
             'FbId': this.attr('', {}),
-
+            'systemAction': this.belongsTo(Systemaction, 'SystemAction'),
+            'systemUser': this.belongsTo(Systemuser, 'SystemUser'),
+            'userRole': this.belongsTo(Userrole, 'UserRole')
         };
     }
 

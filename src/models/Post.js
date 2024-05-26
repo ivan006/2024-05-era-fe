@@ -2,10 +2,10 @@ import MyBaseModel from '@/models/MyBaseModel';
 
 export default class Post extends MyBaseModel {
     static entity = 'post';
-    static entityUrl = '/api/posts';
+    static entityUrl = '/rest/v1/posts';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -28,7 +28,7 @@ export default class Post extends MyBaseModel {
             'created_at': this.attr('', {}),
             'updated_at': this.attr('', {}),
             'name': this.attr('', {}),
-
+            
         };
     }
 
