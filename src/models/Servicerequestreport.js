@@ -49,7 +49,7 @@ export default class Servicerequestreport extends MyBaseModel {
             'servicerequest': this.belongsTo(Servicerequest, 'ServiceRequest'),
             'entity': this.belongsTo(Entity, 'ServiceProvider'),
             'systemuser': this.belongsTo(Systemuser, 'CreatedBy'),
-            'treatmentdetailTreatmentDetails': this.belongsTo(Treatmentdetail, 'TreatmentDetails'),
+            'treatmentdetail': this.belongsTo(Treatmentdetail, 'TreatmentDetails'),
             'externalproducer': this.hasMany(Externalproducer, 'ServiceRequestReport'),
             'treatmentdetailServiceRequestReport': this.hasMany(Treatmentdetail, 'ServiceRequestReport')
         };
