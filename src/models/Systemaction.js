@@ -41,7 +41,7 @@ export default class Systemaction extends MyBaseModel {
             'CreatedBy': this.attr(''),
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
-            'useraccess': this.hasMany(Useraccess, 'SystemAction')
+            'useraccesses': this.hasMany(Useraccess, 'SystemAction')
         };
     }
 

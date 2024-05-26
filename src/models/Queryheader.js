@@ -41,7 +41,7 @@ export default class Queryheader extends MyBaseModel {
             'CreatedOn': this.attr(''),
             'ClosedBy': this.attr(''),
             'ClosedOn': this.attr(''),
-            'entitygoodapproval': this.hasMany(Entitygoodapproval, 'Query')
+            'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'Query')
         };
     }
 

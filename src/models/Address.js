@@ -56,8 +56,8 @@ export default class Address extends MyBaseModel {
             'Dispatch': this.attr(''),
             'Latitude': this.attr(''),
             'Longitude': this.attr(''),
-            'systemcode': this.belongsTo(Systemcode, 'Country'),
-            'systemcode': this.belongsTo(Systemcode, 'Type')
+            'country': this.belongsTo(Systemcode, 'Country'),
+            'type': this.belongsTo(Systemcode, 'Type')
         };
     }
 

@@ -39,7 +39,7 @@ export default class Communication extends MyBaseModel {
             'Content': this.attr(''),
             'RelativeName': this.attr(''),
             'RelativeID': this.attr(''),
-            'systemuser': this.belongsTo(Systemuser, 'SentBy')
+            'sentBy': this.belongsTo(Systemuser, 'SentBy')
         };
     }
 

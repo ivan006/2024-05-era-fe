@@ -45,9 +45,9 @@ export default class Useraccess extends MyBaseModel {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'FbId': this.attr(''),
-            'systemaction': this.belongsTo(Systemaction, 'SystemAction'),
-            'systemuser': this.belongsTo(Systemuser, 'SystemUser'),
-            'userrole': this.belongsTo(Userrole, 'UserRole')
+            'systemAction': this.belongsTo(Systemaction, 'SystemAction'),
+            'systemUser': this.belongsTo(Systemuser, 'SystemUser'),
+            'userRole': this.belongsTo(Userrole, 'UserRole')
         };
     }
 

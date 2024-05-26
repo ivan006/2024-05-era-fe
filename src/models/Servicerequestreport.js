@@ -46,12 +46,12 @@ export default class Servicerequestreport extends MyBaseModel {
             'ReportDate': this.attr(''),
             'Approved': this.attr(''),
             'Rejected': this.attr(''),
-            'servicerequest': this.belongsTo(Servicerequest, 'ServiceRequest'),
-            'entity': this.belongsTo(Entity, 'ServiceProvider'),
-            'systemuser': this.belongsTo(Systemuser, 'CreatedBy'),
-            'treatmentdetail': this.belongsTo(Treatmentdetail, 'TreatmentDetails'),
-            'externalproducer': this.hasMany(Externalproducer, 'ServiceRequestReport'),
-            'treatmentdetailServiceRequestReport': this.hasMany(Treatmentdetail, 'ServiceRequestReport')
+            'serviceRequest': this.belongsTo(Servicerequest, 'ServiceRequest'),
+            'serviceProvider': this.belongsTo(Entity, 'ServiceProvider'),
+            'createdBy': this.belongsTo(Systemuser, 'CreatedBy'),
+            'treatmentDetail': this.belongsTo(Treatmentdetail, 'TreatmentDetails'),
+            'externalproducers': this.hasMany(Externalproducer, 'ServiceRequestReport'),
+            'treatmentdetails': this.hasMany(Treatmentdetail, 'ServiceRequestReport')
         };
     }
 
