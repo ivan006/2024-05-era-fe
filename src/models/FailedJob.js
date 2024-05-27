@@ -62,7 +62,8 @@ export default class FailedJob extends MyBaseModel {
             id,
             [...this.parentWithables, ...relationships],
             flags,
-            this.mergeHeaders(moreHeaders)
+            this.mergeHeaders(moreHeaders),
+            this.adapator
         );
     }
 
@@ -72,7 +73,8 @@ export default class FailedJob extends MyBaseModel {
             entity,
             [...this.parentWithables, ...relationships],
             flags,
-            this.mergeHeaders(moreHeaders)
+            this.mergeHeaders(moreHeaders),
+            this.adapator
         );
     }
 
@@ -82,7 +84,8 @@ export default class FailedJob extends MyBaseModel {
             entity,
             [...this.parentWithables, ...relationships],
             flags,
-            this.mergeHeaders(moreHeaders)
+            this.mergeHeaders(moreHeaders),
+            this.adapator
         );
     }
 

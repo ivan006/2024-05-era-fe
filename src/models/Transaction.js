@@ -77,7 +77,8 @@ export default class Transaction extends MyBaseModel {
             id,
             [...this.parentWithables, ...relationships],
             flags,
-            this.mergeHeaders(moreHeaders)
+            this.mergeHeaders(moreHeaders),
+            this.adapator
         );
     }
 
@@ -87,7 +88,8 @@ export default class Transaction extends MyBaseModel {
             entity,
             [...this.parentWithables, ...relationships],
             flags,
-            this.mergeHeaders(moreHeaders)
+            this.mergeHeaders(moreHeaders),
+            this.adapator
         );
     }
 
@@ -97,7 +99,8 @@ export default class Transaction extends MyBaseModel {
             entity,
             [...this.parentWithables, ...relationships],
             flags,
-            this.mergeHeaders(moreHeaders)
+            this.mergeHeaders(moreHeaders),
+            this.adapator
         );
     }
 
