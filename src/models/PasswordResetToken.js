@@ -6,7 +6,7 @@ export default class PasswordResetToken extends MyBaseModel {
     static primaryKey = 'email';
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -26,7 +26,7 @@ export default class PasswordResetToken extends MyBaseModel {
             'email': this.attr(''),
             'token': this.attr(''),
             'created_at': this.attr(''),
-            
+
         };
     }
 
@@ -50,7 +50,7 @@ export default class PasswordResetToken extends MyBaseModel {
 
     static FetchById(id, relationships = [], flags = {}, moreHeaders = {}) {
         return this.customSupabaseApiFetchById(
-            `${this.baseUrl}${this.entityUrl}?id=eq.${id}`,
+            `${this.baseUrl}${this.entityUrl}`,
             id,
             [...this.parentWithables, ...relationships],
             flags,
@@ -70,7 +70,7 @@ export default class PasswordResetToken extends MyBaseModel {
 
     static Update(entity, relationships = [], flags = {}, moreHeaders = {}) {
         return this.customSupabaseApiUpdate(
-            `${this.baseUrl}${this.entityUrl}?id=eq.${entity.id}`,
+            `${this.baseUrl}${this.entityUrl}`,
             entity,
             [...this.parentWithables, ...relationships],
             flags,
@@ -80,7 +80,7 @@ export default class PasswordResetToken extends MyBaseModel {
 
     static Delete(entityId, options = { flags: {}, moreHeaders: {} }) {
         return this.customSupabaseApiDelete(
-            `${this.baseUrl}${this.entityUrl}?id=eq.${entityId}`,
+            `${this.baseUrl}${this.entityUrl}`,
             entityId
         );
     }
