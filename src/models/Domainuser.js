@@ -53,7 +53,8 @@ export default class Domainuser extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            options
+            options,
+            this.adapator
         );
     }
 

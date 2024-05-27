@@ -54,7 +54,8 @@ export default class Relative extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            options
+            options,
+            this.adapator
         );
     }
 

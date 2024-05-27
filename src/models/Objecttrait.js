@@ -62,7 +62,8 @@ export default class Objecttrait extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            options
+            options,
+            this.adapator
         );
     }
 

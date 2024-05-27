@@ -73,7 +73,8 @@ export default class Entitygood extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            options
+            options,
+            this.adapator
         );
     }
 

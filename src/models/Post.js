@@ -46,7 +46,8 @@ export default class Post extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            options
+            options,
+            this.adapator
         );
     }
 
