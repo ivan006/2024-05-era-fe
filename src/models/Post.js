@@ -6,7 +6,7 @@ export default class Post extends MyBaseModel {
     static primaryKey = 'id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -28,7 +28,7 @@ export default class Post extends MyBaseModel {
             'created_at': this.attr(''),
             'updated_at': this.attr(''),
             'name': this.attr(''),
-
+            
         };
     }
 

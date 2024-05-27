@@ -6,7 +6,7 @@ export default class Query extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -36,7 +36,7 @@ export default class Query extends MyBaseModel {
             'CreatedOn': this.attr(''),
             'ClosedOn': this.attr(''),
             'ClosedBy': this.attr(''),
-
+            
         };
     }
 

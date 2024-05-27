@@ -6,7 +6,7 @@ export default class Ruleactiondatum extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -30,7 +30,7 @@ export default class Ruleactiondatum extends MyBaseModel {
             'TableName': this.attr(''),
             'ColumnName': this.attr(''),
             'ColumnType': this.attr(''),
-
+            
         };
     }
 

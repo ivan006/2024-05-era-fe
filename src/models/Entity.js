@@ -12,7 +12,7 @@ export default class Entity extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {

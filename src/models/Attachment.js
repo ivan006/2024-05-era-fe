@@ -6,7 +6,7 @@ export default class Attachment extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Attachment extends MyBaseModel {
             'RelativeID': this.attr(''),
             'CreatedOn': this.attr(''),
             'CreatedBy': this.attr(''),
-
+            
         };
     }
 

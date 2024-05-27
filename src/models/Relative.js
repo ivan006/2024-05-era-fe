@@ -6,7 +6,7 @@ export default class Relative extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -36,7 +36,7 @@ export default class Relative extends MyBaseModel {
             'Student': this.attr(''),
             'Disabled': this.attr(''),
             'TraditionalMarriage': this.attr(''),
-
+            
         };
     }
 

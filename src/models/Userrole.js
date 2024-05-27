@@ -7,7 +7,7 @@ export default class Userrole extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {

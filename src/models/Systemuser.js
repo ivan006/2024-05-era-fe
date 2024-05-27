@@ -14,7 +14,7 @@ export default class Systemuser extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {

@@ -6,7 +6,7 @@ export default class Ruleentityrole extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -40,7 +40,7 @@ export default class Ruleentityrole extends MyBaseModel {
             'CRUD_Read': this.attr(''),
             'CRUD_Update': this.attr(''),
             'CRUD_Delete': this.attr(''),
-
+            
         };
     }
 

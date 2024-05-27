@@ -6,7 +6,7 @@ export default class Requirement extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -42,7 +42,7 @@ export default class Requirement extends MyBaseModel {
             'SystemCodeContext': this.attr(''),
             'SystemCodeField': this.attr(''),
             'ValueType': this.attr(''),
-
+            
         };
     }
 

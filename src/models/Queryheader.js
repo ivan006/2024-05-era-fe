@@ -7,7 +7,7 @@ export default class Queryheader extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {

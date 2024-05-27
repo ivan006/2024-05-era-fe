@@ -6,7 +6,7 @@ export default class PersonalAccessToken extends MyBaseModel {
     static primaryKey = 'id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -40,7 +40,7 @@ export default class PersonalAccessToken extends MyBaseModel {
             'expires_at': this.attr(''),
             'created_at': this.attr(''),
             'updated_at': this.attr(''),
-
+            
         };
     }
 

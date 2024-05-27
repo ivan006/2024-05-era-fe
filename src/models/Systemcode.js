@@ -56,7 +56,7 @@ export default class Systemcode extends MyBaseModel {
             'ChangedBy': this.attr(''),
             'Entity': this.attr(''),
             'entityRel': this.belongsTo(Entity, 'Entity'),
-            'addresses': this.hasMany(Address, 'Country_id'),
+            'addresses': this.hasMany(Address, 'Country'),
             'addressesType': this.hasMany(Address, 'Type'),
             'contactnumbers': this.hasMany(Contactnumber, 'Type'),
             'emails': this.hasMany(Email, 'Type'),

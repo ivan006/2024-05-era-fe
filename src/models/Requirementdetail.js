@@ -6,7 +6,7 @@ export default class Requirementdetail extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -48,7 +48,7 @@ export default class Requirementdetail extends MyBaseModel {
             'Path': this.attr(''),
             'ChangedBy': this.attr(''),
             'ChangedOn': this.attr(''),
-
+            
         };
     }
 

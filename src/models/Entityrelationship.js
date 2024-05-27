@@ -6,7 +6,7 @@ export default class Entityrelationship extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -42,7 +42,7 @@ export default class Entityrelationship extends MyBaseModel {
             'EntityBQualifier': this.attr(''),
             'EntityALevel': this.attr(''),
             'EntityBLevel': this.attr(''),
-
+            
         };
     }
 

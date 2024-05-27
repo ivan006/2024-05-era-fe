@@ -6,7 +6,7 @@ export default class User extends MyBaseModel {
     static primaryKey = 'id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -36,7 +36,7 @@ export default class User extends MyBaseModel {
             'remember_token': this.attr(''),
             'created_at': this.attr(''),
             'updated_at': this.attr(''),
-
+            
         };
     }
 

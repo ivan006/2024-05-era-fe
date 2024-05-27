@@ -6,7 +6,7 @@ export default class Bank extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Bank extends MyBaseModel {
             'Account': this.attr(''),
             'Verified': this.attr(''),
             'Entity': this.attr(''),
-
+            
         };
     }
 

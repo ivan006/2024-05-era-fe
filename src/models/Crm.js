@@ -6,7 +6,7 @@ export default class Crm extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -32,7 +32,7 @@ export default class Crm extends MyBaseModel {
             'Contact': this.attr(''),
             'Description': this.attr(''),
             'Status': this.attr(''),
-
+            
         };
     }
 

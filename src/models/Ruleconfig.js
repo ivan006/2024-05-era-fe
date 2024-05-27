@@ -6,7 +6,7 @@ export default class Ruleconfig extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Ruleconfig extends MyBaseModel {
             'Value': this.attr(''),
             'Description': this.attr(''),
             'SystemCodeValue': this.attr(''),
-
+            
         };
     }
 

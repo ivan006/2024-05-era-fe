@@ -6,7 +6,7 @@ export default class Systemlog extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -38,7 +38,7 @@ export default class Systemlog extends MyBaseModel {
             'Message': this.attr(''),
             'Exception': this.attr(''),
             'StackTrace': this.attr(''),
-
+            
         };
     }
 

@@ -6,7 +6,7 @@ export default class WebsiteProducerRegistration extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -26,7 +26,7 @@ export default class WebsiteProducerRegistration extends MyBaseModel {
             'Id': this.attr(''),
             'Data': this.attr(''),
             'ProducerId': this.attr(''),
-
+            
         };
     }
 

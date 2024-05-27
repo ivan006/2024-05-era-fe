@@ -6,7 +6,7 @@ export default class Dummy extends MyBaseModel {
     static primaryKey = 'id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -22,7 +22,7 @@ export default class Dummy extends MyBaseModel {
     static fields() {
         return {
             'textData': this.attr(''),
-
+            
         };
     }
 

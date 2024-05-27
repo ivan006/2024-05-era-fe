@@ -6,7 +6,7 @@ export default class Objectvalue extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -34,7 +34,7 @@ export default class Objectvalue extends MyBaseModel {
             'ValueJson': this.attr(''),
             'Object': this.attr(''),
             'Entity': this.attr(''),
-
+            
         };
     }
 

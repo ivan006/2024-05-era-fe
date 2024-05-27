@@ -7,7 +7,7 @@ export default class Systemaction extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {

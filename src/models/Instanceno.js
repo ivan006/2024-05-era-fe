@@ -6,7 +6,7 @@ export default class Instanceno extends MyBaseModel {
     static primaryKey = 'Id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -24,7 +24,7 @@ export default class Instanceno extends MyBaseModel {
         return {
             'Id': this.attr(''),
             'ObjectName': this.attr(''),
-
+            
         };
     }
 

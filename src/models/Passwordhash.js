@@ -6,7 +6,7 @@ export default class Passwordhash extends MyBaseModel {
     static primaryKey = 'SystemUser';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -36,7 +36,7 @@ export default class Passwordhash extends MyBaseModel {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'FbId': this.attr(''),
-
+            
         };
     }
 

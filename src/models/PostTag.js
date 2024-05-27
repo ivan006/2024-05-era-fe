@@ -6,7 +6,7 @@ export default class PostTag extends MyBaseModel {
     static primaryKey = 'id';
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -30,7 +30,7 @@ export default class PostTag extends MyBaseModel {
             'updated_at': this.attr(''),
             'post_id': this.attr(''),
             'tag_id': this.attr(''),
-
+            
         };
     }
 
