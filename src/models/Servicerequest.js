@@ -109,7 +109,8 @@ export default class Servicerequest extends MyBaseModel {
     static Delete(entityId, options = { flags: {}, moreHeaders: {} }) {
         return this.customSupabaseApiDelete(
             `${this.baseUrl}${this.entityUrl}`,
-            entityId
+            entityId,
+            this.adapator
         );
     }
 }

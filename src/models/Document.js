@@ -99,7 +99,8 @@ export default class Document extends MyBaseModel {
         return this.customSupabaseApiDelete(
             // `${this.baseUrl}${this.entityUrl}?id=eq.${entityId}`,
             `${this.baseUrl}${this.entityUrl}`,
-            entityId
+            entityId,
+            this.adapator
         );
     }
 }
