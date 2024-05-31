@@ -126,6 +126,57 @@ export default {
                 },
                 {
                     icon: '',
+                    text: 'Hmmm',
+                    subLinks: [
+                      {
+                        icon: '',
+                        text: 'Servicerequest',
+                        to: '/lists/service-request',
+                      },
+                      {
+                        icon: '',
+                        text: 'Servicerequestfrequency',
+                        to: '/lists/service-request-frequency',
+                      },
+                      {
+                        icon: '',
+                        text: 'Servicerequestreport',
+                        to: '/lists/service-request-report',
+                      },
+                      {
+                        icon: '',
+                        text: 'Treatmentdetail',
+                        to: '/lists/treatment-detail',
+                      },
+                      {
+                        icon: '',
+                        text: 'Entitygood',
+                        to: '/lists/entity-good',
+                      },
+                      {
+                        icon: '',
+                        text: 'Entitygoodapproval',
+                        to: '/lists/entity-good-approval',
+                      },
+                      {
+                        icon: '',
+                        text: 'Good',
+                        to: '/lists/good',
+                      },
+                      {
+                        icon: '',
+                        text: 'Query',
+                        to: '/lists/query',
+                      },
+                      {
+                        icon: '',
+                        text: 'Queryheader',
+                        to: '/lists/query-header',
+                      },
+                    ],
+                },
+                {
+                    icon: '',
                     text: 'Lists',
                     subLinks: [
 
@@ -207,16 +258,6 @@ export default {
                         },
                         {
                             icon: '',
-                            text: 'Entitygood',
-                            to: '/lists/entity-good',
-                        },
-                        {
-                            icon: '',
-                            text: 'Entitygoodapproval',
-                            to: '/lists/entity-good-approval',
-                        },
-                        {
-                            icon: '',
                             text: 'Entityrelationship',
                             to: '/lists/entity-relationship',
                         },
@@ -224,11 +265,6 @@ export default {
                             icon: '',
                             text: 'Externalproducer',
                             to: '/lists/external-producer',
-                        },
-                        {
-                            icon: '',
-                            text: 'Good',
-                            to: '/lists/good',
                         },
                         {
                             icon: '',
@@ -259,16 +295,6 @@ export default {
                             icon: '',
                             text: 'Productprovider',
                             to: '/lists/product-provider',
-                        },
-                        {
-                            icon: '',
-                            text: 'Query',
-                            to: '/lists/query',
-                        },
-                        {
-                            icon: '',
-                            text: 'Queryheader',
-                            to: '/lists/query-header',
                         },
                         {
                             icon: '',
@@ -312,21 +338,6 @@ export default {
                         },
                         {
                             icon: '',
-                            text: 'Servicerequest',
-                            to: '/lists/service-request',
-                        },
-                        {
-                            icon: '',
-                            text: 'Servicerequestfrequency',
-                            to: '/lists/service-request-frequency',
-                        },
-                        {
-                            icon: '',
-                            text: 'Servicerequestreport',
-                            to: '/lists/service-request-report',
-                        },
-                        {
-                            icon: '',
                             text: 'Systemaction',
                             to: '/lists/system-action',
                         },
@@ -354,11 +365,6 @@ export default {
                             icon: '',
                             text: 'Transaction',
                             to: '/lists/transaction',
-                        },
-                        {
-                            icon: '',
-                            text: 'Treatmentdetail',
-                            to: '/lists/treatment-detail',
                         },
                         {
                             icon: '',
