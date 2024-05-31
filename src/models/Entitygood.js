@@ -2,11 +2,20 @@ import MyBaseModel from '@/models/MyBaseModel';
 import Entity from './Entity';
 import Entitygoodapproval from './Entitygoodapproval';
 import Good from './Good';
+import router from "@/router";
 
 export default class Entitygood extends MyBaseModel {
     static entity = 'entitygood';
     static entityUrl = '/api/entitygoods';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/entity-good/:rId',
+        params: {
+          rId: id,
+        },
+      })
+    }
 
     static parentWithables = [
         'entityRel',

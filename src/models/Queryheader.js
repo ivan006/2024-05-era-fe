@@ -1,13 +1,22 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import Entitygoodapproval from './Entitygoodapproval';
+import router from "@/router";
 
 export default class Queryheader extends MyBaseModel {
     static entity = 'queryheader';
     static entityUrl = '/api/queryheaders';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/query-header/:rId',
+        params: {
+          rId: id,
+        },
+      })
+    }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {

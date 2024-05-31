@@ -4,11 +4,20 @@ import Entity from './Entity';
 import Systemuser from './Systemuser';
 import Treatmentdetail from './Treatmentdetail';
 import Externalproducer from './Externalproducer';
+import router from "@/router";
 
 export default class Servicerequestreport extends MyBaseModel {
     static entity = 'servicerequestreport';
     static entityUrl = '/api/servicerequestreports';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/service-request-report/:rId',
+        params: {
+          rId: id,
+        },
+      })
+    }
 
     static parentWithables = [
         'serviceRequestRel',

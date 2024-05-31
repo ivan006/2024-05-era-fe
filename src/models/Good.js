@@ -1,11 +1,20 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import Entity from './Entity';
 import Entitygood from './Entitygood';
+import router from "@/router";
 
 export default class Good extends MyBaseModel {
     static entity = 'good';
     static entityUrl = '/api/goods';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/good/:rId',
+        params: {
+          rId: id,
+        },
+      })
+    }
 
     static parentWithables = [
         'sectorRel'

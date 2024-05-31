@@ -1,11 +1,20 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import Servicerequest from './Servicerequest';
 import Systemcode from './Systemcode';
+import router from "@/router";
 
 export default class Servicerequestfrequency extends MyBaseModel {
     static entity = 'servicerequestfrequency';
     static entityUrl = '/api/servicerequestfrequencies';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/service-request-frequency/:rId',
+        params: {
+          rId: id,
+        },
+      })
+    }
 
     static parentWithables = [
         'serviceRequestRel',
