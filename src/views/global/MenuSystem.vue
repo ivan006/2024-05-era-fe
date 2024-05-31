@@ -124,56 +124,57 @@ export default {
                     text: 'Home',
                     to: '/',
                 },
+
                 {
-                    icon: '',
-                    text: 'Hmmm',
-                    subLinks: [
-                      {
-                        icon: '',
-                        text: 'Servicerequest',
-                        to: '/lists/service-request',
-                      },
-                      {
-                        icon: '',
-                        text: 'Servicerequestfrequency',
-                        to: '/lists/service-request-frequency',
-                      },
-                      {
-                        icon: '',
-                        text: 'Servicerequestreport',
-                        to: '/lists/service-request-report',
-                      },
-                      {
-                        icon: '',
-                        text: 'Treatmentdetail',
-                        to: '/lists/treatment-detail',
-                      },
-                      {
-                        icon: '',
-                        text: 'Entitygood',
-                        to: '/lists/entity-good',
-                      },
-                      {
-                        icon: '',
-                        text: 'Entitygoodapproval',
-                        to: '/lists/entity-good-approval',
-                      },
-                      {
-                        icon: '',
-                        text: 'Good',
-                        to: '/lists/good',
-                      },
-                      {
-                        icon: '',
-                        text: 'Query',
-                        to: '/lists/query',
-                      },
-                      {
-                        icon: '',
-                        text: 'Queryheader',
-                        to: '/lists/query-header',
-                      },
-                    ],
+                  icon: '',
+                  text: 'Hmmm',
+                  subLinks: [
+                    {
+                      icon: '',
+                      text: 'Servicerequest (Deps. Contracts)',
+                      to: '/lists/service-request',
+                    },
+                    {
+                      icon: '',
+                      text: 'Servicerequestfrequency ',
+                      to: '/lists/service-request-frequency',
+                    },
+                    {
+                      icon: '',
+                      text: 'Servicerequestreport (Deps.)',
+                      to: '/lists/service-request-report',
+                    },
+                    {
+                      icon: '',
+                      text: 'Treatmentdetail (Deps. Items)',
+                      to: '/lists/treatment-detail',
+                    },
+                    {
+                      icon: '',
+                      text: 'Entitygood (Withd. Items)',
+                      to: '/lists/entity-good',
+                    },
+                    {
+                      icon: '',
+                      text: 'Entitygoodapproval (Withd.)',
+                      to: '/lists/entity-good-approval',
+                    },
+                    {
+                      icon: '',
+                      text: 'Good (Waste Types)',
+                      to: '/lists/good',
+                    },
+                    {
+                      icon: '',
+                      text: 'Query',
+                      to: '/lists/query',
+                    },
+                    {
+                      icon: '',
+                      text: 'Queryheader',
+                      to: '/lists/query-header',
+                    },
+                  ],
                 },
                 {
                     icon: '',
