@@ -131,7 +131,7 @@ export default {
                   subLinks: [
                     {
                       icon: '',
-                      text: 'Servicerequest (Deps. Contracts)',
+                      text: 'Servicerequest (Withd. Contracts)',
                       to: '/lists/service-request',
                     },
                     {
@@ -141,22 +141,22 @@ export default {
                     },
                     {
                       icon: '',
-                      text: 'Servicerequestreport (Deps.)',
+                      text: 'Servicerequestreport (Withd.)',
                       to: '/lists/service-request-report',
                     },
                     {
                       icon: '',
-                      text: 'Treatmentdetail (Deps. Items)',
+                      text: 'Treatmentdetail (Withd. Items)',
                       to: '/lists/treatment-detail',
                     },
                     {
                       icon: '',
-                      text: 'Entitygood (Withd. Items)',
+                      text: 'Entitygood (Deps. Items)',
                       to: '/lists/entity-good',
                     },
                     {
                       icon: '',
-                      text: 'Entitygoodapproval (Withd.)',
+                      text: 'Entitygoodapproval (Deps.)',
                       to: '/lists/entity-good-approval',
                     },
                     {

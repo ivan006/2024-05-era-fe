@@ -1,10 +1,19 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import Servicerequestreport from './Servicerequestreport';
+import router from "@/router";
 
 export default class Treatmentdetail extends MyBaseModel {
     static entity = 'treatmentdetail';
     static entityUrl = '/api/treatmentdetails';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/treatment-detail/:rId',
+        params: {
+          rId: id,
+        },
+      })
+    }
 
     static parentWithables = [
         'serviceRequestReportRel'
