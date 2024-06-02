@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class EntityGood extends MyBaseModel {
+    static entity = 'entitygood';
+    static entityUrl = '/api/entity-goods';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/entity-goods/:rId',
         params: {
           rId: Id,
         },
@@ -26,37 +26,37 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
-            'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
             'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
+            'Good': {},
+            'Units': {},
+            'AvgKg': {},
+            'AvgKgOld': {},
+            'AvgLifeSpan': {},
+            'TotalKg': {},
+            'Tariff': {},
+            'Selected': {},
+            'Dimension': {},
+            'WasteClass': {},
             'Period': {},
-            'Reference': {},
-            'Type': {}
+            'Invoice': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
-            'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
             'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
+            'Good': this.attr(''),
+            'Units': this.attr(''),
+            'AvgKg': this.attr(''),
+            'AvgKgOld': this.attr(''),
+            'AvgLifeSpan': this.attr(''),
+            'TotalKg': this.attr(''),
+            'Tariff': this.attr(''),
+            'Selected': this.attr(''),
+            'Dimension': this.attr(''),
+            'WasteClass': this.attr(''),
             'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
+            'Invoice': this.attr(''),
             
         };
     }

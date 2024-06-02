@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class DocumentDetail extends MyBaseModel {
+    static entity = 'documentdetail';
+    static entityUrl = '/api/document-details';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/document-details/:rId',
         params: {
           rId: Id,
         },
@@ -26,37 +26,29 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
+            'Document': {},
+            'Section': {},
+            'Position': {},
+            'Title': {},
             'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
-            'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
-            'Period': {},
-            'Reference': {},
-            'Type': {}
+            'Comments': {},
+            'Style': {},
+            'CreatedBy': {},
+            'CreatedOn': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
+            'Document': this.attr(''),
+            'Section': this.attr(''),
+            'Position': this.attr(''),
+            'Title': this.attr(''),
             'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
-            'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
-            'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
+            'Comments': this.attr(''),
+            'Style': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'CreatedOn': this.attr(''),
             
         };
     }

@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class SystemLog extends MyBaseModel {
+    static entity = 'systemlog';
+    static entityUrl = '/api/system-logs';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/system-logs/:rId',
         params: {
           rId: Id,
         },
@@ -26,37 +26,27 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
-            'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
-            'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
-            'Period': {},
-            'Reference': {},
-            'Type': {}
+            'LogDate': {},
+            'LogLevel': {},
+            'Logger': {},
+            'SystemUser': {},
+            'CallSite': {},
+            'Message': {},
+            'Exception': {},
+            'StackTrace': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
-            'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
-            'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
-            'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
+            'LogDate': this.attr(''),
+            'LogLevel': this.attr(''),
+            'Logger': this.attr(''),
+            'SystemUser': this.attr(''),
+            'CallSite': this.attr(''),
+            'Message': this.attr(''),
+            'Exception': this.attr(''),
+            'StackTrace': this.attr(''),
             
         };
     }

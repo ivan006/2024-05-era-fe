@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class EntityAudit extends MyBaseModel {
+    static entity = 'entityaudit';
+    static entityUrl = '/api/entity-audits';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/entity-audits/:rId',
         params: {
           rId: Id,
         },
@@ -26,37 +26,23 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
-            'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
-            'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
-            'Period': {},
-            'Reference': {},
-            'Type': {}
+            'Entity Name': {},
+            'Entity Id': {},
+            'Operation': {},
+            'SystemUser': {},
+            'Changes': {},
+            'Audit_TS': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
-            'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
-            'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
-            'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
+            'Entity Name': this.attr(''),
+            'Entity Id': this.attr(''),
+            'Operation': this.attr(''),
+            'SystemUser': this.attr(''),
+            'Changes': this.attr(''),
+            'Audit_TS': this.attr(''),
             
         };
     }

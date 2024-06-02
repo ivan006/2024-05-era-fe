@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class ObjectTrait extends MyBaseModel {
+    static entity = 'objecttrait';
+    static entityUrl = '/api/object-traits';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/object-traits/:rId',
         params: {
           rId: Id,
         },
@@ -26,37 +26,33 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
+            'Name': {},
             'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
-            'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
-            'Period': {},
-            'Reference': {},
-            'Type': {}
+            'Object': {},
+            'Type': {},
+            'Level': {},
+            'IsRule': {},
+            'SpecialType': {},
+            'IsDisabled': {},
+            'IsHidden': {},
+            'SystemCodeContext': {},
+            'SystemCodeField': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
+            'Name': this.attr(''),
             'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
-            'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
-            'Period': this.attr(''),
-            'Reference': this.attr(''),
+            'Object': this.attr(''),
             'Type': this.attr(''),
+            'Level': this.attr(''),
+            'IsRule': this.attr(''),
+            'SpecialType': this.attr(''),
+            'IsDisabled': this.attr(''),
+            'IsHidden': this.attr(''),
+            'SystemCodeContext': this.attr(''),
+            'SystemCodeField': this.attr(''),
             
         };
     }

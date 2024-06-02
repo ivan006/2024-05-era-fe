@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class ObjectValue extends MyBaseModel {
+    static entity = 'objectvalue';
+    static entityUrl = '/api/object-values';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/object-values/:rId',
         params: {
           rId: Id,
         },
@@ -26,37 +26,23 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
-            'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
-            'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
-            'Period': {},
-            'Reference': {},
-            'Type': {}
+            'Trait': {},
+            'Value': {},
+            'Instance': {},
+            'ValueJson': {},
+            'Object': {},
+            'Entity': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
-            'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
+            'Trait': this.attr(''),
+            'Value': this.attr(''),
+            'Instance': this.attr(''),
+            'ValueJson': this.attr(''),
+            'Object': this.attr(''),
             'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
-            'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
             
         };
     }

@@ -1,15 +1,15 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
-    static primaryKey = 'Id';
+export default class DomainUser extends MyBaseModel {
+    static entity = 'domainuser';
+    static entityUrl = '/api/domain-users';
+    static primaryKey = 'SystemUser';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/domain-users/:rId',
         params: {
-          rId: Id,
+          rId: SystemUser,
         },
       })
     }
@@ -25,38 +25,24 @@ export default class Transaction extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': {},
-            'TransNo': {},
-            'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
-            'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
-            'Period': {},
-            'Reference': {},
-            'Type': {}
+        'SystemUser': {},
+            'DomainName': {},
+            'DomainAccount': {},
+            'CreatedOn': {},
+            'CreatedBy': {},
+            'ChangedOn': {},
+            'ChangedBy': {}
     };
 
     static fields() {
         return {
-            'Id': this.attr(''),
-            'TransNo': this.attr(''),
-            'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
-            'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
-            'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
+            'SystemUser': this.attr(''),
+            'DomainName': this.attr(''),
+            'DomainAccount': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'ChangedOn': this.attr(''),
+            'ChangedBy': this.attr(''),
             
         };
     }

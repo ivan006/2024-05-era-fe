@@ -1,13 +1,21 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Systemcode from './Systemcode';
+import router from '@/router';
 
 export default class Email extends MyBaseModel {
     static entity = 'email';
     static entityUrl = '/api/emails';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/emails/:rId',
+        params: {
+          rId: Id,
+        },
+      })
+    }
 
     static parentWithables = [
-        'typeRel'
+        
     ];
 
     static rules = {
@@ -19,7 +27,7 @@ export default class Email extends MyBaseModel {
     static fieldsMetadata = {
         'Id': {},
             'Address': {},
-            'Type': { relationRules: { linkables: (user) => { return {} } } },
+            'Type': {},
             'Person': {},
             'Preferred': {}
     };
@@ -31,7 +39,7 @@ export default class Email extends MyBaseModel {
             'Type': this.attr(''),
             'Person': this.attr(''),
             'Preferred': this.attr(''),
-            'typeRel': this.belongsTo(Systemcode, 'Type')
+            
         };
     }
 

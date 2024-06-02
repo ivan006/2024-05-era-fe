@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class RuleAction extends MyBaseModel {
+    static entity = 'ruleaction';
+    static entityUrl = '/api/rule-actions';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/rule-actions/:rId',
         params: {
           rId: Id,
         },
@@ -26,37 +26,27 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
+            'Rule': {},
+            'Process': {},
+            'Result': {},
+            'ResultNegative': {},
+            'ResultType': {},
             'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
-            'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
-            'Period': {},
-            'Reference': {},
-            'Type': {}
+            'ResultSystemCode': {},
+            'NegativeSystemCode': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
+            'Rule': this.attr(''),
+            'Process': this.attr(''),
+            'Result': this.attr(''),
+            'ResultNegative': this.attr(''),
+            'ResultType': this.attr(''),
             'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
-            'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
-            'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
+            'ResultSystemCode': this.attr(''),
+            'NegativeSystemCode': this.attr(''),
             
         };
     }

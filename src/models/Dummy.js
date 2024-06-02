@@ -1,9 +1,18 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import router from '@/router';
 
 export default class Dummy extends MyBaseModel {
     static entity = 'dummy';
     static entityUrl = '/api/dummies';
     static primaryKey = 'id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/dummies/:rId',
+        params: {
+          rId: id,
+        },
+      })
+    }
 
     static parentWithables = [
         

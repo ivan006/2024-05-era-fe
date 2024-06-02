@@ -1,13 +1,21 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Systemuser from './Systemuser';
+import router from '@/router';
 
 export default class Communication extends MyBaseModel {
     static entity = 'communication';
     static entityUrl = '/api/communications';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/communications/:rId',
+        params: {
+          rId: Id,
+        },
+      })
+    }
 
     static parentWithables = [
-        'sentByRel'
+        
     ];
 
     static rules = {
@@ -20,7 +28,7 @@ export default class Communication extends MyBaseModel {
         'Id': {},
             'Type': {},
             'Status': {},
-            'SentBy': { relationRules: { linkables: (user) => { return {} } } },
+            'SentBy': {},
             'SentTo': {},
             'SentOn': {},
             'Content': {},
@@ -39,7 +47,7 @@ export default class Communication extends MyBaseModel {
             'Content': this.attr(''),
             'RelativeName': this.attr(''),
             'RelativeID': this.attr(''),
-            'sentByRel': this.belongsTo(Systemuser, 'SentBy')
+            
         };
     }
 

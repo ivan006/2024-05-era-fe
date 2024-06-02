@@ -1,15 +1,18 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Entitygood from './Entitygood';
-import Entitygoodapproval from './Entitygoodapproval';
-import Good from './Good';
-import Servicerequest from './Servicerequest';
-import Servicerequestreport from './Servicerequestreport';
-import Systemcode from './Systemcode';
+import router from '@/router';
 
 export default class Entity extends MyBaseModel {
     static entity = 'entity';
     static entityUrl = '/api/entities';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/entities/:rId',
+        params: {
+          rId: Id,
+        },
+      })
+    }
 
     static parentWithables = [
         
@@ -58,14 +61,7 @@ export default class Entity extends MyBaseModel {
             'Passport': this.attr(''),
             'HasPhoto': this.attr(''),
             'IsPaid': this.attr(''),
-            'entitygoods': this.hasMany(Entitygood, 'Entity'),
-            'entitygoodapprovals': this.hasMany(Entitygoodapproval, 'ApprovedBy'),
-            'entitygoodapprovalsInvoiceApprovedBy': this.hasMany(Entitygoodapproval, 'InvoiceApprovedBy'),
-            'entitygoodapprovalsEntity': this.hasMany(Entitygoodapproval, 'Entity'),
-            'goods': this.hasMany(Good, 'Sector'),
-            'servicerequests': this.hasMany(Servicerequest, 'ServiceProvider'),
-            'servicerequestreports': this.hasMany(Servicerequestreport, 'ServiceProvider'),
-            'systemcodes': this.hasMany(Systemcode, 'Entity')
+            
         };
     }
 

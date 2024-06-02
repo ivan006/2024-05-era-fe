@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class RequirementDetail extends MyBaseModel {
+    static entity = 'requirementdetail';
+    static entityUrl = '/api/requirement-details';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/requirement-details/:rId',
         params: {
           rId: Id,
         },
@@ -26,37 +26,37 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
-            'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
-            'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
-            'Period': {},
-            'Reference': {},
-            'Type': {}
+            'Requirement': {},
+            'RelativeID': {},
+            'Service': {},
+            'Category': {},
+            'Value': {},
+            'Comment': {},
+            'Received': {},
+            'Name': {},
+            'NameOriginal': {},
+            'ContentType': {},
+            'Path': {},
+            'ChangedBy': {},
+            'ChangedOn': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
-            'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
-            'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
-            'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
+            'Requirement': this.attr(''),
+            'RelativeID': this.attr(''),
+            'Service': this.attr(''),
+            'Category': this.attr(''),
+            'Value': this.attr(''),
+            'Comment': this.attr(''),
+            'Received': this.attr(''),
+            'Name': this.attr(''),
+            'NameOriginal': this.attr(''),
+            'ContentType': this.attr(''),
+            'Path': this.attr(''),
+            'ChangedBy': this.attr(''),
+            'ChangedOn': this.attr(''),
             
         };
     }

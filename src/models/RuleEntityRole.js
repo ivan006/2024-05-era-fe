@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class RuleEntityRole extends MyBaseModel {
+    static entity = 'ruleentityrole';
+    static entityUrl = '/api/rule-entity-roles';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/rule-entity-roles/:rId',
         params: {
           rId: Id,
         },
@@ -26,37 +26,29 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
-            'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
+            'EntityRole': {},
             'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
-            'Period': {},
-            'Reference': {},
-            'Type': {}
+            'UserRole': {},
+            'Rule': {},
+            'Priority': {},
+            'CRUD_Create': {},
+            'CRUD_Read': {},
+            'CRUD_Update': {},
+            'CRUD_Delete': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
-            'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
+            'EntityRole': this.attr(''),
             'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
-            'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
+            'UserRole': this.attr(''),
+            'Rule': this.attr(''),
+            'Priority': this.attr(''),
+            'CRUD_Create': this.attr(''),
+            'CRUD_Read': this.attr(''),
+            'CRUD_Update': this.attr(''),
+            'CRUD_Delete': this.attr(''),
             
         };
     }

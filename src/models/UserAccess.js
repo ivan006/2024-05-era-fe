@@ -1,18 +1,9 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class UserAccess extends MyBaseModel {
+    static entity = 'useraccess';
+    static entityUrl = '/api/user-accesses';
     static primaryKey = 'Id';
-    static openRecord(id){
-      router.push({
-        name: '/lists/transactions/:rId',
-        params: {
-          rId: Id,
-        },
-      })
-    }
 
     static parentWithables = [
         
@@ -26,37 +17,29 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
-            'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
+            'SystemUser': {},
+            'UserRole': {},
+            'SystemAction': {},
             'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
-            'Period': {},
-            'Reference': {},
-            'Type': {}
+            'CreatedOn': {},
+            'CreatedBy': {},
+            'ChangedOn': {},
+            'ChangedBy': {},
+            'FbId': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
-            'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
+            'SystemUser': this.attr(''),
+            'UserRole': this.attr(''),
+            'SystemAction': this.attr(''),
             'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
-            'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
+            'CreatedOn': this.attr(''),
+            'CreatedBy': this.attr(''),
+            'ChangedOn': this.attr(''),
+            'ChangedBy': this.attr(''),
+            'FbId': this.attr(''),
             
         };
     }

@@ -1,8 +1,8 @@
 import MyBaseModel from '@/models/MyBaseModel';
 
 export default class WebsiteProducerRegistration extends MyBaseModel {
-    static entity = 'websiteProducerRegistration';
-    static entityUrl = '/api/website_producer_registrations';
+    static entity = 'websiteproducerregistration';
+    static entityUrl = '/api/website-producer-registrations';
     static primaryKey = 'Id';
 
     static parentWithables = [

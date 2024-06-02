@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class RuleConfig extends MyBaseModel {
+    static entity = 'ruleconfig';
+    static entityUrl = '/api/rule-configs';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/rule-configs/:rId',
         params: {
           rId: Id,
         },
@@ -26,37 +26,27 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
+            'Rule': {},
+            'TableName': {},
+            'ColumnName': {},
+            'ColumnType': {},
+            'Operand': {},
+            'Value': {},
             'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
-            'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
-            'Period': {},
-            'Reference': {},
-            'Type': {}
+            'SystemCodeValue': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
+            'Rule': this.attr(''),
+            'TableName': this.attr(''),
+            'ColumnName': this.attr(''),
+            'ColumnType': this.attr(''),
+            'Operand': this.attr(''),
+            'Value': this.attr(''),
             'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
-            'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
-            'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
+            'SystemCodeValue': this.attr(''),
             
         };
     }

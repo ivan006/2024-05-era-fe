@@ -1,7 +1,5 @@
 import MyBaseModel from '@/models/MyBaseModel';
-import Entity from './Entity';
-import Entitygood from './Entitygood';
-import router from "@/router";
+import router from '@/router';
 
 export default class Good extends MyBaseModel {
     static entity = 'good';
@@ -9,15 +7,15 @@ export default class Good extends MyBaseModel {
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/good/:rId',
+        name: '/lists/goods/:rId',
         params: {
-          rId: id,
+          rId: Id,
         },
       })
     }
 
     static parentWithables = [
-        'sectorRel'
+        
     ];
 
     static rules = {
@@ -37,7 +35,7 @@ export default class Good extends MyBaseModel {
             'Category': {},
             'HazardSubstance': {},
             'Dimension': {},
-            'Sector': { relationRules: { linkables: (user) => { return {} } } }
+            'Sector': {}
     };
 
     static fields() {
@@ -53,8 +51,7 @@ export default class Good extends MyBaseModel {
             'HazardSubstance': this.attr(''),
             'Dimension': this.attr(''),
             'Sector': this.attr(''),
-            'sectorRel': this.belongsTo(Entity, 'Sector'),
-            'entitygoods': this.hasMany(Entitygood, 'Good')
+            
         };
     }
 

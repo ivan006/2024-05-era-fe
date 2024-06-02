@@ -1,9 +1,18 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import router from '@/router';
 
 export default class Attachment extends MyBaseModel {
     static entity = 'attachment';
     static entityUrl = '/api/attachments';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/attachments/:rId',
+        params: {
+          rId: Id,
+        },
+      })
+    }
 
     static parentWithables = [
         

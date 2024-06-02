@@ -1,9 +1,18 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import router from '@/router';
 
 export default class Migration extends MyBaseModel {
     static entity = 'migration';
-    static entityUrl = '/api/migrations';
+    static entityUrl = '/api/migration-s';
     static primaryKey = 'id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/migration-s/:rId',
+        params: {
+          rId: id,
+        },
+      })
+    }
 
     static parentWithables = [
         

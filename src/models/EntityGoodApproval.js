@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class Transaction extends MyBaseModel {
-    static entity = 'transaction';
-    static entityUrl = '/api/transactions';
+export default class EntityGoodApproval extends MyBaseModel {
+    static entity = 'entitygoodapproval';
+    static entityUrl = '/api/entity-good-approvals';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/transactions/:rId',
+        name: '/lists/entity-good-approvals/:rId',
         params: {
           rId: Id,
         },
@@ -26,37 +26,35 @@ export default class Transaction extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'TransNo': {},
-            'Description': {},
-            'TransactionDate': {},
-            'CaptureDate': {},
-            'AccountCode': {},
+            'ApprovedBy': {},
+            'ApprovedOn': {},
+            'InvoiceApprovedBy': {},
+            'InvoiceApprovedOn': {},
             'Entity': {},
-            'EntityProduct': {},
-            'Debit': {},
-            'Credit': {},
-            'Source': {},
             'Period': {},
-            'Reference': {},
-            'Type': {}
+            'PurchaseOrder': {},
+            'InvoiceNo': {},
+            'UseAR': {},
+            'UseVAT': {},
+            'Query': {},
+            'Status': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'TransNo': this.attr(''),
-            'Description': this.attr(''),
-            'TransactionDate': this.attr(''),
-            'CaptureDate': this.attr(''),
-            'AccountCode': this.attr(''),
+            'ApprovedBy': this.attr(''),
+            'ApprovedOn': this.attr(''),
+            'InvoiceApprovedBy': this.attr(''),
+            'InvoiceApprovedOn': this.attr(''),
             'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Debit': this.attr(''),
-            'Credit': this.attr(''),
-            'Source': this.attr(''),
             'Period': this.attr(''),
-            'Reference': this.attr(''),
-            'Type': this.attr(''),
+            'PurchaseOrder': this.attr(''),
+            'InvoiceNo': this.attr(''),
+            'UseAR': this.attr(''),
+            'UseVAT': this.attr(''),
+            'Query': this.attr(''),
+            'Status': this.attr(''),
             
         };
     }
