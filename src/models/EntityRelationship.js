@@ -5,11 +5,11 @@ export default class EntityRelationship extends MyBaseModel {
     static entity = 'entityrelationship';
     static entityUrl = '/api/entity-relationships';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/entity-relationships/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

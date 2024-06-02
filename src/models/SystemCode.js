@@ -5,11 +5,11 @@ export default class SystemCode extends MyBaseModel {
     static entity = 'systemcode';
     static entityUrl = '/api/system-codes';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/system-codes/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

@@ -5,11 +5,11 @@ export default class SystemAction extends MyBaseModel {
     static entity = 'systemaction';
     static entityUrl = '/api/system-actions';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/system-actions/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

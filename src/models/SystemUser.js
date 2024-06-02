@@ -5,11 +5,11 @@ export default class SystemUser extends MyBaseModel {
     static entity = 'systemuser';
     static entityUrl = '/api/system-users';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/system-users/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

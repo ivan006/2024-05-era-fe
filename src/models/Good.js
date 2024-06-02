@@ -5,11 +5,11 @@ export default class Good extends MyBaseModel {
     static entity = 'good';
     static entityUrl = '/api/goods';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/goods/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

@@ -5,11 +5,11 @@ export default class UserDevice extends MyBaseModel {
     static entity = 'userdevice';
     static entityUrl = '/api/user-devices';
     static primaryKey = 'SystemUser';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/user-devices/:rId',
         params: {
-          rId: SystemUser,
+          rId: pKey,
         },
       })
     }

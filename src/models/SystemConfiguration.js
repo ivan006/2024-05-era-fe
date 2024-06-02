@@ -5,11 +5,11 @@ export default class SystemConfiguration extends MyBaseModel {
     static entity = 'systemconfiguration';
     static entityUrl = '/api/system-configurations';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/system-configurations/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

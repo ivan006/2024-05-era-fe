@@ -5,11 +5,11 @@ export default class Dummy extends MyBaseModel {
     static entity = 'dummy';
     static entityUrl = '/api/dummies';
     static primaryKey = 'id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/dummies/:rId',
         params: {
-          rId: id,
+          rId: pKey,
         },
       })
     }

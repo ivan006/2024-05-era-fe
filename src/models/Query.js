@@ -5,11 +5,11 @@ export default class Query extends MyBaseModel {
     static entity = 'query';
     static entityUrl = '/api/queries';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/queries/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

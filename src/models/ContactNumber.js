@@ -5,11 +5,11 @@ export default class ContactNumber extends MyBaseModel {
     static entity = 'contactnumber';
     static entityUrl = '/api/contact-numbers';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/contact-numbers/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

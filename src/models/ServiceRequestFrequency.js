@@ -5,11 +5,11 @@ export default class ServiceRequestFrequency extends MyBaseModel {
     static entity = 'servicerequestfrequency';
     static entityUrl = '/api/service-request-frequencies';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/service-request-frequencies/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

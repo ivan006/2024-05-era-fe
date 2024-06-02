@@ -5,11 +5,11 @@ export default class ObjectTrait extends MyBaseModel {
     static entity = 'objecttrait';
     static entityUrl = '/api/object-traits';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/object-traits/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

@@ -5,11 +5,11 @@ export default class QueryHeader extends MyBaseModel {
     static entity = 'queryheader';
     static entityUrl = '/api/query-headers';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/query-headers/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

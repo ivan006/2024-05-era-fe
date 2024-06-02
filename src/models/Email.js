@@ -5,11 +5,11 @@ export default class Email extends MyBaseModel {
     static entity = 'email';
     static entityUrl = '/api/emails';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/emails/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

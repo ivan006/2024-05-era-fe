@@ -5,11 +5,11 @@ export default class Bank extends MyBaseModel {
     static entity = 'bank';
     static entityUrl = '/api/banks';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/banks/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

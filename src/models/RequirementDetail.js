@@ -5,11 +5,11 @@ export default class RequirementDetail extends MyBaseModel {
     static entity = 'requirementdetail';
     static entityUrl = '/api/requirement-details';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/requirement-details/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
