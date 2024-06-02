@@ -1,21 +1,29 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import ServiceRequest from '@/models/ServiceRequest';
+import Entity from '@/models/Entity';
+import SystemUser from '@/models/SystemUser';
+import TreatmentDetail from '@/models/TreatmentDetail';
+import ExternalProducer from '@/models/ExternalProducer';
 
 export default class ServiceRequestReport extends MyBaseModel {
     static entity = 'servicerequestreport';
     static entityUrl = '/api/service-request-reports';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/service-request-reports/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'serviceRequestRel',
+        'serviceProviderRel',
+        'createdByRel',
+        'treatmentDetail'
     ];
 
     static rules = {
@@ -26,10 +34,10 @@ export default class ServiceRequestReport extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'ServiceRequest': {},
-            'ServiceProvider': {},
-            'CreatedBy': {},
-            'TreatmentDetails': {},
+            'ServiceRequest': { relationRules: { linkables: (user) => { return {} } } },
+            'ServiceProvider': { relationRules: { linkables: (user) => { return {} } } },
+            'CreatedBy': { relationRules: { linkables: (user) => { return {} } } },
+            'TreatmentDetails': { relationRules: { linkables: (user) => { return {} } } },
             'CreatedOn': {},
             'ReportDate': {},
             'Approved': {},
@@ -47,7 +55,12 @@ export default class ServiceRequestReport extends MyBaseModel {
             'ReportDate': this.attr(''),
             'Approved': this.attr(''),
             'Rejected': this.attr(''),
-            
+            'serviceRequestRel': this.belongsTo(ServiceRequest, 'ServiceRequest'),
+            'serviceProviderRel': this.belongsTo(Entity, 'ServiceProvider'),
+            'createdByRel': this.belongsTo(SystemUser, 'CreatedBy'),
+            'treatmentDetail': this.belongsTo(TreatmentDetail, 'TreatmentDetails'),
+            'externalproducers': this.hasMany(ExternalProducer, 'ServiceRequestReport'),
+            'treatmentdetailsServiceRequestReport': this.hasMany(TreatmentDetail, 'ServiceRequestReport')
         };
     }
 

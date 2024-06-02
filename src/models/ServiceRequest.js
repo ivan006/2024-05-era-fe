@@ -1,21 +1,26 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import Entity from '@/models/Entity';
+import SystemUser from '@/models/SystemUser';
+import ServiceRequestFrequency from '@/models/ServiceRequestFrequency';
+import ServiceRequestReport from '@/models/ServiceRequestReport';
 
 export default class ServiceRequest extends MyBaseModel {
     static entity = 'servicerequest';
     static entityUrl = '/api/service-requests';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/service-requests/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'serviceProviderRel',
+        'createdByRel'
     ];
 
     static rules = {
@@ -27,8 +32,8 @@ export default class ServiceRequest extends MyBaseModel {
     static fieldsMetadata = {
         'Id': {},
             'ServiceRequestNo': {},
-            'ServiceProvider': {},
-            'CreatedBy': {},
+            'ServiceProvider': { relationRules: { linkables: (user) => { return {} } } },
+            'CreatedBy': { relationRules: { linkables: (user) => { return {} } } },
             'CreatedOn': {},
             'FromDate': {},
             'ToDate': {},
@@ -51,7 +56,10 @@ export default class ServiceRequest extends MyBaseModel {
             'Locations': this.attr(''),
             'Deliverables': this.attr(''),
             'DeliveryDate': this.attr(''),
-            
+            'serviceProviderRel': this.belongsTo(Entity, 'ServiceProvider'),
+            'createdByRel': this.belongsTo(SystemUser, 'CreatedBy'),
+            'servicerequestfrequencies': this.hasMany(ServiceRequestFrequency, 'ServiceRequest'),
+            'servicerequestreports': this.hasMany(ServiceRequestReport, 'ServiceRequest')
         };
     }
 

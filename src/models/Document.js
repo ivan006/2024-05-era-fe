@@ -1,15 +1,16 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import DocumentDetail from '@/models/DocumentDetail';
 
 export default class Document extends MyBaseModel {
     static entity = 'document';
     static entityUrl = '/api/documents';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/documents/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
@@ -45,7 +46,7 @@ export default class Document extends MyBaseModel {
             'CreatedBy': this.attr(''),
             'CreatedOn': this.attr(''),
             'Access': this.attr(''),
-            
+            'documentdetails': this.hasMany(DocumentDetail, 'Document')
         };
     }
 

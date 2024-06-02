@@ -1,21 +1,26 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import Entity from '@/models/Entity';
+import EntityGoodApproval from '@/models/EntityGoodApproval';
+import Good from '@/models/Good';
 
 export default class EntityGood extends MyBaseModel {
     static entity = 'entitygood';
     static entityUrl = '/api/entity-goods';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/entity-goods/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'entityRel',
+        'goodRel',
+        'invoiceRel'
     ];
 
     static rules = {
@@ -26,8 +31,8 @@ export default class EntityGood extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'Entity': {},
-            'Good': {},
+            'Entity': { relationRules: { linkables: (user) => { return {} } } },
+            'Good': { relationRules: { linkables: (user) => { return {} } } },
             'Units': {},
             'AvgKg': {},
             'AvgKgOld': {},
@@ -38,7 +43,7 @@ export default class EntityGood extends MyBaseModel {
             'Dimension': {},
             'WasteClass': {},
             'Period': {},
-            'Invoice': {}
+            'Invoice': { relationRules: { linkables: (user) => { return {} } } }
     };
 
     static fields() {
@@ -57,7 +62,9 @@ export default class EntityGood extends MyBaseModel {
             'WasteClass': this.attr(''),
             'Period': this.attr(''),
             'Invoice': this.attr(''),
-            
+            'entityRel': this.belongsTo(Entity, 'Entity'),
+            'invoiceRel': this.belongsTo(EntityGoodApproval, 'Invoice'),
+            'goodRel': this.belongsTo(Good, 'Good')
         };
     }
 

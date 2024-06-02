@@ -1,15 +1,16 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import UserAccess from '@/models/UserAccess';
 
 export default class UserRole extends MyBaseModel {
     static entity = 'userrole';
     static entityUrl = '/api/user-roles';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/user-roles/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
@@ -45,7 +46,7 @@ export default class UserRole extends MyBaseModel {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'FbId': this.attr(''),
-            
+            'useraccesses': this.hasMany(UserAccess, 'UserRole')
         };
     }
 

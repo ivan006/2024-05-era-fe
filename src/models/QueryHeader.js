@@ -1,15 +1,16 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import EntityGoodApproval from '@/models/EntityGoodApproval';
 
 export default class QueryHeader extends MyBaseModel {
     static entity = 'queryheader';
     static entityUrl = '/api/query-headers';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/query-headers/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
@@ -49,7 +50,7 @@ export default class QueryHeader extends MyBaseModel {
             'CreatedOn': this.attr(''),
             'ClosedBy': this.attr(''),
             'ClosedOn': this.attr(''),
-            
+            'entitygoodapprovals': this.hasMany(EntityGoodApproval, 'Query')
         };
     }
 

@@ -5,11 +5,11 @@ export default class ObjectValue extends MyBaseModel {
     static entity = 'objectvalue';
     static entityUrl = '/api/object-values';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/object-values/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

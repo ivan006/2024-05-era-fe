@@ -5,11 +5,11 @@ export default class PasswordHash extends MyBaseModel {
     static entity = 'passwordhash';
     static entityUrl = '/api/password-hashes';
     static primaryKey = 'SystemUser';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/password-hashes/:rId',
         params: {
-          rId: SystemUser,
+          rId: pKey,
         },
       })
     }

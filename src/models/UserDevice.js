@@ -1,21 +1,22 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import SystemUser from '@/models/SystemUser';
 
 export default class UserDevice extends MyBaseModel {
     static entity = 'userdevice';
     static entityUrl = '/api/user-devices';
     static primaryKey = 'SystemUser';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/user-devices/:rId',
         params: {
-          rId: SystemUser,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'systemUserRel'
     ];
 
     static rules = {
@@ -25,7 +26,7 @@ export default class UserDevice extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'SystemUser': {},
+        'SystemUser': { relationRules: { linkables: (user) => { return {} } } },
             'DeviceKey': {},
             'Name': {},
             'LastUsed': {},
@@ -39,7 +40,7 @@ export default class UserDevice extends MyBaseModel {
             'Name': this.attr(''),
             'LastUsed': this.attr(''),
             'FbId': this.attr(''),
-            
+            'systemUserRel': this.belongsTo(SystemUser, 'SystemUser')
         };
     }
 

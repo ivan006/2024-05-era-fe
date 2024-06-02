@@ -1,15 +1,16 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import UserAccess from '@/models/UserAccess';
 
 export default class SystemAction extends MyBaseModel {
     static entity = 'systemaction';
     static entityUrl = '/api/system-actions';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/system-actions/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
@@ -49,7 +50,7 @@ export default class SystemAction extends MyBaseModel {
             'CreatedBy': this.attr(''),
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
-            
+            'useraccesses': this.hasMany(UserAccess, 'SystemAction')
         };
     }
 

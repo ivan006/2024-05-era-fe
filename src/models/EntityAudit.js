@@ -1,21 +1,22 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import SystemUser from '@/models/SystemUser';
 
 export default class EntityAudit extends MyBaseModel {
     static entity = 'entityaudit';
     static entityUrl = '/api/entity-audits';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/entity-audits/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'systemUserRel'
     ];
 
     static rules = {
@@ -29,7 +30,7 @@ export default class EntityAudit extends MyBaseModel {
             'Entity Name': {},
             'Entity Id': {},
             'Operation': {},
-            'SystemUser': {},
+            'SystemUser': { relationRules: { linkables: (user) => { return {} } } },
             'Changes': {},
             'Audit_TS': {}
     };
@@ -43,7 +44,7 @@ export default class EntityAudit extends MyBaseModel {
             'SystemUser': this.attr(''),
             'Changes': this.attr(''),
             'Audit_TS': this.attr(''),
-            
+            'systemUserRel': this.belongsTo(SystemUser, 'SystemUser')
         };
     }
 

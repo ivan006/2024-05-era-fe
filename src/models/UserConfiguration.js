@@ -1,21 +1,24 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import SystemCode from '@/models/SystemCode';
+import SystemUser from '@/models/SystemUser';
 
 export default class UserConfiguration extends MyBaseModel {
     static entity = 'userconfiguration';
     static entityUrl = '/api/user-configurations';
     static primaryKey = 'SystemUser';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/user-configurations/:rId',
         params: {
-          rId: SystemUser,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'systemUserRel',
+        'languageRel'
     ];
 
     static rules = {
@@ -25,8 +28,8 @@ export default class UserConfiguration extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'SystemUser': {},
-            'Language': {},
+        'SystemUser': { relationRules: { linkables: (user) => { return {} } } },
+            'Language': { relationRules: { linkables: (user) => { return {} } } },
             'FbId': {}
     };
 
@@ -35,7 +38,8 @@ export default class UserConfiguration extends MyBaseModel {
             'SystemUser': this.attr(''),
             'Language': this.attr(''),
             'FbId': this.attr(''),
-            
+            'languageRel': this.belongsTo(SystemCode, 'Language'),
+            'systemUserRel': this.belongsTo(SystemUser, 'SystemUser')
         };
     }
 

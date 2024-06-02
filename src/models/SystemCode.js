@@ -1,21 +1,28 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import Entity from '@/models/Entity';
+import Address from '@/models/Address';
+import ContactNumber from '@/models/ContactNumber';
+import Email from '@/models/Email';
+import ServiceRequestFrequency from '@/models/ServiceRequestFrequency';
+import Transaction from '@/models/Transaction';
+import UserConfiguration from '@/models/UserConfiguration';
 
 export default class SystemCode extends MyBaseModel {
     static entity = 'systemcode';
     static entityUrl = '/api/system-codes';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/system-codes/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'entityRel'
     ];
 
     static rules = {
@@ -38,7 +45,7 @@ export default class SystemCode extends MyBaseModel {
             'CreatedBy': {},
             'ChangedOn': {},
             'ChangedBy': {},
-            'Entity': {}
+            'Entity': { relationRules: { linkables: (user) => { return {} } } }
     };
 
     static fields() {
@@ -57,7 +64,14 @@ export default class SystemCode extends MyBaseModel {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'Entity': this.attr(''),
-            
+            'entityRel': this.belongsTo(Entity, 'Entity'),
+            'addresses': this.hasMany(Address, 'Country'),
+            'addresses': this.hasMany(Address, 'Type'),
+            'contactnumbers': this.hasMany(ContactNumber, 'Type'),
+            'emails': this.hasMany(Email, 'Type'),
+            'servicerequestfrequencies': this.hasMany(ServiceRequestFrequency, 'ReportFrequency'),
+            'transactions': this.hasMany(Transaction, 'Type'),
+            'userconfigurations': this.hasMany(UserConfiguration, 'Language')
         };
     }
 

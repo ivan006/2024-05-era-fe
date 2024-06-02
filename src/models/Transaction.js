@@ -1,21 +1,22 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import SystemCode from '@/models/SystemCode';
 
 export default class Transaction extends MyBaseModel {
     static entity = 'transaction';
     static entityUrl = '/api/transactions';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/transactions/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'typeRel'
     ];
 
     static rules = {
@@ -38,7 +39,7 @@ export default class Transaction extends MyBaseModel {
             'Source': {},
             'Period': {},
             'Reference': {},
-            'Type': {}
+            'Type': { relationRules: { linkables: (user) => { return {} } } }
     };
 
     static fields() {
@@ -57,7 +58,7 @@ export default class Transaction extends MyBaseModel {
             'Period': this.attr(''),
             'Reference': this.attr(''),
             'Type': this.attr(''),
-            
+            'typeRel': this.belongsTo(SystemCode, 'Type')
         };
     }
 

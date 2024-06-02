@@ -1,21 +1,27 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import Entity from '@/models/Entity';
+import QueryHeader from '@/models/QueryHeader';
+import EntityGood from '@/models/EntityGood';
 
 export default class EntityGoodApproval extends MyBaseModel {
     static entity = 'entitygoodapproval';
     static entityUrl = '/api/entity-good-approvals';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/entity-good-approvals/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'approvedByRel',
+        'invoiceApprovedByRel',
+        'entityRel',
+        'queryRel'
     ];
 
     static rules = {
@@ -26,17 +32,17 @@ export default class EntityGoodApproval extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'ApprovedBy': {},
+            'ApprovedBy': { relationRules: { linkables: (user) => { return {} } } },
             'ApprovedOn': {},
-            'InvoiceApprovedBy': {},
+            'InvoiceApprovedBy': { relationRules: { linkables: (user) => { return {} } } },
             'InvoiceApprovedOn': {},
-            'Entity': {},
+            'Entity': { relationRules: { linkables: (user) => { return {} } } },
             'Period': {},
             'PurchaseOrder': {},
             'InvoiceNo': {},
             'UseAR': {},
             'UseVAT': {},
-            'Query': {},
+            'Query': { relationRules: { linkables: (user) => { return {} } } },
             'Status': {}
     };
 
@@ -55,7 +61,11 @@ export default class EntityGoodApproval extends MyBaseModel {
             'UseVAT': this.attr(''),
             'Query': this.attr(''),
             'Status': this.attr(''),
-            
+            'approvedByRel': this.belongsTo(Entity, 'ApprovedBy'),
+            'invoiceApprovedByRel': this.belongsTo(Entity, 'InvoiceApprovedBy'),
+            'queryRel': this.belongsTo(QueryHeader, 'Query'),
+            'entityRel': this.belongsTo(Entity, 'Entity'),
+            'entitygoods': this.hasMany(EntityGood, 'Invoice')
         };
     }
 

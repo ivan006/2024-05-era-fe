@@ -5,11 +5,11 @@ export default class Attachment extends MyBaseModel {
     static entity = 'attachment';
     static entityUrl = '/api/attachments';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/attachments/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

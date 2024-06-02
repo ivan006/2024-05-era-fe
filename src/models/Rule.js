@@ -5,11 +5,11 @@ export default class Rule extends MyBaseModel {
     static entity = 'rule';
     static entityUrl = '/api/rules';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/rules/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }

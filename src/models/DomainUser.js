@@ -1,21 +1,22 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import SystemUser from '@/models/SystemUser';
 
 export default class DomainUser extends MyBaseModel {
     static entity = 'domainuser';
     static entityUrl = '/api/domain-users';
     static primaryKey = 'SystemUser';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/domain-users/:rId',
         params: {
-          rId: SystemUser,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'systemUserRel'
     ];
 
     static rules = {
@@ -25,7 +26,7 @@ export default class DomainUser extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'SystemUser': {},
+        'SystemUser': { relationRules: { linkables: (user) => { return {} } } },
             'DomainName': {},
             'DomainAccount': {},
             'CreatedOn': {},
@@ -43,7 +44,7 @@ export default class DomainUser extends MyBaseModel {
             'CreatedBy': this.attr(''),
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
-            
+            'systemUserRel': this.belongsTo(SystemUser, 'SystemUser')
         };
     }
 

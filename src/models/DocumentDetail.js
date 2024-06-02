@@ -1,21 +1,22 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import Document from '@/models/Document';
 
 export default class DocumentDetail extends MyBaseModel {
     static entity = 'documentdetail';
     static entityUrl = '/api/document-details';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/document-details/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'documentRel'
     ];
 
     static rules = {
@@ -26,7 +27,7 @@ export default class DocumentDetail extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'Document': {},
+            'Document': { relationRules: { linkables: (user) => { return {} } } },
             'Section': {},
             'Position': {},
             'Title': {},
@@ -49,7 +50,7 @@ export default class DocumentDetail extends MyBaseModel {
             'Style': this.attr(''),
             'CreatedBy': this.attr(''),
             'CreatedOn': this.attr(''),
-            
+            'documentRel': this.belongsTo(Document, 'Document')
         };
     }
 

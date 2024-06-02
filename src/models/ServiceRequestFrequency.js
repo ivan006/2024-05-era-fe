@@ -1,21 +1,24 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import ServiceRequest from '@/models/ServiceRequest';
+import SystemCode from '@/models/SystemCode';
 
 export default class ServiceRequestFrequency extends MyBaseModel {
     static entity = 'servicerequestfrequency';
     static entityUrl = '/api/service-request-frequencies';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/service-request-frequencies/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'serviceRequestRel',
+        'reportFrequencyRel'
     ];
 
     static rules = {
@@ -26,8 +29,8 @@ export default class ServiceRequestFrequency extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'ServiceRequest': {},
-            'ReportFrequency': {},
+            'ServiceRequest': { relationRules: { linkables: (user) => { return {} } } },
+            'ReportFrequency': { relationRules: { linkables: (user) => { return {} } } },
             'Active': {}
     };
 
@@ -37,7 +40,8 @@ export default class ServiceRequestFrequency extends MyBaseModel {
             'ServiceRequest': this.attr(''),
             'ReportFrequency': this.attr(''),
             'Active': this.attr(''),
-            
+            'serviceRequestRel': this.belongsTo(ServiceRequest, 'ServiceRequest'),
+            'reportFrequencyRel': this.belongsTo(SystemCode, 'ReportFrequency')
         };
     }
 

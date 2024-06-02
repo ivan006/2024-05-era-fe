@@ -1,21 +1,22 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import ServiceRequestReport from '@/models/ServiceRequestReport';
 
 export default class TreatmentDetail extends MyBaseModel {
     static entity = 'treatmentdetail';
     static entityUrl = '/api/treatment-details';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/treatment-details/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'serviceRequestReportRel'
     ];
 
     static rules = {
@@ -26,7 +27,7 @@ export default class TreatmentDetail extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'ServiceRequestReport': {},
+            'ServiceRequestReport': { relationRules: { linkables: (user) => { return {} } } },
             'OpeningBalance': {},
             'Refurbished': {},
             'Recovered': {},
@@ -47,7 +48,8 @@ export default class TreatmentDetail extends MyBaseModel {
             'Energy': this.attr(''),
             'Landfill': this.attr(''),
             'LocalSecondaryProducts': this.attr(''),
-            
+            'serviceRequestReportRel': this.belongsTo(ServiceRequestReport, 'ServiceRequestReport'),
+            'servicerequestreports': this.hasMany(ServiceRequestReport, 'TreatmentDetails')
         };
     }
 

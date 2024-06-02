@@ -1,15 +1,23 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import Communication from '@/models/Communication';
+import DomainUser from '@/models/DomainUser';
+import EntityAudit from '@/models/EntityAudit';
+import ServiceRequest from '@/models/ServiceRequest';
+import ServiceRequestReport from '@/models/ServiceRequestReport';
+import UserAccess from '@/models/UserAccess';
+import UserConfiguration from '@/models/UserConfiguration';
+import UserDevice from '@/models/UserDevice';
 
 export default class SystemUser extends MyBaseModel {
     static entity = 'systemuser';
     static entityUrl = '/api/system-users';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/system-users/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
@@ -61,7 +69,14 @@ export default class SystemUser extends MyBaseModel {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'FbId': this.attr(''),
-            
+            'communications': this.hasMany(Communication, 'SentBy'),
+            'domainusers': this.hasMany(DomainUser, 'SystemUser'),
+            'entityaudits': this.hasMany(EntityAudit, 'SystemUser'),
+            'servicerequests': this.hasMany(ServiceRequest, 'CreatedBy'),
+            'servicerequestreports': this.hasMany(ServiceRequestReport, 'CreatedBy'),
+            'useraccesses': this.hasMany(UserAccess, 'SystemUser'),
+            'userconfigurations': this.hasMany(UserConfiguration, 'SystemUser'),
+            'userdevices': this.hasMany(UserDevice, 'SystemUser')
         };
     }
 

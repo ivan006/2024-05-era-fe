@@ -1,21 +1,26 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import SystemAction from '@/models/SystemAction';
+import SystemUser from '@/models/SystemUser';
+import UserRole from '@/models/UserRole';
 
 export default class UserAccess extends MyBaseModel {
     static entity = 'useraccess';
     static entityUrl = '/api/user-accesses';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/user-accesses/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'systemUserRel',
+        'userRoleRel',
+        'systemActionRel'
     ];
 
     static rules = {
@@ -26,9 +31,9 @@ export default class UserAccess extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'SystemUser': {},
-            'UserRole': {},
-            'SystemAction': {},
+            'SystemUser': { relationRules: { linkables: (user) => { return {} } } },
+            'UserRole': { relationRules: { linkables: (user) => { return {} } } },
+            'SystemAction': { relationRules: { linkables: (user) => { return {} } } },
             'Entity': {},
             'CreatedOn': {},
             'CreatedBy': {},
@@ -49,7 +54,9 @@ export default class UserAccess extends MyBaseModel {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'FbId': this.attr(''),
-            
+            'systemActionRel': this.belongsTo(SystemAction, 'SystemAction'),
+            'systemUserRel': this.belongsTo(SystemUser, 'SystemUser'),
+            'userRoleRel': this.belongsTo(UserRole, 'UserRole')
         };
     }
 

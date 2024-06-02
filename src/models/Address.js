@@ -1,21 +1,23 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import SystemCode from '@/models/SystemCode';
 
 export default class Address extends MyBaseModel {
     static entity = 'address';
     static entityUrl = '/api/addresses';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/addresses/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'countryRel',
+        'typeRel'
     ];
 
     static rules = {
@@ -33,9 +35,9 @@ export default class Address extends MyBaseModel {
             'Suburb': {},
             'City': {},
             'Province': {},
-            'Country': {},
+            'Country': { relationRules: { linkables: (user) => { return {} } } },
             'PostCode': {},
-            'Type': {},
+            'Type': { relationRules: { linkables: (user) => { return {} } } },
             'Person': {},
             'MoveDate': {},
             'Preferred': {},
@@ -63,7 +65,8 @@ export default class Address extends MyBaseModel {
             'Dispatch': this.attr(''),
             'Latitude': this.attr(''),
             'Longitude': this.attr(''),
-            
+            'countryRel': this.belongsTo(SystemCode, 'Country'),
+            'typeRel': this.belongsTo(SystemCode, 'Type')
         };
     }
 

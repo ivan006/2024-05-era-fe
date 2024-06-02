@@ -1,21 +1,22 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
+import ServiceRequestReport from '@/models/ServiceRequestReport';
 
 export default class ExternalProducer extends MyBaseModel {
     static entity = 'externalproducer';
     static entityUrl = '/api/external-producers';
     static primaryKey = 'Id';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/external-producers/:rId',
         params: {
-          rId: Id,
+          rId: pKey,
         },
       })
     }
 
     static parentWithables = [
-        
+        'serviceRequestReportRel'
     ];
 
     static rules = {
@@ -27,7 +28,7 @@ export default class ExternalProducer extends MyBaseModel {
     static fieldsMetadata = {
         'Id': {},
             'Name': {},
-            'ServiceRequestReport': {}
+            'ServiceRequestReport': { relationRules: { linkables: (user) => { return {} } } }
     };
 
     static fields() {
@@ -35,7 +36,7 @@ export default class ExternalProducer extends MyBaseModel {
             'Id': this.attr(''),
             'Name': this.attr(''),
             'ServiceRequestReport': this.attr(''),
-            
+            'serviceRequestReportRel': this.belongsTo(ServiceRequestReport, 'ServiceRequestReport')
         };
     }
 

@@ -5,11 +5,11 @@ export default class UserRoleAccess extends MyBaseModel {
     static entity = 'userroleaccess';
     static entityUrl = '/api/user-role-accesses';
     static primaryKey = 'UserRole';
-    static openRecord(id){
+    static openRecord(pKey){
       router.push({
         name: '/lists/user-role-accesses/:rId',
         params: {
-          rId: UserRole,
+          rId: pKey,
         },
       })
     }
