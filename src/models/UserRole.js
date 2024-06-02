@@ -1,9 +1,18 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import router from '@/router';
 
 export default class UserRole extends MyBaseModel {
     static entity = 'userrole';
     static entityUrl = '/api/user-roles';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/user-roles/:rId',
+        params: {
+          rId: Id,
+        },
+      })
+    }
 
     static parentWithables = [
         

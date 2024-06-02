@@ -14,18 +14,18 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Migration from '@/models/Migration'
+import UserAccess from '@/models/UserAccess'
 import router from '@/router'
 
 export default {
-    name: 'Migration-list',
+    name: 'UserAccess-list',
     components: {
         SuperTable,
     },
 
     computed: {
         superTableModel() {
-            return Migration
+            return UserAccess
         },
         user() {
           let result = {}
@@ -39,7 +39,7 @@ export default {
     methods: {
         openRecord(e) {
             //router.push({
-            //    name: '/lists/migration-s/:rId',
+            //    name: '/lists/user-accesses/:rId',
             //    params: {
             //        rId: e.id,
             //    },

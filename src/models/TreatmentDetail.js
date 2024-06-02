@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/MyBaseModel';
 import router from '@/router';
 
-export default class UserAccess extends MyBaseModel {
-    static entity = 'useraccess';
-    static entityUrl = '/api/user-accesses';
+export default class TreatmentDetail extends MyBaseModel {
+    static entity = 'treatmentdetail';
+    static entityUrl = '/api/treatment-details';
     static primaryKey = 'Id';
     static openRecord(id){
       router.push({
-        name: '/lists/user-accesses/:rId',
+        name: '/lists/treatment-details/:rId',
         params: {
           rId: Id,
         },
@@ -26,29 +26,27 @@ export default class UserAccess extends MyBaseModel {
 
     static fieldsMetadata = {
         'Id': {},
-            'SystemUser': {},
-            'UserRole': {},
-            'SystemAction': {},
-            'Entity': {},
-            'CreatedOn': {},
-            'CreatedBy': {},
-            'ChangedOn': {},
-            'ChangedBy': {},
-            'FbId': {}
+            'ServiceRequestReport': {},
+            'OpeningBalance': {},
+            'Refurbished': {},
+            'Recovered': {},
+            'Export': {},
+            'Energy': {},
+            'Landfill': {},
+            'LocalSecondaryProducts': {}
     };
 
     static fields() {
         return {
             'Id': this.attr(''),
-            'SystemUser': this.attr(''),
-            'UserRole': this.attr(''),
-            'SystemAction': this.attr(''),
-            'Entity': this.attr(''),
-            'CreatedOn': this.attr(''),
-            'CreatedBy': this.attr(''),
-            'ChangedOn': this.attr(''),
-            'ChangedBy': this.attr(''),
-            'FbId': this.attr(''),
+            'ServiceRequestReport': this.attr(''),
+            'OpeningBalance': this.attr(''),
+            'Refurbished': this.attr(''),
+            'Recovered': this.attr(''),
+            'Export': this.attr(''),
+            'Energy': this.attr(''),
+            'Landfill': this.attr(''),
+            'LocalSecondaryProducts': this.attr(''),
             
         };
     }

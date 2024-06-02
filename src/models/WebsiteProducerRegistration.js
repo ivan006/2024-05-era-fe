@@ -1,9 +1,18 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import router from '@/router';
 
 export default class WebsiteProducerRegistration extends MyBaseModel {
     static entity = 'websiteproducerregistration';
     static entityUrl = '/api/website-producer-registrations';
     static primaryKey = 'Id';
+    static openRecord(id){
+      router.push({
+        name: '/lists/website-producer-registrations/:rId',
+        params: {
+          rId: Id,
+        },
+      })
+    }
 
     static parentWithables = [
         

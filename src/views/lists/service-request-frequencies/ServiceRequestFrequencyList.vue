@@ -14,18 +14,18 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Migration from '@/models/Migration'
+import ServiceRequestFrequency from '@/models/ServiceRequestFrequency'
 import router from '@/router'
 
 export default {
-    name: 'Migration-list',
+    name: 'ServiceRequestFrequency-list',
     components: {
         SuperTable,
     },
 
     computed: {
         superTableModel() {
-            return Migration
+            return ServiceRequestFrequency
         },
         user() {
           let result = {}
@@ -39,7 +39,7 @@ export default {
     methods: {
         openRecord(e) {
             //router.push({
-            //    name: '/lists/migration-s/:rId',
+            //    name: '/lists/service-request-frequencies/:rId',
             //    params: {
             //        rId: e.id,
             //    },

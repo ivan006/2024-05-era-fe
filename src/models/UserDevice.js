@@ -1,9 +1,18 @@
 import MyBaseModel from '@/models/MyBaseModel';
+import router from '@/router';
 
 export default class UserDevice extends MyBaseModel {
     static entity = 'userdevice';
     static entityUrl = '/api/user-devices';
     static primaryKey = 'SystemUser';
+    static openRecord(id){
+      router.push({
+        name: '/lists/user-devices/:rId',
+        params: {
+          rId: SystemUser,
+        },
+      })
+    }
 
     static parentWithables = [
         
