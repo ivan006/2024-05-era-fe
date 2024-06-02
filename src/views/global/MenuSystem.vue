@@ -67,64 +67,56 @@ export default {
           text: 'Home',
           to: '/',
         },
-
-
         {
           icon: '',
           text: 'Hmmm',
           subLinks: [
-            {
-              icon: '',
-              text: 'Servicerequest (Withd. Contracts)',
-              to: '/lists/service-request',
-            },
-            {
-              icon: '',
-              text: 'Servicerequestfrequency ',
-              to: '/lists/service-request-frequency',
-            },
-            {
-              icon: '',
-              text: 'Servicerequestreport (Withd.)',
-              to: '/lists/service-request-report',
-            },
-            {
-              icon: '',
-              text: 'Treatmentdetail (Withd. Items)',
-              to: '/lists/treatment-detail',
-            },
-            {
-              icon: '',
-              text: 'Entitygood (Deps. Items)',
-              to: '/lists/entity-good',
-            },
-            {
-              icon: '',
-              text: 'Entitygoodapproval (Deps.)',
-              to: '/lists/entity-good-approval',
-            },
-            {
-              icon: '',
-              text: 'Good (Waste Types)',
-              to: '/lists/good',
-            },
-            {
-              icon: '',
-              text: 'Query',
-              to: '/lists/query',
-            },
-            {
-              icon: '',
-              text: 'Queryheader',
-              to: '/lists/query-header',
-            },
-          ],
-        },
-        {
-          icon: '',
-          text: 'Hmmm 2',
-          subLinks: [
 
+            {
+              icon: '',
+              text: 'Entity Goods (Deps. Items)',
+              to: '/lists/entity-goods',
+            },
+            {
+              icon: '',
+              text: 'Entity Good Approvals (Deps.)',
+              to: '/lists/entity-good-approvals',
+            },
+            {
+              icon: '',
+              text: 'Goods (Waste Types)',
+              to: '/lists/goods',
+            },
+            {
+              icon: '',
+              text: 'Service Requests (Withd. Contracts)',
+              to: '/lists/service-requests',
+            },
+            {
+              icon: '',
+              text: 'Service Request Frequencies',
+              to: '/lists/service-request-frequencies',
+            },
+            {
+              icon: '',
+              text: 'Service Request Reports (Withd.)',
+              to: '/lists/service-request-reports',
+            },
+            {
+              icon: '',
+              text: 'Queries',
+              to: '/lists/queries',
+            },
+            {
+              icon: '',
+              text: 'Query Headers',
+              to: '/lists/query-headers',
+            },
+            {
+              icon: '',
+              text: 'Treatment Details (Withd. Items)',
+              to: '/lists/treatment-details',
+            },
 
           ],
         },
@@ -209,16 +201,6 @@ export default {
             },
             {
               icon: '',
-              text: 'Entity Goods',
-              to: '/lists/entity-goods',
-            },
-            {
-              icon: '',
-              text: 'Entity Good Approvals',
-              to: '/lists/entity-good-approvals',
-            },
-            {
-              icon: '',
               text: 'Entity Relationships',
               to: '/lists/entity-relationships',
             },
@@ -226,11 +208,6 @@ export default {
               icon: '',
               text: 'External Producers',
               to: '/lists/external-producers',
-            },
-            {
-              icon: '',
-              text: 'Goods',
-              to: '/lists/goods',
             },
             {
               icon: '',
@@ -266,16 +243,6 @@ export default {
               icon: '',
               text: 'Product Providers',
               to: '/lists/product-providers',
-            },
-            {
-              icon: '',
-              text: 'Queries',
-              to: '/lists/queries',
-            },
-            {
-              icon: '',
-              text: 'Query Headers',
-              to: '/lists/query-headers',
             },
             {
               icon: '',
@@ -319,21 +286,6 @@ export default {
             },
             {
               icon: '',
-              text: 'Service Requests',
-              to: '/lists/service-requests',
-            },
-            {
-              icon: '',
-              text: 'Service Request Frequencies',
-              to: '/lists/service-request-frequencies',
-            },
-            {
-              icon: '',
-              text: 'Service Request Reports',
-              to: '/lists/service-request-reports',
-            },
-            {
-              icon: '',
               text: 'System Actions',
               to: '/lists/system-actions',
             },
@@ -361,11 +313,6 @@ export default {
               icon: '',
               text: 'Transactions',
               to: '/lists/transactions',
-            },
-            {
-              icon: '',
-              text: 'Treatment Details',
-              to: '/lists/treatment-details',
             },
             {
               icon: '',
