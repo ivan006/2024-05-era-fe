@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 import EntityGood from '@/models/EntityGood';
 import EntityGoodApproval from '@/models/EntityGoodApproval';
@@ -21,7 +21,7 @@ export default class Entity extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {

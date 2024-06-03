@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
 export default class Requirement extends MyBaseModel {
@@ -15,7 +15,7 @@ export default class Requirement extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -51,7 +51,7 @@ export default class Requirement extends MyBaseModel {
             'SystemCodeContext': this.attr(''),
             'SystemCodeField': this.attr(''),
             'ValueType': this.attr(''),
-            
+
         };
     }
 

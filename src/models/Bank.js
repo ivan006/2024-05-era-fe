@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
 export default class Bank extends MyBaseModel {
@@ -15,7 +15,7 @@ export default class Bank extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -47,7 +47,7 @@ export default class Bank extends MyBaseModel {
             'Account': this.attr(''),
             'Verified': this.attr(''),
             'Entity': this.attr(''),
-            
+
         };
     }
 

@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
 export default class Object extends MyBaseModel {
@@ -15,7 +15,7 @@ export default class Object extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -39,7 +39,7 @@ export default class Object extends MyBaseModel {
             'Description': this.attr(''),
             'Parent': this.attr(''),
             'ChildType': this.attr(''),
-            
+
         };
     }
 

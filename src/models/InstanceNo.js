@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
 export default class InstanceNo extends MyBaseModel {
@@ -15,7 +15,7 @@ export default class InstanceNo extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -33,7 +33,7 @@ export default class InstanceNo extends MyBaseModel {
         return {
             'Id': this.attr(''),
             'ObjectName': this.attr(''),
-            
+
         };
     }
 

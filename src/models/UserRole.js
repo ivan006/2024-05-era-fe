@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 import UserAccess from '@/models/UserAccess';
 
@@ -16,7 +16,7 @@ export default class UserRole extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {

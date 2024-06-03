@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
 export default class ObjectValue extends MyBaseModel {
@@ -15,7 +15,7 @@ export default class ObjectValue extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -43,7 +43,7 @@ export default class ObjectValue extends MyBaseModel {
             'ValueJson': this.attr(''),
             'Object': this.attr(''),
             'Entity': this.attr(''),
-            
+
         };
     }
 

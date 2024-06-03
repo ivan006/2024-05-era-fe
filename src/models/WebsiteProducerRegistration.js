@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
 export default class WebsiteProducerRegistration extends MyBaseModel {
@@ -15,7 +15,7 @@ export default class WebsiteProducerRegistration extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -35,7 +35,7 @@ export default class WebsiteProducerRegistration extends MyBaseModel {
             'Id': this.attr(''),
             'Data': this.attr(''),
             'ProducerId': this.attr(''),
-            
+
         };
     }
 
