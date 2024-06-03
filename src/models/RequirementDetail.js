@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
 export default class RequirementDetail extends MyBaseModel {
@@ -15,7 +15,7 @@ export default class RequirementDetail extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -57,7 +57,7 @@ export default class RequirementDetail extends MyBaseModel {
             'Path': this.attr(''),
             'ChangedBy': this.attr(''),
             'ChangedOn': this.attr(''),
-            
+
         };
     }
 

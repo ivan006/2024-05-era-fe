@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 import DocumentDetail from '@/models/DocumentDetail';
 
@@ -16,7 +16,7 @@ export default class Document extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {

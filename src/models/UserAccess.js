@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 import SystemAction from '@/models/SystemAction';
 import SystemUser from '@/models/SystemUser';

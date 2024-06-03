@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
 export default class ProductProvider extends MyBaseModel {
@@ -15,7 +15,7 @@ export default class ProductProvider extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -35,7 +35,7 @@ export default class ProductProvider extends MyBaseModel {
             'Id': this.attr(''),
             'Name': this.attr(''),
             'Entity': this.attr(''),
-            
+
         };
     }
 

@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
 export default class EntityEvent extends MyBaseModel {
@@ -15,7 +15,7 @@ export default class EntityEvent extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -41,7 +41,7 @@ export default class EntityEvent extends MyBaseModel {
             'Event': this.attr(''),
             'Date': this.attr(''),
             'Instance': this.attr(''),
-            
+
         };
     }
 

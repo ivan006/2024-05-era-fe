@@ -1,13 +1,13 @@
 import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
-export default class Crm extends MyBaseModel {
-    static entity = 'crm';
-    static entityUrl = '/api/crms';
-    static primaryKey = 'Id';
+export default class User extends MyBaseModel {
+    static entity = 'user';
+    static entityUrl = '/api/users';
+    static primaryKey = 'id';
     static openRecord(pKey){
       router.push({
-        name: '/lists/crms/:rId',
+        name: '/lists/users/:rId',
         params: {
           rId: pKey,
         },
@@ -15,7 +15,6 @@ export default class Crm extends MyBaseModel {
     }
 
     static parentWithables = [
-
     ];
 
     static rules = {
@@ -25,23 +24,21 @@ export default class Crm extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': {},
-            'Entity': {},
-            'EntityProduct': {},
-            'Contact': {},
-            'Description': {},
-            'Status': {}
+        'SystemUser': { relationRules: { linkables: (user) => { return {} } } },
+            'DeviceKey': {},
+            'Name': {},
+            'LastUsed': {},
+            'FbId': {}
     };
 
     static fields() {
         return {
-            'Id': this.attr(''),
-            'Entity': this.attr(''),
-            'EntityProduct': this.attr(''),
-            'Contact': this.attr(''),
-            'Description': this.attr(''),
-            'Status': this.attr(''),
-
+            'SystemUser': this.attr(''),
+            'DeviceKey': this.attr(''),
+            'Name': this.attr(''),
+            'LastUsed': this.attr(''),
+            'FbId': this.attr(''),
+            'systemUserRel': this.belongsTo(SystemUser, 'SystemUser')
         };
     }
 

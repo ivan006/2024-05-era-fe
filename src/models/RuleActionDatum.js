@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
 export default class RuleActionDatum extends MyBaseModel {
@@ -15,7 +15,7 @@ export default class RuleActionDatum extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -39,7 +39,7 @@ export default class RuleActionDatum extends MyBaseModel {
             'TableName': this.attr(''),
             'ColumnName': this.attr(''),
             'ColumnType': this.attr(''),
-            
+
         };
     }
 

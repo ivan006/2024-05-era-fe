@@ -1,4 +1,4 @@
-import MyBaseModel from '@/models/MyBaseModel';
+import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
 export default class ObjectTrait extends MyBaseModel {
@@ -15,7 +15,7 @@ export default class ObjectTrait extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -53,7 +53,7 @@ export default class ObjectTrait extends MyBaseModel {
             'IsHidden': this.attr(''),
             'SystemCodeContext': this.attr(''),
             'SystemCodeField': this.attr(''),
-            
+
         };
     }
 
