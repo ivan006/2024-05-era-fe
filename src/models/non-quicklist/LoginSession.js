@@ -1,13 +1,14 @@
 import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
 import router from '@/router';
 
-export default class User extends MyBaseModel {
-    static entity = 'user';
-    static entityUrl = '/api/users';
+
+export default class LoginSession extends MyBaseModel {
+    static entity = 'login-session';
+    static entityUrl = '/api/login-sessions';
     static primaryKey = 'id';
     static openRecord(pKey){
       router.push({
-        name: '/lists/users/:rId',
+        name: '/lists/login-sessions/:rId',
         params: {
           rId: pKey,
         },
@@ -75,17 +76,6 @@ export default class User extends MyBaseModel {
     static Store(entity, relationships = [], flags = {}, moreHeaders = {}) {
         return this.customSupabaseApiStore(
             `${this.baseUrl}${this.entityUrl}`,
-            entity,
-            [...this.parentWithables, ...relationships],
-            flags,
-            this.mergeHeaders(moreHeaders),
-            this.adapator
-        );
-    }
-
-    static Register(entity, relationships = [], flags = {}, moreHeaders = {}) {
-        return this.customSupabaseApiStore(
-            `${this.baseUrl}/api/register`,
             entity,
             [...this.parentWithables, ...relationships],
             flags,

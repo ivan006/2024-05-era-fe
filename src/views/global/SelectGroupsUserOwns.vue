@@ -26,7 +26,7 @@
 </template>
 <script>
 import { Helpers } from 'quicklists-vue-orm-ui'
-import LoginSession from '@/models/LoginSession'
+import LoginSession from '@/models/non-quicklist/LoginSession'
 import DBProviderGroup from '@/models/DBProviderGroup'
 
 export default {

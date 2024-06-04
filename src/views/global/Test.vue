@@ -35,7 +35,7 @@
 
 <script>
 import DBProviderGroup from '@/models/DBProviderGroup'
-import LoginSession from '@/models/LoginSession'
+import LoginSession from '@/models/non-quicklist/LoginSession'
 import { SuperTable } from 'quicklists-vue-orm-ui'
 import router from '@/router'
 import LoginToAccess from '@/views/global/LoginToAccess.vue'

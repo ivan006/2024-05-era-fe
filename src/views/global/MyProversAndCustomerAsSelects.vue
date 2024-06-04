@@ -33,7 +33,7 @@
     </div>
 </template>
 <script>
-import LoginSession from '@/models/LoginSession'
+import LoginSession from '@/models/non-quicklist/LoginSession'
 import DBCustomerManager from '@/models/DBCustomerManager'
 import DBCustomerGroup from '@/models/DBCustomerGroup'
 import DBMembership from '@/models/DBMembership'

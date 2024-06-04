@@ -8,19 +8,16 @@
                     <!--                <a @click="join" class="btn">Buy $10 membership.</a>-->
                     <!--            </div>-->
                     <vTextField
-                        v-model="person.first_name"
-                        label="First Name"
-                        :rules="[(v) => !!v || 'This field is required']"
-                    />
-                    <vTextField
-                        v-model="person.last_name"
-                        label="Last Name"
-                        :rules="[(v) => !!v || 'This field is required']"
+                        v-model="entity.name"
+                        label="Full Name"
+                        :error="!!errors.name"
+                        :error-messages="errors.name"
                     />
                     <vTextField
                         v-model="entity.email"
                         label="Email"
-                        :rules="[(v) => !!v || 'This field is required']"
+                        :error="!!errors.email"
+                        :error-messages="errors.email"
                     />
                     <vTextField
                         v-model="entity.password"
@@ -28,37 +25,18 @@
                         :type="showPassword ? 'text' : 'password'"
                         @click:append="showPassword = !showPassword"
                         label="Password"
-                        :rules="[(v) => !!v || 'This field is required']"
+                        :error="!!errors.password"
+                        :error-messages="errors.password"
                     />
-<!--                  label="My main intention is to be a"-->
-                    <v-radio-group
-                        label="My primary intention is to be a"
-                        v-model="group_type"
-                        :rules="[(v) => !!v || 'This field is required']"
-                    >
-                        <v-radio label="Customer" modelValue="cust"></v-radio>
-                        <v-radio label="Provider" modelValue="prov"></v-radio>
-                    </v-radio-group>
-                    <template v-if="group_type == 'prov'">
-                        <vTextField
-                            :hint="mandatory_prov_message"
-                            persistent-hint
-                            :rules="[(v) => !!v || mandatory_prov_message]"
-                            v-model="providerGroup.name"
-                            label="Provider Group Name"
-                        />
-                    </template>
-                    <template v-else>
-                        <vTextField
-                            :hint="mandatory_cust_message"
-                            persistent-hint
-                            :rules="[(v) => !!v || mandatory_cust_message]"
-                            v-model="customerGroup.name"
-                            label="Customer Group Name"
-                        />
-                    </template>
-                    <!--                  hint="At least 8 characters"-->
-                    <!--                  :rules="[rules.required, rules.min]"-->
+                    <vTextField
+                        v-model="entity.c_password"
+                        :append-icon="showCPassword ? 'mdi-eye' : 'mdi-eye-off'"
+                        :type="showCPassword ? 'text' : 'password'"
+                        @click:append="showCPassword = !showCPassword"
+                        label="Password"
+                        :error="!!errors.c_password"
+                        :error-messages="errors.c_password"
+                    />
 
                     <v-btn block class="mt-2" :loading="loading" @click="join">
                         Submit
@@ -72,10 +50,8 @@
 // import { loadStripe } from '@stripe/stripe-js'
 // const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY)
 
-import User from '@/models/User'
-import DBPerson from '@/models/DBPerson'
-import DBCustomerGroup from '@/models/DBCustomerGroup'
-import DBProviderGroup from '@/models/DBProviderGroup'
+import User from '@/models/non-quicklist/User'
+// import DBPerson from '@/models/non-quicklist/User'
 
 export default {
     name: 'JoinView',
@@ -83,18 +59,28 @@ export default {
         return {
             entity: {},
             person: {},
-            customerGroup: {},
-            providerGroup: {},
             loading: false,
             showPassword: false,
-            group_type: 'cust',
-            // mandatory_prov_message: 'Creating a provider group is mandatory',
-            // mandatory_cust_message: 'Creating a customer group is mandatory',
-            mandatory_prov_message: 'This field is required',
-            mandatory_cust_message: 'This field is required',
+            showCPassword: false,
+            errors: {},
+            itemEmpty: {
+              name: '',
+              email: '',
+              password: '',
+              c_password: '',
+            },
         }
     },
     methods: {
+      setErrors(rawErrors = {}){
+        for (const fieldKey in this.itemEmpty) {
+          if (rawErrors[fieldKey]){
+            this.errors[fieldKey] = rawErrors[fieldKey][0];
+          } else {
+            this.errors[fieldKey] = null;
+          }
+        }
+      },
         // async join() {
         //     // const stripe = await stripePromise
         //     const product = { subscriptionId: 1 }
@@ -107,75 +93,57 @@ export default {
         join() {
             if (this.$refs.form.validate()) {
                 this.loading = true
-                this.entity = {
-                    options: {
-                        redirectTo: 'http://localhost:8082',
-                        data: {
-                            first_name: 'John',
-                            age: 27,
-                        },
-                    },
-                    ...this.entity,
-                }
-                User.Store(this.entity)
+                // this.entity = {
+                //     options: {
+                //         redirectTo: 'http://localhost:8082',
+                //         data: {
+                //             first_name: 'John',
+                //             age: 27,
+                //         },
+                //     },
+                //     ...this.entity,
+                // }
+                User.Register(this.entity)
                     .then((res) => {
-                        const resData = res.response.data
-                        // Determine the correct user ID based on the response structure
-                        let userId
-                        if (resData.user && resData.user.id) {
-                            userId = resData.user.id // Local structure (comprehensive response)
-                        } else if (resData.id) {
-                            userId = resData.id // Remote structure (concise response)
-                        } else {
-                            throw new Error('User ID not found in response')
-                        }
-
-                        // Store the person with the correct user ID
-                        DBPerson.Store({
-                            ...this.person,
-                            user_id: userId,
-                        })
-                            .then((res2) => {
-                                const resData2 = res2.response.data
-
-                                let personId = resData2[0].id
-
-                                if (this.group_type == 'prov') {
-                                    DBProviderGroup.Store({
-                                        ...this.providerGroup,
-                                        person_that_created_this_id: personId,
-                                        created_at: null,
-                                    })
-                                        .then(() => {
-                                            this.loading = false
-                                        })
-                                        .catch(() => {
-                                            this.loading = false
-                                        })
-                                } else {
-                                    DBCustomerGroup.Store({
-                                        ...this.customerGroup,
-                                        person_that_created_this_id: personId,
-                                        created_at: null,
-                                    })
-                                        .then(() => {
-                                            this.loading = false
-                                        })
-                                        .catch(() => {
-                                            this.loading = false
-                                        })
-                                }
-                            })
-                            .catch(() => {
-                                this.loading = false
-                            })
+                        this.loading = false
+                        // const resData = res.response.data
+                        // // Determine the correct user ID based on the response structure
+                        // let userId
+                        // if (resData.user && resData.user.id) {
+                        //     userId = resData.user.id // Local structure (comprehensive response)
+                        // } else if (resData.id) {
+                        //     userId = resData.id // Remote structure (concise response)
+                        // } else {
+                        //     throw new Error('User ID not found in response')
+                        // }
+                        //
+                        // // Store the person with the correct user ID
+                        // DBPerson.Store({
+                        //     ...this.person,
+                        //     user_id: userId,
+                        // })
+                        //     .then((res2) => {
+                        //         const resData2 = res2.response.data
+                        //
+                        //         let personId = resData2[0].id
+                        //
+                        //     })
+                        //     .catch(() => {
+                        //         this.loading = false
+                        //     })
                     })
-                    .catch(() => {
+                    .catch((errors) => {
+                      if (errors.response && errors.response.data.errors) {
+                        this.setErrors(errors.response.data.errors)
+                      }
                         this.loading = false
                     })
             }
         },
     },
+  mounted() {
+    this.setErrors()
+  }
 }
 </script>
 <style scoped></style>

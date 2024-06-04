@@ -1,4 +1,4 @@
-import { DBBaseModel } from 'quicklists-vue-orm-ui'
+import { DBBaseModel } from '../../../../2024-05-vue-orm-ui'
 
 export default class DBEvent extends DBBaseModel {
     static baseUrl = 'http://2024-05-era.test'

@@ -1,8 +1,8 @@
 <script>
 import baselineLayout from '@/layouts/baselineLayout.vue'
-// import LoginSession from '@/models/LoginSession'
+// import LoginSession from '@/models/non-quicklist/LoginSession'
 import VueCookies from 'vue-cookies'
-// import DBPerson from '@/models/DBPerson'
+// import DBPerson from '@/models/non-quicklist/User'
 // import MenuSystemItem from '@/components/global/MenuSystemItem.vue'
 // import MyProversAndCustomerAsMenuList from '@/views/global/MyProversAndCustomerAsMenuList.vue'
 // import MyProversAndCustomerAsSelects from '@/views/global/MyProversAndCustomerAsSelects.vue'

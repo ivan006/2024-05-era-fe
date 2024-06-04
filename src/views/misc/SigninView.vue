@@ -4,7 +4,7 @@
             <v-sheet width="300" class="mx-auto">
                 <h1 class="text-center">Sign In</h1>
                 <template
-                    v-if="!$store.getters['entities/login-sessions/all']()[0]"
+                    v-if="!loginSession"
                 >
                     <v-form @submit.prevent="submit">
                         <v-text-field
@@ -38,8 +38,8 @@
     </div>
 </template>
 <script>
-import LoginSession from '@/models/LoginSession'
-import DBPerson from '@/models/DBPerson'
+import LoginSession from '@/models/non-quicklist/LoginSession'
+import DBPerson from '@/models/non-quicklist/User'
 
 export default {
     name: 'SigninView',
@@ -90,12 +90,12 @@ export default {
                         ],
                     })
                       .then((result)=>{
-                        const id = this.$store.getters['entities/login-sessions/all']()[0].$id
+                        const id = this.loginSession.$id
 
-                        this.$store.state.entities['login-sessions'].data[id] = {
-                          ...this.$store.state.entities['login-sessions'].data[id],
-                          user: result.response.data[0]
-                        }
+                        // this.$store.state.entities['login-sessions'].data[id] = {
+                        //   ...this.$store.state.entities['login-sessions'].data[id],
+                        //   user: result.response.data[0]
+                        // }
 
                       })
 

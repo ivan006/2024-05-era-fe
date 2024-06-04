@@ -1,5 +1,5 @@
 <script>
-import LoginSession from '@/models/LoginSession'
+import LoginSession from '@/models/non-quicklist/LoginSession'
 // import this.model from '@/models/this.model'
 import { Helpers } from 'quicklists-vue-orm-ui'
 import DBCustomerManager from '@/models/DBCustomerManager'

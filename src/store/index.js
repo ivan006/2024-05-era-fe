@@ -58,6 +58,8 @@ import UserDevice from '@/models/UserDevice';
 import UserRole from '@/models/UserRole';
 import UserRoleAccess from '@/models/UserRoleAccess';
 import WebsiteProducerRegistration from '@/models/WebsiteProducerRegistration';
+import LoginSession from '@/models/non-quicklist/LoginSession';
+import User from '@/models/non-quicklist/User';
 
 VuexORM.use(VuexORMAxios, {
   axios,
@@ -120,6 +122,8 @@ database.register(UserDevice);
 database.register(UserRole);
 database.register(UserRoleAccess);
 database.register(WebsiteProducerRegistration);
+database.register(User);
+database.register(LoginSession);
 
 const store = createStore({
   plugins: [VuexORM.install(database)]

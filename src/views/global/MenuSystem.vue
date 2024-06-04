@@ -27,6 +27,15 @@
       </template>
       <template v-slot:header>
         <v-spacer></v-spacer>
+        <template v-if="loginSession">
+          <v-btn @click="logout()"> Sign Out </v-btn>
+        </template>
+        <template v-else>
+          <v-btn @click="$router.push('/sign-in')" style="margin-right: 1em">
+            Sign In
+          </v-btn>
+          <v-btn @click="$router.push('/join')"> Join </v-btn>
+        </template>
       </template>
       <template v-slot:main>
         <slot name="main"></slot>
@@ -40,6 +49,8 @@ import VueCookies from 'vue-cookies'
 import MenuSystemItem from '@/views/global/MenuSystemItem.vue'
 import MyProversAndCustomerAsMenuList from '@/views/global/MyProversAndCustomerAsMenuList.vue'
 import BaselineLayout from "@/layouts/baselineLayout.vue";
+import LoginSession from "@/models/non-quicklist/LoginSession.js";
+import {Model as $store} from "@vuex-orm/core";
 
 export default {
   name: 'MenuSystem',
@@ -55,11 +66,17 @@ export default {
     }
   },
   methods: {
+    $store() {
+      return $store
+    },
     logout() {
       VueCookies.remove('VITE_AUTH')
     },
   },
   computed: {
+    loginSession() {
+        return LoginSession.query().withAllRecursive().first()
+    },
     links() {
       return [
         {
