@@ -39,7 +39,8 @@
 </template>
 <script>
 import LoginSession from '@/models/non-quicklist/LoginSession'
-import DBPerson from '@/models/non-quicklist/User'
+// import DBPerson from '@/models/non-quicklist/User'
+import VueCookies from 'vue-cookies';
 
 export default {
     name: 'SigninView',
@@ -57,47 +58,62 @@ export default {
         submit() {
             LoginSession.deleteAll()
             this.loading = true
-            LoginSession.Login(this.form)
+            LoginSession.signIn(this.form)
                 .then((response) => {
-                    // Get the current time in seconds since the Unix epoch
-                    const currentTimeInSeconds = Math.floor(Date.now() / 1000)
+                    // // Get the current time in seconds since the Unix epoch
+                    // const currentTimeInSeconds = Math.floor(Date.now() / 1000)
+                    //
+                    // const cookieExpireTimeInSeconds =
+                    //     currentTimeInSeconds +
+                    //     (120 * 60) -
+                    //     60
+                    //
+                    // const cookieExpirationDate = new Date(
+                    //     cookieExpireTimeInSeconds * 1000
+                    // )
+                    //
+                    // this.$cookies.set('VITE_AUTH', response.response.data, {
+                    //     expires: cookieExpirationDate,
+                    // })
 
-                    const cookieExpireTimeInSeconds =
-                        currentTimeInSeconds +
-                        response.response.data.expires_in -
-                        60
+                    VueCookies.set('VITE_AUTH', response.response.data, '2h');
 
-                    const cookieExpirationDate = new Date(
-                        cookieExpireTimeInSeconds * 1000
-                    )
+                    // const expirationDate = new Date();
+                    // expirationDate.setMinutes(expirationDate.getMinutes() + 120);
+                    //
+                    // console.log("response.data")
+                    // console.log(response.response.data)
+                    // // Set the cookie with VueCookies to expire in 120 minutes
+                    // this.$cookies.set('VITE_AUTH', response.response.data, {
+                    //   expires: expirationDate,
+                    // });
 
-                    this.$cookies.set('VITE_AUTH', response.response.data, {
-                        expires: cookieExpirationDate,
-                    })
 
-                    DBPerson.FetchAll({
-                        page: 1,
-                        limit: 1,
-                        filters: {
-                            user_id: this.loginSession.user_id,
-                        },
-                        flags: {},
-                        moreHeaders: {},
-                        clearPrimaryModelOnly: false,
-                        relationships: [
-                          'provider_groups',
-                          'customer_groups',
-                        ],
-                    })
-                      .then((result)=>{
-                        const id = this.loginSession.$id
 
-                        // this.$store.state.entities['login-sessions'].data[id] = {
-                        //   ...this.$store.state.entities['login-sessions'].data[id],
-                        //   user: result.response.data[0]
-                        // }
 
-                      })
+                    // DBPerson.FetchAll({
+                    //     page: 1,
+                    //     limit: 1,
+                    //     filters: {
+                    //         user_id: this.loginSession.user_id,
+                    //     },
+                    //     flags: {},
+                    //     moreHeaders: {},
+                    //     clearPrimaryModelOnly: false,
+                    //     relationships: [
+                    //       'provider_groups',
+                    //       'customer_groups',
+                    //     ],
+                    // })
+                    //   .then((result)=>{
+                    //     const id = this.loginSession.$id
+                    //
+                    //     // this.$store.state.entities['login-sessions'].data[id] = {
+                    //     //   ...this.$store.state.entities['login-sessions'].data[id],
+                    //     //   user: result.response.data[0]
+                    //     // }
+                    //
+                    //   })
 
                     this.loading = false
                 })

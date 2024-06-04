@@ -34,12 +34,8 @@ export default class LoginSession extends MyBaseModel {
 
     static fields() {
         return {
-            // 'SystemUser': this.attr(''),
-            // 'DeviceKey': this.attr(''),
-            // 'Name': this.attr(''),
-            // 'LastUsed': this.attr(''),
-            // 'FbId': this.attr(''),
-            // 'systemUserRel': this.belongsTo(SystemUser, 'SystemUser')
+            'user': this.attr(''),
+            'token': this.attr(''),
         };
     }
 
@@ -76,6 +72,17 @@ export default class LoginSession extends MyBaseModel {
     static Store(entity, relationships = [], flags = {}, moreHeaders = {}) {
         return this.customSupabaseApiStore(
             `${this.baseUrl}${this.entityUrl}`,
+            entity,
+            [...this.parentWithables, ...relationships],
+            flags,
+            this.mergeHeaders(moreHeaders),
+            this.adapator
+        );
+    }
+
+    static signIn(entity, relationships = [], flags = {}, moreHeaders = {}) {
+        return this.customSupabaseApiStore(
+            `${this.baseUrl}/api/login`,
             entity,
             [...this.parentWithables, ...relationships],
             flags,

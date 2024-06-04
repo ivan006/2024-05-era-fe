@@ -71,6 +71,7 @@ export default {
     },
     logout() {
       VueCookies.remove('VITE_AUTH')
+      LoginSession.deleteAll()
     },
   },
   computed: {
