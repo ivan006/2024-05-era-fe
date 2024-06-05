@@ -102,9 +102,8 @@
             <v-container>
 
                 <v-row>
-                    <template v-for="n in 4">
+                    <template v-for="n in 4" :key="n">
                         <v-col
-                            :key="n"
                             class="mt-2"
                             cols="12"
                         >

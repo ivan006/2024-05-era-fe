@@ -17,8 +17,8 @@
         </HeroComponent>
         <v-card class="pa-2">
             <v-row class="fill-height" justify="center" align="center">
-                <template v-for="entity of entities">
-                    <v-col cols="12" md="3" :key="entity.name">
+                <template v-for="entity of entities" :key="entity.name">
+                    <v-col cols="12" md="3">
                         <v-card class="mx-auto my-12" style="cursor: pointer">
                             <template slot="progress">
                                 <v-progress-linear
