@@ -10,13 +10,14 @@ import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
+import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   optimizeDeps: {
     include: [
-      "vue-google-maps-community-fork",
-      "fast-deep-equal",
+      'vue-google-maps-community-fork',
+      'fast-deep-equal',
     ],
   },
   plugins: [
@@ -52,6 +53,9 @@ export default defineConfig({
       vueTemplate: true,
     }),
   ],
+  build: {
+    outDir: resolve(__dirname, '../2024-05-era-fe-dist2'),
+  },
   define: { 'process.env': {} },
   resolve: {
     alias: {

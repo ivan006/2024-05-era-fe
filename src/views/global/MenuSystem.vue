@@ -87,7 +87,7 @@ export default {
         },
         {
           icon: '',
-          text: 'Hmmm',
+          text: 'These ones tho',
           subLinks: [
 
             {

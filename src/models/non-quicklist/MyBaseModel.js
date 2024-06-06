@@ -1,4 +1,4 @@
-import { DBBaseModel } from '../../../../2024-05-vue-orm-ui'
+import { DBBaseModel } from 'quicklists-vue-orm-ui'
 import VueCookies from "vue-cookies";
 
 export default class DBEvent extends DBBaseModel {
