@@ -13,8 +13,19 @@
         <q-toolbar-title>Quasar App</q-toolbar-title>
         <div>Quasar v{{ $q.version }}</div>
         <q-space />
-        <q-btn flat label="Login" @click="onLoginClick" />
-        <q-btn flat label="Register" @click="onRegisterClick" />
+
+        <template v-if="loginSession">
+          <q-btn flat label="Sign Out" @click="logout()" />
+        </template>
+        <template v-else>
+          <!--<v-btn  style="margin-right: 1em">-->
+          <!--  Sign In-->
+          <!--</v-btn>-->
+          <!--<v-btn> Join </v-btn>-->
+
+          <q-btn flat label="Login" @click="$router.push('/sign-in')" />
+          <q-btn flat label="Register"  @click="$router.push('/join')" />
+        </template>
       </q-toolbar>
     </q-header>
 
@@ -72,6 +83,8 @@ function onLoginClick() {
 function onRegisterClick() {
   // Handle register click
 }
+
+
 </script>
 
 <style scoped>
