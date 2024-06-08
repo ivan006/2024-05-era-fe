@@ -10,32 +10,36 @@
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
-
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
+        <q-toolbar-title>Quasar App</q-toolbar-title>
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in linksList"
-          :key="link.title"
-          v-bind="link"
-        />
+        <q-item-label header>Menu</q-item-label>
+        <template v-for="link in links" :key="link.text">
+          <q-item v-if="!link.subLinks" :to="link.to" clickable>
+            <q-item-section avatar>
+              <q-icon :name="link.icon" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>{{ link.text }}</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-expansion-item v-else :label="link.text" :icon="link.icon">
+            <q-list>
+              <q-item v-for="subLink in link.subLinks" :key="subLink.text" :to="subLink.to" clickable>
+                <q-item-section avatar>
+                  <q-icon :name="subLink.icon" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label>{{ subLink.text }}</q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-expansion-item>
+        </template>
       </q-list>
     </q-drawer>
 
@@ -46,61 +50,63 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import { ref } from 'vue';
 
 defineOptions({
   name: 'MainLayout'
-})
+});
 
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-]
+const leftDrawerOpen = ref(false);
 
-const leftDrawerOpen = ref(false)
-
-function toggleLeftDrawer () {
-  leftDrawerOpen.value = !leftDrawerOpen.value
+function toggleLeftDrawer() {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
 }
-</script>
+
+const links = [
+  {
+    icon: 'home',
+    text: 'Home',
+    to: '/',
+  },
+  {
+    icon: 'list',
+    text: 'These ones tho',
+    subLinks: [
+      { icon: 'inventory', text: 'Entity Goods (Deps. Items)', to: '/lists/entity-goods' },
+      { icon: 'approval', text: 'Entity Good Approvals (Deps.)', to: '/lists/entity-good-approvals' },
+      { icon: 'category', text: 'Goods (Waste Types)', to: '/lists/goods' },
+      { icon: 'request_quote', text: 'Service Requests (Withd. Contracts)', to: '/lists/service-requests' },
+      { icon: 'date_range', text: 'Service Request Frequencies', to: '/lists/service-request-frequencies' },
+      { icon: 'report', text: 'Service Request Reports (Withd.)', to: '/lists/service-request-reports' },
+      { icon: 'query_builder', text: 'Queries', to: '/lists/queries' },
+      { icon: 'header', text: 'Query Headers', to: '/lists/query-headers' },
+      { icon: 'treatment', text: 'Treatment Details (Withd. Items)', to: '/lists/treatment-details' },
+    ],
+  },
+  {
+    icon: 'format_list_bulleted',
+    text: 'Lists',
+    subLinks: [
+      { icon: 'place', text: 'Addresses', to: '/lists/addresses' },
+      { icon: 'attachment', text: 'Attachments', to: '/lists/attachments' },
+      { icon: 'fact_check', text: 'Audits', to: '/lists/audits' },
+      { icon: 'account_balance', text: 'Banks', to: '/lists/banks' },
+      { icon: 'connect_without_contact', text: 'Communications', to: '/lists/communications' },
+      { icon: 'phone', text: 'Contact Numbers', to: '/lists/contact-numbers' },
+      { icon: 'crm', text: 'Crms', to: '/lists/crms' },
+      { icon: 'description', text: 'Documents', to: '/lists/documents' },
+      { icon: 'document_scanner', text: 'Document Details', to: '/lists/document-details' },
+      { icon: 'people', text: 'Domain Users', to: '/lists/domain-users' },
+      { icon: 'dvr', text: 'Dummies', to: '/lists/dummies' },
+      { icon: 'email', text: 'Emails', to: '/lists/emails' },
+      { icon: 'business', text: 'Entities', to: '/lists/entities' },
+      { icon: 'audit', text: 'Entity Audits', to: '/lists/entity-audits' },
+      { icon: 'event', text: 'Entity Events', to: '/lists/entity-events' },
+      { icon: 'device_hub', text: 'Entity Relationships', to: '/lists/entity-relationships' },
+      { icon: 'external_link', text: 'External Producers', to: '/lists/external-producers' },
+      { icon: 'format_list_numbered', text: 'Instance Nos', to: '/lists/instance-nos' },
+      { icon: 'migration', text: 'Migration S', to: '/lists/migration-s' },
+      { icon: 'objects', text: 'Objects', to: '/lists/objects' },
+      { icon: 'traits', text: 'Object Traits', to: '/lists/object-traits' },
+      { icon: 'values', text: 'Object Values', to: '/lists/object-values' },
+      { icon: 'password', text: 'Password Hashes', to:
