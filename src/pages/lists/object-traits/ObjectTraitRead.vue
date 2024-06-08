@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { SuperRecord } from 'quicklists-vue-orm-ui'
+import { SuperRecord } from 'quicklists-vue-orm-ui-2'
 import ObjectTrait from 'src/models/ObjectTrait'
 
 export default {

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { SuperRecord } from 'quicklists-vue-orm-ui'
+import { SuperRecord } from 'quicklists-vue-orm-ui-2'
 import EntityAudit from 'src/models/EntityAudit'
 
 export default {

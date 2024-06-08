@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { SuperTable } from 'quicklists-vue-orm-ui'
+import { SuperTable } from 'quicklists-vue-orm-ui-2'
 import Entity from 'src/models/Entity'
 import router from 'src/router'
 

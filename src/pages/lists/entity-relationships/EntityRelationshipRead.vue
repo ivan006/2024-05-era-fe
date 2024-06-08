@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { SuperRecord } from 'quicklists-vue-orm-ui'
+import { SuperRecord } from 'quicklists-vue-orm-ui-2'
 import EntityRelationship from 'src/models/EntityRelationship'
 
 export default {
