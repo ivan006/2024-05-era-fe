@@ -109,4 +109,35 @@ const links = [
       { icon: 'objects', text: 'Objects', to: '/lists/objects' },
       { icon: 'traits', text: 'Object Traits', to: '/lists/object-traits' },
       { icon: 'values', text: 'Object Values', to: '/lists/object-values' },
-      { icon: 'password', text: 'Password Hashes', to:
+      { icon: 'password', text: 'Password Hashes', to: '/lists/password-hashes' },
+      { icon: 'providers', text: 'Product Providers', to: '/lists/product-providers' },
+      { icon: 'family_restroom', text: 'Relatives', to: '/lists/relatives' },
+      { icon: 'requirement', text: 'Requirements', to: '/lists/requirements' },
+      { icon: 'requirement_detail', text: 'Requirement Details', to: '/lists/requirement-details' },
+      { icon: 'rule', text: 'Rules', to: '/lists/rules' },
+      { icon: 'rule_action', text: 'Rule Actions', to: '/lists/rule-actions' },
+      { icon: 'rule_action_data', text: 'Rule Action Datas', to: '/lists/rule-action-datas' },
+      { icon: 'rule_config', text: 'Rule Configs', to: '/lists/rule-configs' },
+      { icon: 'role', text: 'Rule Entity Roles', to: '/lists/rule-entity-roles' },
+      { icon: 'system_update', text: 'System Actions', to: '/lists/system-actions' },
+      { icon: 'code', text: 'System Codes', to: '/lists/system-codes' },
+      { icon: 'settings', text: 'System Configurations', to: '/lists/system-configurations' },
+      { icon: 'bug_report', text: 'System Logs', to: '/lists/system-logs' },
+      { icon: 'admin_panel_settings', text: 'System Users', to: '/lists/system-users' },
+      { icon: 'paid', text: 'Transactions', to: '/lists/transactions' },
+      { icon: 'accessibility', text: 'User Accesses', to: '/lists/user-accesses' },
+      { icon: 'user_config', text: 'User Configurations', to: '/lists/user-configurations' },
+      { icon: 'devices', text: 'User Devices', to: '/lists/user-devices' },
+      { icon: 'security', text: 'User Roles', to: '/lists/user-roles' },
+      { icon: 'security', text: 'User Role Accesses', to: '/lists/user-role-accesses' },
+      { icon: 'web', text: 'Website Producer Registrations', to: '/lists/website-producer-registrations' },
+    ],
+  },
+];
+</script>
+
+<style scoped>
+.day-cell {
+  cursor: pointer;
+}
+</style>
