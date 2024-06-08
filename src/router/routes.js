@@ -1,9 +1,32 @@
+import { defineAsyncComponent } from 'vue';
+
 const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
+
+      {
+        path: '/sign-in-up',
+        name: '/sign-in-up',
+        component: () =>
+          import(
+            /* webpackChunkName: "/all-content" */ 'src/pages/EmptyLayout.vue'
+            ),
+        children: [
+          {
+            path: '/sign-in',
+            name: '/sign-in',
+            component: () => import('src/pages/SigninView.vue'),
+          },
+          {
+            path: '/join',
+            name: '/join',
+            component: () => import('src/pages/JoinView.vue'),
+          },
+        ],
+      },
       {
         path: 'lists',
         component: () => import('layouts/EmptyLayout.vue'),
