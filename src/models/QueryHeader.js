@@ -1,6 +1,6 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import EntityGoodApproval from '@/models/EntityGoodApproval';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import EntityGoodApproval from 'src/models/EntityGoodApproval';
 
 export default class QueryHeader extends MyBaseModel {
     static entity = 'queryheader';

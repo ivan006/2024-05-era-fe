@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import Query from '@/models/Query'
+import Query from 'src/models/Query'
 
 export default {
     name: 'Query-read',

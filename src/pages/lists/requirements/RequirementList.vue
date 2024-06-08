@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Requirement from '@/models/Requirement'
-import router from '@/router'
+import Requirement from 'src/models/Requirement'
+import router from 'src/router'
 
 export default {
     name: 'Requirement-list',

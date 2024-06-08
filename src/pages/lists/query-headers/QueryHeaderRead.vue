@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import QueryHeader from '@/models/QueryHeader'
+import QueryHeader from 'src/models/QueryHeader'
 
 export default {
     name: 'QueryHeader-read',

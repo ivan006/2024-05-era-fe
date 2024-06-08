@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import ObjectValue from '@/models/ObjectValue'
-import router from '@/router'
+import ObjectValue from 'src/models/ObjectValue'
+import router from 'src/router'
 
 export default {
     name: 'ObjectValue-list',

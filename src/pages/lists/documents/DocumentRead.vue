@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import Document from '@/models/Document'
+import Document from 'src/models/Document'
 
 export default {
     name: 'Document-read',

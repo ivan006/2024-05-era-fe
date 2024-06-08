@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import ServiceRequestFrequency from '@/models/ServiceRequestFrequency'
+import ServiceRequestFrequency from 'src/models/ServiceRequestFrequency'
 
 export default {
     name: 'ServiceRequestFrequency-read',

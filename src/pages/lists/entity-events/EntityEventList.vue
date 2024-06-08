@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import EntityEvent from '@/models/EntityEvent'
-import router from '@/router'
+import EntityEvent from 'src/models/EntityEvent'
+import router from 'src/router'
 
 export default {
     name: 'EntityEvent-list',

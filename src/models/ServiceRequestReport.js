@@ -1,10 +1,10 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import ServiceRequest from '@/models/ServiceRequest';
-import Entity from '@/models/Entity';
-import SystemUser from '@/models/SystemUser';
-import TreatmentDetail from '@/models/TreatmentDetail';
-import ExternalProducer from '@/models/ExternalProducer';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import ServiceRequest from 'src/models/ServiceRequest';
+import Entity from 'src/models/Entity';
+import SystemUser from 'src/models/SystemUser';
+import TreatmentDetail from 'src/models/TreatmentDetail';
+import ExternalProducer from 'src/models/ExternalProducer';
 
 export default class ServiceRequestReport extends MyBaseModel {
     static entity = 'servicerequestreport';

@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Document from '@/models/Document'
-import router from '@/router'
+import Document from 'src/models/Document'
+import router from 'src/router'
 
 export default {
     name: 'Document-list',

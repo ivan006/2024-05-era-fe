@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import Bank from '@/models/Bank'
+import Bank from 'src/models/Bank'
 
 export default {
     name: 'Bank-read',

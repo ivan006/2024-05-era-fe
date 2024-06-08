@@ -1,7 +1,7 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import Entity from '@/models/Entity';
-import EntityGood from '@/models/EntityGood';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import Entity from 'src/models/Entity';
+import EntityGood from 'src/models/EntityGood';
 
 export default class Good extends MyBaseModel {
     static entity = 'good';

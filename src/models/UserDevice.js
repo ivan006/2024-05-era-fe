@@ -1,6 +1,6 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import SystemUser from '@/models/SystemUser';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import SystemUser from 'src/models/SystemUser';
 
 export default class UserDevice extends MyBaseModel {
     static entity = 'userdevice';

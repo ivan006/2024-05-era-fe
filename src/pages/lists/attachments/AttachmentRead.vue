@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import Attachment from '@/models/Attachment'
+import Attachment from 'src/models/Attachment'
 
 export default {
     name: 'Attachment-read',

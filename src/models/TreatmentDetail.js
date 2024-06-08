@@ -1,6 +1,6 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import ServiceRequestReport from '@/models/ServiceRequestReport';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import ServiceRequestReport from 'src/models/ServiceRequestReport';
 
 export default class TreatmentDetail extends MyBaseModel {
     static entity = 'treatmentdetail';

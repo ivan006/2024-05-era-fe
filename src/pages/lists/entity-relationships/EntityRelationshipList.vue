@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import EntityRelationship from '@/models/EntityRelationship'
-import router from '@/router'
+import EntityRelationship from 'src/models/EntityRelationship'
+import router from 'src/router'
 
 export default {
     name: 'EntityRelationship-list',

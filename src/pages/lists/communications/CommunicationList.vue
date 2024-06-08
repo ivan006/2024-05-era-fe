@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Communication from '@/models/Communication'
-import router from '@/router'
+import Communication from 'src/models/Communication'
+import router from 'src/router'
 
 export default {
     name: 'Communication-list',

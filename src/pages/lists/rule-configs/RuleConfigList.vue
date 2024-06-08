@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import RuleConfig from '@/models/RuleConfig'
-import router from '@/router'
+import RuleConfig from 'src/models/RuleConfig'
+import router from 'src/router'
 
 export default {
     name: 'RuleConfig-list',

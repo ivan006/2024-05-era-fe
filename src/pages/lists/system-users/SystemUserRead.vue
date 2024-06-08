@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import SystemUser from '@/models/SystemUser'
+import SystemUser from 'src/models/SystemUser'
 
 export default {
     name: 'SystemUser-read',

@@ -1,12 +1,12 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import Entity from '@/models/Entity';
-import Address from '@/models/Address';
-import ContactNumber from '@/models/ContactNumber';
-import Email from '@/models/Email';
-import ServiceRequestFrequency from '@/models/ServiceRequestFrequency';
-import Transaction from '@/models/Transaction';
-import UserConfiguration from '@/models/UserConfiguration';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import Entity from 'src/models/Entity';
+import Address from 'src/models/Address';
+import ContactNumber from 'src/models/ContactNumber';
+import Email from 'src/models/Email';
+import ServiceRequestFrequency from 'src/models/ServiceRequestFrequency';
+import Transaction from 'src/models/Transaction';
+import UserConfiguration from 'src/models/UserConfiguration';
 
 export default class SystemCode extends MyBaseModel {
     static entity = 'systemcode';

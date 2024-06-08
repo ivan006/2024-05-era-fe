@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import Email from '@/models/Email'
+import Email from 'src/models/Email'
 
 export default {
     name: 'Email-read',

@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Relative from '@/models/Relative'
-import router from '@/router'
+import Relative from 'src/models/Relative'
+import router from 'src/router'
 
 export default {
     name: 'Relative-list',

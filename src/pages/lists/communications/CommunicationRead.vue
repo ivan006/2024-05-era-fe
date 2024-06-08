@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import Communication from '@/models/Communication'
+import Communication from 'src/models/Communication'
 
 export default {
     name: 'Communication-read',

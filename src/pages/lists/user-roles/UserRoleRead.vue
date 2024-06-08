@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import UserRole from '@/models/UserRole'
+import UserRole from 'src/models/UserRole'
 
 export default {
     name: 'UserRole-read',

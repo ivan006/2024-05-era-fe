@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import ObjectValue from '@/models/ObjectValue'
+import ObjectValue from 'src/models/ObjectValue'
 
 export default {
     name: 'ObjectValue-read',

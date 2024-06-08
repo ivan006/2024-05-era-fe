@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import ServiceRequestFrequency from '@/models/ServiceRequestFrequency'
-import router from '@/router'
+import ServiceRequestFrequency from 'src/models/ServiceRequestFrequency'
+import router from 'src/router'
 
 export default {
     name: 'ServiceRequestFrequency-list',

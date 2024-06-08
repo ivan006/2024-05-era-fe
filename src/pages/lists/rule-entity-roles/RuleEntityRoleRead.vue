@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import RuleEntityRole from '@/models/RuleEntityRole'
+import RuleEntityRole from 'src/models/RuleEntityRole'
 
 export default {
     name: 'RuleEntityRole-read',

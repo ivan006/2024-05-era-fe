@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import SystemLog from '@/models/SystemLog'
+import SystemLog from 'src/models/SystemLog'
 
 export default {
     name: 'SystemLog-read',

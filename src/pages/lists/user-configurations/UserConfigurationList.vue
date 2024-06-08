@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import UserConfiguration from '@/models/UserConfiguration'
-import router from '@/router'
+import UserConfiguration from 'src/models/UserConfiguration'
+import router from 'src/router'
 
 export default {
     name: 'UserConfiguration-list',

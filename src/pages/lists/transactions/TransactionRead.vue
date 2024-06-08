@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import Transaction from '@/models/Transaction'
+import Transaction from 'src/models/Transaction'
 
 export default {
     name: 'Transaction-read',

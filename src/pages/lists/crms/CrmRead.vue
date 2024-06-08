@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import Crm from '@/models/Crm'
+import Crm from 'src/models/Crm'
 
 export default {
     name: 'Crm-read',

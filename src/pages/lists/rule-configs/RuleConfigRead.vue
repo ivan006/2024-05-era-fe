@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import RuleConfig from '@/models/RuleConfig'
+import RuleConfig from 'src/models/RuleConfig'
 
 export default {
     name: 'RuleConfig-read',

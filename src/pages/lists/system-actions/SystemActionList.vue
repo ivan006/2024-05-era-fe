@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import SystemAction from '@/models/SystemAction'
-import router from '@/router'
+import SystemAction from 'src/models/SystemAction'
+import router from 'src/router'
 
 export default {
     name: 'SystemAction-list',

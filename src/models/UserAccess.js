@@ -1,8 +1,8 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import SystemAction from '@/models/SystemAction';
-import SystemUser from '@/models/SystemUser';
-import UserRole from '@/models/UserRole';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import SystemAction from 'src/models/SystemAction';
+import SystemUser from 'src/models/SystemUser';
+import UserRole from 'src/models/UserRole';
 
 export default class UserAccess extends MyBaseModel {
     static entity = 'useraccess';

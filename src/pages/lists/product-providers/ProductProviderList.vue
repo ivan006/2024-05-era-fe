@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import ProductProvider from '@/models/ProductProvider'
-import router from '@/router'
+import ProductProvider from 'src/models/ProductProvider'
+import router from 'src/router'
 
 export default {
     name: 'ProductProvider-list',

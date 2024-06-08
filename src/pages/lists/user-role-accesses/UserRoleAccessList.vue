@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import UserRoleAccess from '@/models/UserRoleAccess'
-import router from '@/router'
+import UserRoleAccess from 'src/models/UserRoleAccess'
+import router from 'src/router'
 
 export default {
     name: 'UserRoleAccess-list',

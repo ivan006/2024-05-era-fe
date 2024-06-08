@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import Requirement from '@/models/Requirement'
+import Requirement from 'src/models/Requirement'
 
 export default {
     name: 'Requirement-read',

@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import TreatmentDetail from '@/models/TreatmentDetail'
+import TreatmentDetail from 'src/models/TreatmentDetail'
 
 export default {
     name: 'TreatmentDetail-read',

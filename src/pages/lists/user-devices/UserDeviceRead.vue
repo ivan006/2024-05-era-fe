@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import UserDevice from '@/models/UserDevice'
+import UserDevice from 'src/models/UserDevice'
 
 export default {
     name: 'UserDevice-read',

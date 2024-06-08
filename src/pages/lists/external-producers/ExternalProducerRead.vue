@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import ExternalProducer from '@/models/ExternalProducer'
+import ExternalProducer from 'src/models/ExternalProducer'
 
 export default {
     name: 'ExternalProducer-read',

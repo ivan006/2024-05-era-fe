@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import UserConfiguration from '@/models/UserConfiguration'
+import UserConfiguration from 'src/models/UserConfiguration'
 
 export default {
     name: 'UserConfiguration-read',

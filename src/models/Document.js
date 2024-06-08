@@ -1,6 +1,6 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import DocumentDetail from '@/models/DocumentDetail';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import DocumentDetail from 'src/models/DocumentDetail';
 
 export default class Document extends MyBaseModel {
     static entity = 'document';

@@ -1,13 +1,13 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import Communication from '@/models/Communication';
-import DomainUser from '@/models/DomainUser';
-import EntityAudit from '@/models/EntityAudit';
-import ServiceRequest from '@/models/ServiceRequest';
-import ServiceRequestReport from '@/models/ServiceRequestReport';
-import UserAccess from '@/models/UserAccess';
-import UserConfiguration from '@/models/UserConfiguration';
-import UserDevice from '@/models/UserDevice';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import Communication from 'src/models/Communication';
+import DomainUser from 'src/models/DomainUser';
+import EntityAudit from 'src/models/EntityAudit';
+import ServiceRequest from 'src/models/ServiceRequest';
+import ServiceRequestReport from 'src/models/ServiceRequestReport';
+import UserAccess from 'src/models/UserAccess';
+import UserConfiguration from 'src/models/UserConfiguration';
+import UserDevice from 'src/models/UserDevice';
 
 export default class SystemUser extends MyBaseModel {
     static entity = 'systemuser';

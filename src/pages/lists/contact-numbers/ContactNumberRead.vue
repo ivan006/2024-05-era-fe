@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import ContactNumber from '@/models/ContactNumber'
+import ContactNumber from 'src/models/ContactNumber'
 
 export default {
     name: 'ContactNumber-read',

@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Attachment from '@/models/Attachment'
-import router from '@/router'
+import Attachment from 'src/models/Attachment'
+import router from 'src/router'
 
 export default {
     name: 'Attachment-list',

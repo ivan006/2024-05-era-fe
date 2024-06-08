@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Transaction from '@/models/Transaction'
-import router from '@/router'
+import Transaction from 'src/models/Transaction'
+import router from 'src/router'
 
 export default {
     name: 'Transaction-list',

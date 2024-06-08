@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import EntityAudit from '@/models/EntityAudit'
+import EntityAudit from 'src/models/EntityAudit'
 
 export default {
     name: 'EntityAudit-read',

@@ -1,6 +1,6 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import UserAccess from '@/models/UserAccess';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import UserAccess from 'src/models/UserAccess';
 
 export default class UserRole extends MyBaseModel {
     static entity = 'userrole';

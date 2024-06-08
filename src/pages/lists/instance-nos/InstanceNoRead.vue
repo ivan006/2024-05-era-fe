@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import InstanceNo from '@/models/InstanceNo'
+import InstanceNo from 'src/models/InstanceNo'
 
 export default {
     name: 'InstanceNo-read',

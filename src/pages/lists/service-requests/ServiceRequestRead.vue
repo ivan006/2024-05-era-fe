@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import ServiceRequest from '@/models/ServiceRequest'
+import ServiceRequest from 'src/models/ServiceRequest'
 
 export default {
     name: 'ServiceRequest-read',

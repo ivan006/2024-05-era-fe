@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import EntityGoodApproval from '@/models/EntityGoodApproval'
+import EntityGoodApproval from 'src/models/EntityGoodApproval'
 
 export default {
     name: 'EntityGoodApproval-read',

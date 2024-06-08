@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import WebsiteProducerRegistration from '@/models/WebsiteProducerRegistration'
-import router from '@/router'
+import WebsiteProducerRegistration from 'src/models/WebsiteProducerRegistration'
+import router from 'src/router'
 
 export default {
     name: 'WebsiteProducerRegistration-list',

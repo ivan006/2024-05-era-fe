@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import EntityRelationship from '@/models/EntityRelationship'
+import EntityRelationship from 'src/models/EntityRelationship'
 
 export default {
     name: 'EntityRelationship-read',

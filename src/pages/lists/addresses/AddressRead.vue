@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import Address from '@/models/Address'
+import Address from 'src/models/Address'
 
 export default {
     name: 'Address-read',

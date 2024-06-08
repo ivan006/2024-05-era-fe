@@ -1,11 +1,11 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import EntityGood from '@/models/EntityGood';
-import EntityGoodApproval from '@/models/EntityGoodApproval';
-import Good from '@/models/Good';
-import ServiceRequest from '@/models/ServiceRequest';
-import ServiceRequestReport from '@/models/ServiceRequestReport';
-import SystemCode from '@/models/SystemCode';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import EntityGood from 'src/models/EntityGood';
+import EntityGoodApproval from 'src/models/EntityGoodApproval';
+import Good from 'src/models/Good';
+import ServiceRequest from 'src/models/ServiceRequest';
+import ServiceRequestReport from 'src/models/ServiceRequestReport';
+import SystemCode from 'src/models/SystemCode';
 
 export default class Entity extends MyBaseModel {
     static entity = 'entity';

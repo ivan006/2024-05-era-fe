@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import PasswordHash from '@/models/PasswordHash'
-import router from '@/router'
+import PasswordHash from 'src/models/PasswordHash'
+import router from 'src/router'
 
 export default {
     name: 'PasswordHash-list',

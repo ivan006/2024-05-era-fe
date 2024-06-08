@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Crm from '@/models/Crm'
-import router from '@/router'
+import Crm from 'src/models/Crm'
+import router from 'src/router'
 
 export default {
     name: 'Crm-list',

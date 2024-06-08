@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import SystemUser from '@/models/SystemUser'
-import router from '@/router'
+import SystemUser from 'src/models/SystemUser'
+import router from 'src/router'
 
 export default {
     name: 'SystemUser-list',

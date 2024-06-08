@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import SystemLog from '@/models/SystemLog'
-import router from '@/router'
+import SystemLog from 'src/models/SystemLog'
+import router from 'src/router'
 
 export default {
     name: 'SystemLog-list',

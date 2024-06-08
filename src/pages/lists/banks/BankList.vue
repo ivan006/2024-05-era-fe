@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Bank from '@/models/Bank'
-import router from '@/router'
+import Bank from 'src/models/Bank'
+import router from 'src/router'
 
 export default {
     name: 'Bank-list',

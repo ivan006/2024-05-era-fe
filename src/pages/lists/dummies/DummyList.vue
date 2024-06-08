@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Dummy from '@/models/Dummy'
-import router from '@/router'
+import Dummy from 'src/models/Dummy'
+import router from 'src/router'
 
 export default {
     name: 'Dummy-list',

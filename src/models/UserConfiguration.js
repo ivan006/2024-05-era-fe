@@ -1,7 +1,7 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import SystemCode from '@/models/SystemCode';
-import SystemUser from '@/models/SystemUser';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import SystemCode from 'src/models/SystemCode';
+import SystemUser from 'src/models/SystemUser';
 
 export default class UserConfiguration extends MyBaseModel {
     static entity = 'userconfiguration';

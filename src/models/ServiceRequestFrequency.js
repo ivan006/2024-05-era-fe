@@ -1,7 +1,7 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import ServiceRequest from '@/models/ServiceRequest';
-import SystemCode from '@/models/SystemCode';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import ServiceRequest from 'src/models/ServiceRequest';
+import SystemCode from 'src/models/SystemCode';
 
 export default class ServiceRequestFrequency extends MyBaseModel {
     static entity = 'servicerequestfrequency';

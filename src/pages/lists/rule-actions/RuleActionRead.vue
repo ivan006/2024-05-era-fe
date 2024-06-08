@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import RuleAction from '@/models/RuleAction'
+import RuleAction from 'src/models/RuleAction'
 
 export default {
     name: 'RuleAction-read',

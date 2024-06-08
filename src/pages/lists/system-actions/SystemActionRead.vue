@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import SystemAction from '@/models/SystemAction'
+import SystemAction from 'src/models/SystemAction'
 
 export default {
     name: 'SystemAction-read',

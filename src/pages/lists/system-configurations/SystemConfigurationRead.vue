@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import SystemConfiguration from '@/models/SystemConfiguration'
+import SystemConfiguration from 'src/models/SystemConfiguration'
 
 export default {
     name: 'SystemConfiguration-read',

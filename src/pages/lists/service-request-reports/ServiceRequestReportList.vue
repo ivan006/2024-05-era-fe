@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import ServiceRequestReport from '@/models/ServiceRequestReport'
-import router from '@/router'
+import ServiceRequestReport from 'src/models/ServiceRequestReport'
+import router from 'src/router'
 
 export default {
     name: 'ServiceRequestReport-list',

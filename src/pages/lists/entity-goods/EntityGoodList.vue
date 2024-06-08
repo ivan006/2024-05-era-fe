@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import EntityGood from '@/models/EntityGood'
-import router from '@/router'
+import EntityGood from 'src/models/EntityGood'
+import router from 'src/router'
 
 export default {
     name: 'EntityGood-list',

@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import WebsiteProducerRegistration from '@/models/WebsiteProducerRegistration'
+import WebsiteProducerRegistration from 'src/models/WebsiteProducerRegistration'
 
 export default {
     name: 'WebsiteProducerRegistration-read',

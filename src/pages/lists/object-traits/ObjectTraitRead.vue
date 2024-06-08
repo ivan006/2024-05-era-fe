@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import ObjectTrait from '@/models/ObjectTrait'
+import ObjectTrait from 'src/models/ObjectTrait'
 
 export default {
     name: 'ObjectTrait-read',

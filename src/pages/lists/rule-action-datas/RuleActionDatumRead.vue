@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import RuleActionDatum from '@/models/RuleActionDatum'
+import RuleActionDatum from 'src/models/RuleActionDatum'
 
 export default {
     name: 'RuleActionDatum-read',

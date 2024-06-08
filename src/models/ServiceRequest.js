@@ -1,9 +1,9 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import Entity from '@/models/Entity';
-import SystemUser from '@/models/SystemUser';
-import ServiceRequestFrequency from '@/models/ServiceRequestFrequency';
-import ServiceRequestReport from '@/models/ServiceRequestReport';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
+import Entity from 'src/models/Entity';
+import SystemUser from 'src/models/SystemUser';
+import ServiceRequestFrequency from 'src/models/ServiceRequestFrequency';
+import ServiceRequestReport from 'src/models/ServiceRequestReport';
 
 export default class ServiceRequest extends MyBaseModel {
     static entity = 'servicerequest';

@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Audit from '@/models/Audit'
-import router from '@/router'
+import Audit from 'src/models/Audit'
+import router from 'src/router'
 
 export default {
     name: 'Audit-list',

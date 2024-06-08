@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Migration from '@/models/Migration'
-import router from '@/router'
+import Migration from 'src/models/Migration'
+import router from 'src/router'
 
 export default {
     name: 'Migration-list',

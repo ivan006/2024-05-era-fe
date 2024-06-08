@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import TreatmentDetail from '@/models/TreatmentDetail'
-import router from '@/router'
+import TreatmentDetail from 'src/models/TreatmentDetail'
+import router from 'src/router'
 
 export default {
     name: 'TreatmentDetail-list',

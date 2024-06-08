@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import InstanceNo from '@/models/InstanceNo'
-import router from '@/router'
+import InstanceNo from 'src/models/InstanceNo'
+import router from 'src/router'
 
 export default {
     name: 'InstanceNo-list',

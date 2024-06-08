@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Email from '@/models/Email'
-import router from '@/router'
+import Email from 'src/models/Email'
+import router from 'src/router'
 
 export default {
     name: 'Email-list',

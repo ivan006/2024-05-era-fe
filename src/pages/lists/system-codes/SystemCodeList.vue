@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import SystemCode from '@/models/SystemCode'
-import router from '@/router'
+import SystemCode from 'src/models/SystemCode'
+import router from 'src/router'
 
 export default {
     name: 'SystemCode-list',

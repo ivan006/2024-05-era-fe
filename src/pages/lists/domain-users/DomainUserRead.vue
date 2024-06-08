@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import DomainUser from '@/models/DomainUser'
+import DomainUser from 'src/models/DomainUser'
 
 export default {
     name: 'DomainUser-read',

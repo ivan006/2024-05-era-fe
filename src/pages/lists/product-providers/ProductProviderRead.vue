@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import ProductProvider from '@/models/ProductProvider'
+import ProductProvider from 'src/models/ProductProvider'
 
 export default {
     name: 'ProductProvider-read',

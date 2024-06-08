@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import PasswordHash from '@/models/PasswordHash'
+import PasswordHash from 'src/models/PasswordHash'
 
 export default {
     name: 'PasswordHash-read',

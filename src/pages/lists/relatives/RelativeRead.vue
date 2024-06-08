@@ -14,7 +14,7 @@
 
 <script>
 import { SuperRecord } from 'quicklists-vue-orm-ui'
-import Relative from '@/models/Relative'
+import Relative from 'src/models/Relative'
 
 export default {
     name: 'Relative-read',

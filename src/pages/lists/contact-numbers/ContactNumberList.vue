@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import ContactNumber from '@/models/ContactNumber'
-import router from '@/router'
+import ContactNumber from 'src/models/ContactNumber'
+import router from 'src/router'
 
 export default {
     name: 'ContactNumber-list',

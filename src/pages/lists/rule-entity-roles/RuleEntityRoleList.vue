@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import RuleEntityRole from '@/models/RuleEntityRole'
-import router from '@/router'
+import RuleEntityRole from 'src/models/RuleEntityRole'
+import router from 'src/router'
 
 export default {
     name: 'RuleEntityRole-list',

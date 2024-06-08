@@ -14,8 +14,8 @@
 
 <script>
 import { SuperTable } from 'quicklists-vue-orm-ui'
-import Address from '@/models/Address'
-import router from '@/router'
+import Address from 'src/models/Address'
+import router from 'src/router'
 
 export default {
     name: 'Address-list',

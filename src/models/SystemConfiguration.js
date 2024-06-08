@@ -1,5 +1,5 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
 
 export default class SystemConfiguration extends MyBaseModel {
     static entity = 'systemconfiguration';
