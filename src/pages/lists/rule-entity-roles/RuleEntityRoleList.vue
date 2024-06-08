@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-card class="pa-4 mt-4">
+        <q-card class="q-pa-md q-mt-md">
             <SuperTable
                 :user="user"
                 :showMap="true"
@@ -8,7 +8,7 @@
                 @update:modelValue="openRecord"
                 :displayMapField="false"
             />
-        </v-card>
+        </q-card>
     </div>
 </template>
 
