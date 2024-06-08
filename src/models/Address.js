@@ -1,6 +1,5 @@
-import MyBaseModel from '@/models/non-quicklist/MyBaseModel';
-import router from '@/router';
-import SystemCode from '@/models/SystemCode';
+import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
+import router from 'src/router';
 
 export default class Address extends MyBaseModel {
     static entity = 'address';
@@ -65,8 +64,6 @@ export default class Address extends MyBaseModel {
             'Dispatch': this.attr(''),
             'Latitude': this.attr(''),
             'Longitude': this.attr(''),
-            'countryRel': this.belongsTo(SystemCode, 'Country'),
-            'typeRel': this.belongsTo(SystemCode, 'Type')
         };
     }
 
@@ -80,7 +77,7 @@ export default class Address extends MyBaseModel {
 
     static FetchAll(relationships = [], flags = {}, moreHeaders = {}, options = { page: 1, limit: 15, filters: {}, clearPrimaryModelOnly: false }) {
         return this.customSupabaseApiFetchAll(
-            `${this.baseUrl}${this.entityUrl}`,
+            `/test.json`,
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
