@@ -18,13 +18,8 @@
           <q-btn flat label="Sign Out" @click="logout()" />
         </template>
         <template v-else>
-          <!--<v-btn  style="margin-right: 1em">-->
-          <!--  Sign In-->
-          <!--</v-btn>-->
-          <!--<v-btn> Join </v-btn>-->
-
           <q-btn flat label="Login" @click="$router.push('/sign-in')" />
-          <q-btn flat label="Register"  @click="$router.push('/join')" />
+          <q-btn flat label="Register" @click="$router.push('/join')" />
         </template>
       </q-toolbar>
     </q-header>
@@ -62,29 +57,40 @@
   </q-layout>
 </template>
 
-<script setup>
+<script>
 import { ref } from 'vue';
 import links from './links.js';
 
-defineOptions({
-  name: 'MainLayout'
-});
-
-const leftDrawerOpen = ref(false);
-
-function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
-}
-
-function onLoginClick() {
-  // Handle login click
-}
-
-function onRegisterClick() {
-  // Handle register click
-}
-
-
+export default {
+  name: 'MainLayout',
+  data() {
+    return {
+      leftDrawerOpen: false,
+      links: links,
+      loginSession: null, // Assume this would be replaced by actual login session logic
+    };
+  },
+  computed: {
+    loginSession() {
+      LoginSession
+      return LoginSession.query().withAllRecursive().first()
+    },
+  },
+  methods: {
+    toggleLeftDrawer() {
+      this.leftDrawerOpen = !this.leftDrawerOpen;
+    },
+    onLoginClick() {
+      // Handle login click
+    },
+    onRegisterClick() {
+      // Handle register click
+    },
+    logout() {
+      // Handle logout logic
+    },
+  },
+};
 </script>
 
 <style scoped>
