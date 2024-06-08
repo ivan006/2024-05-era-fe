@@ -2,7 +2,7 @@
   <q-page>
     <q-card class="q-pa-md">
       <q-form ref="form">
-        <h1 class="text-center">Join</h1>
+        <div class="text-h6">Join</div>
         <q-input
           v-model="entity.name"
           label="Full Name"
@@ -54,51 +54,56 @@
   </q-page>
 </template>
 
-<script setup>
-import { ref } from "vue";
-import User from "@/models/non-quicklist/User";
+<script>
+import User from "src/models/model-helpers/User";
 
-const entity = ref({});
-const loading = ref(false);
-const showPassword = ref(false);
-const showCPassword = ref(false);
-const errors = ref({});
-const itemEmpty = {
-  name: "",
-  email: "",
-  password: "",
-  c_password: "",
-};
-
-const setErrors = (rawErrors = {}) => {
-  for (const fieldKey in itemEmpty) {
-    if (rawErrors[fieldKey]) {
-      errors.value[fieldKey] = rawErrors[fieldKey][0];
-    } else {
-      errors.value[fieldKey] = null;
-    }
-  }
-};
-
-const join = () => {
-  if (this.$refs.form.validate()) {
-    loading.value = true;
-    User.Register(entity.value)
-      .then(() => {
-        loading.value = false;
-      })
-      .catch((errors) => {
-        if (errors.response && errors.response.data.errors) {
-          setErrors(errors.response.data.errors);
+export default {
+  name: "JoinView",
+  data() {
+    return {
+      entity: {},
+      loading: false,
+      showPassword: false,
+      showCPassword: false,
+      errors: {},
+      itemEmpty: {
+        name: "",
+        email: "",
+        password: "",
+        c_password: "",
+      },
+    };
+  },
+  methods: {
+    setErrors(rawErrors = {}) {
+      for (const fieldKey in this.itemEmpty) {
+        if (rawErrors[fieldKey]) {
+          this.errors[fieldKey] = rawErrors[fieldKey][0];
+        } else {
+          this.errors[fieldKey] = null;
         }
-        loading.value = false;
-      });
-  }
+      }
+    },
+    join() {
+      if (this.$refs.form.validate()) {
+        this.loading = true;
+        User.Register(this.entity)
+          .then(() => {
+            this.loading = false;
+          })
+          .catch((errors) => {
+            if (errors.response && errors.response.data.errors) {
+              this.setErrors(errors.response.data.errors);
+            }
+            this.loading = false;
+          });
+      }
+    },
+  },
+  mounted() {
+    this.setErrors();
+  },
 };
-
-onMounted(() => {
-  setErrors();
-});
 </script>
 
 <style scoped></style>

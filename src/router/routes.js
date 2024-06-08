@@ -8,12 +8,9 @@ const routes = [
       { path: '', component: () => import('pages/IndexPage.vue') },
 
       {
-        path: '/sign-in-up',
+        path: '/',
         name: '/sign-in-up',
-        component: () =>
-          import(
-            /* webpackChunkName: "/all-content" */ 'src/pages/EmptyLayout.vue'
-            ),
+        component: defineAsyncComponent(() => import('src/layouts/EmptyLayout.vue')),
         children: [
           {
             path: '/sign-in',

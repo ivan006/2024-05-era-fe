@@ -15,7 +15,7 @@
         <q-space />
 
         <template v-if="loginSession">
-          <q-btn flat label="Sign Out" @click="logout()" />
+          <q-btn flat label="Sign Out" @click="logout" />
         </template>
         <template v-else>
           <q-btn flat label="Login" @click="$router.push('/sign-in')" />
@@ -58,8 +58,9 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import VueCookies from 'vue-cookies';
 import links from './links.js';
+import LoginSession from "src/models/model-helpers/LoginSession.js";
 
 export default {
   name: 'MainLayout',
@@ -67,29 +68,22 @@ export default {
     return {
       leftDrawerOpen: false,
       links: links,
-      loginSession: null, // Assume this would be replaced by actual login session logic
     };
-  },
-  computed: {
-    loginSession() {
-      LoginSession
-      return LoginSession.query().withAllRecursive().first()
-    },
   },
   methods: {
     toggleLeftDrawer() {
       this.leftDrawerOpen = !this.leftDrawerOpen;
     },
-    onLoginClick() {
-      // Handle login click
-    },
-    onRegisterClick() {
-      // Handle register click
-    },
     logout() {
-      // Handle logout logic
+      VueCookies.remove('VITE_AUTH');
+      LoginSession.deleteAll();
     },
   },
+  computed: {
+    loginSession() {
+      return LoginSession.query().withAllRecursive().first();
+    }
+  }
 };
 </script>
 
