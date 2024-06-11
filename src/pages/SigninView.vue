@@ -11,6 +11,8 @@
             outlined
             dense
             :rules="[emailRule]"
+            autocomplete="email"
+            name="email"
           />
           <q-input
             v-model="form.password"
@@ -18,6 +20,8 @@
             type="password"
             outlined
             dense
+            autocomplete="password"
+            name="password"
           />
           <q-btn type="submit" block class="q-mt-md" :loading="loading" label="Submit" color="primary" />
         </template>

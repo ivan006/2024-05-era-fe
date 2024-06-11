@@ -6,7 +6,7 @@ const links =  [
   },
   {
     icon: '',
-    text: 'These ones tho',
+    text: 'List 1',
     subLinks: [
 
       {
@@ -59,7 +59,7 @@ const links =  [
   },
   {
     icon: '',
-    text: 'Lists',
+    text: 'List 2',
     subLinks: [
       {
         icon: '',
