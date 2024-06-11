@@ -85,7 +85,7 @@ export default class Address extends MyBaseModel {
             flags,
             this.mergeHeaders(moreHeaders),
             options,
-            this.adapator
+            this
         );
     }
 
@@ -96,7 +96,7 @@ export default class Address extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            this.adapator
+            this
         );
     }
 
@@ -107,7 +107,7 @@ export default class Address extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            this.adapator
+            this
         );
     }
 
@@ -126,7 +126,7 @@ export default class Address extends MyBaseModel {
         return this.customSupabaseApiDelete(
             `${this.baseUrl}${this.entityUrl}`,
             entityId,
-            this.adapator
+            this
         );
     }
 }

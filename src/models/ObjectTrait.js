@@ -72,7 +72,7 @@ export default class ObjectTrait extends MyBaseModel {
             flags,
             this.mergeHeaders(moreHeaders),
             options,
-            this.adapator
+            this
         );
     }
 
@@ -83,7 +83,7 @@ export default class ObjectTrait extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            this.adapator
+            this
         );
     }
 
@@ -94,7 +94,7 @@ export default class ObjectTrait extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            this.adapator
+            this
         );
     }
 
@@ -113,7 +113,7 @@ export default class ObjectTrait extends MyBaseModel {
         return this.customSupabaseApiDelete(
             `${this.baseUrl}${this.entityUrl}`,
             entityId,
-            this.adapator
+            this
         );
     }
 }

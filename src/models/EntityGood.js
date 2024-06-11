@@ -83,7 +83,7 @@ export default class EntityGood extends MyBaseModel {
             flags,
             this.mergeHeaders(moreHeaders),
             options,
-            this.adapator
+            this
         );
     }
 
@@ -94,7 +94,7 @@ export default class EntityGood extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            this.adapator
+            this
         );
     }
 
@@ -105,7 +105,7 @@ export default class EntityGood extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            this.adapator
+            this
         );
     }
 
@@ -124,7 +124,7 @@ export default class EntityGood extends MyBaseModel {
         return this.customSupabaseApiDelete(
             `${this.baseUrl}${this.entityUrl}`,
             entityId,
-            this.adapator
+            this
         );
     }
 }

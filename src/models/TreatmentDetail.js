@@ -68,7 +68,7 @@ export default class TreatmentDetail extends MyBaseModel {
             flags,
             this.mergeHeaders(moreHeaders),
             options,
-            this.adapator
+            this
         );
     }
 
@@ -79,7 +79,7 @@ export default class TreatmentDetail extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            this.adapator
+            this
         );
     }
 
@@ -90,7 +90,7 @@ export default class TreatmentDetail extends MyBaseModel {
             [...this.parentWithables, ...relationships],
             flags,
             this.mergeHeaders(moreHeaders),
-            this.adapator
+            this
         );
     }
 
@@ -109,7 +109,7 @@ export default class TreatmentDetail extends MyBaseModel {
         return this.customSupabaseApiDelete(
             `${this.baseUrl}${this.entityUrl}`,
             entityId,
-            this.adapator
+            this
         );
     }
 }
