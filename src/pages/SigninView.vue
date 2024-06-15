@@ -60,7 +60,14 @@ export default {
       this.loading = true;
       LoginSession.signIn(this.form)
         .then((response) => {
-          VueCookies.set("VITE_AUTH", response.response.data, "2h");
+          const sessionData = response.response.data;
+          const expireDate = new Date();
+          expireDate.setDate(expireDate.getDate() + 7); // Set the expiration date to 7 days from now
+
+          sessionData.expireDate = expireDate.toISOString(); // Add the expiration date to the session data
+
+          VueCookies.set('VITE_AUTH', sessionData, '7d');
+
           this.loading = false;
         })
         .catch(() => {

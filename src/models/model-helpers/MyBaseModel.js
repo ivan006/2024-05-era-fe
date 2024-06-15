@@ -12,12 +12,13 @@ export default class DBEvent extends DBBaseModel {
     };
 
     const VITE_AUTH = VueCookies.get('VITE_AUTH');
+
     if (VITE_AUTH?.token) {
       const expireDate = new Date(VITE_AUTH.expireDate);
       const currentDate = new Date();
 
       if (currentDate <= expireDate) {
-        result['Authorization'] = `Bearer ${VITE_AUTH.accessToken}`;
+        result['Authorization'] = `Bearer ${VITE_AUTH.token}`;
       }
     }
 

@@ -36,6 +36,7 @@ export default class LoginSession extends MyBaseModel {
         return {
             'user': this.attr(''),
             'token': this.attr(''),
+            'expireDate': this.attr(''),
         };
     }
 
