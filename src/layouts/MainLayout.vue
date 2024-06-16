@@ -52,7 +52,9 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <div class="q-pa-md container-md">
+        <router-view />
+      </div>
     </q-page-container>
   </q-layout>
 </template>
@@ -83,12 +85,73 @@ export default {
     loginSession() {
       return LoginSession.query().withAllRecursive().first();
     }
+  },
+  mounted(){
+    const VITE_AUTH = VueCookies.get('VITE_AUTH')
+    if (VITE_AUTH) {
+      LoginSession.deleteAll()
+      LoginSession.insert({
+        data: VITE_AUTH,
+      })
+    }
   }
 };
 </script>
 
-<style scoped>
-.day-cell {
-  cursor: pointer;
+<style lang="scss">
+//.day-cell {
+//  cursor: pointer;
+//}
+
+
+// breakpoint variable, from https://quasar.dev/style/breakpoints
+// Except the xs one because I think 600px is too small
+$xs-breakpoint: 718px;
+$sm-breakpoint: 1024px;
+$md-breakpoint: 1439px;
+$lg-breakpoint: 1920px;
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $xs-breakpoint) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: $sm-breakpoint) {
+  .container,
+  .container-sm,
+  .container-md {
+    max-width: 920px;
+  }
+}
+
+@media (min-width: $md-breakpoint) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: $lg-breakpoint) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1440px;
+  }
 }
 </style>
