@@ -15,7 +15,7 @@ export default class SystemConfiguration extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -35,7 +35,7 @@ export default class SystemConfiguration extends MyBaseModel {
             'Id': this.attr(''),
             'Name': this.attr(''),
             'Value': this.attr(''),
-
+            
         };
     }
 

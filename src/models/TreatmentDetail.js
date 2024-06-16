@@ -16,7 +16,7 @@ export default class TreatmentDetail extends MyBaseModel {
     }
 
     static parentWithables = [
-        'serviceRequestReportRel'
+        'service_request_report_rel'
     ];
 
     static rules = {
@@ -48,7 +48,7 @@ export default class TreatmentDetail extends MyBaseModel {
             'Energy': this.attr(''),
             'Landfill': this.attr(''),
             'LocalSecondaryProducts': this.attr(''),
-            'serviceRequestReportRel': this.belongsTo(ServiceRequestReport, 'ServiceRequestReport'),
+            'service_request_report_rel': this.belongsTo(ServiceRequestReport, 'ServiceRequestReport'),
             'servicerequestreports': this.hasMany(ServiceRequestReport, 'TreatmentDetails')
         };
     }

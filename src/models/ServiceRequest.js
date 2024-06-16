@@ -19,8 +19,8 @@ export default class ServiceRequest extends MyBaseModel {
     }
 
     static parentWithables = [
-        'serviceProviderRel',
-        'createdByRel'
+        'service_provider_rel',
+        'created_by_rel'
     ];
 
     static rules = {
@@ -56,8 +56,8 @@ export default class ServiceRequest extends MyBaseModel {
             'Locations': this.attr(''),
             'Deliverables': this.attr(''),
             'DeliveryDate': this.attr(''),
-            'serviceProviderRel': this.belongsTo(Entity, 'ServiceProvider'),
-            'createdByRel': this.belongsTo(SystemUser, 'CreatedBy'),
+            'service_provider_rel': this.belongsTo(Entity, 'ServiceProvider'),
+            'created_by_rel': this.belongsTo(SystemUser, 'CreatedBy'),
             'servicerequestfrequencies': this.hasMany(ServiceRequestFrequency, 'ServiceRequest'),
             'servicerequestreports': this.hasMany(ServiceRequestReport, 'ServiceRequest')
         };

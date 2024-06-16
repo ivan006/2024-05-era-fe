@@ -20,10 +20,10 @@ export default class ServiceRequestReport extends MyBaseModel {
     }
 
     static parentWithables = [
-        'serviceRequestRel',
-        'serviceProviderRel',
-        'createdByRel',
-        'treatmentDetail'
+        'service_request_rel',
+        'service_provider_rel',
+        'created_by_rel',
+        'treatment_detail'
     ];
 
     static rules = {
@@ -55,10 +55,10 @@ export default class ServiceRequestReport extends MyBaseModel {
             'ReportDate': this.attr(''),
             'Approved': this.attr(''),
             'Rejected': this.attr(''),
-            'serviceRequestRel': this.belongsTo(ServiceRequest, 'ServiceRequest'),
-            'serviceProviderRel': this.belongsTo(Entity, 'ServiceProvider'),
-            'createdByRel': this.belongsTo(SystemUser, 'CreatedBy'),
-            'treatmentDetail': this.belongsTo(TreatmentDetail, 'TreatmentDetails'),
+            'service_request_rel': this.belongsTo(ServiceRequest, 'ServiceRequest'),
+            'service_provider_rel': this.belongsTo(Entity, 'ServiceProvider'),
+            'created_by_rel': this.belongsTo(SystemUser, 'CreatedBy'),
+            'treatment_detail': this.belongsTo(TreatmentDetail, 'TreatmentDetails'),
             'externalproducers': this.hasMany(ExternalProducer, 'ServiceRequestReport'),
             'treatmentdetailsServiceRequestReport': this.hasMany(TreatmentDetail, 'ServiceRequestReport')
         };

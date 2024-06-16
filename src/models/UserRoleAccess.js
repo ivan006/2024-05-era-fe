@@ -15,7 +15,7 @@ export default class UserRoleAccess extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -45,7 +45,7 @@ export default class UserRoleAccess extends MyBaseModel {
             'ChangedBy': this.attr(''),
             'FbId': this.attr(''),
             'Rule': this.attr(''),
-
+            
         };
     }
 

@@ -16,7 +16,7 @@ export default class ContactNumber extends MyBaseModel {
     }
 
     static parentWithables = [
-        'typeRel'
+        'type_rel'
     ];
 
     static rules = {
@@ -40,7 +40,7 @@ export default class ContactNumber extends MyBaseModel {
             'Type': this.attr(''),
             'Person': this.attr(''),
             'Preferred': this.attr(''),
-            'typeRel': this.belongsTo(SystemCode, 'Type')
+            'type_rel': this.belongsTo(SystemCode, 'Type')
         };
     }
 

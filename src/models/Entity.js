@@ -21,7 +21,7 @@ export default class Entity extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {

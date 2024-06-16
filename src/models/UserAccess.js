@@ -18,9 +18,9 @@ export default class UserAccess extends MyBaseModel {
     }
 
     static parentWithables = [
-        'systemUserRel',
-        'userRoleRel',
-        'systemActionRel'
+        'system_user_rel',
+        'user_role_rel',
+        'system_action_rel'
     ];
 
     static rules = {
@@ -54,9 +54,9 @@ export default class UserAccess extends MyBaseModel {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'FbId': this.attr(''),
-            'systemActionRel': this.belongsTo(SystemAction, 'SystemAction'),
-            'systemUserRel': this.belongsTo(SystemUser, 'SystemUser'),
-            'userRoleRel': this.belongsTo(UserRole, 'UserRole')
+            'system_action_rel': this.belongsTo(SystemAction, 'SystemAction'),
+            'system_user_rel': this.belongsTo(SystemUser, 'SystemUser'),
+            'user_role_rel': this.belongsTo(UserRole, 'UserRole')
         };
     }
 

@@ -17,8 +17,8 @@ export default class ServiceRequestFrequency extends MyBaseModel {
     }
 
     static parentWithables = [
-        'serviceRequestRel',
-        'reportFrequencyRel'
+        'service_request_rel',
+        'report_frequency_rel'
     ];
 
     static rules = {
@@ -40,8 +40,8 @@ export default class ServiceRequestFrequency extends MyBaseModel {
             'ServiceRequest': this.attr(''),
             'ReportFrequency': this.attr(''),
             'Active': this.attr(''),
-            'serviceRequestRel': this.belongsTo(ServiceRequest, 'ServiceRequest'),
-            'reportFrequencyRel': this.belongsTo(SystemCode, 'ReportFrequency')
+            'service_request_rel': this.belongsTo(ServiceRequest, 'ServiceRequest'),
+            'report_frequency_rel': this.belongsTo(SystemCode, 'ReportFrequency')
         };
     }
 

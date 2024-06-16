@@ -15,7 +15,7 @@ export default class EntityRelationship extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -51,7 +51,7 @@ export default class EntityRelationship extends MyBaseModel {
             'EntityBQualifier': this.attr(''),
             'EntityALevel': this.attr(''),
             'EntityBLevel': this.attr(''),
-
+            
         };
     }
 

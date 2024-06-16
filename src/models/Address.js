@@ -16,8 +16,8 @@ export default class Address extends MyBaseModel {
     }
 
     static parentWithables = [
-        'countryRel',
-        'typeRel'
+        'country_rel',
+        'type_rel'
     ];
 
     static rules = {
@@ -65,8 +65,8 @@ export default class Address extends MyBaseModel {
             'Dispatch': this.attr(''),
             'Latitude': this.attr(''),
             'Longitude': this.attr(''),
-            'countryRel': this.belongsTo(SystemCode, 'Country'),
-            'typeRel': this.belongsTo(SystemCode, 'Type')
+            'country_rel': this.belongsTo(SystemCode, 'Country'),
+            'type_rel': this.belongsTo(SystemCode, 'Type')
         };
     }
 

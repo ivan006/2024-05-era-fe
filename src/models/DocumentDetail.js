@@ -16,7 +16,7 @@ export default class DocumentDetail extends MyBaseModel {
     }
 
     static parentWithables = [
-        'documentRel'
+        'document_rel'
     ];
 
     static rules = {
@@ -50,7 +50,7 @@ export default class DocumentDetail extends MyBaseModel {
             'Style': this.attr(''),
             'CreatedBy': this.attr(''),
             'CreatedOn': this.attr(''),
-            'documentRel': this.belongsTo(Document, 'Document')
+            'document_rel': this.belongsTo(Document, 'Document')
         };
     }
 

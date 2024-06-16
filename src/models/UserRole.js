@@ -16,7 +16,7 @@ export default class UserRole extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {

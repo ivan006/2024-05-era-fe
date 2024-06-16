@@ -17,8 +17,8 @@ export default class UserConfiguration extends MyBaseModel {
     }
 
     static parentWithables = [
-        'systemUserRel',
-        'languageRel'
+        'system_user_rel',
+        'language_rel'
     ];
 
     static rules = {
@@ -38,8 +38,8 @@ export default class UserConfiguration extends MyBaseModel {
             'SystemUser': this.attr(''),
             'Language': this.attr(''),
             'FbId': this.attr(''),
-            'languageRel': this.belongsTo(SystemCode, 'Language'),
-            'systemUserRel': this.belongsTo(SystemUser, 'SystemUser')
+            'language_rel': this.belongsTo(SystemCode, 'Language'),
+            'system_user_rel': this.belongsTo(SystemUser, 'SystemUser')
         };
     }
 

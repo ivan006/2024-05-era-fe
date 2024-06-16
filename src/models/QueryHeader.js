@@ -16,7 +16,7 @@ export default class QueryHeader extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {

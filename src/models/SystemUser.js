@@ -23,7 +23,7 @@ export default class SystemUser extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {

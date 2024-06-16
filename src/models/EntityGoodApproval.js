@@ -18,10 +18,10 @@ export default class EntityGoodApproval extends MyBaseModel {
     }
 
     static parentWithables = [
-        'approvedByRel',
-        'invoiceApprovedByRel',
-        'entityRel',
-        'queryRel'
+        'approved_by_rel',
+        'invoice_approved_by_rel',
+        'entity_rel',
+        'query_rel'
     ];
 
     static rules = {
@@ -61,10 +61,10 @@ export default class EntityGoodApproval extends MyBaseModel {
             'UseVAT': this.attr(''),
             'Query': this.attr(''),
             'Status': this.attr(''),
-            'approvedByRel': this.belongsTo(Entity, 'ApprovedBy'),
-            'invoiceApprovedByRel': this.belongsTo(Entity, 'InvoiceApprovedBy'),
-            'queryRel': this.belongsTo(QueryHeader, 'Query'),
-            'entityRel': this.belongsTo(Entity, 'Entity'),
+            'approved_by_rel': this.belongsTo(Entity, 'ApprovedBy'),
+            'invoice_approved_by_rel': this.belongsTo(Entity, 'InvoiceApprovedBy'),
+            'query_rel': this.belongsTo(QueryHeader, 'Query'),
+            'entity_rel': this.belongsTo(Entity, 'Entity'),
             'entitygoods': this.hasMany(EntityGood, 'Invoice')
         };
     }

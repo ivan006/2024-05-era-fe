@@ -16,7 +16,7 @@ export default class EntityAudit extends MyBaseModel {
     }
 
     static parentWithables = [
-        'systemUserRel'
+        'system_user_rel'
     ];
 
     static rules = {
@@ -44,7 +44,7 @@ export default class EntityAudit extends MyBaseModel {
             'SystemUser': this.attr(''),
             'Changes': this.attr(''),
             'Audit_TS': this.attr(''),
-            'systemUserRel': this.belongsTo(SystemUser, 'SystemUser')
+            'system_user_rel': this.belongsTo(SystemUser, 'SystemUser')
         };
     }
 

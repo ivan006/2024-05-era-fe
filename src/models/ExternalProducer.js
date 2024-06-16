@@ -16,7 +16,7 @@ export default class ExternalProducer extends MyBaseModel {
     }
 
     static parentWithables = [
-        'serviceRequestReportRel'
+        'service_request_report_rel'
     ];
 
     static rules = {
@@ -36,7 +36,7 @@ export default class ExternalProducer extends MyBaseModel {
             'Id': this.attr(''),
             'Name': this.attr(''),
             'ServiceRequestReport': this.attr(''),
-            'serviceRequestReportRel': this.belongsTo(ServiceRequestReport, 'ServiceRequestReport')
+            'service_request_report_rel': this.belongsTo(ServiceRequestReport, 'ServiceRequestReport')
         };
     }
 

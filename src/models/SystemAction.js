@@ -16,7 +16,7 @@ export default class SystemAction extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {

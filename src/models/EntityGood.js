@@ -18,9 +18,9 @@ export default class EntityGood extends MyBaseModel {
     }
 
     static parentWithables = [
-        'entityRel',
-        'goodRel',
-        'invoiceRel'
+        'entity_rel',
+        'good_rel',
+        'invoice_rel'
     ];
 
     static rules = {
@@ -62,9 +62,9 @@ export default class EntityGood extends MyBaseModel {
             'WasteClass': this.attr(''),
             'Period': this.attr(''),
             'Invoice': this.attr(''),
-            'entityRel': this.belongsTo(Entity, 'Entity'),
-            'invoiceRel': this.belongsTo(EntityGoodApproval, 'Invoice'),
-            'goodRel': this.belongsTo(Good, 'Good')
+            'entity_rel': this.belongsTo(Entity, 'Entity'),
+            'invoice_rel': this.belongsTo(EntityGoodApproval, 'Invoice'),
+            'good_rel': this.belongsTo(Good, 'Good')
         };
     }
 

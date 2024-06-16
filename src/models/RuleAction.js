@@ -15,7 +15,7 @@ export default class RuleAction extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -47,7 +47,7 @@ export default class RuleAction extends MyBaseModel {
             'Description': this.attr(''),
             'ResultSystemCode': this.attr(''),
             'NegativeSystemCode': this.attr(''),
-
+            
         };
     }
 

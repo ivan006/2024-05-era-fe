@@ -16,7 +16,7 @@ export default class UserDevice extends MyBaseModel {
     }
 
     static parentWithables = [
-        'systemUserRel'
+        'system_user_rel'
     ];
 
     static rules = {
@@ -40,7 +40,7 @@ export default class UserDevice extends MyBaseModel {
             'Name': this.attr(''),
             'LastUsed': this.attr(''),
             'FbId': this.attr(''),
-            'systemUserRel': this.belongsTo(SystemUser, 'SystemUser')
+            'system_user_rel': this.belongsTo(SystemUser, 'SystemUser')
         };
     }
 

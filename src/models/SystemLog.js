@@ -15,7 +15,7 @@ export default class SystemLog extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -47,7 +47,7 @@ export default class SystemLog extends MyBaseModel {
             'Message': this.attr(''),
             'Exception': this.attr(''),
             'StackTrace': this.attr(''),
-
+            
         };
     }
 

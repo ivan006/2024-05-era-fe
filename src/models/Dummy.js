@@ -15,7 +15,7 @@ export default class Dummy extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -31,7 +31,7 @@ export default class Dummy extends MyBaseModel {
     static fields() {
         return {
             'textData': this.attr(''),
-
+            
         };
     }
 

@@ -16,7 +16,7 @@ export default class Document extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {

@@ -15,7 +15,7 @@ export default class EntityEvent extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -41,7 +41,7 @@ export default class EntityEvent extends MyBaseModel {
             'Event': this.attr(''),
             'Date': this.attr(''),
             'Instance': this.attr(''),
-
+            
         };
     }
 

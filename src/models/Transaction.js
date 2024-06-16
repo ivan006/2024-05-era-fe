@@ -16,7 +16,7 @@ export default class Transaction extends MyBaseModel {
     }
 
     static parentWithables = [
-        'typeRel'
+        'type_rel'
     ];
 
     static rules = {
@@ -58,7 +58,7 @@ export default class Transaction extends MyBaseModel {
             'Period': this.attr(''),
             'Reference': this.attr(''),
             'Type': this.attr(''),
-            'typeRel': this.belongsTo(SystemCode, 'Type')
+            'type_rel': this.belongsTo(SystemCode, 'Type')
         };
     }
 

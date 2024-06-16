@@ -15,7 +15,7 @@ export default class Rule extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -39,7 +39,7 @@ export default class Rule extends MyBaseModel {
             'Description': this.attr(''),
             'RuleType': this.attr(''),
             'NextRule': this.attr(''),
-
+            
         };
     }
 

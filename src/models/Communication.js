@@ -16,7 +16,7 @@ export default class Communication extends MyBaseModel {
     }
 
     static parentWithables = [
-        'sentByRel'
+        'sent_by_rel'
     ];
 
     static rules = {
@@ -48,7 +48,7 @@ export default class Communication extends MyBaseModel {
             'Content': this.attr(''),
             'RelativeName': this.attr(''),
             'RelativeID': this.attr(''),
-            'sentByRel': this.belongsTo(SystemUser, 'SentBy')
+            'sent_by_rel': this.belongsTo(SystemUser, 'SentBy')
         };
     }
 

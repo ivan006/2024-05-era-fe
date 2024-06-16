@@ -22,7 +22,7 @@ export default class SystemCode extends MyBaseModel {
     }
 
     static parentWithables = [
-        'entityRel'
+        'entity_rel'
     ];
 
     static rules = {
@@ -64,7 +64,7 @@ export default class SystemCode extends MyBaseModel {
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
             'Entity': this.attr(''),
-            'entityRel': this.belongsTo(Entity, 'Entity'),
+            'entity_rel': this.belongsTo(Entity, 'Entity'),
             'addresses': this.hasMany(Address, 'Country'),
             'addresses': this.hasMany(Address, 'Type'),
             'contactnumbers': this.hasMany(ContactNumber, 'Type'),

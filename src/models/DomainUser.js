@@ -16,7 +16,7 @@ export default class DomainUser extends MyBaseModel {
     }
 
     static parentWithables = [
-        'systemUserRel'
+        'system_user_rel'
     ];
 
     static rules = {
@@ -44,7 +44,7 @@ export default class DomainUser extends MyBaseModel {
             'CreatedBy': this.attr(''),
             'ChangedOn': this.attr(''),
             'ChangedBy': this.attr(''),
-            'systemUserRel': this.belongsTo(SystemUser, 'SystemUser')
+            'system_user_rel': this.belongsTo(SystemUser, 'SystemUser')
         };
     }
 

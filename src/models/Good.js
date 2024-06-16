@@ -17,7 +17,7 @@ export default class Good extends MyBaseModel {
     }
 
     static parentWithables = [
-        'sectorRel'
+        'sector_rel'
     ];
 
     static rules = {
@@ -53,7 +53,7 @@ export default class Good extends MyBaseModel {
             'HazardSubstance': this.attr(''),
             'Dimension': this.attr(''),
             'Sector': this.attr(''),
-            'sectorRel': this.belongsTo(Entity, 'Sector'),
+            'sector_rel': this.belongsTo(Entity, 'Sector'),
             'entitygoods': this.hasMany(EntityGood, 'Good')
         };
     }

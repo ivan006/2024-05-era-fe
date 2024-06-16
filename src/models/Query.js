@@ -15,7 +15,7 @@ export default class Query extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -45,7 +45,7 @@ export default class Query extends MyBaseModel {
             'CreatedOn': this.attr(''),
             'ClosedOn': this.attr(''),
             'ClosedBy': this.attr(''),
-
+            
         };
     }
 

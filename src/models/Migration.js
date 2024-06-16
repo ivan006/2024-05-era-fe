@@ -15,7 +15,7 @@ export default class Migration extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -35,7 +35,7 @@ export default class Migration extends MyBaseModel {
             'id': this.attr(''),
             'migration': this.attr(''),
             'batch': this.attr(''),
-
+            
         };
     }
 

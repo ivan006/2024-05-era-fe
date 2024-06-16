@@ -15,7 +15,7 @@ export default class ObjectTrait extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
@@ -53,7 +53,7 @@ export default class ObjectTrait extends MyBaseModel {
             'IsHidden': this.attr(''),
             'SystemCodeContext': this.attr(''),
             'SystemCodeField': this.attr(''),
-
+            
         };
     }
 
