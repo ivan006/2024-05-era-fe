@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { SuperTable } from 'quicklists-vue-orm-ui-2'
+import { SuperTable } from 'quicklists-vue-orm-ui'
 import RuleActionDatum from 'src/models/RuleActionDatum'
 import router from 'src/router'
 

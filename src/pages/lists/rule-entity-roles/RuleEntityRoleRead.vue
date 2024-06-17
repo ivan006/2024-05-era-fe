@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { SuperRecord } from 'quicklists-vue-orm-ui-2'
+import { SuperRecord } from 'quicklists-vue-orm-ui'
 import RuleEntityRole from 'src/models/RuleEntityRole'
 
 export default {
