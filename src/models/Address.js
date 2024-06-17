@@ -25,6 +25,7 @@ export default class Address extends MyBaseModel {
         readables: (user) => true,
         readable: (user, item) => true,
         editable: (user, item) => true,
+        creatable: (user) => true,
     };
 
     static fieldsMetadata = {

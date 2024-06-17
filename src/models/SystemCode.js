@@ -30,6 +30,7 @@ export default class SystemCode extends MyBaseModel {
         readables: (user) => true,
         readable: (user, item) => true,
         editable: (user, item) => true,
+        creatable: (user) => true,
     };
 
     static fieldsMetadata = {

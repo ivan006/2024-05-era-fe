@@ -11,7 +11,7 @@ export default class Entity extends MyBaseModel {
     static entity = 'entity';
     static entityUrl = '/api/entities';
     static primaryKey = 'Id';
-    static titleKey = 'Name';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/entities/:rId',
@@ -22,13 +22,14 @@ export default class Entity extends MyBaseModel {
     }
 
     static parentWithables = [
-
+        
     ];
 
     static rules = {
         readables: (user) => true,
         readable: (user, item) => true,
         editable: (user, item) => true,
+        creatable: (user) => true,
     };
 
     static fieldsMetadata = {
