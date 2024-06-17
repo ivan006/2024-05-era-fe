@@ -11,7 +11,7 @@ export default class Entity extends MyBaseModel {
     static entity = 'entity';
     static entityUrl = '/api/entities';
     static primaryKey = 'Id';
-    static titleKey = 'Id';
+    static titleKey = 'Name';
     static openRecord(pKey){
       router.push({
         name: '/lists/entities/:rId',
@@ -22,7 +22,7 @@ export default class Entity extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
