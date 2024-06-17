@@ -37,7 +37,7 @@
       }
     },
     "../2024-05-vue-orm-ui": {
-      "name": "quicklists-vue-orm-ui-2",
+      "name": "quicklists-vue-orm-ui",
       "version": "1.0.8",
       "extraneous": true,
       "license": "UNLICENSED",
