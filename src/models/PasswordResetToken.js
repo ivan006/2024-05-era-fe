@@ -1,14 +1,14 @@
 import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
 import router from 'src/router';
 
-export default class EntityRelationship extends MyBaseModel {
-    static entity = 'entityrelationship';
-    static entityUrl = '/api/entity-relationships';
-    static primaryKey = 'Id';
-    static titleKey = 'Id';
+export default class PasswordResetToken extends MyBaseModel {
+    static entity = 'passwordresettoken';
+    static entityUrl = '/api/password-reset-tokens';
+    static primaryKey = 'email';
+    static titleKey = 'email';
     static openRecord(pKey){
       router.push({
-        name: '/lists/entity-relationships/:rId',
+        name: '/lists/password-reset-tokens/:rId',
         params: {
           rId: pKey,
         },
@@ -26,32 +26,16 @@ export default class EntityRelationship extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': {},
-            'EntityA': {},
-            'EntityB': {},
-            'EntityARelationship': {},
-            'EntityBRelationship': {},
-            'EntityAStatus': {},
-            'EntityBStatus': {},
-            'EntityAQualifier': {},
-            'EntityBQualifier': {},
-            'EntityALevel': {},
-            'EntityBLevel': {}
+        'email': {},
+            'token': {},
+            'created_at': {}
     };
 
     static fields() {
         return {
-            'Id': this.attr(''),
-            'EntityA': this.attr(''),
-            'EntityB': this.attr(''),
-            'EntityARelationship': this.attr(''),
-            'EntityBRelationship': this.attr(''),
-            'EntityAStatus': this.attr(''),
-            'EntityBStatus': this.attr(''),
-            'EntityAQualifier': this.attr(''),
-            'EntityBQualifier': this.attr(''),
-            'EntityALevel': this.attr(''),
-            'EntityBLevel': this.attr(''),
+            'email': this.attr(''),
+            'token': this.attr(''),
+            'created_at': this.attr(''),
             
         };
     }

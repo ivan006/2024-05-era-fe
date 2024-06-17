@@ -6,6 +6,7 @@ export default class EntityAudit extends MyBaseModel {
     static entity = 'entityaudit';
     static entityUrl = '/api/entity-audits';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/entity-audits/:rId',

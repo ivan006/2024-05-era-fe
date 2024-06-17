@@ -1,14 +1,14 @@
 import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
 import router from 'src/router';
 
-export default class EntityRelationship extends MyBaseModel {
-    static entity = 'entityrelationship';
-    static entityUrl = '/api/entity-relationships';
-    static primaryKey = 'Id';
-    static titleKey = 'Id';
+export default class Tag extends MyBaseModel {
+    static entity = 'tag';
+    static entityUrl = '/api/tags';
+    static primaryKey = 'id';
+    static titleKey = 'id';
     static openRecord(pKey){
       router.push({
-        name: '/lists/entity-relationships/:rId',
+        name: '/lists/tags/:rId',
         params: {
           rId: pKey,
         },
@@ -26,32 +26,18 @@ export default class EntityRelationship extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': {},
-            'EntityA': {},
-            'EntityB': {},
-            'EntityARelationship': {},
-            'EntityBRelationship': {},
-            'EntityAStatus': {},
-            'EntityBStatus': {},
-            'EntityAQualifier': {},
-            'EntityBQualifier': {},
-            'EntityALevel': {},
-            'EntityBLevel': {}
+        'id': {},
+            'created_at': {},
+            'updated_at': {},
+            'name': {}
     };
 
     static fields() {
         return {
-            'Id': this.attr(''),
-            'EntityA': this.attr(''),
-            'EntityB': this.attr(''),
-            'EntityARelationship': this.attr(''),
-            'EntityBRelationship': this.attr(''),
-            'EntityAStatus': this.attr(''),
-            'EntityBStatus': this.attr(''),
-            'EntityAQualifier': this.attr(''),
-            'EntityBQualifier': this.attr(''),
-            'EntityALevel': this.attr(''),
-            'EntityBLevel': this.attr(''),
+            'id': this.attr(''),
+            'created_at': this.attr(''),
+            'updated_at': this.attr(''),
+            'name': this.attr(''),
             
         };
     }

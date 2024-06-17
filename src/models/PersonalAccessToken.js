@@ -1,14 +1,14 @@
 import MyBaseModel from 'src/models/model-helpers/MyBaseModel';
 import router from 'src/router';
 
-export default class EntityRelationship extends MyBaseModel {
-    static entity = 'entityrelationship';
-    static entityUrl = '/api/entity-relationships';
-    static primaryKey = 'Id';
-    static titleKey = 'Id';
+export default class PersonalAccessToken extends MyBaseModel {
+    static entity = 'personalaccesstoken';
+    static entityUrl = '/api/personal-access-tokens';
+    static primaryKey = 'id';
+    static titleKey = 'id';
     static openRecord(pKey){
       router.push({
-        name: '/lists/entity-relationships/:rId',
+        name: '/lists/personal-access-tokens/:rId',
         params: {
           rId: pKey,
         },
@@ -26,32 +26,30 @@ export default class EntityRelationship extends MyBaseModel {
     };
 
     static fieldsMetadata = {
-        'Id': {},
-            'EntityA': {},
-            'EntityB': {},
-            'EntityARelationship': {},
-            'EntityBRelationship': {},
-            'EntityAStatus': {},
-            'EntityBStatus': {},
-            'EntityAQualifier': {},
-            'EntityBQualifier': {},
-            'EntityALevel': {},
-            'EntityBLevel': {}
+        'id': {},
+            'tokenable_type': {},
+            'tokenable_id': {},
+            'name': {},
+            'token': {},
+            'abilities': {},
+            'last_used_at': {},
+            'expires_at': {},
+            'created_at': {},
+            'updated_at': {}
     };
 
     static fields() {
         return {
-            'Id': this.attr(''),
-            'EntityA': this.attr(''),
-            'EntityB': this.attr(''),
-            'EntityARelationship': this.attr(''),
-            'EntityBRelationship': this.attr(''),
-            'EntityAStatus': this.attr(''),
-            'EntityBStatus': this.attr(''),
-            'EntityAQualifier': this.attr(''),
-            'EntityBQualifier': this.attr(''),
-            'EntityALevel': this.attr(''),
-            'EntityBLevel': this.attr(''),
+            'id': this.attr(''),
+            'tokenable_type': this.attr(''),
+            'tokenable_id': this.attr(''),
+            'name': this.attr(''),
+            'token': this.attr(''),
+            'abilities': this.attr(''),
+            'last_used_at': this.attr(''),
+            'expires_at': this.attr(''),
+            'created_at': this.attr(''),
+            'updated_at': this.attr(''),
             
         };
     }

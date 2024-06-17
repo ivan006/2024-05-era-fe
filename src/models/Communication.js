@@ -6,6 +6,7 @@ export default class Communication extends MyBaseModel {
     static entity = 'communication';
     static entityUrl = '/api/communications';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/communications/:rId',

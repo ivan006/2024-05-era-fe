@@ -5,6 +5,7 @@ export default class RuleActionDatum extends MyBaseModel {
     static entity = 'ruleactiondatum';
     static entityUrl = '/api/rule-action-datas';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/rule-action-datas/:rId',

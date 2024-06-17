@@ -5,6 +5,7 @@ export default class PasswordHash extends MyBaseModel {
     static entity = 'passwordhash';
     static entityUrl = '/api/password-hashes';
     static primaryKey = 'SystemUser';
+    static titleKey = 'SystemUser';
     static openRecord(pKey){
       router.push({
         name: '/lists/password-hashes/:rId',

@@ -9,6 +9,7 @@ export default class ServiceRequest extends MyBaseModel {
     static entity = 'servicerequest';
     static entityUrl = '/api/service-requests';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/service-requests/:rId',

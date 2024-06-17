@@ -8,6 +8,7 @@ export default class EntityGoodApproval extends MyBaseModel {
     static entity = 'entitygoodapproval';
     static entityUrl = '/api/entity-good-approvals';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/entity-good-approvals/:rId',

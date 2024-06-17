@@ -5,6 +5,7 @@ export default class InstanceNo extends MyBaseModel {
     static entity = 'instanceno';
     static entityUrl = '/api/instance-nos';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/instance-nos/:rId',

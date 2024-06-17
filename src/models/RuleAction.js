@@ -5,6 +5,7 @@ export default class RuleAction extends MyBaseModel {
     static entity = 'ruleaction';
     static entityUrl = '/api/rule-actions';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/rule-actions/:rId',

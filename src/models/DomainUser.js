@@ -6,6 +6,7 @@ export default class DomainUser extends MyBaseModel {
     static entity = 'domainuser';
     static entityUrl = '/api/domain-users';
     static primaryKey = 'SystemUser';
+    static titleKey = 'SystemUser';
     static openRecord(pKey){
       router.push({
         name: '/lists/domain-users/:rId',

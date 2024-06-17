@@ -5,6 +5,7 @@ export default class Relative extends MyBaseModel {
     static entity = 'relative';
     static entityUrl = '/api/relatives';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/relatives/:rId',

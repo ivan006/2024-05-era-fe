@@ -6,6 +6,7 @@ export default class ExternalProducer extends MyBaseModel {
     static entity = 'externalproducer';
     static entityUrl = '/api/external-producers';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/external-producers/:rId',

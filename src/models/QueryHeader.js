@@ -6,6 +6,7 @@ export default class QueryHeader extends MyBaseModel {
     static entity = 'queryheader';
     static entityUrl = '/api/query-headers';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/query-headers/:rId',

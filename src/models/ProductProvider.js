@@ -5,6 +5,7 @@ export default class ProductProvider extends MyBaseModel {
     static entity = 'productprovider';
     static entityUrl = '/api/product-providers';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/product-providers/:rId',

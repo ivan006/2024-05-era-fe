@@ -5,6 +5,7 @@ export default class Object extends MyBaseModel {
     static entity = 'object';
     static entityUrl = '/api/objects';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/objects/:rId',

@@ -6,6 +6,7 @@ export default class DocumentDetail extends MyBaseModel {
     static entity = 'documentdetail';
     static entityUrl = '/api/document-details';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/document-details/:rId',

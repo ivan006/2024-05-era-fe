@@ -5,6 +5,7 @@ export default class SystemLog extends MyBaseModel {
     static entity = 'systemlog';
     static entityUrl = '/api/system-logs';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/system-logs/:rId',

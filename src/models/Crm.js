@@ -5,6 +5,7 @@ export default class Crm extends MyBaseModel {
     static entity = 'crm';
     static entityUrl = '/api/crms';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/crms/:rId',

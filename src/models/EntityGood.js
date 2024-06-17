@@ -8,6 +8,7 @@ export default class EntityGood extends MyBaseModel {
     static entity = 'entitygood';
     static entityUrl = '/api/entity-goods';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/entity-goods/:rId',

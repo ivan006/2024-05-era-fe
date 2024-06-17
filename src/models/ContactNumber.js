@@ -6,6 +6,7 @@ export default class ContactNumber extends MyBaseModel {
     static entity = 'contactnumber';
     static entityUrl = '/api/contact-numbers';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/contact-numbers/:rId',

@@ -5,6 +5,7 @@ export default class WebsiteProducerRegistration extends MyBaseModel {
     static entity = 'websiteproducerregistration';
     static entityUrl = '/api/website-producer-registrations';
     static primaryKey = 'Id';
+    static titleKey = 'Id';
     static openRecord(pKey){
       router.push({
         name: '/lists/website-producer-registrations/:rId',
