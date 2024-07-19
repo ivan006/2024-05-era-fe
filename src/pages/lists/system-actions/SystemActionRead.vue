@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { SuperRecord } from 'quicklists-vue-orm-ui-2'
+import { SuperRecord } from 'quicklists-vue-orm-ui'
 import SystemAction from 'src/models/SystemAction'
 
 export default {

@@ -1,7 +1,7 @@
 import { createStore } from 'vuex'
 import VuexORM from '@vuex-orm/core'
 
-import {DBCrudCacheSet} from "quicklists-vue-orm-ui-2";
+import {DBCrudCacheSet} from "quicklists-vue-orm-ui";
 
 import Address from 'src/models/Address';
 import Attachment from 'src/models/Attachment';
