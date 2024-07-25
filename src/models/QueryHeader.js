@@ -17,7 +17,7 @@ export default class QueryHeader extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -56,8 +56,8 @@ export default class QueryHeader extends MyBaseModel {
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

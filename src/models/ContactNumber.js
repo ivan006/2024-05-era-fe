@@ -46,8 +46,8 @@ export default class ContactNumber extends MyBaseModel {
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

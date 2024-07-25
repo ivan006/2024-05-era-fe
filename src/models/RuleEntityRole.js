@@ -16,7 +16,7 @@ export default class RuleEntityRole extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -51,12 +51,12 @@ export default class RuleEntityRole extends MyBaseModel {
             'CRUD_Read': this.attr(''),
             'CRUD_Update': this.attr(''),
             'CRUD_Delete': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

@@ -66,8 +66,8 @@ export default class ServiceRequestReport extends MyBaseModel {
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

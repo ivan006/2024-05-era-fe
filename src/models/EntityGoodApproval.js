@@ -71,8 +71,8 @@ export default class EntityGoodApproval extends MyBaseModel {
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

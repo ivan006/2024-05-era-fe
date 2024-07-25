@@ -16,7 +16,7 @@ export default class ObjectValue extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -45,12 +45,12 @@ export default class ObjectValue extends MyBaseModel {
             'ValueJson': this.attr(''),
             'Object': this.attr(''),
             'Entity': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

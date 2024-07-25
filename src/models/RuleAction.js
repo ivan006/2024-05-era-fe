@@ -16,7 +16,7 @@ export default class RuleAction extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -49,12 +49,12 @@ export default class RuleAction extends MyBaseModel {
             'Description': this.attr(''),
             'ResultSystemCode': this.attr(''),
             'NegativeSystemCode': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

@@ -16,7 +16,7 @@ export default class WebsiteProducerRegistration extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -37,12 +37,12 @@ export default class WebsiteProducerRegistration extends MyBaseModel {
             'Id': this.attr(''),
             'Data': this.attr(''),
             'ProducerId': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

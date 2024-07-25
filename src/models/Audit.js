@@ -16,7 +16,7 @@ export default class Audit extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -49,12 +49,12 @@ export default class Audit extends MyBaseModel {
             'PageNo': this.attr(''),
             'NoOfLines': this.attr(''),
             'CrudMessage': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

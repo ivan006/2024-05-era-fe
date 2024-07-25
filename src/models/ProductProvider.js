@@ -16,7 +16,7 @@ export default class ProductProvider extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -37,12 +37,12 @@ export default class ProductProvider extends MyBaseModel {
             'Id': this.attr(''),
             'Name': this.attr(''),
             'Entity': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

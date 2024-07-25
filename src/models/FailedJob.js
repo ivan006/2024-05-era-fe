@@ -16,7 +16,7 @@ export default class FailedJob extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -45,12 +45,12 @@ export default class FailedJob extends MyBaseModel {
             'payload': this.attr(''),
             'exception': this.attr(''),
             'failed_at': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

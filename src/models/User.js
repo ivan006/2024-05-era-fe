@@ -16,7 +16,7 @@ export default class User extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -47,12 +47,12 @@ export default class User extends MyBaseModel {
             'remember_token': this.attr(''),
             'created_at': this.attr(''),
             'updated_at': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

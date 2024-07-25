@@ -16,7 +16,7 @@ export default class PostTag extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -41,12 +41,12 @@ export default class PostTag extends MyBaseModel {
             'updated_at': this.attr(''),
             'post_id': this.attr(''),
             'tag_id': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

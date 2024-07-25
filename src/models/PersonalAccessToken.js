@@ -16,7 +16,7 @@ export default class PersonalAccessToken extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -51,12 +51,12 @@ export default class PersonalAccessToken extends MyBaseModel {
             'expires_at': this.attr(''),
             'created_at': this.attr(''),
             'updated_at': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

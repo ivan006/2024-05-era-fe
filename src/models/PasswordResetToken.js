@@ -16,7 +16,7 @@ export default class PasswordResetToken extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -37,12 +37,12 @@ export default class PasswordResetToken extends MyBaseModel {
             'email': this.attr(''),
             'token': this.attr(''),
             'created_at': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

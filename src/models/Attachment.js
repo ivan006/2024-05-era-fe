@@ -16,7 +16,7 @@ export default class Attachment extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -49,12 +49,12 @@ export default class Attachment extends MyBaseModel {
             'RelativeID': this.attr(''),
             'CreatedOn': this.attr(''),
             'CreatedBy': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

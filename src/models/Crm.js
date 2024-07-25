@@ -16,7 +16,7 @@ export default class Crm extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -43,12 +43,12 @@ export default class Crm extends MyBaseModel {
             'Contact': this.attr(''),
             'Description': this.attr(''),
             'Status': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

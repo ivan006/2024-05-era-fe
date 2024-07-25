@@ -16,7 +16,7 @@ export default class Requirement extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -53,12 +53,12 @@ export default class Requirement extends MyBaseModel {
             'SystemCodeContext': this.attr(''),
             'SystemCodeField': this.attr(''),
             'ValueType': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

@@ -16,7 +16,7 @@ export default class Relative extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -47,12 +47,12 @@ export default class Relative extends MyBaseModel {
             'Student': this.attr(''),
             'Disabled': this.attr(''),
             'TraditionalMarriage': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {

@@ -16,7 +16,7 @@ export default class InstanceNo extends MyBaseModel {
     }
 
     static parentWithables = [
-        
+
     ];
 
     static rules = {
@@ -35,12 +35,12 @@ export default class InstanceNo extends MyBaseModel {
         return {
             'Id': this.attr(''),
             'ObjectName': this.attr(''),
-            
+
         };
     }
 
-    static displayMapSummary = {
-        // Define displayMapSummary
+    static templateListGrid = {
+        // Define templateListGrid
     };
 
     static displayMapFull = {
